@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
@@ -1449,6 +1449,8 @@ body {
       <button class="filter-btn" onclick="filterEvents('upcoming', this)">即将开始</button>
       <button class="filter-btn" onclick="filterEvents('concert', this)">演唱会</button>
       <button class="filter-btn" onclick="filterEvents('fanmeeting', this)">见面会</button>
+      <button class="filter-btn" onclick="filterEvents('fansign', this)">签售会</button>
+      <button class="filter-btn" onclick="filterEvents('festival', this)">音乐节</button>
     </div>
     
     <div class="event-list" id="eventList">
@@ -1593,7 +1595,9 @@ function renderEventList() {
   let filtered = [...events];
   if (currentFilter === 'upcoming') filtered = filtered.filter(e => e.status === 'upcoming' || e.status === 'onsale');
   else if (currentFilter === 'concert') filtered = filtered.filter(e => e.type === 'concert');
-  else if (currentFilter === 'fanmeeting') filtered = filtered.filter(e => e.type === 'fanmeeting' || e.type === 'fansign');
+  else if (currentFilter === 'fanmeeting') filtered = filtered.filter(e => e.type === 'fanmeeting');
+  else if (currentFilter === 'fansign') filtered = filtered.filter(e => e.type === 'fansign');
+  else if (currentFilter === 'festival') filtered = filtered.filter(e => e.type === 'festival' || e.type === 'smtown');
   
   filtered.sort((a,b) => new Date(a.date) - new Date(b.date));
   
@@ -1969,4 +1973,3 @@ document.addEventListener('click', (e) => {
 </script>
 </body>
 </html>
-
