@@ -1,486 +1,287 @@
-#!/usr/bin/env python3
-"""
-RIIZE 活动自动爬取脚本
-只从官方网站获取公告，严格过滤非官方内容
-"""
-
+import requests
+from bs4 import BeautifulSoup
 import json
 import re
-import os
-import sys
 from datetime import datetime, timedelta
-from urllib.parse import urlparse
+import os
 
-try:
-    import requests
-    from bs4 import BeautifulSoup
-except ImportError:
-    print("Installing dependencies...")
-    os.system("pip install requests beautifulsoup4")
-    import requests
-    from bs4 import BeautifulSoup
+# 汇率（人民币）
+EXCHANGE_RATES = {
+    "KRW": 0.0053,  # 韩元
+    "JPY": 0.047,   # 日元
+    "USD": 7.2,     # 美元
+    "CNY": 1.0,     # 人民币
+    "HKD": 0.92,    # 港币
+    "MOP": 0.89,    # 澳门元
+    "THB": 0.20     # 泰铢
+}
 
-# ========== 官方来源白名单 ==========
-# 只从这些官方域名爬取，其他来源一律忽略
-OFFICIAL_SOURCES = [
-    {
-        "name": "SMTOWN 官网",
-        "url": "https://www.smtown.com/notice",
-        "domain": "smtown.com",
-        "type": "official_notice",
-        "category": "公告"
-    },
-    {
-        "name": "SMTOWN JAPAN 官方",
-        "url": "https://www.smtown.jp/news/",
-        "domain": "smtown.jp",
-        "type": "official_notice",
-        "category": "公告"
-    },
-    {
-        "name": "Weverse RIIZE",
-        "url": "https://weverse.io/riize/notice",
-        "domain": "weverse.io",
-        "type": "official_notice",
-        "category": "公告"
-    }
+# 配置
+DATA_FILE = "data.js"
+OFFICIAL_SITES = [
+    {"name": "Weverse RIIZE", "url": "https://weverse.io/RIIZE/notice", "lang": "ko"},
+    {"name": "SMTOWN 官网", "url": "https://www.smtown.com/artist/riize", "lang": "ko"},
+    {"name": "RIIZE JAPAN 官网", "url": "https://riizeofficial.jp/news/", "lang": "ja"}
 ]
 
-# ========== 关键词白名单 ==========
-# 标题必须包含这些关键词之一，才认为是RIIZE的活动
-RIIZE_KEYWORDS = ["RIIZE", "라이즈", "riize", "RIIZE_"]
+BLACKLIST_KEYWORDS = ["传闻", "网传", "爆料", "疑似", "可能", "或将", "rumor", "alleged"]
 
-# ========== 活动类型关键词 ==========
 TYPE_KEYWORDS = {
-    "concert": ["CONCERT", "TOUR", "WORLD TOUR", "LIVE", "演唱会", "巡演"],
-    "fanmeeting": ["FAN MEETING", "FANMEETING", " FM ", "粉丝见面会", "见面会"],
-    "fansign": ["FAN SIGN", "FANSIGN", "签名会", "签售"],
-    "smtown": ["SMTOWN", "SM TOWN", "SM LIVE"],
-    "album": ["ALBUM", "COMEBACK", "回归", "专辑"]
+    "concert": ["演唱会", "concert", "巡演", "tour", "专场"],
+    "fanmeeting": ["粉丝见面会", "fanmeeting", "fm", "粉丝派对", "fan party"],
+    "fansign": ["签售", "签名会", "fansign", "线下活动", "抽选"],
+    "festival": ["音乐节", "颁奖礼", "盛典", "festival", "awards", "歌谣大战"],
+    "event": ["快闪", "pop-up", "popup", "展览"]
 }
 
-# ========== 黑名单关键词 ==========
-# 包含这些关键词的直接跳过（谣言、传闻、粉丝创作等）
-BLACKLIST_KEYWORDS = [
-    "루머", "rumor", "传闻", "谣言", "网传", "爆料",
-    "팬아트", "fanart", "fan art", "同人", "二创", "创作",
-    "테스트", "test", "测试",
-    "Q&A", "질문", "提问",
-    "공지사항", "notice",
+TICKET_PLATFORM_KEYWORDS = [
+    "Melon Ticket", "Interpark", "YES24", "Ticketmaster", "e+", "ぴあ", "罗森",
+    "NOL", "Weverse", "Ktown4u", "Fantopia", "熊宝空间站", "大麦网", "猫眼",
+    "银河票务", "Qoo10", "MADE ON"
 ]
 
-# ========== 状态关键词 ==========
-STATUS_KEYWORDS = {
-    "onsale": ["TICKET OPEN", "售票", "开票", "预售", "판매"],
-    "soldout": ["SOLD OUT", "售罄", "完售", "매진"],
-    "closed": ["CLOSED", "截止", "结束", "마감"]
-}
-
-# ========== 购票链接关键词 ==========
-TICKET_LINK_KEYWORDS = [
-    "ticket", "tickets", "booking", "reserve", "reservation",
-    "예매", "판매", "购票", "售票", "预订", "买票",
-    "interpark", "yes24", "ticketmaster", "livenation",
-    "weply", "smtown", "fanclub", "fancafe",
-    "auction", "11번가", "쿠팡", "티켓링크",
-    "ticketlink", "interpark.com", "yes24.com"
-]
-
-# ========== 票务网站域名 ==========
-TICKET_SITES = [
-    "interpark.com", "yes24.com", "ticketmaster.com",
-    "livenation.com", "ticketlink.co.kr", "auction.co.kr",
-    "weply.com", "smtown.com", "fanclub.smtown.com"
-]
-
-
-def is_official_url(url):
-    """检查URL是否来自官方域名"""
-    try:
-        parsed = urlparse(url)
-        domain = parsed.netloc.lower()
-        for source in OFFICIAL_SOURCES:
-            if source["domain"] in domain:
-                return True
-        return False
-    except:
-        return False
-
-
-def extract_ticket_url(detail_url, source_domain):
-    """从公告详情页提取购票链接"""
-    try:
-        headers = {
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-            "Accept-Language": "ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7,ja;q=0.6,zh-CN;q=0.5,zh;q=0.4"
-        }
-        
-        resp = requests.get(detail_url, headers=headers, timeout=15, allow_redirects=True)
-        if resp.status_code != 200:
-            return None
-        
-        soup = BeautifulSoup(resp.text, "html.parser")
-        
-        links = soup.find_all("a", href=True)
-        
-        best_ticket_url = None
-        best_score = 0
-        
-        for link in links:
-            href = link["href"]
-            text = link.get_text(strip=True)
-            
-            if not href:
-                continue
-            
-            full_url = href
-            if not href.startswith("http"):
-                if href.startswith("/"):
-                    full_url = f"https://{source_domain}{href}"
-                else:
-                    full_url = f"https://{source_domain}/{href}"
-            
-            score = 0
-            href_lower = full_url.lower()
-            text_lower = text.lower()
-            
-            for kw in TICKET_LINK_KEYWORDS:
-                if kw.lower() in text_lower:
-                    score += 10
-                    break
-            
-            for site in TICKET_SITES:
-                if site in href_lower:
-                    score += 20
-                    break
-            
-            for kw in TICKET_LINK_KEYWORDS:
-                if kw.lower() in href_lower:
-                    score += 5
-                    break
-            
-            if score > best_score and score >= 10:
-                best_score = score
-                best_ticket_url = full_url
-        
-        if best_ticket_url:
-            print(f"      🎫 找到购票链接: {best_ticket_url}")
-            return best_ticket_url
-        
-        return None
-        
-    except Exception as e:
-        print(f"      ⚠️ 提取购票链接失败: {e}")
-        return None
-
-
-def is_valid_rize_title(title):
-    """检查标题是否真的是RIIZE的官方公告"""
-    title_lower = title.lower()
-    
-    has_rize = any(kw.lower() in title_lower for kw in RIIZE_KEYWORDS)
-    if not has_rize:
-        return False
-    
-    has_blacklist = any(kw.lower() in title_lower for kw in BLACKLIST_KEYWORDS)
-    if has_blacklist:
-        return False
-    
-    has_activity = any(
-        any(kw.lower() in title_lower for kw in keywords)
-        for keywords in TYPE_KEYWORDS.values()
-    )
-    
-    has_notice = any(kw in title for kw in ["NOTICE", "公告", "공지", "안내"])
-    
-    return has_activity or has_notice
-
-
-def load_events():
-    """加载活动数据"""
-    with open("data.js", "r", encoding="utf-8") as f:
-        content = f.read()
-    
-    match = re.search(r'window\.RIIZE_EVENTS\s*=\s*(\[[\s\S]*?\]);', content)
-    if not match:
-        print("❌ 找不到活动数据")
+def load_existing_events():
+    if not os.path.exists(DATA_FILE):
         return []
-    
-    events_str = match.group(1)
     try:
-        events_str_clean = events_str.strip()
-        events_str_clean = re.sub(r"'([^']*)':", r'"\1":', events_str_clean)
-        events_str_clean = re.sub(r": '([^']*)'", r': "\1"', events_str_clean)
-        events_str_clean = re.sub(r',\s*([}\]])', r'\1', events_str_clean)
-        return json.loads(events_str_clean)
+        with open(DATA_FILE, 'r', encoding='utf-8') as f:
+            content = f.read()
+            match = re.search(r'window\.RIIZE_EVENTS\s*=\s*(\[.*\]);', content, re.DOTALL)
+            if match:
+                return json.loads(match.group(1))
     except Exception as e:
-        print(f"⚠️ 解析失败: {e}")
-        ids = re.findall(r'id:\s*(\d+)', events_str)
-        titles = re.findall(r'title:\s*["\']([^"\']+)["\']', events_str)
-        return [{"id": int(ids[i]) if i < len(ids) else i+100, "title": t} for i, t in enumerate(titles)]
-
+        print(f"加载失败: {e}")
+    return []
 
 def save_events(events):
-    """保存活动数据"""
-    js = "window.RIIZE_EVENTS = [\n"
-    for i, e in enumerate(events):
-        js += "  {\n"
-        for key, value in e.items():
-            if isinstance(value, str):
-                value_escaped = value.replace("\\", "\\\\").replace("'", "\\'")
-                js += f"    {key}: '{value_escaped}',\n"
-            elif isinstance(value, list):
-                js += f"    {key}: {json.dumps(value, ensure_ascii=False)},\n"
-            else:
-                js += f"    {key}: {value},\n"
-        js += "  }"
-        if i < len(events) - 1:
-            js += ","
-        js += "\n"
-    js += "];"
-    
-    with open("data.js", "w", encoding="utf-8") as f:
+    events.sort(key=lambda x: x.get('date', ''), reverse=True)
+    js = f"window.RIIZE_EVENTS = {json.dumps(events, ensure_ascii=False, indent=2)};"
+    with open(DATA_FILE, 'w', encoding='utf-8') as f:
         f.write(js)
+    print(f"已保存 {len(events)} 条")
+
+def kst_to_beijing(time_str):
+    try:
+        for fmt in ["%H:%M", "%H시 %M분"]:
+            try:
+                dt = datetime.strptime(time_str.strip(), fmt)
+                return (dt - timedelta(hours=1)).strftime("%H:%M")
+            except:
+                continue
+    except:
+        pass
+    return time_str
+
+def extract_ticket_info(text, lang="ko"):
+    info = {"platform": "待定", "time": "待定", "price": "待定", "currency": "KRW", "priceCNY": "待定"}
     
-    print(f"✅ 已保存 {len(events)} 条活动数据")
-
-
-def get_next_id(events):
-    """获取下一个可用ID"""
-    if not events:
-        return 1
-    return max(e.get("id", 0) for e in events) + 1
-
-
-def parse_event_info(title, source_name, url):
-    """从标题中解析活动信息"""
-    event = {
-        "title": title[:80],
-        "subtitle": f"来自 {source_name} 的官方公告",
-        "type": "concert",
-        "typeLabel": "官方公告",
-        "date": "",
-        "endDate": "",
-        "time": "18:00",
-        "city": "待确认",
-        "venue": "待确认",
-        "status": "upcoming",
-        "statusLabel": "新公告",
-        "ticketNote": "待官方公布",
-        "price": "待官方公布",
-        "ticketUrl": url,
-        "officialUrl": url,
-        "highlights": [
-            {"title": "📢 官方公告", "content": f"来自 {source_name} 的官方消息"},
-            {"title": "ℹ️ 信息待补充", "content": "自动爬取，详细信息待后续更新"}
-        ],
-        "schedule": []
-    }
+    # 提取购票平台
+    plats = []
+    for kw in TICKET_PLATFORM_KEYWORDS:
+        if kw.lower() in text.lower():
+            plats.append(kw)
+    if plats:
+        info["platform"] = " / ".join(list(set(plats))[:3])
     
-    title_lower = title.lower()
-    for t, keywords in TYPE_KEYWORDS.items():
-        if any(kw.lower() in title_lower for kw in keywords):
-            event["type"] = t
-            type_labels = {
-                "concert": "演唱会",
-                "fanmeeting": "粉丝见面会",
-                "fansign": "签名会",
-                "smtown": "SMTOWN",
-                "album": "专辑回归"
-            }
-            event["typeLabel"] = type_labels.get(t, "官方公告")
+    # 提取开票时间
+    time_pats = [
+        r'(\d{1,2}月\d{1,2}日\s*\d{1,2}[:시]\d{0,2}[분]?)\s*(?:开票|发售|开售|판매|発売)',
+        r'(?:开票|发售|开售).*?(\d{1,2}月\d{1,2}日\s*\d{1,2}[:시]\d{0,2}[분]?)',
+    ]
+    for p in time_pats:
+        m = re.search(p, text)
+        if m:
+            info["time"] = m.group(1) + "（北京时间）"
             break
     
-    for s, keywords in STATUS_KEYWORDS.items():
-        if any(kw.lower() in title_lower for kw in keywords):
-            event["status"] = s
-            status_labels = {
-                "onsale": "售票中",
-                "soldout": "已售罄",
-                "closed": "已截止"
-            }
-            event["statusLabel"] = status_labels.get(s, "新公告")
-            break
-    
-    date_patterns = [
-        r'(\d{4})[.\-/](\d{1,2})[.\-/](\d{1,2})',
-        r'(\d{1,2})月(\d{1,2})日',
-        r'(\d{1,2})/(\d{1,2})'
+    # 提取票价和货币
+    price_data = [
+        (r'(\d{1,3}[,，]\d{3})\s*(?:원|₩|KRW)', "KRW"),
+        (r'(\d{1,3}[,，]?\d{0,3})\s*(?:円|¥|JPY)', "JPY"),
+        (r'(\d{1,3}[,，]?\d{0,3})\s*(?:元|¥|CNY|人民币)', "CNY"),
+        (r'(\d{1,3}[,，]?\d{0,3})\s*(?:美元|\$|USD)', "USD"),
+        (r'(\d{1,3}[,，]?\d{0,3})\s*(?:港币|HKD)', "HKD"),
+        (r'(\d{1,3}[,，]?\d{0,3})\s*(?:澳门币|MOP)', "MOP"),
     ]
     
-    for pattern in date_patterns:
-        match = re.search(pattern, title)
-        if match:
-            groups = match.groups()
-            if len(groups) == 3:
-                year, month, day = groups
-            else:
-                year = str(datetime.now().year)
-                month, day = groups
-            
+    for pattern, currency in price_data:
+        m = re.search(pattern, text)
+        if m:
+            price_str = m.group(1).replace(',', '').replace('，', '')
             try:
-                date_str = f"{year}-{int(month):02d}-{int(day):02d}"
-                event["date"] = date_str
-                event["endDate"] = date_str
+                price_num = int(price_str)
+                info["price"] = m.group(1)
+                info["currency"] = currency
+                rate = EXCHANGE_RATES.get(currency, 1)
+                info["priceCNY"] = f"约¥{int(price_num * rate):,}"
             except:
                 pass
             break
     
-    cities = ["서울", "首尔", "도쿄", "东京", "오사카", "大阪", "후쿠오카", "福冈",
-              "홍콩", "香港", "대만", "台北", "방콕", "曼谷",
-              "뉴욕", "纽约", "로스앤젤레스", "洛杉矶", "샌프란시스코", "旧金山",
-              "시애틀", "西雅图", "워싱턴", "华盛顿", "애틀랜타", "亚特兰大",
-              "런던", "伦敦", "파리", "巴黎", "싱가포르", "新加坡",
-              "자카르타", "雅加达", "마닐라", "马尼拉"]
+    return info
+
+def extract_event_details(title, content, url, site_name):
+    event = {
+        "id": int(datetime.now().timestamp()),
+        "title": title,
+        "subtitle": site_name,
+        "type": "festival",
+        "typeLabel": "活动",
+        "date": "",
+        "time": "19:00",
+        "endDate": "",
+        "city": "待定",
+        "venue": "待定",
+        "status": "upcoming",
+        "statusLabel": "即将开始",
+        "price": "待定",
+        "currency": "KRW",
+        "priceCNY": "待定",
+        "organizer": site_name,
+        "ticketPlatform": "待定",
+        "ticketTime": "待定",
+        "ticketUrl": url,
+        "officialUrl": url,
+        "description": [],
+        "highlights": [],
+        "ticketNote": "以官方公告为准"
+    }
     
-    for city in cities:
-        if city in title:
-            city_map = {
-                "서울": "韩国首尔", "도쿄": "日本东京", "오사카": "日本大阪",
-                "후쿠오카": "日本福冈", "홍콩": "中国香港", "대만": "中国台北",
-                "방콕": "泰国曼谷", "뉴욕": "美国纽约", "로스앤젤레스": "美国洛杉矶",
-                "샌프란시스코": "美国旧金山", "시애틀": "美国西雅图",
-                "워싱턴": "美国华盛顿", "애틀랜타": "美国亚特兰大",
-                "런던": "英国伦敦", "파리": "法国巴黎", "싱가포르": "新加坡",
-                "자카르타": "印尼雅加达", "마닐라": "菲律宾马尼拉"
-            }
-            event["city"] = city_map.get(city, city)
+    # 活动类型
+    text_lower = (title + " " + content).lower()
+    for etype, kws in TYPE_KEYWORDS.items():
+        for kw in kws:
+            if kw.lower() in text_lower:
+                event["type"] = etype
+                labels = {"concert": "演唱会", "fanmeeting": "粉丝见面会", "fansign": "签售会", "festival": "音乐节", "event": "活动"}
+                event["typeLabel"] = labels.get(etype, "活动")
+                break
+        else:
+            continue
+        break
+    
+    # 日期
+    date_pats = [
+        r'(\d{4})[년./-](\d{1,2})[월./-](\d{1,2})[일日]?',
+        r'(\d{1,2})[월月](\d{1,2})[일日]',
+    ]
+    for p in date_pats:
+        m = re.search(p, title + " " + content)
+        if m:
+            g = m.groups()
+            if len(g) == 3:
+                y, mo, d = g
+            else:
+                y = str(datetime.now().year)
+                mo, d = g
+            event["date"] = f"{y}-{int(mo):02d}-{int(d):02d}"
+            event["endDate"] = event["date"]
             break
+    
+    # 购票信息
+    ticket = extract_ticket_info(content)
+    event["ticketPlatform"] = ticket["platform"]
+    event["ticketTime"] = ticket["time"]
+    event["price"] = ticket["price"]
+    event["currency"] = ticket["currency"]
+    event["priceCNY"] = ticket["priceCNY"]
+    
+    # 地点
+    loc_pats = [
+        r'(?:地点|场地|场馆|장소|会場)[:：]\s*([^\n，。]+)',
+        r'在([^\n，。]{2,20})(?:举办|举行)',
+    ]
+    for p in loc_pats:
+        m = re.search(p, content)
+        if m:
+            loc = m.group(1).strip()
+            if len(loc) < 50:
+                event["venue"] = loc
+                if "서울" in loc or "首尔" in loc: event["city"] = "韩国首尔"
+                elif "도쿄" in loc or "东京" in loc: event["city"] = "日本东京"
+                elif "오사카" in loc or "大阪" in loc: event["city"] = "日本大阪"
+                elif "부산" in loc or "釜山" in loc: event["city"] = "韩国釜山"
+                elif "마카오" in loc or "澳门" in loc: event["city"] = "中国澳门"
+                elif "상하이" in loc or "上海" in loc: event["city"] = "中国上海"
+                elif "홍콩" in loc or "香港" in loc: event["city"] = "中国香港"
+            break
+    
+    # 描述
+    paras = [p.strip() for p in re.split(r'[\n。.]', content) if len(p.strip()) > 10][:3]
+    event["description"] = paras if paras else [title, f"来自 {site_name}", "请查看官方公告"]
     
     return event
 
+def is_blacklisted(text):
+    return any(kw.lower() in text.lower() for kw in BLACKLIST_KEYWORDS)
 
-def scrape_official_site(source):
-    """爬取单个官方网站"""
-    new_events = []
+def is_riize_related(text):
+    return any(kw.lower() in text.lower() for kw in ["riize", "라이즈", "RIIZE", "rise and realize"])
+
+def fetch_site(site):
+    events = []
     try:
-        headers = {
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-            "Accept-Language": "ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7,ja;q=0.6,zh-CN;q=0.5,zh;q=0.4"
-        }
+        headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
+        r = requests.get(site["url"], headers=headers, timeout=15)
+        r.encoding = 'utf-8'
+        soup = BeautifulSoup(r.text, 'html.parser')
         
-        print(f"   正在访问 {source['name']}...")
-        resp = requests.get(source["url"], headers=headers, timeout=15, allow_redirects=True)
+        items = soup.find_all(['a', 'div', 'li'], class_=re.compile(r'(notice|news|item|list|post)', re.I))
         
-        if resp.status_code != 200:
-            print(f"   ⚠️ HTTP {resp.status_code}")
-            return new_events
-        
-        soup = BeautifulSoup(resp.text, "html.parser")
-        
-        links = soup.find_all("a", href=True)
-        found = 0
-        
-        for link in links:
-            href = link["href"]
-            text = link.get_text(strip=True)
+        for item in items[:10]:
+            title_elem = item.find(['h2', 'h3', 'h4', 'span', 'a'], class_=re.compile(r'(title|subject)', re.I)) or item
+            title = title_elem.get_text(strip=True)
             
-            if not text or len(text) < 8:
+            if not title or len(title) < 5 or not is_rize_related(title) or is_blacklisted(title):
                 continue
             
-            full_url = href
-            if not href.startswith("http"):
-                if href.startswith("/"):
-                    full_url = f"https://{source['domain']}{href}"
-                else:
-                    full_url = f"https://{source['domain']}/{href}"
+            link = item.find('a', href=True)
+            url = site["url"]
+            if link:
+                from urllib.parse import urljoin
+                url = urljoin(site["url"], link['href']) if link['href'].startswith('/') else link['href']
             
-            if not is_official_url(full_url):
-                continue
+            content_elem = item.find(['p', 'div'], class_=re.compile(r'(content|desc)', re.I))
+            content = content_elem.get_text(strip=True) if content_elem else title
             
-            if is_valid_rize_title(text):
-                event = parse_event_info(text, source["name"], full_url)
-                
-                print(f"   📄 检查公告详情: {text[:30]}...")
-                ticket_url = extract_ticket_url(full_url, source["domain"])
-                if ticket_url:
-                    event["ticketUrl"] = ticket_url
-                    event["ticketNote"] = "官方售票"
-                    if event["status"] == "upcoming":
-                        event["status"] = "onsale"
-                        event["statusLabel"] = "售票中"
-                
-                new_events.append(event)
-                found += 1
-                
-                if found >= 5:
-                    break
-        
-        print(f"   ✅ 找到 {found} 条 RIIZE 官方公告")
-                    
+            events.append(extract_event_details(title, content, url, site["name"]))
+            
     except Exception as e:
-        print(f"   ⚠️ 爬取失败: {e}")
-    
-    return new_events
-
+        print(f"爬取 {site['name']} 失败: {e}")
+    return events
 
 def main():
-    print("🔍 RIIZE 官方活动自动检查")
-    print(f"⏰ 时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-    print("=" * 60)
-    print(f"📋 官方来源: {len(OFFICIAL_SOURCES)} 个")
-    print(f"🔒 严格模式: 只接受官方域名 + RIIZE关键词 + 活动关键词")
-    print("=" * 60)
+    print("=" * 50)
+    print("RIIZE 活动自动爬取 v2.1（票价自动提取+人民币转换）")
+    print("=" * 50)
     
-    events = load_events()
-    existing_titles = set(e.get("title", "")[:30] for e in events)
-    print(f"\n📊 已有活动: {len(events)} 条")
+    existing = load_existing_events()
+    print(f"已有 {len(existing)} 条")
     
     all_new = []
+    for site in OFFICIAL_SITES:
+        print(f"爬取 {site['name']}...")
+        new = fetch_site(site)
+        print(f"  找到 {len(new)} 条")
+        all_new.extend(new)
     
-    for source in OFFICIAL_SOURCES:
-        print(f"\n📡 检查 {source['name']}...")
-        new_events = scrape_official_site(source)
-        all_new.extend(new_events)
-    
-    truly_new = []
-    seen_titles = set()
-    
-    for event in all_new:
-        title_key = event["title"][:30]
-        
-        is_duplicate = False
-        for existing_title in existing_titles:
-            if (title_key in existing_title or 
-                existing_title in title_key or
-                title_key == existing_title):
-                is_duplicate = True
+    # 去重
+    existing_titles = [e["title"] for e in existing]
+    unique = []
+    for ev in all_new:
+        dup = False
+        for ot in existing_titles:
+            sim = len(set(ev["title"]) & set(ot)) / len(set(ev["title"]) | set(ot)))
+            if sim > 0.6:
+                dup = True
                 break
-        
-        if not is_duplicate and title_key not in seen_titles:
-            seen_titles.add(title_key)
-            truly_new.append(event)
+        if not dup:
+            unique.append(ev)
     
-    print(f"\n{'=' * 60}")
-    print(f"✨ 新增官方活动: {len(truly_new)} 条")
-    
-    if truly_new:
-        next_id = get_next_id(events)
-        
-        print("\n📋 新增列表:")
-        for i, event in enumerate(truly_new):
-            event["id"] = next_id + i
-            events.append(event)
-            print(f"  {i+1}. [{event['typeLabel']}] {event['title']}")
-            print(f"      来源: {event['subtitle']}")
-            print(f"      链接: {event['officialUrl']}")
-        
-        save_events(events)
-        
-        with open("update_log.txt", "w", encoding="utf-8") as f:
-            f.write(f"更新时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
-            f.write(f"新增官方活动: {len(truly_new)} 条\n\n")
-            for event in truly_new:
-                f.write(f"[{event['typeLabel']}] {event['title']}\n")
-                f.write(f"  来源: {event['subtitle']}\n")
-                f.write(f"  链接: {event['officialUrl']}\n\n")
-        
-        print("\n✅ 活动数据已更新，将自动部署")
-        return 1
-    else:
-        print("\n✅ 没有新的官方活动")
-        return 0
-
+    print(f"\n新增 {len(unique)} 条")
+    all_events = existing + unique
+    save_events(all_events)
+    print("✅ 完成！")
 
 if __name__ == "__main__":
-    sys.exit(main())
+    main()
