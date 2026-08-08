@@ -1,9 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
-import json
 import re
 from datetime import datetime
-import os
 
 EXCHANGE_RATES = {
     'KRW': 0.0053, 'JPY': 0.047, 'USD': 7.2, 'CNY': 1.0,
@@ -12,30 +10,29 @@ EXCHANGE_RATES = {
 
 TICKET_PLATFORMS = [
     'Melon Ticket', 'YES24', 'Interpark', 'NOL', 'Ticketmaster', 'AXS',
-    'e+', 'ぴあ', '罗森票务', 'ローソンチケット', 'Lawson Ticket',
+    'e+', 'ぴあ', '罗森票务', 'ローソンチケット',
     '大麦网', '猫眼', '银河票务', 'Fantopia', 'Ktown4u',
     '熊宝空间站', 'Creatrip', 'Thai Ticket Major', 'MADE ON',
-    'Melon', 'Weverse', 'SMTOWN', 'BRIIZE JAPAN',
-    'Qoo10', 'litt.ly', '现场购买', '无需门票'
+    'Weverse', 'SMTOWN', 'BRIIZE JAPAN', 'Qoo10'
 ]
 
 PRICE_PATTERNS = [
     r'(\d{1,3}(?:,\d{3})*)\s*(?:원|KRW|韩元|₩)',
     r'(\d{1,3}(?:,\d{3})*)\s*(?:円|JPY|日元|¥)',
     r'(\d{1,3}(?:,\d{3})*)\s*(?:USD|美元|\$)',
-    r'(\d{1,3}(?:,\d{3})*)\s*(?:HKD|港币|港幣)',
-    r'(\d{1,3}(?:,\d{3})*)\s*(?:MOP|澳门元|澳門幣)',
+    r'(\d{1,3}(?:,\d{3})*)\s*(?:HKD|港币)',
+    r'(\d{1,3}(?:,\d{3})*)\s*(?:MOP|澳门元)',
     r'(\d{1,3}(?:,\d{3})*)\s*(?:THB|泰铢|บาท)',
     r'(\d{1,3}(?:,\d{3})*)\s*(?:元|CNY|人民币)',
 ]
 
 CURRENCY_MAP = {
-    'KRW': 'KRW', '원': 'KRW', '韩元': 'KRW', '₩': 'KRW',
-    'JPY': 'JPY', '円': 'JPY', '日元': 'JPY', '¥': 'JPY',
-    'USD': 'USD', '美元': 'USD', '$': 'USD',
-    'HKD': 'HKD', '港币': 'HKD', '港幣': 'HKD',
-    'MOP': 'MOP', '澳门元': 'MOP', '澳門幣': 'MOP',
-    'THB': 'THB', '泰铢': 'THB', 'บาท': 'THB',
+    'KRW': 'KRW', '원': 'KRW', '韩元': 'KRW',
+    'JPY': 'JPY', '円': 'JPY', '日元': 'JPY',
+    'USD': 'USD', '美元': 'USD',
+    'HKD': 'HKD', '港币': 'HKD',
+    'MOP': 'MOP', '澳门元': 'MOP',
+    'THB': 'THB', '泰铢': 'THB',
     'CNY': 'CNY', '元': 'CNY', '人民币': 'CNY',
 }
 
@@ -45,7 +42,7 @@ OFFICIAL_SITES = [
     {'url': 'https://www.riizeofficial.jp/news/', 'name': 'RIIZE JAPAN', 'timezone': 'JST'},
 ]
 
-BLACKLIST = ['루머', 'rumor', '传闻', '爆料', '小道消息', '推测', '미확인', 'unconfirmed']
+BLACKLIST = ['루머', 'rumor', '传闻', '爆料', '小道消息', '미확인', 'unconfirmed']
 
 def clean_text(text):
     return re.sub(r'\s+', ' ', text).strip()
@@ -84,56 +81,61 @@ def extract_ticket_platform(text):
     return None
 
 def extract_ticket_time(text, timezone='KST'):
-    patterns = [
-        r'(\d{1,2})月\s*(\d{1,2})日[^\d]*(\d{1,2})[:：](\d{1,2}).*?(?:开票|开售|发售|售票开始|预售|先行)',
-        r'(\d{1,2})/(\d{1,2})[^\d]*(\d{1,2})[:：](\d{1,2}).*?(?:ticket\s*open|on\s*sale|presale)',
-        r'(\d{4})[년\-/](\d{1,2})[월\-/](\d{1,2})[일日]?[^\d]*(\d{1,2})[:시](\d{1,2})[분]?.*?(?:판매|예매|开票|预售)',
-        r'(\d{1,2})月\s*(\d{1,2})日.*?(?:开票|开售|发售|售票开始|预售|先行)',
+    member_time = None
+    general_time = None
+    
+    member_patterns = [
+        r'(?:팬클럽|팬클럽선예매|会员先行|FC先行|pre-sale|presale|member.*?sale)[^\d]*(\d{1,2})月\s*(\d{1,2})日[^\d]*(\d{1,2})[:：](\d{1,2})',
+        r'(?:팬클럽|会员先行|FC先行)[^\d]*(\d{1,2})[월/](\d{1,2})[일/][^\d]*(\d{1,2})[:시](\d{1,2})',
     ]
     
-    for pattern in patterns:
+    general_patterns = [
+        r'(?:일반|一般售票|一般发售|general sale)[^\d]*(\d{1,2})月\s*(\d{1,2})日[^\d]*(\d{1,2})[:：](\d{1,2})',
+        r'(?:일반|一般)[^\d]*(\d{1,2})[월/](\d{1,2})[일/][^\d]*(\d{1,2})[:시](\d{1,2})',
+    ]
+    
+    for pattern in member_patterns:
         match = re.search(pattern, text)
         if match:
-            groups = match.groups()
-            if len(groups) == 5:
-                year, month, day, hour, minute = groups
-                year = int(year)
-            elif len(groups) == 4:
-                month, day, hour, minute = groups
-                year = datetime.now().year
-            elif len(groups) == 2:
-                month, day = groups
-                hour, minute = 12, 0
-                year = datetime.now().year
-            
-            month = int(month)
-            day = int(day)
-            hour = int(hour)
-            minute = int(minute) if isinstance(minute, str) else 0
-            
+            month, day, hour, minute = match.groups()
+            month, day, hour, minute = int(month), int(day), int(hour), int(minute)
             if timezone == 'KST':
-                bj_hour, bj_min = kst_to_bj(hour, minute)
+                bj_h, bj_m = kst_to_bj(hour, minute)
             elif timezone == 'JST':
-                bj_hour, bj_min = jst_to_bj(hour, minute)
+                bj_h, bj_m = jst_to_bj(hour, minute)
             else:
-                bj_hour, bj_min = hour, minute
-            
-            time_str = f"{month}月{day}日 {bj_hour:02d}:{bj_min:02d} 北京时间开票"
-            
-            if '会员先行' in text or 'pre-sale' in text.lower() or 'presale' in text.lower():
-                time_str += "（会员先行）"
-            elif '预售' in text:
-                time_str += "（预售）"
-                
-            return time_str
+                bj_h, bj_m = hour, minute
+            member_time = f"会员先行：{month}月{day}日 {bj_h:02d}:{bj_m:02d} 北京时间"
+            break
     
-    if '已开票' in text or '售票中' in text or 'on sale' in text.lower():
+    for pattern in general_patterns:
+        match = re.search(pattern, text)
+        if match:
+            month, day, hour, minute = match.groups()
+            month, day, hour, minute = int(month), int(day), int(hour), int(minute)
+            if timezone == 'KST':
+                bj_h, bj_m = kst_to_bj(hour, minute)
+            elif timezone == 'JST':
+                bj_h, bj_m = jst_to_bj(hour, minute)
+            else:
+                bj_h, bj_m = hour, minute
+            general_time = f"一般售票：{month}月{day}日 {bj_h:02d}:{bj_m:02d} 北京时间"
+            break
+    
+    if member_time and general_time:
+        return f"{member_time}<br>{general_time}"
+    elif member_time:
+        return member_time
+    elif general_time:
+        return general_time
+    
+    if '已开票' in text or '售票中' in text:
         return '已开票（北京时间）'
     if '报名中' in text:
         return '报名中（北京时间）'
-    if '已售罄' in text or 'sold out' in text.lower():
+    if '已售罄' in text:
         return '已售罄'
-    if '已结束' in text or 'ended' in text.lower():
+    if '已结束' in text:
         return '已结束'
     
     return None
@@ -255,7 +257,7 @@ def scrape_site(url, name, timezone):
 
 def main():
     print("=" * 60)
-    print("RIIZE 活动爬虫 v2.2 - 具体北京时间提取版")
+    print("RIIZE 活动爬虫 v3.0 - 会员/非会员售票时间提取")
     print("=" * 60)
     
     all_events = []
@@ -271,10 +273,12 @@ def main():
         print(f"  📌 {e['title']}")
         print(f"     💰 票价: {e['price']} {e['currency']}")
         print(f"     🏪 平台: {e['ticketPlatform']}")
-        print(f"     ⏰ 购票时间: {e['ticketTime']}")
+        print(f"     ⏰ 购票时间: {e['ticketTime'].replace('<br>', ' / ')}")
         print()
     
-    print("✅ 爬取完成！所有时间均已转换为北京时间")
+    print("✅ 爬取完成！")
+    print("   购票时间自动转换为北京时间")
+    print("   自动提取会员先行 + 一般售票两个时间")
 
 if __name__ == '__main__':
     main()
