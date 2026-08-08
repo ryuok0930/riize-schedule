@@ -1,0 +1,40 @@
+name: 自动检查新活动
+
+on:
+  schedule:
+    - cron: '0 4,12 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4
+      
+      - name: Run scraper
+        id: scrape
+        run: |
+          python scripts/scraper.py
+          echo "has_update=$?" >> $GITHUB_OUTPUT
+        continue-on-error: true
+      
+      - name: Commit and push if updated
+        if: steps.scrape.outputs.has_update == 1
+        run: |
+          git config --local user.email "riize-bot@users.noreply.github.com"
+          git config --local user.name "RIIZE Bot"
+          git add data.js
+          git commit -m "🔔 自动更新：发现新活动" || echo "没有变化"
+          git push
