@@ -1,4 +1,112 @@
-﻿window.RIIZE_EVENTS = [
+window.RIIZE_EVENTS = [
+  {
+    id: 20, title: "SBS 夏季歌谣大战", subtitle: "SBS Gayo Daejeon 2026 Summer",
+    type: "festival", typeLabel: "音乐节",
+    date: "2026-08-09", time: "17:00", endDate: "2026-08-09",
+    city: "韩国高阳", venue: "KINTEX",
+    status: "upcoming", statusLabel: "即将开始",
+    price: "以官方售票为准", currency: "KRW",
+    organizer: "SBS",
+    ticketUrl: "https://creatrip.com/zh-CN/spot/14266",
+    officialUrl: "https://creatrip.com/zh-CN/spot/14266",
+    description: [
+      "SBS 2026 夏季歌谣大战，RIIZE 确定出演。",
+      "成灿担任本次歌谣大战的主持人。",
+      "豪华阵容齐聚，夏日特别舞台不容错过。"
+    ],
+    highlights: [{ title: "🎤 成灿主持", content: "RIIZE 成灿担任本次歌谣大战主持人，还有 RIIZE 特别舞台！" }],
+    ticketNote: "售票中，请通过官方渠道购票"
+  },
+  {
+    id: 21, title: "Mezamashi WANGAN Fes 2026", subtitle: "めざましWNGANフェス 2026",
+    type: "festival", typeLabel: "音乐节",
+    date: "2026-08-13", time: "16:30", endDate: "2026-08-13",
+    city: "日本东京", venue: "东京台场",
+    status: "upcoming", statusLabel: "即将开始",
+    price: "以官方售票为准", currency: "JPY",
+    organizer: "富士电视台",
+    ticketUrl: "https://kpop.music-now.live/artist/group/riize/",
+    officialUrl: "https://kpop.music-now.live/artist/group/riize/",
+    description: [
+      "日本电视台晨间节目《闹钟电视》主办的 WANGAN 音乐节 2026。",
+      "RIIZE 确定出演，将带来精彩舞台表演。",
+      "东京台场户外会场，夏日限定音乐盛典。"
+    ],
+    highlights: [],
+    ticketNote: "售票中"
+  },
+  {
+    id: 15, title: "RIIZE 二辑东京线下活动", subtitle: "The 2nd Mini Album 『II』 Offline Event",
+    type: "fansign", typeLabel: "签售会",
+    date: "2026-08-12", time: "13:00", endDate: "2026-08-12",
+    city: "日本东京", venue: "东京都内某地（当选者通知）",
+    status: "closed", statusLabel: "报名已截止",
+    price: "专辑抽选", currency: "JPY",
+    organizer: "SM Entertainment / RIIZE JAPAN",
+    ticketUrl: "https://riizeofficial.jp/news/20260617/",
+    officialUrl: "https://riizeofficial.jp/news/20260617/",
+    description: [
+      "RIIZE 第二张迷你专辑『II』日本限定抽选线下活动。",
+      "包含迷你谈话秀 + 团体签名会等丰富环节。",
+      "当选者将通过邮件通知具体活动地点和时间。"
+    ],
+    highlights: [{ title: "🎫 参与方式", content: "购买日本版二辑获得抽选序列号，登录官网报名抽选。" }],
+    ticketNote: "报名已截止，当选者已公布"
+  },
+  {
+    id: 22, title: "TMEA 腾讯音乐娱乐盛典", subtitle: "TMElive International Music Awards 2026",
+    type: "festival", typeLabel: "音乐节",
+    date: "2026-08-22", time: "19:00", endDate: "2026-08-22",
+    city: "中国澳门", venue: "澳门银河综艺馆",
+    status: "upcoming", statusLabel: "即将开始",
+    price: "以官方售票为准", currency: "MOP",
+    organizer: "腾讯音乐娱乐集团",
+    ticketUrl: "https://www.setlist.fm/setlists/riize-63f99e87.html",
+    officialUrl: "https://www.setlist.fm/setlists/riize-63f99e87.html",
+    description: [
+      "2026 TMEA 腾讯音乐娱乐盛典，RIIZE 确定出席。",
+      "国际音乐盛典，汇聚全球顶尖艺人。",
+      "RIIZE 将带来特别舞台表演。"
+    ],
+    highlights: [{ title: "🏆 音乐盛典", content: "腾讯音乐年度最大规模音乐颁奖盛典，国际阵容豪华。" }],
+    ticketNote: "售票中"
+  },
+  {
+    id: 23, title: "INKIGAYO LIVE IN TOKYO", subtitle: "인기가요 라이브 인 도쿄 DAY 1",
+    type: "festival", typeLabel: "音乐节",
+    date: "2026-09-22", time: "16:00", endDate: "2026-09-22",
+    city: "日本埼玉", venue: "Belluna Dome",
+    status: "upcoming", statusLabel: "即将开始",
+    price: "以官方售票为准", currency: "JPY",
+    organizer: "SBS / 日本电视台",
+    ticketUrl: "https://www.setlist.fm/setlists/riize-63f99e87.html",
+    officialUrl: "https://www.setlist.fm/setlists/riize-63f99e87.html",
+    description: [
+      "SBS 人气歌谣 LIVE IN TOKYO 2026，RIIZE 确定出演第一天。",
+      "在埼玉 Belluna Dome 举办的大型 K-POP 音乐节。",
+      "TXT、RIIZE、NiziU 等豪华阵容齐聚。"
+    ],
+    highlights: [{ title: "🎵 人气歌谣现场", content: "SBS 人气歌谣首次在东京巨蛋级场馆举办大型现场演出。" }],
+    ticketNote: "售票中"
+  },
+  {
+    id: 16, title: "RIIZE 上海线下签售会", subtitle: "The 2nd Mini Album [II] Shanghai Fan Sign",
+    type: "fansign", typeLabel: "签售会",
+    date: "2026-08-20", time: "19:00", endDate: "2026-08-20",
+    city: "中国上海", venue: "上海（非公开场地）",
+    status: "onsale", statusLabel: "报名中",
+    price: "以熊宝空间站购买为准", currency: "CNY",
+    organizer: "熊宝空间站 / SM Entertainment",
+    ticketUrl: "https://m.weibo.cn/detail/5329221134057930",
+    officialUrl: "https://m.weibo.cn/detail/5329221134057930",
+    description: [
+      "RIIZE 第二张迷你专辑 [II] 上海第二场线下签名会。",
+      "七夕节特别场，与 RIIZE 一起度过浪漫的七夕节。",
+      "活动地点为非公开场地，当选者将单独通知。"
+    ],
+    highlights: [{ title: "💌 七夕特别场", content: "抓住七夕节的尾巴，与 RIIZE 一起在中国度过七夕节！" }],
+    ticketNote: "报名中，请通过熊宝空间站参与"
+  },
   {
     id: 1, title: "RIIZE 香港签名会 & 观礼", subtitle: "The 2nd Mini Album [II] Fan Sign Event IN HONG KONG",
     type: "fansign", typeLabel: "签售会",
@@ -7,7 +115,7 @@
     status: "closed", statusLabel: "报名已截止",
     price: "以 Fantopia 购买专辑为准", currency: "HKD",
     organizer: "Fantopia / SM Entertainment",
-    ticketUrl: "https://www.fantopia.app/", officialUrl: "https://weverse.io/RIIZE/notice",
+    ticketUrl: "https://www.fantopia.app/", officialUrl: "https://riizeofficial.jp/news/",
     description: [
       "RIIZE 第二张迷你专辑 [II] 香港线下粉丝签名会 & 观礼活动。",
       "中选名单已公布，按姓名字母顺序排列，具体参与顺序将通过官方邮件通知。",
@@ -119,6 +227,60 @@
     description: ["RIIZE 首次世界巡演 [RIIZING LOUD] 北美洛杉矶站。", "洛杉矶是北美巡演的重要一站，预计将带来精彩的收官演出。", "具体场馆和开票信息待官方公布。"],
     highlights: [{ title: "🌟 北美收官", content: "洛杉矶站预计是北美巡演的收官站，将有特别舞台准备！" }],
     ticketNote: "开票时间待定，请关注官方公告"
+  },
+  {
+    id: 17, title: "RIIZE 韩国线下签售会", subtitle: "The 2nd Mini Album 《II》 ONE-DAY SPECIAL EVENT",
+    type: "fansign", typeLabel: "签售会",
+    date: "2026-07-19", time: "12:00", endDate: "2026-07-19",
+    city: "韩国首尔", venue: "首尔（非公开场地）",
+    status: "ended", statusLabel: "已结束",
+    price: "专辑抽选", currency: "KRW",
+    organizer: "Ktown4u / SM Entertainment",
+    ticketUrl: "https://timetreeapp.com/public_calendars/riize_briize_rise2394/events/2986222044209704574",
+    officialUrl: "https://timetreeapp.com/public_calendars/riize_briize_rise2394/events/2986222044209704574",
+    description: [
+      "RIIZE 第二张迷你专辑《II》发行纪念特别 ONE-DAY SPECIAL EVENT & 线下签售会。",
+      "全天共 5 场签名会，分别在不同时间段进行。",
+      "通过 Ktown4u 购买专辑参与抽选。"
+    ],
+    highlights: [{ title: "🎁 特别活动", content: "一天五场签售，与粉丝近距离互动的特别机会。" }],
+    ticketNote: "已结束"
+  },
+  {
+    id: 18, title: "RIIZE 二辑大阪线下活动", subtitle: "The 2nd Mini Album 『II』 Offline Event in Osaka",
+    type: "fansign", typeLabel: "签售会",
+    date: "2026-07-22", time: "13:00", endDate: "2026-07-22",
+    city: "日本大阪", venue: "大阪府内某地（当选者通知）",
+    status: "ended", statusLabel: "已结束",
+    price: "专辑抽选", currency: "JPY",
+    organizer: "SM Entertainment / RIIZE JAPAN",
+    ticketUrl: "https://riizeofficial.jp/news/20260617/",
+    officialUrl: "https://riizeofficial.jp/news/20260617/",
+    description: [
+      "RIIZE 第二张迷你专辑『II』日本大阪线下活动。",
+      "迷你谈话秀 + 团体签名会，与关西粉丝见面。",
+      "购买日本版二辑获得抽选资格。"
+    ],
+    highlights: [],
+    ticketNote: "已结束"
+  },
+  {
+    id: 19, title: "RIIZE POP-UP 快闪店", subtitle: "RIIZE POP-UP [ARCHIIVE²]",
+    type: "event", typeLabel: "快闪店",
+    date: "2026-06-16", time: "12:00", endDate: "2026-06-28",
+    city: "韩国首尔", venue: "首尔麻浦区光成路 41-11 Layer Studio",
+    status: "ended", statusLabel: "已结束",
+    price: "免费入场", currency: "KRW",
+    organizer: "SM Entertainment",
+    ticketUrl: "https://rise-realize.com/archiive%C2%B2/",
+    officialUrl: "https://rise-realize.com/archiive%C2%B2/",
+    description: [
+      "RIIZE 官方 POP-UP 快闪店 [ARCHIIVE²] 在首尔举办。",
+      "售卖 RIIZE 官方周边商品，还有特别拍照区和互动环节。",
+      "为期 13 天，吸引了大量粉丝前往打卡。"
+    ],
+    highlights: [{ title: "🛍️ 限定周边", content: "快闪店限定周边商品，还有特别打卡点和随机小卡。" }],
+    ticketNote: "免费入场，周边可现场购买"
   },
   {
     id: 9, title: "RIIZE 日本粉丝见面会 2026", subtitle: "RIIZE JAPAN FANMEETING 2026 RPG",
