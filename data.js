@@ -72,6 +72,42 @@ window.RIIZE_EVENTS = [
     ticketNote: "售票中"
   },
   {
+    id: 24, title: "THE FACT MUSIC AWARDS", subtitle: "2026 TMA 釜山",
+    type: "festival", typeLabel: "颁奖礼",
+    date: "2026-09-19", time: "17:00", endDate: "2026-09-19",
+    city: "韩国釜山", venue: "釜山亚运会主体育场",
+    status: "upcoming", statusLabel: "即将开始",
+    price: "以官方售票为准", currency: "KRW",
+    organizer: "The Fact / FAN N STAR",
+    ticketUrl: "https://kstyle.com/ad/kstyleparty2026",
+    officialUrl: "https://kstyle.com/ad/kstyleparty2026",
+    description: [
+      "2026 THE FACT MUSIC AWARDS (TMA) 在釜山举办。",
+      "RIIZE 确定出席并带来表演舞台。",
+      "可容纳8万人的大型颁奖盛典，阵容豪华。"
+    ],
+    highlights: [{ title: "🏆 年度颁奖礼", content: "韩国年度重要音乐颁奖盛典，各大偶像团体齐聚。" }],
+    ticketNote: "8月6日开票"
+  },
+  {
+    id: 25, title: "FEST. INAZUMA 2026", subtitle: "フェス.イナズマ 2026",
+    type: "festival", typeLabel: "音乐节",
+    date: "2026-09-20", time: "13:00", endDate: "2026-09-20",
+    city: "日本草津", venue: "滋贺县草津市",
+    status: "upcoming", statusLabel: "即将开始",
+    price: "以官方售票为准", currency: "JPY",
+    organizer: "富士电视台 / 滋贺县",
+    ticketUrl: "https://eplus.jp/fest-inazuma/",
+    officialUrl: "https://riizeofficial.jp/news/20260508/",
+    description: [
+      "日本知名大型户外音乐节 FEST. INAZUMA 2026。",
+      "RIIZE 确定出演9月20日的场次。",
+      "在滋贺县草津市举办，是日本夏季重要音乐节之一。"
+    ],
+    highlights: [{ title: "🎸 日本大型音乐节", content: "FEST. INAZUMA 是日本知名户外音乐节，每年吸引大量观众。" }],
+    ticketNote: "售票中"
+  },
+  {
     id: 23, title: "INKIGAYO LIVE IN TOKYO", subtitle: "인기가요 라이브 인 도쿄 DAY 1",
     type: "festival", typeLabel: "音乐节",
     date: "2026-09-22", time: "16:00", endDate: "2026-09-22",
@@ -229,6 +265,25 @@ window.RIIZE_EVENTS = [
     ticketNote: "开票时间待定，请关注官方公告"
   },
   {
+    id: 26, title: "WATERBOMB SEOUL 2026", subtitle: "워터밤 서울 2026 水弹音乐节",
+    type: "festival", typeLabel: "音乐节",
+    date: "2026-07-26", time: "17:10", endDate: "2026-07-26",
+    city: "韩国高阳", venue: "KINTEX 户外 Global Stage",
+    status: "ended", statusLabel: "已结束",
+    price: "165,000", currency: "KRW",
+    organizer: "MADE ON",
+    ticketUrl: "https://www.nxsquare.com/play/?bmode=view&idx=172321881",
+    officialUrl: "https://www.nxsquare.com/play/?bmode=view&idx=172321881",
+    description: [
+      "韩国最火夏日音乐节 WATERBOMB 2026 首尔站。",
+      "RIIZE 出演7月26日最后一天，属于 TEAM YELLOW。",
+      "水枪大战 + 高能舞台，夏日限定狂欢。",
+      "与 ZICO、J.Y.Park、SUNMI、泰容(NCT) 等艺人同台。"
+    ],
+    highlights: [{ title: "💦 夏日限定", content: "韩国最具代表性的夏日音乐节，水枪大战和精彩舞台结合，约20万人参与。" }],
+    ticketNote: "活动已结束"
+  },
+  {
     id: 17, title: "RIIZE 韩国线下签售会", subtitle: "The 2nd Mini Album 《II》 ONE-DAY SPECIAL EVENT",
     type: "fansign", typeLabel: "签售会",
     date: "2026-07-19", time: "12:00", endDate: "2026-07-19",
@@ -265,6 +320,43 @@ window.RIIZE_EVENTS = [
     ticketNote: "已结束"
   },
   {
+    id: 27, title: "ULSAN MUSIC FESTIVAL", subtitle: "蔚山音乐节 2026",
+    type: "festival", typeLabel: "音乐节",
+    date: "2026-06-15", time: "18:00", endDate: "2026-06-15",
+    city: "韩国蔚山", venue: "太和江国家庭园 River Stage",
+    status: "ended", statusLabel: "已结束",
+    price: "免费", currency: "KRW",
+    organizer: "蔚山市 / 音乐中心",
+    ticketUrl: "https://www.melon.com/",
+    officialUrl: "https://www.melon.com/",
+    description: [
+      "2026 蔚山音乐节 ULSAN MUSIC FESTIVAL。",
+      "RIIZE 出演并带来精彩舞台。",
+      "在太和江边举办的户外音乐节，阵容豪华。"
+    ],
+    highlights: [{ title: "🎶 户外音乐节", content: "蔚山市主办的大型户外音乐节，免费入场，众多艺人出演。" }],
+    ticketNote: "活动已结束"
+  },
+  {
+    id: 28, title: "RAPBEAT 2026", subtitle: "랩비트 2026",
+    type: "festival", typeLabel: "音乐节",
+    date: "2026-06-20", time: "14:45", endDate: "2026-06-20",
+    city: "韩国首尔", venue: "Oil Tank Culture Park",
+    status: "ended", statusLabel: "已结束",
+    price: "99,000", currency: "KRW",
+    organizer: "RAPBEAT Festival",
+    ticketUrl: "https://litt.ly/rapbeat",
+    officialUrl: "https://litt.ly/rapbeat",
+    description: [
+      "韩国大型嘻哈音乐节 RAPBEAT 2026。",
+      "RIIZE 出演6月20日场次。",
+      "与 ZICO、泰容(NCT)、H1GHR MUSIC 等艺人同台。",
+      "在首尔 Oil Tank Culture Park 举办。"
+    ],
+    highlights: [{ title: "🎤 嘻哈音乐节", content: "韩国代表性嘻哈音乐节，R&B、Hip-Hop 艺人齐聚。" }],
+    ticketNote: "活动已结束"
+  },
+  {
     id: 19, title: "RIIZE POP-UP 快闪店", subtitle: "RIIZE POP-UP [ARCHIIVE²]",
     type: "event", typeLabel: "快闪店",
     date: "2026-06-16", time: "12:00", endDate: "2026-06-28",
@@ -281,6 +373,79 @@ window.RIIZE_EVENTS = [
     ],
     highlights: [{ title: "🛍️ 限定周边", content: "快闪店限定周边商品，还有特别打卡点和随机小卡。" }],
     ticketNote: "免费入场，周边可现场购买"
+  },
+  {
+    id: 29, title: "BUSAN ONE ASIA FESTIVAL", subtitle: "釜山同一个亚洲文化节 BOF 2026",
+    type: "festival", typeLabel: "音乐节",
+    date: "2026-06-28", time: "19:00", endDate: "2026-06-28",
+    city: "韩国釜山", venue: "釜山亚运会主体育场",
+    status: "ended", statusLabel: "已结束",
+    price: "以官方为准", currency: "KRW",
+    organizer: "釜山广域市 / BOF",
+    ticketUrl: "https://world.nol.com/ja/ticket/places/26000246/products/26004729",
+    officialUrl: "https://world.nol.com/ja/ticket/places/26000246/products/26004729",
+    description: [
+      "2026 釜山同一个亚洲文化节（BOF）。",
+      "RIIZE 出演6月28日闭幕演唱会。",
+      "可容纳8万人的大型体育场，阵容豪华。"
+    ],
+    highlights: [{ title: "🏙️ 釜山文化节", content: "釜山年度最大规模 K-POP 演唱会，在亚运会主体育场举办。" }],
+    ticketNote: "活动已结束"
+  },
+  {
+    id: 30, title: "K2O Songkran Music Festival", subtitle: "泰国泼水节音乐节",
+    type: "festival", typeLabel: "音乐节",
+    date: "2026-04-14", time: "23:15", endDate: "2026-04-14",
+    city: "泰国曼谷", venue: "S2O LAND",
+    status: "ended", statusLabel: "已结束",
+    price: "以官方为准", currency: "THB",
+    organizer: "K2O Festival",
+    ticketUrl: "https://www.k2ofestival.com/",
+    officialUrl: "https://www.k2ofestival.com/",
+    description: [
+      "泰国泼水节 K2O 音乐节，RIIZE 确定出演。",
+      "宋干节期间举办，水、光、声、色结合的狂欢派对。",
+      "RIIZE 带来完整一小时的舞台表演。"
+    ],
+    highlights: [{ title: "💦 泰国泼水节", content: "泰国宋干节期间的大型水上音乐节，泼水+演出双重狂欢。" }],
+    ticketNote: "活动已结束"
+  },
+  {
+    id: 31, title: "Weibo 国际娱乐盛典", subtitle: "WIEA 2026 澳门",
+    type: "festival", typeLabel: "颁奖礼",
+    date: "2026-04-25", time: "19:00", endDate: "2026-04-25",
+    city: "中国澳门", venue: "银河综艺馆 Galaxy Arena",
+    status: "ended", statusLabel: "已结束",
+    price: "758-2,358", currency: "MOP",
+    organizer: "微博 / 银河综艺馆",
+    ticketUrl: "https://www.galaxymacau.com/ja/offers/entertainment/2026-weibo-international-entertainment-awards-macau",
+    officialUrl: "https://www.galaxymacau.com/ja/offers/entertainment/2026-weibo-international-entertainment-awards-macau",
+    description: [
+      "2026 微博国际娱乐盛典 WIEA 在澳门举办。",
+      "RIIZE 出席并带来表演舞台。",
+      "与 Jay Park、BILLKIN 等艺人同台。"
+    ],
+    highlights: [{ title: "🏆 国际盛典", content: "微博主办的国际娱乐盛典，中韩艺人齐聚澳门银河综艺馆。" }],
+    ticketNote: "活动已结束"
+  },
+  {
+    id: 32, title: "Lollapalooza 南美巡演", subtitle: "阿根廷/智利/巴西 三站",
+    type: "festival", typeLabel: "音乐节",
+    date: "2026-03-15", time: "09:30", endDate: "2026-03-22",
+    city: "阿根廷/智利/巴西", venue: "Lollapalooza 各站",
+    status: "ended", statusLabel: "已结束",
+    price: "以各站为准", currency: "USD",
+    organizer: "Lollapalooza",
+    ticketUrl: "https://www.ticketmaster.com.br/event/lollapaloozabr",
+    officialUrl: "https://www.ticketmaster.com.br/event/lollapaloozabr",
+    description: [
+      "RIIZE 首次登上 Lollapalooza 南美三站舞台。",
+      "阿根廷站（3/15）、智利站（3/19）、巴西站（3/22）。",
+      "在全球顶级音乐节上展现 RIIZE 的舞台魅力。",
+      "巴西站当天正好是 ANTON 的生日。"
+    ],
+    highlights: [{ title: "🌎 全球顶级音乐节", content: "Lollapalooza 是世界上最大的音乐节之一，RIIZE 首次登上南美舞台。" }],
+    ticketNote: "活动已结束"
   },
   {
     id: 9, title: "RIIZE 日本粉丝见面会 2026", subtitle: "RIIZE JAPAN FANMEETING 2026 RPG",
