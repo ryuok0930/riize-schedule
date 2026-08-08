@@ -1130,7 +1130,7 @@ body {
   <div class="hero-content">
     <div class="hero-dolls"></div>
     <h1 class="hero-title">RIIZE</h1>
-    <p class="hero-subtitle">全 球 活 动 汇 总 · by Ryuok</p>
+    <p class="hero-subtitle">全 球 活 动 汇 总 · Ryuok</p>
     <div class="hero-stats">
       <div class="stat-item">
         <div class="stat-num" id="statTotal">32</div>
@@ -1263,7 +1263,7 @@ body {
   <div class="dolls-row"></div>
   <p class="slogan">RISE and REALIZE, we are RIIZE 💜</p>
   <p>数据来源：Weverse / SMTOWN / 官方公告 · 所有时间均为北京时间</p>
-  <p style="font-size:11px;opacity:0.7;margin-top:4px;">本页面仅供粉丝学习交流使用 · by Ryuok</p>
+  <p style="font-size:11px;opacity:0.7;margin-top:4px;">本页面仅供粉丝学习交流使用 · Ryuok</p>
 </div>
 
 <div class="notif-panel" id="notifPanel">
@@ -1621,7 +1621,7 @@ function initNotifications() {
   notifications = [{
     id: 1,
     title: "🎀 欢迎使用 RIIZE 全球活动汇总！",
-    desc: "这是你的专属 BRIIZE 日程应用～所有时间均为北京时间，点击活动可查看详情和购票链接。by Ryuok",
+    desc: "这是你的专属 BRIIZE 日程应用～所有时间均为北京时间，点击活动可查看详情和购票链接。Ryuok",
     time: "刚刚",
     unread: true
   }];
@@ -1672,7 +1672,7 @@ function requestNotify() {
   }
   Notification.requestPermission().then(p => {
     if (p === 'granted') {
-      new Notification('💜 RIIZE 活动提醒已开启', { body: '有新活动或活动即将开始时会通知你哦～ by Ryuok' });
+      new Notification('💜 RIIZE 活动提醒已开启', { body: '有新活动或活动即将开始时会通知你哦～ Ryuok' });
       notifications.unshift({
         id: Date.now(),
         title: "🔔 通知提醒已开启！",
