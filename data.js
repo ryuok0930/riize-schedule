@@ -6,8 +6,8 @@ window.RIIZE_EVENTS = [
     city: "韩国高阳", venue: "KINTEX",
     status: "upcoming", statusLabel: "即将开始",
     price: "154,000", currency: "KRW",
-    ticketPlatform: "Creatrip / Interpark",
-    ticketTime: "以官方公告为准",
+    ticketPlatform: "Creatrip / Interpark / Melon Ticket",
+    ticketTime: "优先售票：6月23日 13:00 北京时间<br>一般售票：6月25日 12:00 北京时间",
     organizer: "SBS",
     ticketUrl: "https://creatrip.com/zh-CN/spot/14266",
     officialUrl: "https://creatrip.com/zh-CN/spot/14266",
@@ -26,9 +26,9 @@ window.RIIZE_EVENTS = [
     city: "韩国高阳", venue: "KINTEX",
     status: "ended", statusLabel: "已结束",
     price: "165,000", currency: "KRW",
-    ticketPlatform: "MADE ON / Interpark",
-    ticketTime: "以官方公告为准",
-    organizer: "SBS / MADE Entertainment",
+    ticketPlatform: "Melon Ticket / Ticket Link / NOL / 29CM",
+    ticketTime: "分轮次售票<br>早鸟票：2025年9月30日开售<br>最终票价：165,000韩元",
+    organizer: "MADE Entertainment",
     ticketUrl: "https://www.waterbomb.co.kr/",
     officialUrl: "https://www.waterbomb.co.kr/",
     description: [
@@ -87,10 +87,10 @@ window.RIIZE_EVENTS = [
     status: "upcoming", statusLabel: "即将开始",
     price: "1,280", currency: "MOP",
     ticketPlatform: "大麦网 / 猫眼 / 银河票务",
-    ticketTime: "以官方公告为准",
+    ticketTime: "一般售票：7月22日 13:00 北京时间",
     organizer: "腾讯音乐娱乐集团",
-    ticketUrl: "https://www.setlist.fm/setlists/riize-63f99e87.html",
-    officialUrl: "https://www.setlist.fm/setlists/riize-63f99e87.html",
+    ticketUrl: "https://www.damai.cn/",
+    officialUrl: "https://www.damai.cn/",
     description: [
       "2026 TMEA 腾讯音乐娱乐盛典，RIIZE 确定出席。",
       "国际音乐盛典，汇聚全球顶尖艺人。",
@@ -206,7 +206,7 @@ window.RIIZE_EVENTS = [
     status: "soldout", statusLabel: "已售罄",
     price: "121,000", currency: "KRW",
     ticketPlatform: "NOL / Melon Ticket",
-    ticketTime: "以官方公告为准",
+    ticketTime: "会员先行（全球）：7月28日 19:00 北京时间<br>一般售票：7月29日 19:00 北京时间<br>轮椅席会员：7月27日 09:00 北京时间<br>轮椅席一般：7月29日 09:00 北京时间",
     organizer: "SM Entertainment / NOL",
     ticketUrl: "https://world.nol.com/en/articles/85486922-78da-44c2-b695-c16e3edc2b51",
     officialUrl: "https://weverse.io/RIIZE/notice",
@@ -229,4 +229,397 @@ window.RIIZE_EVENTS = [
   {
     id: 3, title: "RIIZE 北美巡演 - 纽约站", subtitle: "2026 RIIZE CONCERT TOUR [RIIZING LOUD] in USA",
     type: "concert", typeLabel: "演唱会",
-    date: "202
+    date: "2026-11-01", time: "08:00", endDate: "2026-11-01",
+    city: "美国纽约", venue: "New York, NY",
+    status: "upcoming", statusLabel: "即将开票",
+    price: "198", currency: "USD",
+    ticketPlatform: "Ticketmaster / AXS",
+    ticketTime: "以官方公告为准",
+    organizer: "SM Entertainment / AEG Presents",
+    ticketUrl: "https://www.ticketmaster.com/", officialUrl: "https://weverse.io/RIIZE/notice",
+    description: [
+      "RIIZE 首次世界巡演 [RIIZING LOUD] 北美站。",
+      "纽约站是北美巡演的重要一站，将带来完整的演唱会舞台。",
+      "具体场馆和开票信息待官方公布，请持续关注。"
+    ],
+    highlights: [{ title: "🌎 世界巡演", content: "RIIZE 首次世界巡演覆盖亚洲和北美21个城市，累计吸引42万+观众。北美站是巡演的重要延伸。" }],
+    ticketNote: "开票时间待定，请关注官方公告"
+  },
+  {
+    id: 4, title: "RIIZE 北美巡演 - 华盛顿站", subtitle: "2026 RIIZE CONCERT TOUR [RIIZING LOUD] in USA",
+    type: "concert", typeLabel: "演唱会",
+    date: "2026-11-02", time: "08:00", endDate: "2026-11-02",
+    city: "美国华盛顿", venue: "Washington, DC",
+    status: "upcoming", statusLabel: "即将开票",
+    price: "188", currency: "USD",
+    ticketPlatform: "Ticketmaster / AXS",
+    ticketTime: "以官方公告为准",
+    organizer: "SM Entertainment / AEG Presents",
+    ticketUrl: "https://www.ticketmaster.com/", officialUrl: "https://weverse.io/RIIZE/notice",
+    description: ["RIIZE 首次世界巡演 [RIIZING LOUD] 北美华盛顿站。", "紧跟纽约站之后，华盛顿站将延续巡演的火热氛围。", "具体场馆和开票信息待官方公布。"],
+    highlights: [], ticketNote: "开票时间待定，请关注官方公告"
+  },
+  {
+    id: 5, title: "RIIZE 北美巡演 - 亚特兰大站", subtitle: "2026 RIIZE CONCERT TOUR [RIIZING LOUD] in USA",
+    type: "concert", typeLabel: "演唱会",
+    date: "2026-11-04", time: "09:00", endDate: "2026-11-04",
+    city: "美国德卢斯（亚特兰大）", venue: "Duluth, GA（亚特兰大地区）",
+    status: "upcoming", statusLabel: "即将开票",
+    price: "178", currency: "USD",
+    ticketPlatform: "Ticketmaster / AXS",
+    ticketTime: "以官方公告为准",
+    organizer: "SM Entertainment / AEG Presents",
+    ticketUrl: "https://www.ticketmaster.com/", officialUrl: "https://weverse.io/RIIZE/notice",
+    description: ["RIIZE 首次世界巡演 [RIIZING LOUD] 北美亚特兰大地区站。", "演出地点位于佐治亚州德卢斯，属于亚特兰大 metropolitan area。", "具体场馆和开票信息待官方公布。"],
+    highlights: [], ticketNote: "开票时间待定，请关注官方公告"
+  },
+  {
+    id: 6, title: "RIIZE 北美巡演 - 西雅图站", subtitle: "2026 RIIZE CONCERT TOUR [RIIZING LOUD] in USA",
+    type: "concert", typeLabel: "演唱会",
+    date: "2026-11-07", time: "11:00", endDate: "2026-11-07",
+    city: "美国西雅图", venue: "Seattle, WA",
+    status: "upcoming", statusLabel: "即将开票",
+    price: "188", currency: "USD",
+    ticketPlatform: "Ticketmaster / AXS",
+    ticketTime: "以官方公告为准",
+    organizer: "SM Entertainment / AEG Presents",
+    ticketUrl: "https://www.ticketmaster.com/", officialUrl: "https://weverse.io/RIIZE/notice",
+    description: ["RIIZE 首次世界巡演 [RIIZING LOUD] 北美西雅图站。", "西雅图是美国西北部重要城市，当地 BRIIZE 终于等到了 RIIZE 的到来。", "具体场馆和开票信息待官方公布。"],
+    highlights: [], ticketNote: "开票时间待定，请关注官方公告"
+  },
+  {
+    id: 7, title: "RIIZE 北美巡演 - 旧金山站", subtitle: "2026 RIIZE CONCERT TOUR [RIIZING LOUD] in USA",
+    type: "concert", typeLabel: "演唱会",
+    date: "2026-11-09", time: "11:00", endDate: "2026-11-09",
+    city: "美国旧金山", venue: "San Francisco, CA",
+    status: "upcoming", statusLabel: "即将开票",
+    price: "198", currency: "USD",
+    ticketPlatform: "Ticketmaster / AXS",
+    ticketTime: "以官方公告为准",
+    organizer: "SM Entertainment / AEG Presents",
+    ticketUrl: "https://www.ticketmaster.com/", officialUrl: "https://weverse.io/RIIZE/notice",
+    description: ["RIIZE 首次世界巡演 [RIIZING LOUD] 北美旧金山站。", "旧金山湾区是韩流文化在美国的重要据点。", "具体场馆和开票信息待官方公布。"],
+    highlights: [], ticketNote: "开票时间待定，请关注官方公告"
+  },
+  {
+    id: 8, title: "RIIZE 北美巡演 - 洛杉矶站", subtitle: "2026 RIIZE CONCERT TOUR [RIIZING LOUD] in USA",
+    type: "concert", typeLabel: "演唱会",
+    date: "2026-11-11", time: "11:00", endDate: "2026-11-11",
+    city: "美国洛杉矶", venue: "Los Angeles, CA",
+    status: "upcoming", statusLabel: "即将开票",
+    price: "228", currency: "USD",
+    ticketPlatform: "Ticketmaster / AXS",
+    ticketTime: "以官方公告为准",
+    organizer: "SM Entertainment / AEG Presents",
+    ticketUrl: "https://www.ticketmaster.com/", officialUrl: "https://weverse.io/RIIZE/notice",
+    description: ["RIIZE 首次世界巡演 [RIIZING LOUD] 北美洛杉矶站。", "洛杉矶是北美巡演的重要一站，预计将带来精彩的收官演出。", "具体场馆和开票信息待官方公布。"],
+    highlights: [{ title: "🌟 北美收官", content: "洛杉矶站预计是北美巡演的收官站，将有特别舞台准备！" }],
+    ticketNote: "开票时间待定，请关注官方公告"
+  },
+  {
+    id: 17, title: "RIIZE 韩国线下签售会", subtitle: "The 2nd Mini Album 《II》 ONE-DAY SPECIAL EVENT",
+    type: "fansign", typeLabel: "签售会",
+    date: "2026-07-19", time: "12:00", endDate: "2026-07-19",
+    city: "韩国首尔", venue: "首尔（非公开场地）",
+    status: "ended", statusLabel: "已结束",
+    price: "23,000", currency: "KRW",
+    ticketPlatform: "Ktown4u抽选",
+    ticketTime: "以官方公告为准",
+    organizer: "Ktown4u / SM Entertainment",
+    ticketUrl: "https://timetreeapp.com/public_calendars/riize_briize_rise2394/events/2986222044209704574",
+    officialUrl: "https://timetreeapp.com/public_calendars/riize_briize_rise2394/events/2986222044209704574",
+    description: [
+      "RIIZE 第二张迷你专辑《II》发行纪念特别 ONE-DAY SPECIAL EVENT & 线下签售会。",
+      "全天共 5 场签名会，分别在不同时间段进行。",
+      "通过 Ktown4u 购买专辑参与抽选。"
+    ],
+    highlights: [{ title: "🎁 特别活动", content: "一天五场签售，与粉丝近距离互动的特别机会。" }],
+    ticketNote: "已结束"
+  },
+  {
+    id: 18, title: "RIIZE 二辑大阪线下活动", subtitle: "The 2nd Mini Album 『II』 Offline Event in Osaka",
+    type: "fansign", typeLabel: "签售会",
+    date: "2026-07-22", time: "13:00", endDate: "2026-07-22",
+    city: "日本大阪", venue: "大阪府内某地（当选者通知）",
+    status: "ended", statusLabel: "已结束",
+    price: "3,300", currency: "JPY",
+    ticketPlatform: "RIIZE JAPAN官网抽选",
+    ticketTime: "以官方公告为准",
+    organizer: "SM Entertainment / RIIZE JAPAN",
+    ticketUrl: "https://riizeofficial.jp/news/20260617/",
+    officialUrl: "https://riizeofficial.jp/news/20260617/",
+    description: [
+      "RIIZE 第二张迷你专辑『II』日本大阪线下活动。",
+      "迷你谈话秀 + 团体签名会，与关西粉丝见面。",
+      "购买日本版二辑获得抽选资格。"
+    ],
+    highlights: [],
+    ticketNote: "已结束"
+  },
+  {
+    id: 19, title: "RIIZE POP-UP 快闪店", subtitle: "RIIZE POP-UP [ARCHIIVE²]",
+    type: "event", typeLabel: "快闪店",
+    date: "2026-06-16", time: "12:00", endDate: "2026-06-28",
+    city: "韩国首尔", venue: "首尔麻浦区光成路 41-11 Layer Studio",
+    status: "ended", statusLabel: "已结束",
+    price: "免费入场", currency: "KRW",
+    ticketPlatform: "现场购买 / 无需门票",
+    ticketTime: "无需门票<br>现场直接入场",
+    organizer: "SM Entertainment",
+    ticketUrl: "https://rise-realize.com/archiive%C2%B2/",
+    officialUrl: "https://rise-realize.com/archiive%C2%B2/",
+    description: [
+      "RIIZE 官方 POP-UP 快闪店 [ARCHIIVE²] 在首尔举办。",
+      "售卖 RIIZE 官方周边商品，还有特别拍照区和互动环节。",
+      "为期 13 天，吸引了大量粉丝前往打卡。"
+    ],
+    highlights: [{ title: "🛍️ 限定周边", content: "快闪店限定周边商品，还有特别打卡点和随机小卡。" }],
+    ticketNote: "免费入场，周边可现场购买"
+  },
+  {
+    id: 27, title: "ULSAN MUSIC FESTIVAL 蔚山音乐节", subtitle: "울산서머뮤직페스티벌 2026",
+    type: "festival", typeLabel: "音乐节",
+    date: "2026-06-15", time: "18:00", endDate: "2026-06-15",
+    city: "韩国蔚山", venue: "蔚山太和江市民公园",
+    status: "ended", statusLabel: "已结束",
+    price: "免费", currency: "KRW",
+    ticketPlatform: "现场免费 / 无需购票",
+    ticketTime: "免费入场<br>无需购票",
+    organizer: "蔚山市 / 蔚山文化财团",
+    ticketUrl: "https://www.ulsan.go.kr/",
+    officialUrl: "https://www.ulsan.go.kr/",
+    description: [
+      "2026 蔚山夏日音乐节，RIIZE 确定出演压轴。",
+      "在蔚山太和江市民公园举办，免费入场。",
+      "吸引了数万观众现场观看。"
+    ],
+    highlights: [{ title: "🎵 免费音乐节", content: "蔚山市主办的免费夏日音乐节，RIIZE 压轴出演。" }],
+    ticketNote: "活动已结束"
+  },
+  {
+    id: 28, title: "RAPBEAT 2026 嘻哈音乐节", subtitle: "랩비트 페스티벌 2026",
+    type: "festival", typeLabel: "音乐节",
+    date: "2026-06-20", time: "14:00", endDate: "2026-06-21",
+    city: "韩国首尔", venue: "首尔麻浦区 Oil Tank",
+    status: "ended", statusLabel: "已结束",
+    price: "132,000", currency: "KRW",
+    ticketPlatform: "litt.ly/rapbeat / Interpark",
+    ticketTime: "以官方公告为准",
+    organizer: "RAPBEAT 组委会",
+    ticketUrl: "https://rapbeat.co.kr/",
+    officialUrl: "https://rapbeat.co.kr/",
+    description: [
+      "韩国大型嘻哈音乐节 RAPBEAT 2026，RIIZE 确定出演。",
+      "在首尔 Oil Tank 举办，两天活动。",
+      "RIIZE 带来跨界特别舞台。"
+    ],
+    highlights: [{ title: "🎤 嘻哈音乐节", content: "韩国最大嘻哈音乐节之一，RIIZE 带来跨界表演。" }],
+    ticketNote: "活动已结束"
+  },
+  {
+    id: 29, title: "BUSAN ONE ASIA FESTIVAL 釜山BOF", subtitle: "부산원아시아페스티벌 2026",
+    type: "festival", typeLabel: "音乐节",
+    date: "2026-06-28", time: "19:00", endDate: "2026-06-28",
+    city: "韩国釜山", venue: "釜山亚运会主体育场",
+    status: "ended", statusLabel: "已结束",
+    price: "110,000", currency: "KRW",
+    ticketPlatform: "NOL / Interpark",
+    ticketTime: "以官方公告为准",
+    organizer: "釜山广域市 / BOF 组委会",
+    ticketUrl: "https://www.bof.or.kr/",
+    officialUrl: "https://www.bof.or.kr/",
+    description: [
+      "2026 釜山 ONE ASIA FESTIVAL 闭幕式演唱会，RIIZE 确定出演。",
+      "在釜山亚运会主体育场举办。",
+      "BOF 是釜山代表性的 K-POP 音乐节。"
+    ],
+    highlights: [{ title: "🏙️ 釜山音乐节", content: "釜山代表性 K-POP 音乐节，亚运会主体育场举办。" }],
+    ticketNote: "活动已结束"
+  },
+  {
+    id: 9, title: "RIIZE 日本粉丝见面会 2026", subtitle: "RIIZE JAPAN FANMEETING 2026 RPG",
+    type: "fanmeeting", typeLabel: "粉丝见面会",
+    date: "2026-07-15", time: "17:00", endDate: "2026-07-23",
+    city: "日本东京/福冈/大阪", venue: "国立代代木竞技场第一体育馆 等",
+    status: "ended", statusLabel: "已结束",
+    price: "12,800", currency: "JPY",
+    ticketPlatform: "tickebo.jp（抽选）/ e+ / ぴあ",
+    ticketTime: "FC最速先行（抽选）：4月24日 17:00 北京时间<br>FC 2次先行（抽选）：5月18日 17:00 北京时间<br>一般发售：未公布",
+    organizer: "SM Entertainment Japan / BRIIZE JAPAN",
+    ticketUrl: "https://riizeofficial.jp/news/20260424/",
+    officialUrl: "https://www.riizeofficial.jp/",
+    description: [
+      "RIIZE 第二次日本粉丝见面会「RPG - RIIZE PLAYING GAME -」",
+      "在东京、福冈、大阪等多个城市举办。",
+      "新曲《Sunburst》在日本粉丝见面会上全球首唱。",
+      "粉丝见面会以「游戏」为主题，RIIZE 成员与 BRIIZE 一起玩游戏互动。"
+    ],
+    highlights: [
+      { title: "🎮 游戏主题", content: "以「RIIZE PLAYING GAME」为主题，成员们和粉丝一起参与各种游戏环节，互动性超强！" },
+      { title: "🎵 新曲首唱", content: "新单曲《Sunburst》在日本 FM 全球首演！" }
+    ],
+    ticketNote: "活动已结束",
+    schedule: [
+      { date: "7月15日", time: "17:00", label: "东京 第1场（北京时间 16:00）" },
+      { date: "7月16日", time: "13:00", label: "东京 第2场（北京时间 12:00）" },
+      { date: "7月23日", time: "17:00", label: "福冈站（北京时间 16:00）" }
+    ]
+  },
+  {
+    id: 10, title: "RIIZE 1000 DAYS FAN PARTY", subtitle: "RIIZE OFFIICE",
+    type: "fanmeeting", typeLabel: "粉丝派对",
+    date: "2026-05-30", time: "12:00", endDate: "2026-05-30",
+    city: "韩国首尔", venue: "Songdo ConvensiA",
+    status: "ended", statusLabel: "已结束",
+    price: "55,000", currency: "KRW",
+    ticketPlatform: "Melon Ticket",
+    ticketTime: "会员先行：4月27日 19:00 北京时间<br>一般售票：以官方公告为准",
+    organizer: "SM Entertainment / Melon Ticket",
+    ticketUrl: "https://weverse.io/RIIZE/notice/34710",
+    officialUrl: "https://weverse.io/RIIZE/notice",
+    description: [
+      "RIIZE 出道 1000 天纪念粉丝派对「RIIZE OFFIICE」",
+      "以「办公室」为概念，一天两场（下午1点和6点 KST）。",
+      "全席统一票价 55,000 韩元。",
+      "通过 Melon Ticket 售票，BRIIZE 会员优先预售。"
+    ],
+    highlights: [{ title: "🏢 办公室概念", content: "以「RIIZE OFFICE」为主题，成员们化身办公室职员，和 BRIIZE 一起度过特别的一天！" }],
+    ticketNote: "活动已结束",
+    schedule: [
+      { date: "5月30日", time: "12:00", label: "第1场（北京时间 12:00 / KST 13:00）" },
+      { date: "5月30日", time: "17:00", label: "第2场（北京时间 17:00 / KST 18:00）" }
+    ]
+  },
+  {
+    id: 30, title: "K2O Songkran Music Festival 泼水节", subtitle: "K2O 송크란 뮤직 페스티벌",
+    type: "festival", typeLabel: "音乐节",
+    date: "2026-04-14", time: "14:00", endDate: "2026-04-14",
+    city: "泰国曼谷", venue: "S2O LAND",
+    status: "ended", statusLabel: "已结束",
+    price: "4,800", currency: "THB",
+    ticketPlatform: "K2O Festival官网",
+    ticketTime: "以官方公告为准",
+    organizer: "K2O Festival",
+    ticketUrl: "https://k2ofestival.com/",
+    officialUrl: "https://k2ofestival.com/",
+    description: [
+      "泰国泼水节 K2O Songkran Music Festival，RIIZE 确定出演。",
+      "在曼谷 S2O LAND 举办，是泰国最大的泼水音乐节。",
+      "RIIZE 带来泼水节特别舞台。"
+    ],
+    highlights: [{ title: "💦 泰国泼水节", content: "泰国最大泼水音乐节，宋干节特别活动。" }],
+    ticketNote: "活动已结束"
+  },
+  {
+    id: 31, title: "Weibo 国际娱乐盛典 WIEA", subtitle: "Weibo International Entertainment Awards 2026",
+    type: "festival", typeLabel: "颁奖礼",
+    date: "2026-04-25", time: "19:00", endDate: "2026-04-25",
+    city: "中国澳门", venue: "澳门银河综艺馆",
+    status: "ended", statusLabel: "已结束",
+    price: "1,580", currency: "MOP",
+    ticketPlatform: "银河票务 / 大麦网",
+    ticketTime: "以官方公告为准",
+    organizer: "微博 / 银河综艺馆",
+    ticketUrl: "https://ent.weibo.com/",
+    officialUrl: "https://ent.weibo.com/",
+    description: [
+      "2026 微博国际娱乐盛典 WIEA，RIIZE 获得年度国际艺人奖。",
+      "在澳门银河综艺馆举办。",
+      "RIIZE 带来获奖特别舞台。"
+    ],
+    highlights: [{ title: "🏆 微博盛典", content: "微博年度国际娱乐盛典，RIIZE 获奖并表演。" }],
+    ticketNote: "活动已结束"
+  },
+  {
+    id: 11, title: "RIIZING LOUD FINALE IN SEOUL", subtitle: "2026 RIIZE CONCERT TOUR [RIIZING LOUD] FINALE",
+    type: "concert", typeLabel: "演唱会",
+    date: "2026-03-06", time: "19:00", endDate: "2026-03-08",
+    city: "韩国首尔", venue: "KSPO Dome（奥林匹克体操竞技场）",
+    status: "ended", statusLabel: "已结束",
+    price: "VIP 198,000 / 一般 165,000", currency: "KRW",
+    ticketPlatform: "Melon Ticket",
+    ticketTime: "会员先行：1月6日 19:00 北京时间<br>一般售票：1月7日 19:00 北京时间",
+    organizer: "SM Entertainment / Dream Maker",
+    ticketUrl: "https://weverse.io/RIIZE/notice/32822",
+    officialUrl: "https://weverse.io/RIIZE/notice",
+    description: [
+      "RIIZE 首次世界巡演 [RIIZING LOUD] 首尔安可终场。",
+      "3月6日至8日连续三天在 KSPO Dome 举办，共吸引32,000名观众。",
+      "世界巡演历时8个月，覆盖21个城市，累计42万+观众。",
+      "所有场次在粉丝俱乐部预售阶段即全部售罄。"
+    ],
+    highlights: [
+      { title: "🎉 世界巡演收官", content: "历时8个月的首次世界巡演完美收官！21个城市、42万+观众见证 RIIZE 的成长。" },
+      { title: "💎 VIP 福利", content: "VIP 席位可参与演出前的 Sound Check 活动。" }
+    ],
+    ticketNote: "活动已结束",
+    schedule: [
+      { date: "3月6日", time: "19:00", label: "第1场（北京时间 19:00 / KST 20:00）" },
+      { date: "3月7日", time: "17:00", label: "第2场（北京时间 17:00 / KST 18:00）" },
+      { date: "3月8日", time: "15:00", label: "第3场（北京时间 15:00 / KST 16:00）" }
+    ]
+  },
+  {
+    id: 12, title: "RIIZE 东京巨蛋演唱会", subtitle: "[RIIZING LOUD] Special Edition in TOKYO DOME",
+    type: "concert", typeLabel: "演唱会",
+    date: "2026-02-21", time: "17:00", endDate: "2026-02-22",
+    city: "日本东京", venue: "东京巨蛋（Tokyo Dome）",
+    status: "ended", statusLabel: "已结束",
+    price: "14,800", currency: "JPY",
+    ticketPlatform: "tickebo.jp（抽选）/ e+ / ぴあ / 罗森票务",
+    ticketTime: "FC最速先行（抽选）：2025年9月13日开始<br>一般发售：未公布",
+    organizer: "SM Entertainment Japan / BRIIZE JAPAN",
+    ticketUrl: "https://www.riizeofficial.jp/news/20250913/",
+    officialUrl: "https://www.riizeofficial.jp/",
+    description: [
+      "RIIZE 首次东京巨蛋演唱会，创下 K-POP 男团最快登上东京巨蛋的纪录。",
+      "作为 [RIIZING LOUD] 巡演的 Special Edition，带来特别舞台配置。",
+      "指定席票价 14,800 日元（含税），系统手续费 1,000 日元。",
+      "每人每场最多可申请2张票。"
+    ],
+    highlights: [
+      { title: "🏆 纪录缔造", content: "RIIZE 以出道最短时间登上东京巨蛋的 K-POP 男团身份，创造了新纪录！" },
+      { title: "✨ Special Edition", content: "东京巨蛋特别版，有专属的舞台设计和特别曲目安排！" }
+    ],
+    ticketNote: "活动已结束"
+  },
+  {
+    id: 13, title: "SMTOWN LIVE 2025-26 in 福冈", subtitle: "SMTOWN LIVE WORLD TOUR",
+    type: "concert", typeLabel: "家族演唱会",
+    date: "2026-01-31", time: "16:00", endDate: "2026-02-01",
+    city: "日本福冈", venue: "福冈 PayPay Dome",
+    status: "ended", statusLabel: "已结束",
+    price: "13,800", currency: "JPY",
+    ticketPlatform: "e+ / ぴあ",
+    ticketTime: "以官方公告为准",
+    organizer: "SM Entertainment Japan",
+    ticketUrl: "https://smtown-official.jp/smtownlive_2025_26_fukuoka/",
+    officialUrl: "https://smtown-official.jp/",
+    description: [
+      "SMTOWN LIVE 2025-26 福冈站，RIIZE 参与演出。",
+      "在福冈 PayPay Dome 举办，两天共两场。",
+      "Beyond LIVE 线上直播票售价 6,500 日元（含税）。",
+      "SM 旗下艺人齐聚，包括东方神起、SUPER JUNIOR、少女时代、SHINee、EXO、Red Velvet、NCT、aespa、RIIZE、NCT WISH 等。"
+    ],
+    highlights: [], ticketNote: "活动已结束"
+  },
+  {
+    id: 14, title: "SMTOWN LIVE 2025-26 in 曼谷", subtitle: "SMTOWN LIVE WORLD TOUR",
+    type: "concert", typeLabel: "家族演唱会",
+    date: "2026-02-15", time: "18:00", endDate: "2026-02-16",
+    city: "泰国曼谷", venue: "曼谷（待定）",
+    status: "ended", statusLabel: "已结束",
+    price: "4,800", currency: "THB",
+    ticketPlatform: "Thai Ticket Major",
+    ticketTime: "以官方公告为准",
+    organizer: "SM Entertainment",
+    ticketUrl: "https://weverse.io/RIIZE/notice/32213",
+    officialUrl: "https://weverse.io/RIIZE/notice",
+    description: [
+      "SMTOWN LIVE 2025-26 曼谷站，RIIZE 作为 SM 旗下艺人参与。",
+      "与 SUPER JUNIOR、少女时代、SHINee、EXO、Red Velvet、NCT、aespa 等艺人同台。",
+      "BRIIZE 会员可参与粉丝俱乐部预售。"
+    ],
+    highlights: [], ticketNote: "活动已结束"
+  }
+];
