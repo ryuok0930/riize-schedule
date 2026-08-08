@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-RIIZE 官方活动自动爬取脚本 v4.0
+RIIZE 官方活动自动爬取脚本 v5.0
 功能：从 SMTOWN 官网、Weverse 等官方渠道自动爬取 RIIZE 最新活动公告
-      自动提取购票平台、售票时间、票价，自动转换为北京时间
+      自动提取所有类型售票时间（会员/一般/轮椅席），自动转换为北京时间
       自动更新 data.js，配合 GitHub Actions 实现全自动更新
 """
 
@@ -14,6 +14,7 @@ import re
 import os
 from datetime import datetime, timedelta
 import time
+from urllib.parse import urlparse
 
 # ===== 官方来源白名单（只爬这些域名，保证数据来源官方） =====
 OFFICIAL_SOURCES = [
@@ -77,15 +78,35 @@ PRICE_PATTERNS = [
     (r'(\d{1,3}(?:,\d{3})*)\s*(?:元|CNY|人民币)', 'CNY'),
 ]
 
-# ===== 售票时间正则（会员先行 + 一般售票） =====
-MEMBER_TIME_PATTERNS = [
-    r'(?:팬클럽|팬클럽선예매|会员先行|FC先行|pre-sale|presale|member.*?sale)[^\d]{0,20}(\d{1,2})[월月/](\d{1,2})[일日/]?[^\d]{0,10}(\d{1,2})[:시时](\d{1,2})[분分]?',
-    r'(?:팬클럽|会员先行|FC先行)[^\d]{0,20}(\d{1,2})月\s*(\d{1,2})日[^\d]{0,10}(\d{1,2})[:：](\d{1,2})',
+# ========== 售票时间分类关键词 ==========
+# 会员先行（普通）
+MEMBER_KEYWORDS = [
+    "粉丝俱乐部预售", "粉丝俱乐部预购", "팬클럽선예매", "팬클럽 예매",
+    "会员先行", "FC先行", "pre-sale", "presale", "fan club",
+    "韩国本土页面 粉丝俱乐部预售", "全球页面 粉丝俱乐部预售"
 ]
 
-GENERAL_TIME_PATTERNS = [
-    r'(?:일반|一般售票|一般发售|general sale)[^\d]{0,20}(\d{1,2})[월月/](\d{1,2})[일日/]?[^\d]{0,10}(\d{1,2})[:시时](\d{1,2})[분分]?',
-    r'(?:일반|一般)[^\d]{0,20}(\d{1,2})月\s*(\d{1,2})日[^\d]{0,10}(\d{1,2})[:：](\d{1,2})',
+# 一般售票（普通）
+GENERAL_KEYWORDS = [
+    "普通公售", "一般售票", "一般发售", "일반", "general sale",
+    "公售", "正式售票", "일반예매"
+]
+
+# 轮椅席关键词（用于识别）
+WHEELCHAIR_KEYWORDS = [
+    "轮椅", "휠체어", "wheelchair", "Wheelchair", "WHEELCHAIR"
+]
+
+# 时间正则：支持多种格式
+# 格式1: 2026-07-27 (周一) 20:00
+# 格式2: 2026年7月27日 20:00
+# 格式3: 7月27日 20:00
+# 格式4: 07/27 20:00
+TIME_PATTERNS = [
+    # 完整日期 + 时间: 2026-07-27 20:00 或 2026.07.27 20:00
+    r'(\d{4})[.\-年](\d{1,2})[.\-월月](\d{1,2})[일日]?[^\d]{0,15}(\d{1,2})[:시时](\d{1,2})[분分]?',
+    # 月日 + 时间: 7月27日 20:00 或 07/27 20:00
+    r'(\d{1,2})[월月/](\d{1,2})[일日/]?[^\d]{0,10}(\d{1,2})[:시时](\d{1,2})[분分]?',
 ]
 
 
@@ -99,26 +120,17 @@ def jst_to_bj(hour, minute=0):
     return (hour - 1) % 24, minute
 
 
-def is_official_content(title, content):
-    """五重安全过滤：验证内容是否为官方活动公告"""
-    text = f"{title} {content}"
-    
-    # 1. 必须包含 RIIZE 关键词
-    has_riize = any(kw in text for kw in RIIZE_KEYWORDS)
-    if not has_riize:
+def is_official_url(url):
+    """检查URL是否来自官方域名"""
+    try:
+        parsed = urlparse(url)
+        domain = parsed.netloc.lower()
+        for source in OFFICIAL_SOURCES:
+            if source["domain"] in domain:
+                return True
         return False
-    
-    # 2. 必须包含活动关键词
-    has_activity = any(kw in text for kw in ACTIVITY_KEYWORDS)
-    if not has_activity:
+    except:
         return False
-    
-    # 3. 不能包含黑名单关键词
-    has_blacklist = any(kw.lower() in text.lower() for kw in BLACKLIST_KEYWORDS)
-    if has_blacklist:
-        return False
-    
-    return True
 
 
 def extract_ticket_url(detail_url, source_domain):
@@ -138,16 +150,40 @@ def extract_ticket_url(detail_url, source_domain):
         # 查找购票相关链接
         ticket_keywords = ["ticket", "티켓", "チケット", "购票", "售票", "reservation", "예매", "予約"]
         
+        best_ticket_url = None
+        best_score = 0
+        
         for a_tag in soup.find_all("a", href=True):
             href = a_tag["href"]
             text = a_tag.get_text(strip=True).lower()
+            href_lower = href.lower()
             
-            # 检查链接文本是否包含购票关键词
-            if any(kw.lower() in text for kw in ticket_keywords):
+            score = 0
+            
+            # 检查链接文本
+            for kw in ticket_keywords:
+                if kw.lower() in text:
+                    score += 20
+                    break
+            
+            # 检查URL中的关键词
+            for kw in ticket_keywords:
+                if kw.lower() in href_lower:
+                    score += 5
+                    break
+            
+            # 优先选择票务网站的链接
+            if score > best_score and score >= 10:
+                best_score = score
+                best_ticket_url = href
                 if href.startswith("http"):
-                    return href
+                    best_ticket_url = href
                 elif href.startswith("/"):
-                    return f"https://{source_domain}{href}"
+                    best_ticket_url = f"https://{source_domain}{href}"
+        
+        if best_ticket_url:
+            print(f"      🎫 找到购票链接: {best_ticket_url}")
+            return best_ticket_url
         
         return None
         
@@ -169,7 +205,7 @@ def extract_ticket_details(detail_url, source_domain, timezone='KST'):
             return {}
         
         soup = BeautifulSoup(resp.text, "html.parser")
-        text = soup.get_text(separator=" ", strip=True)
+        text = soup.get_text(separator="\n", strip=True)
         
         details = {}
         
@@ -183,46 +219,144 @@ def extract_ticket_details(detail_url, source_domain, timezone='KST'):
             details["ticketPlatform"] = " / ".join(list(dict.fromkeys(platforms_found))[:4])
             print(f"      🏪 购票平台: {details['ticketPlatform']}")
         
-        # 2. 提取售票时间（会员先行 + 一般售票）
-        member_time = None
-        general_time = None
+        # 2. 提取所有售票时间（按行处理，分类显示）
+        lines = text.split('\n')
+        all_ticket_times = []  # 存储所有找到的售票时间
         
-        for pattern in MEMBER_TIME_PATTERNS:
-            match = re.search(pattern, text)
-            if match:
-                month, day, hour, minute = match.groups()
-                month, day, hour, minute = int(month), int(day), int(hour), int(minute)
-                if timezone == 'KST':
-                    bj_h, bj_m = kst_to_bj(hour, minute)
-                elif timezone == 'JST':
-                    bj_h, bj_m = jst_to_bj(hour, minute)
-                else:
-                    bj_h, bj_m = hour, minute
-                member_time = f"会员先行：{month}月{day}日 {bj_h:02d}:{bj_m:02d} 北京时间"
-                print(f"      ⏰ 会员先行: {member_time}")
-                break
+        def parse_time_from_line(line):
+            """从一行文本中提取时间，返回 (month, day, hour, minute)"""
+            for pattern in TIME_PATTERNS:
+                match = re.search(pattern, line)
+                if match:
+                    groups = match.groups()
+                    if len(groups) == 5:
+                        # 完整日期格式：年 月 日 时 分
+                        year, month, day, hour, minute = groups
+                        return int(month), int(day), int(hour), int(minute)
+                    elif len(groups) == 4:
+                        # 月日格式：月 日 时 分
+                        month, day, hour, minute = groups
+                        return int(month), int(day), int(hour), int(minute)
+            return None
         
-        for pattern in GENERAL_TIME_PATTERNS:
-            match = re.search(pattern, text)
-            if match:
-                month, day, hour, minute = match.groups()
-                month, day, hour, minute = int(month), int(day), int(hour), int(minute)
-                if timezone == 'KST':
-                    bj_h, bj_m = kst_to_bj(hour, minute)
-                elif timezone == 'JST':
-                    bj_h, bj_m = jst_to_bj(hour, minute)
-                else:
-                    bj_h, bj_m = hour, minute
-                general_time = f"一般售票：{month}月{day}日 {bj_h:02d}:{bj_m:02d} 北京时间"
-                print(f"      ⏰ 一般售票: {general_time}")
-                break
+        def convert_to_bj(month, day, hour, minute):
+            """转换为北京时间"""
+            if timezone == 'KST' or timezone == 'JST':
+                bj_h, bj_m = kst_to_bj(hour, minute)
+            else:
+                bj_h, bj_m = hour, minute
+            return month, day, bj_h, bj_m
         
-        if member_time and general_time:
-            details["ticketTime"] = f"{member_time}<br>{general_time}"
-        elif member_time:
-            details["ticketTime"] = member_time
-        elif general_time:
-            details["ticketTime"] = general_time
+        def classify_line(line):
+            """判断一行属于哪种售票类型"""
+            line_lower = line.lower()
+            is_wheelchair = any(kw.lower() in line_lower for kw in WHEELCHAIR_KEYWORDS)
+            
+            # 检查是否是会员先行
+            is_member = any(kw.lower() in line_lower for kw in MEMBER_KEYWORDS)
+            # 检查是否是一般售票
+            is_general = any(kw.lower() in line_lower for kw in GENERAL_KEYWORDS)
+            
+            if is_wheelchair and is_member:
+                return "wheelchair_member"
+            elif is_wheelchair and is_general:
+                return "wheelchair_general"
+            elif is_member:
+                return "member"
+            elif is_general:
+                return "general"
+            else:
+                return None
+        
+        # 逐行检查
+        found_types = set()  # 已经找到的类型，避免重复
+        
+        for line in lines:
+            line = line.strip()
+            if not line or len(line) < 10:
+                continue
+            
+            # 分类
+            line_type = classify_line(line)
+            if not line_type:
+                continue
+            
+            # 这种类型已经找到了，跳过
+            if line_type in found_types:
+                continue
+            
+            # 提取时间
+            time_result = parse_time_from_line(line)
+            if not time_result:
+                continue
+            
+            month, day, hour, minute = time_result
+            bj_month, bj_day, bj_h, bj_m = convert_to_bj(month, day, hour, minute)
+            
+            # 根据类型生成标签
+            if line_type == "member":
+                label = "会员先行"
+            elif line_type == "general":
+                label = "一般售票"
+            elif line_type == "wheelchair_member":
+                label = "轮椅席会员"
+            elif line_type == "wheelchair_general":
+                label = "轮椅席一般"
+            else:
+                label = "售票时间"
+            
+            time_str = f"{label}：{bj_month}月{bj_day}日 {bj_h:02d}:{bj_m:02d} 北京时间"
+            all_ticket_times.append((line_type, time_str))
+            found_types.add(line_type)
+            print(f"      ⏰ {time_str}")
+            print(f"         原文: {line[:60]}...")
+        
+        # 如果逐行没找到，用旧的正则全文匹配（兜底）
+        if not all_ticket_times:
+            # 旧的正则兜底
+            old_member_patterns = [
+                r'(?:팬클럽|팬클럽선예매|会员先行|FC先行|粉丝俱乐部预售)[^\d]{0,20}(\d{1,2})[월月/](\d{1,2})[일日/]?[^\d]{0,10}(\d{1,2})[:시时](\d{1,2})[분分]?',
+            ]
+            old_general_patterns = [
+                r'(?:일반|一般售票|一般发售|普通公售|general sale)[^\d]{0,20}(\d{1,2})[월月/](\d{1,2})[일日/]?[^\d]{0,10}(\d{1,2})[:시时](\d{1,2})[분分]?',
+            ]
+            
+            for pattern in old_member_patterns:
+                match = re.search(pattern, text)
+                if match:
+                    month, day, hour, minute = match.groups()
+                    month, day, hour, minute = int(month), int(day), int(hour), int(minute)
+                    if timezone == 'KST' or timezone == 'JST':
+                        bj_h, bj_m = kst_to_bj(hour, minute)
+                    else:
+                        bj_h, bj_m = hour, minute
+                    time_str = f"会员先行：{month}月{day}日 {bj_h:02d}:{bj_m:02d} 北京时间"
+                    all_ticket_times.append(("member", time_str))
+                    print(f"      ⏰ 会员先行(兜底): {time_str}")
+                    break
+            
+            for pattern in old_general_patterns:
+                match = re.search(pattern, text)
+                if match:
+                    month, day, hour, minute = match.groups()
+                    month, day, hour, minute = int(month), int(day), int(hour), int(minute)
+                    if timezone == 'KST' or timezone == 'JST':
+                        bj_h, bj_m = kst_to_bj(hour, minute)
+                    else:
+                        bj_h, bj_m = hour, minute
+                    time_str = f"一般售票：{month}月{day}日 {bj_h:02d}:{bj_m:02d} 北京时间"
+                    all_ticket_times.append(("general", time_str))
+                    print(f"      ⏰ 一般售票(兜底): {time_str}")
+                    break
+        
+        # 按优先级排序：会员先行 → 一般售票 → 轮椅席会员 → 轮椅席一般
+        priority = {"member": 0, "general": 1, "wheelchair_member": 2, "wheelchair_general": 3}
+        all_ticket_times.sort(key=lambda x: priority.get(x[0], 99))
+        
+        # 生成最终的 ticketTime 字符串
+        if all_ticket_times:
+            details["ticketTime"] = "<br>".join([t[1] for t in all_ticket_times])
+            print(f"      ✅ 共找到 {len(all_ticket_times)} 个售票时间")
         
         # 3. 提取票价
         prices_found = []
@@ -249,6 +383,28 @@ def extract_ticket_details(detail_url, source_domain, timezone='KST'):
     except Exception as e:
         print(f"      ⚠️ 提取票务详情失败: {e}")
         return {}
+
+
+def is_official_content(title, content):
+    """五重安全过滤：验证内容是否为官方活动公告"""
+    text = f"{title} {content}"
+    
+    # 1. 必须包含 RIIZE 关键词
+    has_riize = any(kw in text for kw in RIIZE_KEYWORDS)
+    if not has_riize:
+        return False
+    
+    # 2. 必须包含活动关键词
+    has_activity = any(kw in text for kw in ACTIVITY_KEYWORDS)
+    if not has_activity:
+        return False
+    
+    # 3. 不能包含黑名单关键词
+    has_blacklist = any(kw.lower() in text.lower() for kw in BLACKLIST_KEYWORDS)
+    if has_blacklist:
+        return False
+    
+    return True
 
 
 def scrape_official_site(source):
@@ -415,7 +571,7 @@ def scrape_official_site(source):
                 }
                 
                 # 尝试从公告详情页提取购票链接
-                print(f"   📄 检查公告详情: {text[:30]}...")
+                print(f"   📄 检查公告详情...")
                 ticket_url = extract_ticket_url(full_url, source["domain"])
                 if ticket_url:
                     event["ticketUrl"] = ticket_url
@@ -519,7 +675,7 @@ def deduplicate_events(existing_events, new_events):
 def main():
     """主函数"""
     print("=" * 60)
-    print("🌟 RIIZE 官方活动自动爬取工具 v4.0")
+    print("🌟 RIIZE 官方活动自动爬取工具 v5.0")
     print("=" * 60)
     print(f"🕐 开始时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     
