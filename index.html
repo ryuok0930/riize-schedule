@@ -3,7 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RIIZE 全球活动汇总 · Ryuok</title>
+<title>RIIZE&BRIIZE</title>
+<link rel="icon" type="image/jpeg" href="assets/cover.jpg">
+<meta property="og:title" content="RIIZE&BRIIZE">
+<meta property="og:description" content="RIIZE 全球活动汇总，按北京时间显示，一键跳转购票">
+<meta property="og:image" content="assets/cover.jpg">
+<meta property="og:url" content="https://ryuok0930.github.io/riize-schedule/">
+<meta name="twitter:card" content="summary_large_image">
 <style>
 /* ===== 全局变量 ===== */
 :root {
@@ -52,6 +58,96 @@ body {
   50% { background-position: 100% 50%; }
 }
 
+/* ===== 欢迎封面 ===== */
+#welcome-cover {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100vh;
+  background: linear-gradient(135deg, #4c1d95 0%, #7c3aed 50%, #ec4899 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+#welcome-cover::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: url('assets/cover.jpg') center/cover;
+  opacity: 0.35;
+}
+#welcome-cover.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+.cover-title {
+  font-size: 56px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 12px;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  z-index: 1;
+  animation: coverFadeIn 1.2s ease;
+}
+.cover-subtitle {
+  font-size: 16px;
+  color: rgba(255,255,255,0.9);
+  letter-spacing: 6px;
+  margin-top: 16px;
+  z-index: 1;
+  animation: coverFadeIn 1.2s ease 0.3s both;
+}
+.cover-line {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #a78bfa, #f9a8d4);
+  border-radius: 2px;
+  margin: 24px 0;
+  z-index: 1;
+  animation: coverFadeIn 1.2s ease 0.5s both;
+}
+.cover-btn {
+  padding: 14px 48px;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255,255,255,0.4);
+  border-radius: 50px;
+  color: #fff;
+  font-size: 15px;
+  letter-spacing: 4px;
+  cursor: pointer;
+  z-index: 1;
+  transition: all 0.3s ease;
+  animation: coverFadeIn 1.2s ease 0.7s both;
+}
+.cover-btn:hover {
+  background: rgba(255,255,255,0.25);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+}
+.cover-deco {
+  position: absolute;
+  font-size: 24px;
+  opacity: 0.4;
+  z-index: 1;
+  animation: coverFloat 4s ease-in-out infinite;
+}
+.cover-deco.d1 { top: 15%; left: 15%; animation-delay: 0s; }
+.cover-deco.d2 { top: 20%; right: 18%; animation-delay: 1s; }
+.cover-deco.d3 { bottom: 20%; left: 20%; animation-delay: 2s; }
+.cover-deco.d4 { bottom: 15%; right: 15%; animation-delay: 1.5s; }
+@keyframes coverFadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes coverFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
 /* ===== 漂浮装饰 ===== */
 .floating-deco {
   position: fixed;
@@ -84,7 +180,7 @@ body {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: url('assets/group1.jpg') center top/cover;
+  background: url('assets/group1.jpg') center/cover;
   opacity: 0.35;
   filter: blur(1px);
 }
@@ -538,7 +634,7 @@ body {
 .detail-banner-img {
   position: absolute;
   inset: 0;
-  background: url('assets/group2.jpg') center top/cover;
+  background: url('assets/group2.jpg') center/cover;
   opacity: 0.4;
 }
 
@@ -1298,6 +1394,8 @@ body {
 }
 
 @media (max-width: 600px) {
+  .cover-title { font-size: 36px; letter-spacing: 8px; }
+  .cover-subtitle { font-size: 13px; letter-spacing: 4px; }
   .hero-section { height: 260px; }
   .hero-title { font-size: 26px; letter-spacing: 4px; }
   .hero-dolls { width: 220px; height: 60px; }
@@ -1311,6 +1409,18 @@ body {
 </style>
 </head>
 <body>
+
+<!-- 欢迎封面 -->
+<div id="welcome-cover">
+  <span class="cover-deco d1">💜</span>
+  <span class="cover-deco d2">✨</span>
+  <span class="cover-deco d3">🎀</span>
+  <span class="cover-deco d4">💫</span>
+  <div class="cover-title">RIIZE&BRIIZE</div>
+  <div class="cover-line"></div>
+  <div class="cover-subtitle">全 球 活 动 汇 总</div>
+  <button class="cover-btn" onclick="enterSite()">进 入</button>
+</div>
 
 <!-- 漂浮装饰 -->
 <div class="floating-deco d1">💜</div>
@@ -1487,6 +1597,16 @@ body {
 </div>
 
 <script src="data.js"></script><script>
+// ===== 欢迎封面 =====
+function enterSite() {
+  document.getElementById('welcome-cover').classList.add('hidden');
+}
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Enter' || e.key === ' ') {
+    enterSite();
+  }
+});
+
 // ===== 活动数据 =====
 const events = window.RIIZE_EVENTS || [];
 
