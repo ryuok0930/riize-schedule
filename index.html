@@ -8,7 +8,7 @@
 <meta property="og:title" content="RIIZE&BRIIZE">
 <meta property="og:description" content="RIIZE 全球活动汇总，按北京时间显示，一键跳转购票">
 <meta property="og:image" content="assets/cover.jpg">
-<meta property="og:url" content="https://ryuok0930.github.io/riize-schedule/">
+<meta property="og:url" content="https://riizeandbriize.pages.dev/">
 <meta name="twitter:card" content="summary_large_image">
 <style>
 /* ===== 全局变量 ===== */
@@ -58,94 +58,105 @@ body {
   50% { background-position: 100% 50%; }
 }
 
-/* ===== 欢迎封面 ===== */
+/* ===== 欢迎封面（弹窗样式 1:1） ===== */
 #welcome-cover {
   position: fixed;
   top: 0; left: 0;
   width: 100%; height: 100vh;
-  background: linear-gradient(135deg, #4c1d95 0%, #7c3aed 50%, #ec4899 100%);
+  background: rgba(76, 29, 149, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   z-index: 9999;
-  transition: opacity 0.8s ease, visibility 0.8s ease;
-}
-#welcome-cover::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: url('assets/cover.jpg') center/cover;
-  opacity: 0.35;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
 }
 #welcome-cover.hidden {
   opacity: 0;
   visibility: hidden;
 }
-.cover-title {
-  font-size: 56px;
-  font-weight: 700;
+.welcome-modal {
+  width: 400px;
+  height: 400px;
+  background: white;
+  border-radius: var(--radius-xl);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  overflow: hidden;
+  position: relative;
+  animation: modalPop 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+  display: flex;
+  flex-direction: column;
+}
+@keyframes modalPop {
+  0% { opacity: 0; transform: scale(0.7); }
+  100% { opacity: 1; transform: scale(1); }
+}
+.welcome-modal-img {
+  width: 100%;
+  height: 100%;
+  background: url('assets/cover.jpg') center/contain no-repeat;
+  position: absolute;
+  top: 0; left: 0;
+}
+.welcome-modal-overlay {
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 100%;
+  height: 55%;
+  background: linear-gradient(to top, rgba(76, 29, 149, 0.95) 0%, rgba(76, 29, 149, 0.7) 60%, transparent 100%);
+}
+.welcome-modal-content {
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 100%;
+  padding: 28px 24px 24px;
+  text-align: center;
+  z-index: 2;
+}
+.welcome-modal-title {
+  font-size: 32px;
+  font-weight: 800;
   color: #fff;
-  letter-spacing: 12px;
-  text-shadow: 0 4px 20px rgba(0,0,0,0.5);
-  z-index: 1;
-  animation: coverFadeIn 1.2s ease;
-}
-.cover-subtitle {
-  font-size: 16px;
-  color: rgba(255,255,255,0.9);
   letter-spacing: 6px;
-  margin-top: 16px;
-  z-index: 1;
-  animation: coverFadeIn 1.2s ease 0.3s both;
+  text-shadow: 0 2px 15px rgba(0,0,0,0.3);
+  margin-bottom: 8px;
 }
-.cover-line {
-  width: 60px;
-  height: 3px;
-  background: linear-gradient(90deg, #a78bfa, #f9a8d4);
-  border-radius: 2px;
-  margin: 24px 0;
-  z-index: 1;
-  animation: coverFadeIn 1.2s ease 0.5s both;
+.welcome-modal-subtitle {
+  font-size: 13px;
+  color: rgba(255,255,255,0.9);
+  letter-spacing: 3px;
+  margin-bottom: 18px;
 }
-.cover-btn {
-  padding: 14px 48px;
-  background: rgba(255,255,255,0.15);
+.welcome-modal-btn {
+  padding: 12px 40px;
+  background: rgba(255,255,255,0.2);
   backdrop-filter: blur(10px);
-  border: 2px solid rgba(255,255,255,0.4);
+  border: 2px solid rgba(255,255,255,0.5);
   border-radius: 50px;
   color: #fff;
-  font-size: 15px;
-  letter-spacing: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 3px;
   cursor: pointer;
-  z-index: 1;
   transition: all 0.3s ease;
-  animation: coverFadeIn 1.2s ease 0.7s both;
 }
-.cover-btn:hover {
-  background: rgba(255,255,255,0.25);
+.welcome-modal-btn:hover {
+  background: rgba(255,255,255,0.35);
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
 }
-.cover-deco {
+.welcome-deco {
   position: absolute;
-  font-size: 24px;
-  opacity: 0.4;
-  z-index: 1;
-  animation: coverFloat 4s ease-in-out infinite;
+  font-size: 20px;
+  opacity: 0.6;
+  animation: welcomeFloat 3s ease-in-out infinite;
 }
-.cover-deco.d1 { top: 15%; left: 15%; animation-delay: 0s; }
-.cover-deco.d2 { top: 20%; right: 18%; animation-delay: 1s; }
-.cover-deco.d3 { bottom: 20%; left: 20%; animation-delay: 2s; }
-.cover-deco.d4 { bottom: 15%; right: 15%; animation-delay: 1.5s; }
-@keyframes coverFadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-@keyframes coverFloat {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-15px); }
+.welcome-deco.d1 { top: -15px; right: -15px; animation-delay: 0s; font-size: 30px; }
+.welcome-deco.d2 { bottom: 90px; left: -10px; animation-delay: 1s; font-size: 24px; }
+@keyframes welcomeFloat {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(10deg); }
 }
 
 /* ===== 漂浮装饰 ===== */
@@ -180,7 +191,7 @@ body {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: url('assets/group1.jpg') center/cover;
+  background: url('assets/group1.jpg') center 30%/cover;
   opacity: 0.35;
   filter: blur(1px);
 }
@@ -634,7 +645,7 @@ body {
 .detail-banner-img {
   position: absolute;
   inset: 0;
-  background: url('assets/group2.jpg') center/cover;
+  background: url('assets/group2.jpg') center 30%/cover;
   opacity: 0.4;
 }
 
@@ -1394,8 +1405,24 @@ body {
 }
 
 @media (max-width: 600px) {
-  .cover-title { font-size: 36px; letter-spacing: 8px; }
-  .cover-subtitle { font-size: 13px; letter-spacing: 4px; }
+  .welcome-modal {
+    width: 320px;
+    height: 320px;
+  }
+  .welcome-modal-title {
+    font-size: 26px;
+    letter-spacing: 4px;
+  }
+  .welcome-modal-subtitle {
+    font-size: 12px;
+    letter-spacing: 2px;
+  }
+  .hero-bg {
+    background-position: center 15%;
+  }
+  .detail-banner-img {
+    background-position: center 15%;
+  }
   .hero-section { height: 260px; }
   .hero-title { font-size: 26px; letter-spacing: 4px; }
   .hero-dolls { width: 220px; height: 60px; }
@@ -1410,16 +1437,19 @@ body {
 </head>
 <body>
 
-<!-- 欢迎封面 -->
+<!-- 欢迎封面（弹窗样式） -->
 <div id="welcome-cover">
-  <span class="cover-deco d1">💜</span>
-  <span class="cover-deco d2">✨</span>
-  <span class="cover-deco d3">🎀</span>
-  <span class="cover-deco d4">💫</span>
-  <div class="cover-title">RIIZE&BRIIZE</div>
-  <div class="cover-line"></div>
-  <div class="cover-subtitle">全 球 活 动 汇 总</div>
-  <button class="cover-btn" onclick="enterSite()">进 入</button>
+  <div class="welcome-modal">
+    <span class="welcome-deco d1">✨</span>
+    <span class="welcome-deco d2">💜</span>
+    <div class="welcome-modal-img"></div>
+    <div class="welcome-modal-overlay"></div>
+    <div class="welcome-modal-content">
+      <div class="welcome-modal-title">RIIZE&BRIIZE</div>
+      <div class="welcome-modal-subtitle">全 球 活 动 汇 总</div>
+      <button class="welcome-modal-btn" onclick="enterSite()">进 入</button>
+    </div>
+  </div>
 </div>
 
 <!-- 漂浮装饰 -->
@@ -1539,576 +1569,4 @@ body {
           </div>
           <div class="feature-card">
             <div class="feature-icon">🌐</div>
-            <span>全北京时间</span>
-          </div>
-        </div>
-        <p class="welcome-tip">从右侧选择一个活动开始吧～</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- 右侧：活动列表 -->
-  <div class="panel right-panel">
-    <div class="panel-header">
-      <h2>🎫 活动列表</h2>
-      <span class="badge" id="eventCount">共 14 场</span>
-    </div>
-    
-    <div class="filter-bar">
-      <button class="filter-btn active" onclick="filterEvents('all', this)">全部</button>
-      <button class="filter-btn" onclick="filterEvents('upcoming', this)">即将开始</button>
-      <button class="filter-btn" onclick="filterEvents('concert', this)">演唱会</button>
-      <button class="filter-btn" onclick="filterEvents('fanmeeting', this)">见面会</button>
-      <button class="filter-btn" onclick="filterEvents('fansign', this)">签售会</button>
-      <button class="filter-btn" onclick="filterEvents('festival', this)">音乐节</button>
-    </div>
-    
-    <div class="event-list" id="eventList">
-      <!-- 动态生成 -->
-    </div>
-    
-    <div class="quick-ticket" id="quickTicket">
-      <div class="qt-title">🎫 快速购票</div>
-      <div class="qt-event" id="qtEvent">选择活动后可快速购票</div>
-      <button class="qt-btn" id="qtBtn" onclick="if(selectedId) openTicket(selectedId)" disabled>
-        前往购票
-      </button>
-    </div>
-  </div>
-</div>
-
-<!-- 底部 -->
-<div class="footer">
-  <div class="dolls-row"></div>
-  <p class="slogan">RISE and REALIZE, we are RIIZE 💜</p>
-  <p>数据来源：Weverse / SMTOWN / 官方公告 · 所有时间均为北京时间</p>
-  <p style="font-size:11px;opacity:0.7;margin-top:4px;">本页面仅供粉丝学习交流使用</p>
-</div>
-
-<!-- 通知面板 -->
-<div class="notif-panel" id="notifPanel">
-  <div class="notif-header">
-    <span>📢 通知中心</span>
-    <span class="notif-close" onclick="toggleNotif()">×</span>
-  </div>
-  <div class="notif-list" id="notifList">
-    <!-- 动态生成 -->
-  </div>
-</div>
-
-<script src="data.js"></script><script>
-// ===== 欢迎封面 =====
-function enterSite() {
-  document.getElementById('welcome-cover').classList.add('hidden');
-}
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Enter' || e.key === ' ') {
-    enterSite();
-  }
-});
-
-// ===== 活动数据 =====
-const events = window.RIIZE_EVENTS || [];
-
-// ===== 汇率 & 人民币换算 =====
-const EXCHANGE_RATES = { KRW: 0.0053, JPY: 0.047, USD: 7.2, CNY: 1.0, HKD: 0.92, MOP: 0.89, THB: 0.20 };
-events.forEach(e => {
-  if (e.price && e.currency && EXCHANGE_RATES[e.currency]) {
-    const priceNum = parseInt(String(e.price).replace(/,/g, '').replace(/[^0-9]/g, ''));
-    if (!isNaN(priceNum) && priceNum > 0) {
-      e.priceCNY = Math.round(priceNum * EXCHANGE_RATES[e.currency]).toLocaleString();
-    }
-  }
-});
-
-// ===== 状态 =====
-let currentDate = new Date();
-let currentMonth = currentDate.getMonth();
-let currentYear = currentDate.getFullYear();
-let selectedId = null;
-let currentFilter = 'all';
-let notifications = [];
-
-// ===== 初始化 =====
-document.addEventListener('DOMContentLoaded', () => {
-  updateClock();
-  setInterval(updateClock, 1000);
-  renderCalendar();
-  renderEventList();
-  renderTimeline();
-  updateStats();
-  initNotifications();
-  checkUpcoming();
-});
-
-// ===== 时钟 =====
-function updateClock() {
-  const now = new Date();
-  const y = now.getFullYear(), m = now.getMonth()+1, d = now.getDate();
-  const weekdays = ['周日','周一','周二','周三','周四','周五','周六'];
-  const h = String(now.getHours()).padStart(2,'0');
-  const mi = String(now.getMinutes()).padStart(2,'0');
-  const s = String(now.getSeconds()).padStart(2,'0');
-  document.getElementById('currentDate').textContent = `${y}年${m}月${d}日 ${weekdays[now.getDay()]}`;
-  document.getElementById('currentTime').textContent = `${h}:${mi}:${s} 北京时间`;
-}
-
-// ===== 日历 =====
-function renderCalendar() {
-  const grid = document.getElementById('calendarGrid');
-  grid.innerHTML = '';
-  const weekdays = ['日','一','二','三','四','五','六'];
-  weekdays.forEach(d => {
-    const el = document.createElement('div');
-    el.className = 'calendar-weekday';
-    el.textContent = d;
-    grid.appendChild(el);
-  });
-  
-  const firstDay = new Date(currentYear, currentMonth, 1).getDay();
-  const daysInMonth = new Date(currentYear, currentMonth+1, 0).getDate();
-  const prevLast = new Date(currentYear, currentMonth, 0).getDate();
-  const today = new Date();
-  
-  for (let i = firstDay-1; i >= 0; i--) {
-    grid.appendChild(createDay(prevLast - i, true));
-  }
-  
-  for (let i = 1; i <= daysInMonth; i++) {
-    const ds = `${currentYear}-${String(currentMonth+1).padStart(2,'0')}-${String(i).padStart(2,'0')}`;
-    const has = events.some(e => ds >= e.date && ds <= e.endDate);
-    const isToday = today.getFullYear()===currentYear && today.getMonth()===currentMonth && today.getDate()===i;
-    grid.appendChild(createDay(i, false, has, isToday, ds));
-  }
-  
-  const total = firstDay + daysInMonth;
-  const rem = 7 - (total % 7);
-  if (rem < 7) for (let i = 1; i <= rem; i++) grid.appendChild(createDay(i, true));
-  
-  document.getElementById('calendarMonth').textContent = `${currentYear}年${currentMonth+1}月`;
-}
-
-function createDay(day, other, has=false, isToday=false, ds='') {
-  const el = document.createElement('div');
-  el.className = 'calendar-day';
-  if (other) el.classList.add('other-month');
-  if (has) el.classList.add('has-event');
-  if (isToday) el.classList.add('today');
-  el.innerHTML = `<span>${day}</span>${has?'<span class="dot"></span>':''}`;
-  if (!other && has) el.onclick = () => showDayEvents(ds);
-  return el;
-}
-
-function changeMonth(d) {
-  currentMonth += d;
-  if (currentMonth < 0) { currentMonth = 11; currentYear--; }
-  if (currentMonth > 11) { currentMonth = 0; currentYear++; }
-  renderCalendar();
-}
-
-function goToday() {
-  const t = new Date();
-  currentYear = t.getFullYear();
-  currentMonth = t.getMonth();
-  renderCalendar();
-}
-
-function showDayEvents(ds) {
-  const ev = events.filter(e => ds >= e.date && ds <= e.endDate);
-  if (ev.length > 0) selectEvent(ev[0].id);
-}
-
-// ===== 活动列表 =====
-function renderEventList() {
-  const list = document.getElementById('eventList');
-  list.innerHTML = '';
-  
-  let filtered = [...events];
-  if (currentFilter === 'upcoming') filtered = filtered.filter(e => e.status === 'upcoming' || e.status === 'onsale');
-  else if (currentFilter === 'concert') filtered = filtered.filter(e => e.type === 'concert');
-  else if (currentFilter === 'fanmeeting') filtered = filtered.filter(e => e.type === 'fanmeeting');
-  else if (currentFilter === 'fansign') filtered = filtered.filter(e => e.type === 'fansign');
-  else if (currentFilter === 'festival') filtered = filtered.filter(e => e.type === 'festival' || e.type === 'smtown');
-  
-  filtered.sort((a,b) => new Date(a.date) - new Date(b.date));
-  
-  if (filtered.length === 0) {
-    list.innerHTML = `<div class="empty-state"><div class="emoji">🔍</div><p>没有找到符合条件的活动</p></div>`;
-    return;
-  }
-  
-  filtered.forEach(e => {
-    const card = document.createElement('div');
-    card.className = 'event-card' + (e.id===selectedId ? ' selected' : '');
-    const d = new Date(e.date);
-    const disabled = e.status === 'ended' || e.status === 'soldout' || e.status === 'closed';
-    const btnClass = disabled ? '' : 'ticket';
-    const btnText = disabled ? e.ticketNote : '🎫 购票';
-    let sc = '';
-    if (e.status==='upcoming') sc='status-upcoming';
-    else if (e.status==='onsale') sc='status-onsale';
-    else if (e.status==='soldout') sc='status-soldout';
-    else sc='status-ended';
-    
-    card.innerHTML = `
-      <div class="card-top">
-        <div class="card-date-badge">
-          <div class="month">${d.getMonth()+1}月</div>
-          <div class="day">${d.getDate()}</div>
-        </div>
-        <span class="card-status ${sc}">${e.statusLabel}</span>
-      </div>
-      <div class="card-title">${e.title}</div>
-      <div class="card-location">📍 ${e.city}</div>
-      <div class="card-actions">
-        <button class="card-btn ${btnClass}" ${disabled?'disabled':''} onclick="event.stopPropagation();openTicket(${e.id})">${btnText}</button>
-        <button class="card-btn detail" onclick="event.stopPropagation();selectEvent(${e.id})">📋 详情</button>
-      </div>
-    `;
-    card.onclick = () => selectEvent(e.id);
-    list.appendChild(card);
-  });
-}
-
-function filterEvents(f, btn) {
-  currentFilter = f;
-  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  renderEventList();
-}
-
-function updateStats() {
-  const upcoming = events.filter(e => e.status !== 'ended').length;
-  const cities = new Set(events.map(e => e.city)).size;
-  document.getElementById('statTotal').textContent = events.length;
-  document.getElementById('statUpcoming').textContent = upcoming;
-  document.getElementById('statCities').textContent = cities;
-  document.getElementById('eventCount').textContent = `共 ${events.length} 场`;
-}
-
-// ===== 详情 =====
-function selectEvent(id) {
-  selectedId = id;
-  const e = events.find(x => x.id === id);
-  if (!e) return;
-  
-  // 更新快速购票区域
-  const qtEvent = document.getElementById('qtEvent');
-  const qtBtn = document.getElementById('qtBtn');
-  if (qtEvent) qtEvent.textContent = e.title;
-  if (qtBtn) {
-    const disabled = e.status === 'ended' || e.status === 'soldout' || e.status === 'closed';
-    qtBtn.disabled = disabled;
-    qtBtn.textContent = disabled ? e.ticketNote : '🎫 前往购票';
-  }
-  
-  document.getElementById('detailType').textContent = e.typeLabel;
-  document.getElementById('detailTitle').textContent = e.title;
-  document.getElementById('detailSubtitle').textContent = e.subtitle;
-  
-  const body = document.getElementById('detailBody');
-  
-  let schedHtml = '';
-  if (e.schedule && e.schedule.length > 0) {
-    schedHtml = `<div class="detail-section"><h3>📅 场次安排</h3><div class="schedule-list">
-      ${e.schedule.map(s => `
-        <div class="schedule-item">
-          <div class="schedule-date"><div class="date">${s.date.split('月')[1]}</div><div class="month">${s.date.split('月')[0]}月</div></div>
-          <div class="schedule-info"><div class="time">⏰ ${s.time} 北京时间</div><div class="label">${s.label}</div></div>
-        </div>
-      `).join('')}
-    </div></div>`;
-  }
-  
-  let highHtml = '';
-  if (e.highlights && e.highlights.length > 0) {
-    highHtml = e.highlights.map(h => `
-      <div class="highlight-box">
-        <div class="title">${h.title}</div>
-        <div class="content">${h.content}</div>
-      </div>
-    `).join('');
-  }
-  
-  let sc = '';
-  if (e.status==='upcoming') sc='status-upcoming';
-  else if (e.status==='onsale') sc='status-onsale';
-  else if (e.status==='soldout') sc='status-soldout';
-  else sc='status-ended';
-  
-  const disabled = e.status === 'ended' || e.status === 'soldout' || e.status === 'closed';
-  const btnClass = disabled ? 'disabled' : 'primary';
-  
-  body.innerHTML = `
-    <div class="detail-section">
-      <h3>📌 基本信息</h3>
-      <div class="info-grid">
-        <div class="info-card">
-          <div class="label">活动日期</div>
-          <div class="value highlight">${formatRange(e.date, e.endDate)}</div>
-        </div>
-        <div class="info-card">
-          <div class="label">活动时间</div>
-          <div class="value highlight">${e.time} 北京时间</div>
-        </div>
-        <div class="info-card">
-          <div class="label">举办城市</div>
-          <div class="value">${e.city}</div>
-        </div>
-        <div class="info-card">
-          <div class="label">举办场馆</div>
-          <div class="value">${e.venue}</div>
-        </div>
-        <div class="info-card">
-          <div class="label">票价</div>
-          <div class="value">${e.price} ${e.currency}${e.priceCNY ? '<br><span style="font-size:11px;color:#9b59b6;">约¥' + e.priceCNY + ' 人民币</span>' : ''}</div>
-        </div>
-        <div class="info-card">
-          <div class="label">状态</div>
-          <div class="value"><span class="status-tag ${sc}">${e.statusLabel}</span></div>
-        </div>
-        <div class="info-card">
-          <div class="label">购票平台</div>
-          <div class="value" style="font-size:12px;">${e.ticketPlatform || '以官方公告为准'}</div>
-        </div>
-        <div class="info-card">
-          <div class="label">购票时间</div>
-          <div class="value" style="font-size:12px;color:#9b59b6;line-height:1.5;">${e.ticketTime || '以官方公告为准'}</div>
-        </div>
-        <div class="info-card" style="grid-column: span 2;">
-          <div class="label">主办方</div>
-          <div class="value">${e.organizer}</div>
-        </div>
-      </div>
-    </div>
-    
-    ${schedHtml}
-    
-    <div class="detail-section">
-      <h3>📝 活动介绍</h3>
-      <div class="detail-desc">
-        ${e.description.map(p => `<p>${p}</p>`).join('')}
-      </div>
-      ${highHtml}
-    </div>
-    
-    <div class="detail-section">
-      <h3>🎫 购票信息</h3>
-      <div class="ticket-section">
-        <button class="btn-ticket ${btnClass}" onclick="openTicket(${e.id})" ${disabled?'disabled':''}>
-          🎫 ${disabled ? e.ticketNote : '前往官方购票页面'}
-        </button>
-        <button class="btn-ticket secondary" onclick="openOfficial(${e.id})">
-          📢 官方公告页
-        </button>
-      </div>
-      <div class="ticket-tip">
-        💡 提示：购票请通过官方渠道，谨防黄牛和诈骗。<br>
-        🌐 购票链接将跳转至官方售票网站，具体票价和座位以官方为准。
-      </div>
-    </div>
-  `;
-  
-  renderEventList();
-  renderTimeline();
-  createSparkle();
-}
-
-function formatRange(s, e) {
-  if (s === e) {
-    const d = new Date(s);
-    return `${d.getFullYear()}年${d.getMonth()+1}月${d.getDate()}日`;
-  }
-  const sd = new Date(s), ed = new Date(e);
-  if (sd.getMonth() === ed.getMonth()) {
-    return `${sd.getMonth()+1}月${sd.getDate()}-${ed.getDate()}日`;
-  }
-  return `${sd.getMonth()+1}月${sd.getDate()}日 - ${ed.getMonth()+1}月${ed.getDate()}日`;
-}
-
-function openTicket(id) {
-  const e = events.find(x => x.id === id);
-  if (e && e.ticketUrl) {
-    window.open(e.ticketUrl, '_blank');
-    createSparkle();
-  }
-}
-
-function openOfficial(id) {
-  const e = events.find(x => x.id === id);
-  if (e && e.officialUrl) window.open(e.officialUrl, '_blank');
-}
-
-// ===== 时间线 =====
-function renderTimeline() {
-  const list = document.getElementById('timelineList');
-  const now = new Date();
-  const upcoming = events
-    .filter(e => new Date(e.endDate) >= now)
-    .sort((a,b) => new Date(a.date) - new Date(b.date))
-    .slice(0, 6);
-  
-  if (upcoming.length === 0) {
-    list.innerHTML = `<div class="empty-state" style="padding:20px 0;"><div class="emoji" style="font-size:36px;">💤</div><p style="font-size:12px;">近期暂无活动<br>好好休息，等待下一次见面～</p></div>`;
-    return;
-  }
-  
-  list.innerHTML = upcoming.map(e => {
-    const d = new Date(e.date);
-    let sc = '';
-    if (e.status==='upcoming') sc='status-upcoming';
-    else if (e.status==='onsale') sc='status-onsale';
-    else if (e.status==='soldout') sc='status-soldout';
-    const diff = Math.ceil((new Date(e.date) - now) / (1000*60*60*24));
-    const cd = diff > 0 ? `还有 ${diff} 天` : diff === 0 ? '就是今天！' : '';
-    return `
-      <div class="timeline-item ${e.id===selectedId?'active':''}" onclick="selectEvent(${e.id})">
-        <div class="tl-date">
-          <div class="month">${d.getMonth()+1}月</div>
-          <div class="day">${d.getDate()}</div>
-        </div>
-        <div class="tl-info">
-          <div class="title">${e.title}</div>
-          <div class="city">📍 ${e.city}</div>
-          <span class="status-tag ${sc}">${cd || e.statusLabel}</span>
-        </div>
-      </div>
-    `;
-  }).join('');
-}
-
-// ===== 通知 =====
-function initNotifications() {
-  notifications = [{
-    id: 1,
-    title: "🎀 欢迎使用 RIIZE 全球活动汇总！",
-    desc: "这是你的专属 BRIIZE 日程应用～所有时间均为北京时间，点击活动可查看详情和购票链接。",
-    time: "刚刚",
-    unread: true
-  }];
-  renderNotifs();
-}
-
-function checkUpcoming() {
-  const now = new Date();
-  events.forEach(e => {
-    if (e.status === 'ended' || e.status === 'closed') return;
-    const ed = new Date(e.date);
-    const diff = Math.ceil((ed - now) / (1000*60*60*24));
-    
-    if (diff > 0 && diff <= 7) {
-      if (!notifications.find(n => n.eventId === e.id)) {
-        notifications.unshift({
-          id: Date.now(), eventId: e.id,
-          title: `⏰ 提醒：${e.title}`,
-          desc: `还有 ${diff} 天就要开始啦！地点：${e.city} · ${e.venue}`,
-          time: "刚刚", unread: true
-        });
-        if (Notification.permission === 'granted') {
-          new Notification(`RIIZE 活动提醒`, { body: `${e.title} 还有 ${diff} 天开始！\n${e.city}` });
-        }
-      }
-    }
-    if (diff === 0) {
-      if (!notifications.find(n => n.eventId === e.id && n.isToday)) {
-        notifications.unshift({
-          id: Date.now()+1, eventId: e.id, isToday: true,
-          title: `🎉 今天就是 ${e.title}！`,
-          desc: `就在今天！时间：${e.time} 北京时间 · ${e.city}`,
-          time: "刚刚", unread: true
-        });
-        if (Notification.permission === 'granted') {
-          new Notification(`🎉 今天是 ${e.title}！`, { body: `时间：${e.time} 北京时间\n${e.city}` });
-        }
-      }
-    }
-  });
-  renderNotifs();
-}
-
-function requestNotify() {
-  if (!('Notification' in window)) {
-    alert('你的浏览器不支持通知功能');
-    return;
-  }
-  Notification.requestPermission().then(p => {
-    if (p === 'granted') {
-      new Notification('💜 RIIZE 活动提醒已开启', { body: '有新活动或活动即将开始时会通知你哦～' });
-      notifications.unshift({
-        id: Date.now(),
-        title: "🔔 通知提醒已开启！",
-        desc: "活动开始前7天和当天会自动提醒你，再也不会错过啦～",
-        time: "刚刚", unread: true
-      });
-      renderNotifs();
-      createSparkle();
-    }
-  });
-}
-
-function toggleNotif() {
-  const panel = document.getElementById('notifPanel');
-  panel.classList.toggle('show');
-  if (panel.classList.contains('show')) {
-    notifications.forEach(n => n.unread = false);
-    renderNotifs();
-  }
-}
-
-function renderNotifs() {
-  const list = document.getElementById('notifList');
-  if (notifications.length === 0) {
-    list.innerHTML = `<div class="empty-state" style="padding:30px 0;"><div class="emoji" style="font-size:36px;">🔔</div><p style="font-size:12px;">暂无通知</p></div>`;
-    return;
-  }
-  list.innerHTML = notifications.map(n => `
-    <div class="notif-item ${n.unread?'unread':''}" onclick="${n.eventId?`selectEvent(${n.eventId});toggleNotif();`:''}">
-      <div class="title">${n.title}</div>
-      <div class="desc">${n.desc}</div>
-      <div class="time">${n.time}</div>
-    </div>
-  `).join('');
-}
-
-// ===== 刷新 =====
-function refreshData() {
-  document.getElementById('statusText') && (document.getElementById('statusText').textContent = '正在刷新...');
-  setTimeout(() => {
-    notifications.unshift({
-      id: Date.now(),
-      title: "🔄 数据已刷新",
-      desc: "活动数据已更新到最新状态～当前共 " + events.length + " 场活动",
-      time: "刚刚", unread: true
-    });
-    renderNotifs();
-    createSparkle();
-  }, 1200);
-}
-
-// ===== 撒花 =====
-function createSparkle() {
-  const emojis = ['✨','💜','🎀','💫','🌸','⭐','💖','🌟','💐','🎊'];
-  for (let i = 0; i < 15; i++) {
-    setTimeout(() => {
-      const s = document.createElement('div');
-      s.className = 'sparkle';
-      s.textContent = emojis[Math.floor(Math.random()*emojis.length)];
-      s.style.left = (Math.random() * window.innerWidth * 0.6 + window.innerWidth * 0.2) + 'px';
-      s.style.top = (Math.random() * window.innerHeight * 0.5 + 150) + 'px';
-      document.body.appendChild(s);
-      setTimeout(() => s.remove(), 1800);
-    }, i * 60);
-  }
-}
-
-// 点击其他地方关闭通知面板
-document.addEventListener('click', (e) => {
-  const panel = document.getElementById('notifPanel');
-  const btn = e.target.closest('.action-btn');
-  if (!panel.contains(e.target) && !btn) {
-    panel.classList.remove('show');
-  }
-});
-</script>
-</body>
-</html>
+            <span>全北京时间
