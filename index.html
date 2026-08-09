@@ -598,6 +598,7 @@ body {
 }
 .status-upcoming { background: #d1fae5; color: #059669; }
 .status-onsale { background: #fef3c7; color: #d97706; }
+.status-ongoing { background: #fef3c7; color: #d97706; animation: pulse 2s infinite; }
 .status-soldout { background: #f3f4f6; color: #6b7280; }
 .status-ended { background: #fee2e2; color: #dc2626; text-decoration: line-through; }
 .status-closed { background: #f3f4f6; color: #6b7280; }
@@ -1445,6 +1446,7 @@ body {
     <div class="filter-bar">
       <button class="filter-btn active" data-filter="all" onclick="filterEvents('all')">全部</button>
       <button class="filter-btn" data-filter="upcoming" onclick="filterEvents('upcoming')">即将开始</button>
+      <button class="filter-btn" data-filter="ongoing" onclick="filterEvents('ongoing')">进行中</button>
       <button class="filter-btn" data-filter="concert" onclick="filterEvents('concert')">演唱会</button>
       <button class="filter-btn" data-filter="fanmeeting" onclick="filterEvents('fanmeeting')">见面会</button>
       <button class="filter-btn" data-filter="fansign" onclick="filterEvents('fansign')">签售会</button>
@@ -1554,10 +1556,27 @@ function getEventStatus(event) {
   
   // 如果有具体时间，按具体时间判断
   if (eventTime) {
-    if (now >= eventTime) {
-      return { status: 'ended', label: '已结束' };
-    } else {
+    // 假设活动持续3小时（演唱会/见面会/颁奖礼等）
+    // 音乐节/快闪店等持续时间更长的，后面可以单独处理
+    let duration = 3 * 60 * 60 * 1000; // 默认3小时
+    
+    // 根据活动类型调整持续时间
+    if (event.type === 'festival') {
+      duration = 6 * 60 * 60 * 1000; // 音乐节6小时
+    } else if (event.type === 'popup') {
+      duration = 10 * 60 * 60 * 1000; // 快闪店10小时
+    } else if (event.type === 'fansign') {
+      duration = 2 * 60 * 60 * 1000; // 签售会2小时
+    }
+    
+    const endTime = new Date(eventTime.getTime() + duration);
+    
+    if (now < eventTime) {
       return { status: 'upcoming', label: '即将开始' };
+    } else if (now >= eventTime && now < endTime) {
+      return { status: 'ongoing', label: '进行中' };
+    } else {
+      return { status: 'ended', label: '已结束' };
     }
   }
   
@@ -1571,8 +1590,8 @@ function getEventStatus(event) {
   if (eventDay < today) {
     return { status: 'ended', label: '已结束' };
   } else if (eventDay.getTime() === today.getTime()) {
-    // 今天的活动，默认显示即将开始（因为不知道具体时间）
-    return { status: 'upcoming', label: '即将开始' };
+    // 今天的活动，默认显示进行中（因为不知道具体时间）
+    return { status: 'ongoing', label: '进行中' };
   } else {
     return { status: 'upcoming', label: '即将开始' };
   }
@@ -1814,6 +1833,8 @@ function renderEventList() {
   
   if (currentFilter === 'upcoming') {
     filtered = filtered.filter(e => getEventStatus(e).status === 'upcoming');
+  } else if (currentFilter === 'ongoing') {
+    filtered = filtered.filter(e => getEventStatus(e).status === 'ongoing');
   } else if (currentFilter !== 'all') {
     filtered = filtered.filter(e => e.type === currentFilter);
   }
