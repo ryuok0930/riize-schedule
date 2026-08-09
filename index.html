@@ -54,7 +54,7 @@ body {
   50% { background-position: 100% 50%; }
 }
 
-/* ===== 欢迎封面（弹窗样式 1:1） ===== */
+/* 欢迎封面 */
 #welcome-cover {
   position: fixed;
   top: 0; left: 0;
@@ -346,4 +346,2470 @@ body {
   color: white;
   border-radius: 10px;
   cursor: pointer;
- 
+  font-size: 12px;
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.2s ease;
+  font-weight: 600;
+}
+.nav-btn:hover { transform: scale(1.1); box-shadow: var(--shadow-sm); }
+.calendar-month {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--purple-700);
+  padding: 12px 0 8px;
+}
+.calendar-grid {
+  padding: 0 16px 16px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 3px;
+  text-align: center;
+}
+.calendar-weekday {
+  font-size: 10px;
+  color: var(--purple-400);
+  font-weight: 600;
+  padding: 6px 0;
+}
+.calendar-day {
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+  color: var(--purple-600);
+  position: relative;
+}
+.calendar-day:hover { background: var(--purple-100); transform: scale(1.08); }
+.calendar-day.today {
+  background: var(--gradient-primary);
+  color: white;
+  font-weight: 700;
+  box-shadow: var(--shadow-glow);
+}
+.calendar-day.has-event {
+  background: var(--purple-100);
+  color: var(--purple-800);
+  font-weight: 600;
+}
+.calendar-day.has-event.today {
+  background: var(--gradient-primary);
+  color: white;
+}
+.calendar-day .dot {
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: var(--pink-500);
+  margin-top: 2px;
+}
+.calendar-day.today .dot { background: white; }
+.calendar-day.other-month { color: var(--purple-300); opacity: 0.5; }
+
+.timeline-section {
+  border-top: 1px solid var(--purple-100);
+  padding: 14px 16px;
+  flex: 1;
+  overflow-y: auto;
+}
+.timeline-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--purple-800);
+  margin-bottom: 12px;
+  display: flex; align-items: center; gap: 6px;
+}
+.timeline-list { display: flex; flex-direction: column; gap: 10px; }
+.timeline-item {
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  background: var(--purple-50);
+  border: 1.5px solid transparent;
+}
+.timeline-item:hover {
+  background: var(--purple-100);
+  border-color: var(--purple-300);
+  transform: translateX(4px);
+}
+.timeline-item.active {
+  background: var(--gradient-soft);
+  border-color: transparent;
+}
+.timeline-item.active .tl-date .day,
+.timeline-item.active .tl-info .title,
+.timeline-item.active .tl-info .city { color: white; }
+.tl-date {
+  min-width: 44px;
+  text-align: center;
+  background: rgba(255,255,255,0.5);
+  border-radius: 10px;
+  padding: 6px 4px;
+}
+.timeline-item.active .tl-date { background: rgba(255,255,255,0.25); }
+.tl-date .month { font-size: 9px; color: var(--purple-500); font-weight: 500; }
+.timeline-item.active .tl-date .month { color: rgba(255,255,255,0.8); }
+.tl-date .day {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--purple-700);
+  line-height: 1.1;
+}
+.tl-info { flex: 1; min-width: 0; }
+.tl-info .title {
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--purple-900);
+}
+.tl-info .city { font-size: 10px; color: var(--purple-500); margin-top: 3px; }
+.status-tag {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 9px;
+  font-weight: 600;
+  margin-top: 5px;
+}
+.status-upcoming { background: #d1fae5; color: #059669; }
+.status-onsale { background: #fef3c7; color: #d97706; }
+.status-soldout { background: #f3f4f6; color: #6b7280; }
+.status-ended { background: #fee2e2; color: #dc2626; text-decoration: line-through; }
+.status-closed { background: #f3f4f6; color: #6b7280; }
+.timeline-item.active .status-tag {
+  background: rgba(255,255,255,0.3);
+  color: white;
+}
+
+.detail-banner {
+  height: 200px;
+  position: relative;
+  background: var(--gradient-primary);
+  overflow: hidden;
+}
+.detail-banner-img {
+  position: absolute;
+  inset: 0;
+  background: url('assets/group2.jpg') center 30%/cover;
+  opacity: 0.4;
+}
+.detail-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(76, 29, 149, 0.85) 0%, rgba(124, 58, 237, 0.5) 100%);
+}
+.detail-banner-content {
+  position: relative;
+  z-index: 10;
+  padding: 24px 28px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: white;
+}
+.detail-type {
+  display: inline-block;
+  background: rgba(255,255,255,0.25);
+  backdrop-filter: blur(10px);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  width: fit-content;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+.detail-banner-content h1 {
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 6px;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+.detail-banner-content p { font-size: 13px; opacity: 0.9; }
+.detail-body { flex: 1; padding: 20px 24px; overflow-y: auto; }
+
+.welcome-state { text-align: center; padding: 30px 0; }
+.welcome-dolls {
+  width: 220px; height: 180px;
+  margin: 0 auto 20px;
+  background: url('assets/dolls.jpg') center/cover;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+}
+.welcome-dolls::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(124, 58, 237, 0.2), transparent);
+}
+.welcome-state h2 {
+  font-size: 24px;
+  font-weight: 800;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 8px;
+}
+.welcome-state > p {
+  font-size: 14px;
+  color: var(--purple-600);
+  margin-bottom: 24px;
+}
+.welcome-features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  max-width: 400px;
+  margin: 0 auto 24px;
+}
+.feature-card {
+  padding: 16px;
+  background: linear-gradient(135deg, rgba(167, 139, 250, 0.1), rgba(249, 168, 212, 0.1));
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--purple-200);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.feature-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--purple-400);
+}
+.feature-icon { font-size: 28px; margin-bottom: 8px; }
+.feature-card span {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--purple-700);
+}
+.welcome-tip { font-size: 12px; color: var(--purple-400); }
+
+.detail-section { margin-bottom: 24px; }
+.detail-section h3 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--purple-800);
+  margin-bottom: 14px;
+  display: flex; align-items: center; gap: 8px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--purple-200);
+}
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+.info-card {
+  background: linear-gradient(135deg, rgba(167, 139, 250, 0.08), rgba(249, 168, 212, 0.08));
+  padding: 14px 16px;
+  border-radius: var(--radius-md);
+  border-left: 4px solid var(--purple-400);
+  transition: all 0.2s ease;
+}
+.info-card:hover {
+  border-left-color: var(--pink-500);
+  background: linear-gradient(135deg, rgba(167, 139, 250, 0.12), rgba(249, 168, 212, 0.12));
+}
+.info-card .label {
+  font-size: 10px;
+  color: var(--purple-400);
+  margin-bottom: 5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.info-card .value {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--purple-900);
+}
+.info-card .value.highlight {
+  color: var(--purple-700);
+  font-size: 15px;
+}
+.detail-desc {
+  font-size: 13px;
+  line-height: 1.9;
+  color: var(--purple-700);
+  background: linear-gradient(135deg, rgba(167, 139, 250, 0.05), rgba(249, 168, 212, 0.05));
+  padding: 18px;
+  border-radius: var(--radius-md);
+}
+.detail-desc p { margin-bottom: 10px; }
+.detail-desc p:last-child { margin-bottom: 0; }
+.highlight-box {
+  background: linear-gradient(135deg, rgba(249, 168, 212, 0.2), rgba(167, 139, 250, 0.2));
+  border: 2px dashed var(--pink-400);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  margin-top: 14px;
+}
+.highlight-box .title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--purple-800);
+  margin-bottom: 8px;
+  display: flex; align-items: center; gap: 6px;
+}
+.highlight-box .content {
+  font-size: 12px;
+  color: var(--purple-600);
+  line-height: 1.7;
+}
+
+.ticket-section { display: flex; gap: 12px; flex-wrap: wrap; }
+.btn-ticket {
+  flex: 1;
+  min-width: 140px;
+  padding: 16px 20px;
+  border-radius: var(--radius-md);
+  border: none;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+}
+.btn-ticket.primary {
+  background: var(--gradient-primary);
+  color: white;
+  box-shadow: var(--shadow-md);
+}
+.btn-ticket.primary:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+.btn-ticket.disabled {
+  background: #e5e7eb;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+.btn-ticket.secondary {
+  background: linear-gradient(135deg, rgba(167, 139, 250, 0.15), rgba(249, 168, 212, 0.15));
+  color: var(--purple-700);
+  border: 2px solid var(--purple-300);
+}
+.btn-ticket.secondary:hover {
+  background: linear-gradient(135deg, rgba(167, 139, 250, 0.25), rgba(249, 168, 212, 0.25));
+  transform: translateY(-2px);
+}
+.ticket-tip {
+  font-size: 11px;
+  color: var(--purple-400);
+  margin-top: 12px;
+  line-height: 1.7;
+  padding: 12px;
+  background: var(--purple-50);
+  border-radius: var(--radius-sm);
+  border-left: 3px solid var(--purple-300);
+}
+
+.filter-bar {
+  padding: 12px 16px;
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid var(--purple-100);
+}
+.filter-btn {
+  padding: 5px 12px;
+  border-radius: 14px;
+  border: 1.5px solid var(--purple-300);
+  background: transparent;
+  color: var(--purple-500);
+  font-size: 11px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 600;
+}
+.filter-btn:hover {
+  border-color: var(--purple-500);
+  color: var(--purple-700);
+}
+.filter-btn.active {
+  background: var(--gradient-primary);
+  color: white;
+  border-color: transparent;
+  box-shadow: var(--shadow-sm);
+}
+.event-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.event-card {
+  background: linear-gradient(135deg, rgba(167, 139, 250, 0.08), rgba(249, 168, 212, 0.08));
+  border-radius: var(--radius-md);
+  padding: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.event-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 5px; height: 100%;
+  background: var(--gradient-primary);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.event-card:hover {
+  transform: translateX(5px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--purple-200);
+}
+.event-card:hover::before { opacity: 1; }
+.event-card.selected {
+  background: linear-gradient(135deg, rgba(167, 139, 250, 0.15), rgba(249, 168, 212, 0.15));
+  border-color: var(--purple-400);
+}
+.event-card.selected::before { opacity: 1; }
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+.card-date-badge {
+  text-align: center;
+  min-width: 50px;
+  background: var(--gradient-soft);
+  padding: 8px 6px;
+  border-radius: 12px;
+  color: white;
+  box-shadow: var(--shadow-sm);
+}
+.card-date-badge .month { font-size: 9px; font-weight: 500; opacity: 0.9; }
+.card-date-badge .day {
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+.card-status {
+  font-size: 10px;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+.card-title {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  line-height: 1.4;
+  color: var(--purple-900);
+}
+.card-location {
+  font-size: 11px;
+  color: var(--purple-500);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+.card-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+.card-btn {
+  flex: 1;
+  padding: 10px 8px;
+  border-radius: var(--radius-sm);
+  border: none;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex; align-items: center; justify-content: center; gap: 4px;
+  white-space: nowrap;
+}
+.card-btn.ticket {
+  background: var(--gradient-primary);
+  color: white;
+}
+.card-btn.ticket:hover {
+  transform: scale(1.03);
+  box-shadow: var(--shadow-sm);
+}
+.card-btn.ticket:disabled {
+  background: #e5e7eb;
+  color: #9ca3af;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+.card-btn.detail {
+  background: rgba(167, 139, 250, 0.15);
+  color: var(--purple-700);
+}
+.card-btn.detail:hover { background: rgba(167, 139, 250, 0.25); }
+
+.quick-ticket {
+  padding: 16px;
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.08), rgba(236, 72, 153, 0.08));
+  border-top: 2px solid var(--purple-200);
+  flex-shrink: 0;
+}
+.qt-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--purple-800);
+  margin-bottom: 8px;
+  display: flex; align-items: center; gap: 6px;
+}
+.qt-event {
+  font-size: 12px;
+  color: var(--purple-500);
+  margin-bottom: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.qt-btn {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: var(--radius-md);
+  background: var(--gradient-primary);
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-md);
+  letter-spacing: 1px;
+}
+.qt-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+.qt-btn:disabled {
+  background: #e5e7eb;
+  color: #9ca3af;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  color: var(--purple-400);
+  font-size: 12px;
+  position: relative;
+  z-index: 10;
+}
+.footer .dolls-row {
+  width: 200px;
+  height: 60px;
+  margin: 0 auto 12px;
+  background: url('assets/characters.png') center/contain no-repeat;
+  opacity: 0.6;
+}
+.footer p { margin-bottom: 4px; }
+.footer .slogan {
+  font-weight: 700;
+  color: var(--purple-500);
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.notif-panel {
+  position: fixed;
+  top: 20px; right: 20px;
+  width: 340px;
+  max-height: 450px;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(20px);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  z-index: 1000;
+  display: none;
+  overflow: hidden;
+  border: 1px solid var(--purple-200);
+}
+.notif-panel.show {
+  display: block;
+  animation: slideIn 0.3s ease;
+}
+@keyframes slideIn {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+.notif-header {
+  padding: 16px 20px;
+  background: var(--gradient-primary);
+  color: white;
+  font-weight: 700;
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.notif-close { cursor: pointer; font-size: 22px; opacity: 0.8; transition: opacity 0.2s; }
+.notif-close:hover { opacity: 1; }
+.notif-list { max-height: 380px; overflow-y: auto; }
+.notif-item {
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--purple-100);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.notif-item:hover { background: var(--purple-50); }
+.notif-item.unread {
+  background: linear-gradient(135deg, rgba(249, 168, 212, 0.1), rgba(167, 139, 250, 0.1));
+}
+.notif-item .title {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: var(--purple-900);
+}
+.notif-item .desc {
+  font-size: 12px;
+  color: var(--purple-600);
+  line-height: 1.5;
+}
+.notif-item .time {
+  font-size: 10px;
+  color: var(--pink-500);
+  margin-top: 6px;
+  font-weight: 500;
+}
+
+.sparkle {
+  position: fixed;
+  pointer-events: none;
+  font-size: 24px;
+  animation: sparkle-fade 1.8s ease-out forwards;
+  z-index: 9999;
+}
+@keyframes sparkle-fade {
+  0% { opacity: 1; transform: scale(0) rotate(0deg); }
+  40% { opacity: 1; transform: scale(1.5) rotate(180deg); }
+  100% { opacity: 0; transform: scale(0.6) rotate(360deg) translateY(-60px); }
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--purple-100); border-radius: 3px; }
+::-webkit-scrollbar-thumb { background: var(--purple-400); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--purple-500); }
+
+.empty-state {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--purple-400);
+}
+.empty-state .emoji { font-size: 48px; margin-bottom: 12px; }
+.empty-state p { font-size: 13px; line-height: 1.7; }
+
+@media (max-width: 1200px) {
+  .main-container { grid-template-columns: 250px 1fr 280px; }
+}
+@media (max-width: 900px) {
+  .main-container { grid-template-columns: 1fr; }
+  .panel { max-height: none; }
+  .hero-title { font-size: 32px; }
+}
+@media (max-width: 600px) {
+  .welcome-modal { width: 320px; height: 320px; }
+  .welcome-modal-title { font-size: 26px; letter-spacing: 4px; }
+  .welcome-modal-subtitle { font-size: 12px; letter-spacing: 2px; }
+  .hero-bg { background-position: center 15%; }
+  .detail-banner-img { background-position: center 15%; }
+  .hero-section { height: 260px; }
+  .hero-title { font-size: 26px; letter-spacing: 4px; }
+  .hero-dolls { width: 220px; height: 60px; }
+  .hero-stats { gap: 24px; }
+  .stat-num { font-size: 22px; }
+  .time-card { flex-direction: column; gap: 12px; padding: 16px; }
+  .time-right { width: 100%; justify-content: center; }
+  .info-grid { grid-template-columns: 1fr; }
+  .welcome-features { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- 欢迎封面 -->
+<div id="welcome-cover">
+  <div class="welcome-modal">
+    <span class="welcome-deco d1">✨</span>
+    <span class="welcome-deco d2">💜</span>
+    <div class="welcome-modal-img"></div>
+    <div class="welcome-modal-overlay"></div>
+    <div class="welcome-modal-content">
+      <div class="welcome-modal-title">RIIZE&BRIIZE</div>
+      <div class="welcome-modal-subtitle">全 球 活 动 汇 总</div>
+      <button class="welcome-modal-btn" onclick="enterSite()">进 入</button>
+    </div>
+  </div>
+</div>
+
+<!-- 漂浮装饰 -->
+<div class="floating-deco d1">💜</div>
+<div class="floating-deco d2">🎀</div>
+<div class="floating-deco d3">✨</div>
+<div class="floating-deco d4">🌸</div>
+<div class="floating-deco d5">💫</div>
+<div class="floating-deco d6">🎀</div>
+
+<!-- Hero区域 -->
+<div class="hero-section">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-dolls"></div>
+    <h1 class="hero-title">RIIZE</h1>
+    <p class="hero-subtitle">全 球 活 动 汇 总 · Ryuok</p>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-num" id="statTotal">50+</div>
+        <div class="stat-label">场活动</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" id="statUpcoming">15</div>
+        <div class="stat-label">即将开始</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" id="statCities">30+</div>
+        <div class="stat-label">座城市</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 时间栏 -->
+<div class="time-bar">
+  <div class="time-card">
+    <div class="time-left">
+      <div class="time-icon">⏰</div>
+      <div class="time-info">
+        <div class="date" id="currentDate">加载中...</div>
+        <div class="time" id="currentTime">--:--:--</div>
+      </div>
+    </div>
+    <div class="time-right">
+      <button class="action-btn btn-primary" onclick="refreshData()">
+        <span>🔄</span> 刷新数据
+      </button>
+      <button class="action-btn btn-secondary" onclick="toggleNotif()">
+        <span>🔔</span> 通知中心
+      </button>
+      <button class="action-btn btn-secondary" onclick="requestNotify()">
+        <span>📢</span> 开启提醒
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- 主体三栏 -->
+<div class="main-container">
+  
+  <!-- 左侧：日历 + 时间线 -->
+  <div class="panel left-panel">
+    <div class="panel-header">
+      <h2>📅 活动日历</h2>
+      <div class="calendar-nav">
+        <button class="nav-btn" onclick="changeMonth(-1)">◀</button>
+        <button class="nav-btn" onclick="goToday()" style="width:auto;padding:0 10px;font-size:11px;">今天</button>
+        <button class="nav-btn" onclick="changeMonth(1)">▶</button>
+      </div>
+    </div>
+    
+    <div class="calendar-month" id="calendarMonth">2026年8月</div>
+    
+    <div class="calendar-grid" id="calendarGrid">
+    </div>
+    
+    <div class="timeline-section">
+      <div class="timeline-title">⏰ 近期活动</div>
+      <div class="timeline-list" id="timelineList">
+      </div>
+    </div>
+  </div>
+
+  <!-- 中间：详情 -->
+  <div class="panel center-panel">
+    <div class="detail-banner">
+      <div class="detail-banner-img"></div>
+      <div class="detail-banner-overlay"></div>
+      <div class="detail-banner-content">
+        <span class="detail-type" id="detailType">选择活动</span>
+        <h1 id="detailTitle">RIIZE 全球活动汇总</h1>
+        <p id="detailSubtitle">点击右侧活动查看详细信息 ✨</p>
+      </div>
+    </div>
+    
+    <div class="detail-body" id="detailBody">
+      <div class="welcome-state">
+        <div class="welcome-dolls"></div>
+        <h2>💜 欢迎 BRIIZE！</h2>
+        <p>这是专属于你的 RIIZE 全球活动小助手</p>
+        <div class="welcome-features">
+          <div class="feature-card">
+            <div class="feature-icon">📅</div>
+            <span>全球活动日历</span>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🔔</div>
+            <span>活动开始提醒</span>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🎫</div>
+            <span>一键跳转购票</span>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🌐</div>
+            <span>全北京时间</span>
+          </div>
+        </div>
+        <p class="welcome-tip">从右侧选择一场活动开始探索吧～</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 右侧：活动列表 -->
+  <div class="panel right-panel">
+    <div class="panel-header">
+      <h2>🎫 活动列表</h2>
+      <span class="badge" id="eventCount">0 场</span>
+    </div>
+    
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all" onclick="filterEvents('all')">全部</button>
+      <button class="filter-btn" data-filter="upcoming" onclick="filterEvents('upcoming')">即将开始</button>
+      <button class="filter-btn" data-filter="concert" onclick="filterEvents('concert')">演唱会</button>
+      <button class="filter-btn" data-filter="fanmeeting" onclick="filterEvents('fanmeeting')">见面会</button>
+      <button class="filter-btn" data-filter="fansign" onclick="filterEvents('fansign')">签售会</button>
+      <button class="filter-btn" data-filter="festival" onclick="filterEvents('festival')">音乐节</button>
+    </div>
+    
+    <div class="event-list" id="eventList">
+    </div>
+    
+    <div class="quick-ticket">
+      <div class="qt-title">⚡ 快速购票</div>
+      <div class="qt-event" id="qtEvent">选择活动后显示</div>
+      <button class="qt-btn" id="qtBtn" disabled>暂无活动</button>
+    </div>
+  </div>
+</div>
+
+<!-- 底部 -->
+<div class="footer">
+  <div class="dolls-row"></div>
+  <p class="slogan">RISE and REALIZE, we are RIIZE 💜</p>
+  <p>数据来源：RIIZE 官方 / SMTOWN / 各主办方官方公告</p>
+  <p style="margin-top:8px;font-size:11px;opacity:0.7;">仅供粉丝学习交流使用 · Ryuok</p>
+</div>
+
+<!-- 通知面板 -->
+<div class="notif-panel" id="notifPanel">
+  <div class="notif-header">
+    <span>🔔 通知中心</span>
+    <span class="notif-close" onclick="toggleNotif()">×</span>
+  </div>
+  <div class="notif-list" id="notifList">
+  </div>
+</div>
+
+<script>
+// ===== 欢迎封面 =====
+function enterSite() {
+  document.getElementById('welcome-cover').classList.add('hidden');
+}
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Enter' || e.key === ' ') {
+    enterSite();
+  }
+});
+
+// ===== 活动数据（出道至今全部） =====
+const events = [
+  // ===== 2023年 出道年 =====
+  {
+    id: 1,
+    title: "RIIZE 出道 Showcase",
+    type: "concert",
+    typeLabel: "出道Showcase",
+    date: "2023-09-04",
+    time: "18:00",
+    city: "首尔",
+    venue: "Blue Square Mastercard厅",
+    status: "ended",
+    statusLabel: "已结束",
+    price: "免费",
+    currency: "KRW",
+    priceCNY: "",
+    ticketPlatform: "Weverse",
+    ticketTime: "已结束",
+    organizer: "SM Entertainment",
+    ticketUrl: "",
+    desc: "RIIZE 出道纪念 Showcase 'RIIZING DAY: RIIZE Premiere'，首次公开《Get A Guitar》舞台。",
+    highlight: "出道日！首张单曲专辑《Get A Guitar》发行"
+  },
+  {
+    id: 2,
+    title: "KCON 2023 LA",
+    type: "festival",
+    typeLabel: "拼盘演唱会",
+    date: "2023-09-23",
+    time: "18:00",
+    city: "洛杉矶",
+    venue: "Crypto.com Arena",
+    status: "ended",
+    statusLabel: "已结束",
+    price: "待定",
+    currency: "USD",
+    priceCNY: "",
+    ticketPlatform: "KCON官网",
+    ticketTime: "已结束",
+    organizer: "CJ ENM",
+    ticketUrl: "",
+    desc: "RIIZE 出道后首次海外行程，参加 KCON 2023 LA。",
+    highlight: "首次海外舞台"
+  },
+  {
+    id: 3,
+    title: "SMTOWN LIVE 2023 雅加达",
+    type: "festival",
+    typeLabel: "家族演唱会",
+    date: "2023-09-24",
+    time: "18:00",
+    city: "雅加达",
+    venue: "GBK 主体育场",
+    status: "ended",
+    statusLabel: "已结束",
+    price: "待定",
+    currency: "IDR",
+    priceCNY: "",
+    ticketPlatform: "SMTOWN官网",
+    ticketTime: "已结束",
+    organizer: "SM Entertainment",
+    ticketUrl: "",
+    desc: "SMTOWN LIVE 2023 : SMCU PALACE @JAKARTA",
+    highlight: "首次SMTOWN家族演唱会"
+  },
+  {
+    id: 4,
+    title: "KCON 沙特阿拉伯 2023",
+    type: "festival",
+    typeLabel: "拼盘演唱会",
+    date: "2023-10-06",
+    time: "18:00",
+    city: "利雅得",
+    venue: "Boulevard World",
+    status: "ended",
+    statusLabel: "已结束",
+    price: "待定",
+    currency: "SAR",
+    priceCNY: "",
+    ticketPlatform: "KCON官网",
+    ticketTime: "已结束",
+    organizer: "CJ ENM",
+    ticketUrl: "",
+    desc: "KCON SAUDI ARABIA 2023",
+    highlight: "首次中东行程"
+  },
+  {
+    id: 5,
+    title: "2023 MAMA Awards",
+    type: "festival",
+    typeLabel: "颁奖礼",
+    date: "2023-11-28",
+    time: "18:00",
+    city: "首尔",
+    venue: "高尺天空巨蛋",
+    status: "ended",
+    statusLabel: "已结束",
+    price: "待定",
+    currency: "KRW",
+    priceCNY: "",
+    ticketPlatform: "Mnet官网",
+    ticketTime: "已结束",
+    organizer: "CJ ENM",
+    ticketUrl: "",
+    desc: "2023 MAMA AWARDS，RIIZE 获得最受喜爱新人奖。",
+    highlight: "出道首个新人奖"
+  },
+  {
+    id: 6,
+    title: "2023 MMA 甜瓜音乐奖",
+    type: "festival",
+    typeLabel: "颁奖礼",
+    date: "2023-12-02",
+    time: "18:00",
+    city: "首尔",
+    venue: "高尺天空巨蛋",
+    status: "ended",
+    statusLabel: "已结束",
+    price: "待定",
+    currency: "KRW",
+    priceCNY: "",
+    ticketPlatform: "Melon Ticket",
+    ticketTime: "已结束",
+    organizer: "Kakao",
+    ticketUrl: "",
+    desc: "2023 Melon Music Awards，RIIZE 获得最佳新人奖。",
+    highlight: "MMA新人奖"
+  },
+  {
+    id: 7,
+    title: "MBC 歌谣大祭典 2023",
+    type: "festival",
+    typeLabel: "年末舞台",
+    date: "2023-12-31",
+    time: "18:00",
+    city: "高阳",
+    venue: "MBC Dream Center",
+    status: "ended",
+    statusLabel: "已结束",
+    price: "待定",
+    currency: "KRW",
+    priceCNY: "",
+    ticketPlatform: "MBC官网",
+    ticketTime: "已结束",
+    organizer: "MBC",
+    ticketUrl: "",
+    desc: "2023 MBC 歌谣大祭典，跨年舞台。",
+    highlight: "首次跨年舞台"
+  },
+
+  // ===== 2024年 =====
+  {
+    id: 8,
+    title: "第33届首尔歌谣大赏",
+    type: "festival",
+    typeLabel: "颁奖礼",
+    date: "2024-01-02",
+    time: "18:00",
+    city: "首尔",
+    venue: "高尺天空巨蛋",
+    status: "ended",
+    statusLabel: "已结束",
+    price: "待定",
+    currency: "KRW",
+    priceCNY: "",
+    ticketPlatform: "Interpark",
+    ticketTime: "已结束",
+    organizer: "首尔体育",
+    ticketUrl: "",
+    desc: "第33届首尔歌谣大赏，RIIZE 获得本赏和新人奖。",
+    highlight: "本赏 + 新人奖双丰收"
+  },
+  {
+    id: 9,
+    title: "RIIZE 印尼粉丝见面会",
+    type: "fanmeeting",
+    typeLabel: "粉丝见面会",
+    date: "2024-02-21",
+    time: "18:00",
+    city: "雅加达",
+    venue: "Richeese Land",
+    status: "ended",
+    statusLabel: "已结束",
+    price: "待定",
+    currency: "IDR",
+    priceCNY: "",
+    ticketPlatform: "当地主办方",
+    ticketTime: "已结束",
+    organizer: "ONE IN A BILLION",
+    ticketUrl: "",
+    desc: "ONE IN A BILLION Richeese Land 粉丝见面会。",
+    highlight: "印尼首次单独FM"
+  },
+  {
+    id: 10,
+    title: "RIIZING DAY 首尔站",
+    type: "concert",
+    typeLabel: "粉丝演唱会",
+    date: "2024-05-04",
+    dateEnd: "2024-05-05",
+    time: "18:00",
+    city: "首尔",
+    venue: "蚕室室内体育馆",
+    status: "ended",
+    statusLabel: "已结束",
+    price: "154,000",
+    currency: "KRW",
+    priceCNY: "816",
+    ticketPlatform: "Yes24 / Interpark",
+    ticketTime: "已结束",
+    organizer: "SM Entertainment / Dream Maker",
+    ticketUrl: "",
+    desc: "2024 RIIZE FAN-CON TOUR 'RIIZING DAY' 首尔站，首次单独演唱会。",
+    highlight: "首次单独演唱会！两天连开"
+  },
+  {
+    id: 11,
+    title: "RIIZING DAY 东京站",
+    type: "concert",
+    typeLabel: "粉丝演唱会",
+    date: "2024-05-11",
+    dateEnd: "2024-05-12",
+    time: "18:00",
+    city: "东京",
+    venue: "国立代代木竞技场",
+    status: "ended",
+    statusLabel: "已结束",
+    price: "12,800",
+    currency: "JPY",
+    priceCNY: "602",
+    ticketPlatform: "e+ / ぴあ",
+    ticketTime: "已结束",
+    organizer: "SM Entertainment Japan",
+    ticketUrl: "",
+    desc: "2024 RIIZE FAN-CON TOUR 'RIIZING DAY' 东京站。",
+    highlight: "日本首次单独演唱会"
+  },
+  {
+    id: 12,
+    title: "RIIZING DAY 香港站",
+    type: "concert",
+    typeLabel: "粉丝演唱会",
+    date: "2024-05-20",
+    time: "19:00",
+    city: "香港",
+    venue: "亚洲国际博览馆",
+    status: "ended",
+    statusLabel: "已结束",
+    price: "1,280",
+    currency: "HKD",
+    priceCNY: "1,178",
+    ticketPlatform: "Cityline",
+    ticketTime: "已结束",
+    organizer: "SM Entertainment",
+    ticketUrl: "",
+    desc: "2024 RIIZE FAN-CON TOUR 'RIIZING DAY' 香港站。",
+    highlight: "中国首站！"
+  },
+  {
+    id: 13,
+    title: "RIIZING DAY 台北站",
+    type: "concert",
+    typeLabel: "粉丝演唱会",
+    date: "2024-06-15",
+    time: "18:00",
+    city: "台北",
+    venue: "新北市工商展览中心",
+    status: "ended",
+    statusLabel: "已结束",
+    price: "4,800",
+    currency: "TWD",
+    priceCNY: "1,100",
+    ticketPlatform: "拓元售票",
+    ticketTime: "已结束",
+    organizer: "SM Entertainment",
+    ticketUrl: "",
+    desc: "2024 RIIZE FAN-CON TOUR 'RIIZING DAY' 台北站。",
+    highlight: "台湾首站"
+  },
+  {
+    id: 14,
+    title: "SUMMER SONIC 2024",
+    type: "festival",
+    typeLabel: "音乐节",
+    date: "2024-08-17",
+    time: "18:00",
+    city: "东京",
+    venue: "幕张展览馆",
+    status: "ended",
+    statusLabel: "已结束",
+    price: "18,000",
+    currency: "JPY",
+    priceCNY: "846",
+    ticketPlatform: "e+ / ぴあ",
+    ticketTime: "已结束",
+    organizer: "SUMMER SONIC",
+    ticketUrl: "",
+    desc: "日本最大夏日音乐节 SUMMER SONIC 2024。",
+    highlight: "首次日本音乐节"
+  },
+  {
+    id: 15,
+    title: "RIIZE 出道1周年 Fan Party",
+    type: "fanmeeting",
+    typeLabel: "粉丝见面会",
+    date: "2024-09-04",
+    time: "19:00",
+    city: "首尔",
+    venue: "在线直播",
+    status: "ended",
+    statusLabel: "已结束",
+    price: "免费",
+    currency: "KRW",
+    priceCNY: "",
+    ticketPlatform: "Weverse",
+    ticketTime: "已结束",
+    organizer: "SM Entertainment",
+    ticketUrl: "",
+    desc: "RIIZE 出道1周年纪念线上粉丝派对。",
+    highlight: "1周年快乐！"
+  },
+  {
+    id: 16,
+    title: "2024 MAMA Awards",
+    type: "festival",
+    typeLabel: "颁奖礼",
+    date: "2024-11-22",
+    time: "18:00",
+    city: "大阪",
+    venue: "京瓷巨蛋",
+    status: "ended",
+    statusLabel: "已结束",
+    price: "待定",
+    currency: "JPY",
+    priceCNY: "",
+    ticketPlatform: "Mnet官网",
+    ticketTime: "已结束",
+    organizer: "CJ ENM",
+    ticketUrl: "",
+    desc: "2024 MAMA AWARDS 大阪站。",
+    highlight: "首次日本MAMA"
+  },
+  {
+    id: 17,
+    title: "SBS 歌谣大战 2024",
+    type: "festival",
+    typeLabel: "年末舞台",
+    date: "2024-12-25",
+    time: "18:00",
+    city: "首尔",
+    venue: "高尺天空巨蛋",
+    status: "ended",
+    statusLabel: "已结束",
+    price: "待定",
+    currency: "KRW",
+    priceCNY: "",
+    ticketPlatform: "SBS官网",
+    ticketTime: "已结束",
+    organizer: "SBS",
+    ticketUrl: "",
+    desc: "2024 SBS 歌谣大战，圣诞特别舞台。",
+    highlight: "圣诞年末舞台"
+  },
+
+  // ===== 2025年 =====
+  {
+    id: 18,
+    title: "RIIZE 日本FM 2025",
+    type: "fanmeeting",
+    typeLabel: "粉丝见面会",
+    date: "2025-01-18",
+    dateEnd: "2025-01-19",
+    time: "18:00",
+    city: "横滨",
+    venue: "Pia Arena MM",
+    status: "ended",
+    statusLabel: "已结束",
+    price: "10,800",
+    currency: "JPY",
+    priceCNY: "508",
+    ticketPlatform: "FC抽选",
+    ticketTime: "已结束",
+    organizer: "SM Entertainment Japan",
+    ticketUrl: "",
+    desc: "RIIZE JAPAN FANMEETING 2025 'The Secret LIEZ'。",
+    highlight: "日本首次单独FM"
+  },
+  {
+    id: 19,
+    title: "RIIZING LOUD 首尔站",
+    type: "concert",
+    typeLabel: "演唱会",
+    date: "2025-07-04",
+    dateEnd: "2025-07-06",
+    time: "18:00",
+    city: "首尔",
+    venue: "KSPO DOME",
+    status: "ended",
+    statusLabel: "已结束",
+    price: "154,000",
+    currency: "KRW",
+    priceCNY: "816",
+    ticketPlatform: "Yes24 / Interpark",
+    ticketTime: "已结束",
+    organizer: "SM Entertainment / Dream Maker",
+    ticketUrl: "",
+    desc: "2025 RIIZE CONCERT TOUR [RIIZING LOUD] 首尔站，首次世巡起点。三天连开，规模空前。",
+    highlight: "首次世界巡演！三天连开"
+  },
+  {
+    id: 20,
+    title: "RIIZING LOUD 神户站",
+    type: "concert",
+    typeLabel: "演唱会",
+    date: "2025-07-12",
+    dateEnd: "2025-07-13",
+    time: "18:00",
+    city: "神户",
+    venue: "GLION ARENA KOBE",
+    status: "ended",
+    statusLabel: "已结束",
+    price: "13,800",
+    currency: "JPY",
+    priceCNY: "649",
+    ticketPlatform: "e+ / ぴあ",
+    ticketTime: "已结束",
+    organizer: "SM Entertainment Japan",
+    ticketUrl: "",
+    desc: "2025 RIIZE CONCERT TOUR [RIIZING LOUD] 神户站。",
+    highlight: "日本世巡首站"
+  },
+  {
+    id: 21,
+    title: "RIIZING LOUD 香港站",
+    type: "concert",
+    typeLabel: "演唱会",
+    date: "2025-07-19",
+    time: "19:00",
+    city: "香港",
+    venue: "亚洲国际博览馆",
+    status: "ended",
+    statusLabel: "已结束",
+    price: "1,680",
+    currency: "HKD",
+    priceCNY: "1,546",
+    ticketPlatform: "Cityline",
+    ticketTime: "已结束",
+    organizer: "SM Entertainment",
+    ticketUrl: "",
+    desc: "2025 RIIZE CONCERT TOUR [RIIZING LOUD] 香港站。",
+    highlight: "中国首站"
+  },
+  {
+    id: 22,
+    title: "RIIZING LOUD 埼玉站",
+    type: "concert",
+    typeLabel: "演唱会",
+    date: "2025-07-23",
+    dateEnd: "2025-07-24",
+    time: "18:00",
+    city: "埼玉",
+    venue: "埼玉超级竞技场",
+    status: "ended",
+    statusLabel: "已结束",
+    price: "13,800",
+    currency: "JPY",
+    priceCNY: "649",
+    ticketPlatform: "e+ / ぴあ",
+    ticketTime: "已结束",
+    organizer: "SM Entertainment Japan",
+    ticketUrl: "",
+    desc: "2025 RIIZE CONCERT TOUR [RIIZING LOUD] 埼玉站。",
+    highlight: "两天连开"
+  },
+  {
+    id: 23,
+    title: "RIIZING LOUD 广岛站",
+    type: "concert",
+    typeLabel: "演唱会",
+    date: "2025-08-09",
+    dateEnd: "2025-08-10",
+    time: "18:00",
+    city: "广岛",
+    venue: "HIROSHIMA GREEN ARENA",
+    status: "ended",
+    statusLabel: "已结束",
+    price: "13,800",
+    currency: "JPY",
+    priceCNY: "649",
+    ticketPlatform: "e+ / ぴあ",
+    ticketTime: "已结束",
+    organizer: "SM Entertainment Japan",
+    ticketUrl: "",
+    desc: "2025 RIIZE CONCERT TOUR [RIIZING LOUD] 广岛站。",
+    highlight: "广岛首场"
+  },
+  {
+    id: 24,
+    title: "SMTOWN LIVE 2025 东京",
+    type: "festival",
+    typeLabel: "家族演唱会",
+    date: "2025-08-16",
+    time: "18:00",
+    city: "东京",
+    venue: "东京巨蛋",
+    status: "ended",
+    statusLabel: "已结束",
+    price: "12,800",
+    currency: "JPY",
+    priceCNY: "602",
+    ticketPlatform: "FC抽选",
+    ticketTime: "已结束",
+    organizer: "SM Entertainment",
+    ticketUrl: "",
+    desc: "SMTOWN LIVE 2025 in TOKYO 东京巨蛋。",
+    highlight: "首次东京巨蛋"
+  },
+  {
+    id: 25,
+    title: "RIIZING LOUD 吉隆坡站",
+    type: "concert",
+    typeLabel: "演唱会",
+    date: "2025-08-16",
+    time: "19:00",
+    city: "吉隆坡",
+    venue: "Axiata Arena",
+    status: "ended",
+    statusLabel: "已结束",
+    price: "688",
+    currency: "MYR",
+    priceCNY: "1,090",
+    ticketPlatform: "BookMyShow",
+    ticketTime: "已结束",
+    organizer: "SM Entertainment",
+    ticketUrl: "",
+    desc: "2025 RIIZE CONCERT TOUR [RIIZING LOUD] 吉隆坡站。",
+    highlight: "马来西亚首站"
+  },
+  {
+    id: 26,
+    title: "RIIZING LOUD 福冈站",
+    type: "concert",
+    typeLabel: "演唱会",
+    date: "2025-08-23",
+    dateEnd: "2025-08-24",
+    time: "18:00",
+    city: "福冈",
+    venue: "Marine Messe 福冈",
+    status: "ended",
+    statusLabel: "已结束",
+    price: "13,800",
+    currency: "JPY",
+    priceCNY: "649",
+    ticketPlatform: "e+ / ぴあ",
+    ticketTime: "已结束",
+    organizer: "SM Entertainment Japan",
+    ticketUrl: "",
+    desc: "2025 RIIZE CONCERT TOUR [RIIZING LOUD] 福冈站。",
+    highlight: "两天连开"
+  },
+  {
+    id: 27,
+    title: "RIIZING LOUD 台北站",
+    type: "concert",
+    typeLabel: "演唱会",
+    date: "2025-08-30",
+    time: "18:00",
+    city: "台北",
+    venue: "台北小巨蛋",
+    status: "ended",
+    statusLabel: "已结束",
+    price: "5,200",
+    currency: "TWD",
+    priceCNY: "1,190",
+    ticketPlatform: "拓元售票",
+    ticketTime: "已结束",
+    organizer: "SM Entertainment",
+    ticketUrl: "",
+    desc: "2025 RIIZE CONCERT TOUR [RIIZING LOUD] 台北站。",
+    highlight: "小巨蛋首唱"
+  },
+  {
+    id: 28,
+    title: "RIIZING LOUD 曼谷站",
+    type: "concert",
+    typeLabel: "演唱会",
+    date: "2025-09-13",
+    dateEnd: "2025-09-15",
+    time: "18:00",
+    city: "曼谷",
+    venue: "Impact Arena",
+    status: "ended",
+    statusLabel: "已结束",
+    price: "4,800",
+    currency: "THB",
+    priceCNY: "960",
+    ticketPlatform: "Thai Ticket Major",
+    ticketTime: "已结束",
+    organizer: "SM Entertainment",
+    ticketUrl: "",
+    desc: "2025 RIIZE CONCERT TOUR [RIIZING LOUD] 曼谷站。",
+    highlight: "泰国首站，三天连开"
+  },
+  {
+    id: 29,
+    title: "RIIZING LOUD 洛杉矶站",
+    type: "concert",
+    typeLabel: "演唱会",
+    date: "2025-11-11",
+    time: "20:00",
+    city: "洛杉矶",
+    venue: "Kia Forum",
+    status: "ended",
+    statusLabel: "已结束",
+    price: "199",
+    currency: "USD",
+    priceCNY: "1,433",
+    ticketPlatform: "Ticketmaster",
+    ticketTime: "已结束",
+    organizer: "AEG Presents",
+    ticketUrl: "",
+    desc: "2025 RIIZE CONCERT TOUR [RIIZING LOUD] 北美巡演洛杉矶站。",
+    highlight: "北美巡演"
+  },
+  {
+    id: 30,
+    title: "2025 MAMA Awards",
+    type: "festival",
+    typeLabel: "颁奖礼",
+    date: "2025-11-29",
+    time: "18:00",
+    city: "首尔",
+    venue: "高尺天空巨蛋",
+    status: "ended",
+    statusLabel: "已结束",
+    price: "待定",
+    currency: "KRW",
+    priceCNY: "",
+    ticketPlatform: "Mnet官网",
+    ticketTime: "已结束",
+    organizer: "CJ ENM",
+    ticketUrl: "",
+    desc: "2025 MAMA AWARDS，RIIZE 获得最佳男子组合和年度歌曲。",
+    highlight: "大赏级获奖！"
+  },
+  {
+    id: 31,
+    title: "2025 MMA 甜瓜音乐奖",
+    type: "festival",
+    typeLabel: "颁奖礼",
+    date: "2025-12-02",
+    time: "18:00",
+    city: "首尔",
+    venue: "高尺天空巨蛋",
+    status: "ended",
+    statusLabel: "已结束",
+    price: "待定",
+    currency: "KRW",
+    priceCNY: "",
+    ticketPlatform: "Melon Ticket",
+    ticketTime: "已结束",
+    organizer: "Kakao",
+    ticketUrl: "",
+    desc: "2025 Melon Music Awards，RIIZE 获得最佳男艺人表演、TOP10等三项大奖。",
+    highlight: "三项大奖！"
+  },
+
+  // ===== 2026年 今年 =====
+  {
+    id: 32,
+    title: "RIIZING LOUD 雅加达站",
+    type: "concert",
+    typeLabel: "演唱会",
+    date: "2026-01-10",
+    time: "19:00",
+    city: "雅加达",
+    venue: "ICE BSD Hall 5-6",
+    status: "ended",
+    statusLabel: "已结束",
+    price: "2,800,000",
+    currency: "IDR",
+    priceCNY: "1,344",
+    ticketPlatform: "Tiket.com",
+    ticketTime: "已结束",
+    organizer: "SM Entertainment",
+    ticketUrl: "",
+    desc: "2025 RIIZE CONCERT TOUR [RIIZING LOUD] 雅加达站。",
+    highlight: "印尼世巡"
+  },
+  {
+    id: 33,
+    title: "第40届金唱片奖",
+    type: "festival",
+    typeLabel: "颁奖礼",
+    date: "2026-01-10",
+    time: "18:00",
+    city: "大阪",
+    venue: "京瓷巨蛋",
+    status: "ended",
+    statusLabel: "已结束",
+    price: "待定",
+    currency: "JPY",
+    priceCNY: "",
+    ticketPlatform: "FC抽选",
+    ticketTime: "已结束",
+    organizer: "金唱片奖委员会",
+    ticketUrl: "",
+    desc: "第40届韩国金唱片奖，RIIZE 获得最佳专辑。",
+    highlight: "金唱片最佳专辑"
+  },
+  {
+    id: 34,
+    title: "SMTOWN LIVE 曼谷",
+    type: "festival",
+    typeLabel: "家族演唱会",
+    date: "2026-02-14",
+    time: "18:00",
+    city: "曼谷",
+    venue: "Rajamangala 国家体育场",
+    status: "ended",
+    statusLabel: "已结束",
+    price: "4,800",
+    currency: "THB",
+    priceCNY: "960",
+    ticketPlatform: "Thai Ticket Major",
+    ticketTime: "已结束",
+    organizer: "SM Entertainment",
+    ticketUrl: "",
+    desc: "SMTOWN LIVE 2025-26 in BANGKOK。",
+    highlight: "情人节SMTOWN"
+  },
+  {
+    id: 35,
+    title: "Lollapalooza 阿根廷 2026",
+    type: "festival",
+    typeLabel: "音乐节",
+    date: "2026-03-15",
+    time: "20:00",
+    city: "布宜诺斯艾利斯",
+    venue: "San Isidro 跑马场",
+    status: "ended",
+    statusLabel: "已结束",
+    price: "待定",
+    currency: "ARS",
+    priceCNY: "",
+    ticketPlatform: "Lollapalooza官网",
+    ticketTime: "已结束",
+    organizer: "Lollapalooza",
+    ticketUrl: "",
+    desc: "Lollapalooza ARGENTINA 2026，RIIZE 首次南美音乐节。",
+    highlight: "南美首秀！"
+  },
+  {
+    id: 36,
+    title: "K2O 泼水节音乐节",
+    type: "festival",
+    typeLabel: "音乐节",
+    date: "2026-04-14",
+    time: "18:00",
+    city: "曼谷",
+    venue: "曼谷市中心",
+    status: "ended",
+    statusLabel: "已结束",
+    price: "3,500",
+    currency: "THB",
+    priceCNY: "700",
+    ticketPlatform: "Eventpop",
+    ticketTime: "已结束",
+    organizer: "K2O",
+    ticketUrl: "",
+    desc: "K2O Songkran Music Festival 泰国泼水节音乐节。",
+    highlight: "泼水节特别舞台"
+  },
+  {
+    id: 37,
+    title: "微博国际娱乐盛典",
+    type: "festival",
+    typeLabel: "颁奖礼",
+    date: "2026-04-25",
+    time: "19:00",
+    city: "澳门",
+    venue: "银河综艺馆",
+    status: "ended",
+    statusLabel: "已结束",
+    price: "待定",
+    currency: "MOP",
+    priceCNY: "",
+    ticketPlatform: "大麦网",
+    ticketTime: "已结束",
+    organizer: "微博",
+    ticketUrl: "",
+    desc: "Weibo International Entertainment Festival。",
+    highlight: "中国首秀"
+  },
+  {
+    id: 38,
+    title: "Channel B 棒球音乐节",
+    type: "festival",
+    typeLabel: "音乐节",
+    date: "2026-05-25",
+    time: "18:00",
+    city: "台北",
+    venue: "天母棒球场",
+    status: "ended",
+    statusLabel: "已结束",
+    price: "3,800",
+    currency: "TWD",
+    priceCNY: "870",
+    ticketPlatform: "拓元售票",
+    ticketTime: "已结束",
+    organizer: "Channel B",
+    ticketUrl: "",
+    desc: "Channel B Baseball Music Fest 台湾棒球音乐节。",
+    highlight: "台湾音乐节"
+  },
+  {
+    id: 39,
+    title: "RIIZE 1000天 Fan Party",
+    type: "fanmeeting",
+    typeLabel: "粉丝见面会",
+    date: "2026-05-30",
+    time: "13:00",
+    city: "首尔",
+    venue: "在线 + 线下",
+    status: "ended",
+    statusLabel: "已结束",
+    price: "免费",
+    currency: "KRW",
+    priceCNY: "",
+    ticketPlatform: "Weverse",
+    ticketTime: "已结束",
+    organizer: "SM Entertainment",
+    ticketUrl: "",
+    desc: "RIIZE 1000 DAYS FAN PARTY [RIIZE OFFIICE]，两场线下。",
+    highlight: "1000天纪念！"
+  },
+  {
+    id: 40,
+    title: "RIIZE 日本FM 2026 RPG",
+    type: "fanmeeting",
+    typeLabel: "粉丝见面会",
+    date: "2026-07-10",
+    time: "18:00",
+    city: "福冈",
+    venue: "福冈太阳宫",
+    status: "ended",
+    statusLabel: "已结束",
+    price: "11,800",
+    currency: "JPY",
+    priceCNY: "555",
+    ticketPlatform: "FC抽选",
+    ticketTime: "已结束",
+    organizer: "SM Entertainment Japan",
+    ticketUrl: "",
+    desc: "RIIZE FANMEETING 2026 'RPG' 日本巡演福冈站。",
+    highlight: "日本FM巡演"
+  },
+  {
+    id: 41,
+    title: "WATERBOMB 首尔 2026",
+    type: "festival",
+    typeLabel: "音乐节",
+    date: "2026-07-26",
+    time: "14:00",
+    city: "首尔",
+    venue: "首尔森林",
+    status: "ended",
+    statusLabel: "已结束",
+    price: "165,000",
+    currency: "KRW",
+    priceCNY: "875",
+    ticketPlatform: "Melon Ticket",
+    ticketTime: "已结束",
+    organizer: "SBS / 9ENT",
+    ticketUrl: "",
+    desc: "韩国最火夏日水上音乐节 WATERBOMB 2026 首尔站。",
+    highlight: "水枪大战！"
+  },
+  {
+    id: 42,
+    title: "SBS 夏季歌谣大战",
+    type: "festival",
+    typeLabel: "音乐节/颁奖礼",
+    date: "2026-08-09",
+    time: "18:00",
+    city: "高阳",
+    venue: "KINTEX",
+    status: "upcoming",
+    statusLabel: "即将开始",
+    price: "154,000",
+    currency: "KRW",
+    priceCNY: "816",
+    ticketPlatform: "Creatrip / Interpark / Melon Ticket",
+    ticketTime: "优先售票：6月23日 13:00 北京时间<br>一般售票：6月25日 12:00 北京时间",
+    organizer: "SBS",
+    ticketUrl: "https://tickets.interpark.com/",
+    desc: "SBS 夏季歌谣大战，成灿担任主持人。夏日特别舞台，多位顶级艺人齐聚。",
+    highlight: "成灿主持！"
+  },
+  {
+    id: 43,
+    title: "二辑东京线下活动",
+    type: "fansign",
+    typeLabel: "签售会",
+    date: "2026-08-12",
+    time: "19:00",
+    city: "东京",
+    venue: "东京国际论坛",
+    status: "upcoming",
+    statusLabel: "即将开始",
+    price: "3,300",
+    currency: "JPY",
+    priceCNY: "155",
+    ticketPlatform: "RIIZE JAPAN官网抽选",
+    ticketTime: "以官方公告为准",
+    organizer: "SM Entertainment Japan",
+    ticketUrl: "https://rize.jp/",
+    desc: "RIIZE 日本二辑纪念线下签售活动。",
+    highlight: "日本限定！"
+  },
+  {
+    id: 44,
+    title: "Mezamashi WANGAN Fes",
+    type: "festival",
+    typeLabel: "音乐节",
+    date: "2026-08-13",
+    time: "12:00",
+    city: "东京",
+    venue: "台场",
+    status: "upcoming",
+    statusLabel: "即将开始",
+    price: "12,800",
+    currency: "JPY",
+    priceCNY: "602",
+    ticketPlatform: "e+ / ぴあ / 罗森票务",
+    ticketTime: "以官方公告为准",
+    organizer: "富士电视台",
+    ticketUrl: "https://eplus.jp/",
+    desc: "日本台场夏日音乐节 Mezamashi WANGAN Fes 2026。",
+    highlight: "台场海边舞台！"
+  },
+  {
+    id: 45,
+    title: "上海线下签售会",
+    type: "fansign",
+    typeLabel: "签售会",
+    date: "2026-08-20",
+    time: "19:30",
+    city: "上海",
+    venue: "上海静安体育中心",
+    status: "upcoming",
+    statusLabel: "即将开始",
+    price: "399",
+    currency: "CNY",
+    priceCNY: "399",
+    ticketPlatform: "熊宝空间站",
+    ticketTime: "以官方公告为准",
+    organizer: "熊宝空间站",
+    ticketUrl: "https://www.xiongbao.com/",
+    desc: "RIIZE 七夕特别场上海线下签售会。",
+    highlight: "七夕特别场！"
+  },
+  {
+    id: 46,
+    title: "TMEA 腾讯音乐娱乐盛典",
+    type: "festival",
+    typeLabel: "颁奖礼",
+    date: "2026-08-23",
+    time: "19:00",
+    city: "澳门",
+    venue: "银河综艺馆",
+    status: "upcoming",
+    statusLabel: "即将开始",
+    price: "待公布",
+    currency: "MOP",
+    priceCNY: "",
+    ticketPlatform: "大麦网",
+    ticketTime: "以官方公告为准",
+    organizer: "腾讯音乐娱乐集团",
+    ticketUrl: "https://www.damai.cn/",
+    desc: "TMEA 腾讯音乐娱乐盛典 2026。",
+    highlight: "中国盛典！"
+  },
+  {
+    id: 47,
+    title: "香港线下签售会",
+    type: "fansign",
+    typeLabel: "签售会",
+    date: "2026-08-28",
+    time: "19:00",
+    city: "香港",
+    venue: "待定",
+    status: "upcoming",
+    statusLabel: "即将开始",
+    price: "1,280",
+    currency: "HKD",
+    priceCNY: "1,178",
+    ticketPlatform: "Fantopia",
+    ticketTime: "抽选：7月23日 19:00 ~ 8月5日 23:59 北京时间",
+    organizer: "Fantopia",
+    ticketUrl: "https://www.fantopia.app/",
+    desc: "RIIZE The 2nd Mini Album 【II】 Fan Sign Event IN HONG KONG。",
+    highlight: "香港签售！"
+  },
+  {
+    id: 48,
+    title: "三周年粉丝见面会",
+    type: "fanmeeting",
+    typeLabel: "粉丝见面会",
+    date: "2026-09-12",
+    dateEnd: "2026-09-13",
+    time: "18:00",
+    city: "仁川",
+    venue: "INSPIRE Arena",
+    status: "upcoming",
+    statusLabel: "即将开始",
+    price: "154,000",
+    currency: "KRW",
+    priceCNY: "816",
+    ticketPlatform: "Yes24 / Interpark",
+    ticketTime: "会员先行：7月27日 19:00 北京时间（韩）<br>会员先行：7月28日 19:00 北京时间（全球）<br>一般售票：7月29日 19:00 北京时间",
+    organizer: "SM Entertainment / Dream Maker",
+    ticketUrl: "https://ticket.yes24.com/",
+    desc: "RIIZE 出道三周年特别粉丝见面会 'Ch. RIIZE : ON AIR'。360度全开放舞台，打造专属于BRIIZE的特别频道。",
+    highlight: "三周年特别活动！两场全部售罄"
+  },
+  {
+    id: 49,
+    title: "RAPBEAT 音乐节 2026",
+    type: "festival",
+    typeLabel: "音乐节",
+    date: "2026-09-20",
+    dateEnd: "2026-09-21",
+    time: "13:00",
+    city: "首尔",
+    venue: "奥林匹克公园",
+    status: "upcoming",
+    statusLabel: "即将开始",
+    price: "165,000",
+    currency: "KRW",
+    priceCNY: "875",
+    ticketPlatform: "Melon Ticket / Interpark",
+    ticketTime: "以官方公告为准",
+    organizer: "9ENT",
+    ticketUrl: "https://ticket.melon.com/",
+    desc: "韩国最大嘻哈音乐节 RAPBEAT 2026。",
+    highlight: "两天连开！"
+  },
+  {
+    id: 50,
+    title: "釜山 BOF 2026",
+    type: "festival",
+    typeLabel: "音乐节",
+    date: "2026-10-01",
+    dateEnd: "2026-10-10",
+    time: "18:00",
+    city: "釜山",
+    venue: "釜山亚运主体育场",
+    status: "upcoming",
+    statusLabel: "即将开始",
+    price: "待公布",
+    currency: "KRW",
+    priceCNY: "",
+    ticketPlatform: "以官方公告为准",
+    ticketTime: "以官方公告为准",
+    organizer: "釜山文化财团",
+    ticketUrl: "",
+    desc: "釜山 One Asia Festival 2026。",
+    highlight: "釜山最大K-POP庆典！"
+  },
+  {
+    id: 51,
+    title: "MAMA 2026",
+    type: "festival",
+    typeLabel: "颁奖礼",
+    date: "2026-11-01",
+    time: "18:00",
+    city: "待定",
+    venue: "待定",
+    status: "upcoming",
+    statusLabel: "即将开始",
+    price: "待公布",
+    currency: "KRW",
+    priceCNY: "",
+    ticketPlatform: "以官方公告为准",
+    ticketTime: "以官方公告为准",
+    organizer: "CJ ENM",
+    ticketUrl: "",
+    desc: "MAMA 大奖 2026。",
+    highlight: "年度最大颁奖礼！"
+  }
+];
+
+// ===== 当前状态 =====
+let currentMonth = new Date();
+let currentFilter = 'all';
+let selectedEvent = null;
+let notifications = [];
+
+// ===== 初始化 =====
+document.addEventListener('DOMContentLoaded', function() {
+  updateTime();
+  setInterval(updateTime, 1000);
+  renderCalendar();
+  renderTimeline();
+  renderEventList();
+  updateStats();
+  initNotifications();
+});
+
+// ===== 时间更新 =====
+function updateTime() {
+  const now = new Date();
+  const options = { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' };
+  document.getElementById('currentDate').textContent = now.toLocaleDateString('zh-CN', options);
+  document.getElementById('currentTime').textContent = now.toLocaleTimeString('zh-CN');
+}
+
+// ===== 日历 =====
+function renderCalendar() {
+  const grid = document.getElementById('calendarGrid');
+  const monthLabel = document.getElementById('calendarMonth');
+  
+  const year = currentMonth.getFullYear();
+  const month = currentMonth.getMonth();
+  
+  monthLabel.textContent = `${year}年${month + 1}月`;
+  
+  const firstDay = new Date(year, month, 1);
+  const lastDay = new Date(year, month + 1, 0);
+  const startDay = firstDay.getDay();
+  const daysInMonth = lastDay.getDate();
+  
+  const prevLastDay = new Date(year, month, 0).getDate();
+  
+  let html = '';
+  const weekdays = ['日', '一', '二', '三', '四', '五', '六'];
+  weekdays.forEach(d => {
+    html += `<div class="calendar-weekday">${d}</div>`;
+  });
+  
+  for (let i = startDay - 1; i >= 0; i--) {
+    html += `<div class="calendar-day other-month">${prevLastDay - i}</div>`;
+  }
+  
+  const today = new Date();
+  const eventDates = getEventDatesForMonth(year, month);
+  
+  for (let day = 1; day <= daysInMonth; day++) {
+    const dateStr = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+    const isToday = today.getFullYear() === year && today.getMonth() === month && today.getDate() === day;
+    const hasEvent = eventDates.includes(dateStr);
+    
+    let classes = 'calendar-day';
+    if (isToday) classes += ' today';
+    if (hasEvent) classes += ' has-event';
+    
+    html += `<div class="${classes}" onclick="selectDate('${dateStr}')">
+      ${day}
+      ${hasEvent ? '<div class="dot"></div>' : ''}
+    </div>`;
+  }
+  
+  const totalCells = startDay + daysInMonth;
+  const remaining = (7 - (totalCells % 7)) % 7;
+  for (let i = 1; i <= remaining; i++) {
+    html += `<div class="calendar-day other-month">${i}</div>`;
+  }
+  
+  grid.innerHTML = html;
+}
+
+function getEventDatesForMonth(year, month) {
+  const dates = [];
+  events.forEach(e => {
+    const start = new Date(e.date);
+    const end = e.dateEnd ? new Date(e.dateEnd) : start;
+    if (start.getFullYear() === year && start.getMonth() === month ||
+        end.getFullYear() === year && end.getMonth() === month) {
+      for (let d = new Date(start); d <= end; d.setDate(d.getDate() + 1)) {
+        if (d.getFullYear() === year && d.getMonth() === month) {
+          dates.push(d.toISOString().split('T')[0]);
+        }
+      }
+    }
+  });
+  return dates;
+}
+
+function changeMonth(delta) {
+  currentMonth.setMonth(currentMonth.getMonth() + delta);
+  renderCalendar();
+}
+
+function goToday() {
+  currentMonth = new Date();
+  renderCalendar();
+}
+
+function selectDate(dateStr) {
+  const dateEvents = events.filter(e => {
+    const start = new Date(e.date);
+    const end = e.dateEnd ? new Date(e.dateEnd) : start;
+    const d = new Date(dateStr);
+    return d >= start && d <= end;
+  });
+  
+  if (dateEvents.length > 0) {
+    selectEvent(dateEvents[0].id);
+  }
+}
+
+// ===== 时间线 =====
+function renderTimeline() {
+  const list = document.getElementById('timelineList');
+  const now = new Date();
+  
+  const upcoming = events
+    .filter(e => new Date(e.date) >= now)
+    .sort((a, b) => new Date(a.date) - new Date(b.date))
+    .slice(0, 5);
+  
+  if (upcoming.length === 0) {
+    list.innerHTML = `<div class="empty-state"><div class="emoji">💜</div><p>近期暂无活动</p></div>`;
+    return;
+  }
+  
+  let html = '';
+  upcoming.forEach(e => {
+    const date = new Date(e.date);
+    const isActive = selectedEvent && selectedEvent.id === e.id;
+    html += `
+      <div class="timeline-item ${isActive ? 'active' : ''}" onclick="selectEvent(${e.id})">
+        <div class="tl-date">
+          <div class="month">${date.getMonth() + 1}月</div>
+          <div class="day">${date.getDate()}</div>
+        </div>
+        <div class="tl-info">
+          <div class="title">${e.title}</div>
+          <div class="city">📍 ${e.city}</div>
+          <span class="status-tag status-${e.status}">${e.statusLabel}</span>
+        </div>
+      </div>
+    `;
+  });
+  
+  list.innerHTML = html;
+}
+
+// ===== 活动列表 =====
+function renderEventList() {
+  const list = document.getElementById('eventList');
+  const countEl = document.getElementById('eventCount');
+  
+  let filtered = events;
+  
+  if (currentFilter === 'upcoming') {
+    const now = new Date();
+    filtered = events.filter(e => new Date(e.date) >= now);
+  } else if (currentFilter !== 'all') {
+    filtered = events.filter(e => e.type === currentFilter);
+  }
+  
+  filtered.sort((a, b) => new Date(a.date) - new Date(b.date));
+  
+  countEl.textContent = `${filtered.length} 场`;
+  
+  if (filtered.length === 0) {
+    list.innerHTML = `<div class="empty-state"><div class="emoji">🎫</div><p>暂无相关活动</p></div>`;
+    return;
+  }
+  
+  let html = '';
+  filtered.forEach(e => {
+    const date = new Date(e.date);
+    const isSelected = selectedEvent && selectedEvent.id === e.id;
+    const hasTicket = e.ticketUrl && e.ticketUrl.length > 0;
+    
+    html += `
+      <div class="event-card ${isSelected ? 'selected' : ''}" onclick="selectEvent(${e.id})">
+        <div class="card-top">
+          <div class="card-date-badge">
+            <div class="month">${date.getMonth() + 1}月</div>
+            <div class="day">${date.getDate()}</div>
+          </div>
+          <span class="card-status status-${e.status}">${e.statusLabel}</span>
+        </div>
+        <div class="card-title">${e.title}</div>
+        <div class="card-location">📍 ${e.city} · ${e.venue}</div>
+        <div class="card-actions">
+          <button class="card-btn detail" onclick="event.stopPropagation(); selectEvent(${e.id})">📋 详情</button>
+          <button class="card-btn ticket" ${hasTicket ? '' : 'disabled'} onclick="event.stopPropagation(); openTicket(${e.id})">🎫 购票</button>
+        </div>
+      </div>
+    `;
+  });
+  
+  list.innerHTML = html;
+}
+
+function filterEvents(filter) {
+  currentFilter = filter;
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.filter === filter);
+  });
+  renderEventList();
+}
+
+// ===== 详情 =====
+function selectEvent(id) {
+  const e = events.find(ev => ev.id === id);
+  if (!e) return;
+  
+  selectedEvent = e;
+  
+  document.getElementById('detailType').textContent = e.typeLabel;
+  document.getElementById('detailTitle').textContent = e.title;
+  document.getElementById('detailSubtitle').textContent = `📍 ${e.city} · ${e.venue}`;
+  
+  const date = new Date(e.date);
+  const dateEnd = e.dateEnd ? new Date(e.dateEnd) : null;
+  const dateStr = dateEnd 
+    ? `${date.getMonth() + 1}月${date.getDate()}日 - ${dateEnd.getMonth() + 1}月${dateEnd.getDate()}日`
+    : `${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日`;
+  
+  const priceStr = e.priceCNY 
+    ? `${e.price} ${e.currency}<br><span style="font-size:11px;color:#9b59b6;">约¥${e.priceCNY} 人民币</span>`
+    : `${e.price} ${e.currency || ''}`;
+  
+  const body = document.getElementById('detailBody');
+  body.innerHTML = `
+    <div class="detail-section">
+      <h3>📋 基本信息</h3>
+      <div class="info-grid">
+        <div class="info-card">
+          <div class="label">活动日期</div>
+          <div class="value">${dateStr}</div>
+        </div>
+        <div class="info-card">
+          <div class="label">活动时间</div>
+          <div class="value">${e.time}（北京时间）</div>
+        </div>
+        <div class="info-card">
+          <div class="label">举办城市</div>
+          <div class="value">${e.city}</div>
+        </div>
+        <div class="info-card">
+          <div class="label">举办场馆</div>
+          <div class="value">${e.venue}</div>
+        </div>
+        <div class="info-card">
+          <div class="label">票价</div>
+          <div class="value">${priceStr}</div>
+        </div>
+        <div class="info-card">
+          <div class="label">状态</div>
+          <div class="value"><span class="status-tag status-${e.status}">${e.statusLabel}</span></div>
+        </div>
+        <div class="info-card">
+          <div class="label">购票平台</div>
+          <div class="value" style="font-size:12px;">${e.ticketPlatform || '以官方公告为准'}</div>
+        </div>
+        <div class="info-card">
+          <div class="label">购票时间</div>
+          <div class="value" style="font-size:12px;color:#9b59b6;line-height:1.5;">${e.ticketTime || '以官方公告为准'}</div>
+        </div>
+        <div class="info-card" style="grid-column: span 2;">
+          <div class="label">主办方</div>
+          <div class="value">${e.organizer}</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="detail-section">
+      <h3>📅 场次安排</h3>
+      <div class="schedule-list">
+        <div class="schedule-item">
+          <div class="schedule-date">
+            <div class="date">${date.getDate()}</div>
+            <div class="month">${date.getMonth() + 1}月</div>
+          </div>
+          <div class="schedule-info">
+            <div class="time">${e.time} 北京时间</div>
+            <div class="label">正式演出</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="detail-section">
+      <h3>📝 活动介绍</h3>
+      <div class="detail-desc">
+        <p>${e.desc}</p>
+        ${e.highlight ? `
+        <div class="highlight-box">
+          <div class="title">✨ 亮点</div>
+          <div class="content">${e.highlight}</div>
+        </div>
+        ` : ''}
+      </div>
+    </div>
+    
+    <div class="detail-section">
+      <h3>🎫 购票信息</h3>
+      <div class="ticket-section">
+        <button class="btn-ticket primary" ${e.ticketUrl ? '' : 'disabled'} onclick="openTicket(${e.id})">
+          🎫 立即购票
+        </button>
+        <button class="btn-ticket secondary" onclick="addReminder(${e.id})">
+          🔔 设置提醒
+        </button>
+      </div>
+      <div class="ticket-tip">
+        💡 温馨提示：购票请通过官方渠道，谨防黄牛和诈骗。所有时间均为北京时间，请注意时差。
+      </div>
+    </div>
+  `;
+  
+  // 更新快速购票
+  document.getElementById('qtEvent').textContent = e.title;
+  const qtBtn = document.getElementById('qtBtn');
+  if (e.ticketUrl) {
+    qtBtn.disabled = false;
+    qtBtn.textContent = '⚡ 立即购票';
+    qtBtn.onclick = () => openTicket(e.id);
+  } else {
+    qtBtn.disabled = true;
+    qtBtn.textContent = '暂无购票链接';
+  }
+  
+  // 撒花效果
+  createSparkle(window.innerWidth / 2, window.innerHeight / 2);
+  
+  // 更新列表选中状态
+  renderEventList();
+  renderTimeline();
+}
+
+function openTicket(id) {
+  const e = events.find(ev => ev.id === id);
+  if (e && e.ticketUrl) {
+    window.open(e.ticketUrl, '_blank');
+    createSparkle(window.innerWidth / 2, window.innerHeight / 2);
+  }
+}
+
+// ===== 撒花效果 =====
+function createSparkle(x, y) {
+  const emojis = ['💜', '✨', '🎀', '🌸', '💫', '⭐', '💕', '🌟'];
+  for (let i = 0; i < 15; i++) {
+    const sparkle = document.createElement('div');
+    sparkle.className = 'sparkle';
+    sparkle.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+    sparkle.style.left = (x + (Math.random() - 0.5) * 200) + 'px';
+    sparkle.style.top = (y + (Math.random() - 0.5) * 100) + 'px';
+    sparkle.style.animationDelay = (Math.random() * 0.3) + 's';
+    sparkle.style.fontSize = (16 + Math.random() * 20) + 'px';
+    document.body.appendChild(sparkle);
+    setTimeout(() => sparkle.remove(), 2000);
+  }
+}
+
+// ===== 统计 =====
+function updateStats() {
+  const now = new Date();
+  const upcoming = events.filter(e => new Date(e.date) >= now);
+  const cities = new Set(events.map(e => e.city));
+  
+  document.getElementById('statTotal').textContent = events.length;
+  document.getElementById('statUpcoming').textContent = upcoming.length;
+  document.getElementById('statCities').textContent = cities.size;
+}
+
+// ===== 刷新 =====
+function refreshData() {
+  createSparkle(window.innerWidth / 2, window.innerHeight / 2);
+  alert('✅ 数据已是最新！');
+}
+
+// ===== 通知 =====
+function initNotifications() {
+  const now = new Date();
+  const upcoming = events
+    .filter(e => new Date(e.date) >= now)
+    .sort((a, b) => new Date(a.date) - new Date(b.date))
+    .slice(0, 3);
+  
+  notifications = upcoming.map(e => ({
+    id: e.id,
+    title: e.title,
+    desc: `${e.city} · ${e.venue}`,
+    time: getCountdown(e.date),
+    unread: true
+  }));
+  
+  renderNotifications();
+}
+
+function getCountdown(dateStr) {
+  const now = new Date();
+  const date = new Date(dateStr);
+  const diff = date - now;
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  
+  if (days < 0) return '已结束';
+  if (days === 0) return '今天！';
+  return `还有 ${days} 天`;
+}
+
+function renderNotifications() {
+  const list = document.getElementById('notifList');
+  
+  if (notifications.length === 0) {
+    list.innerHTML = `<div class="empty-state"><div class="emoji">🔔</div><p>暂无通知</p></div>`;
+    return;
+  }
+  
+  let html = '';
+  notifications.forEach(n => {
+    html += `
+      <div class="notif-item ${n.unread ? 'unread' : ''}" onclick="selectEvent(${n.id})">
+        <div class="title">${n.title}</div>
+        <div class="desc">${n.desc}</div>
+        <div class="time">${n.time}</div>
+      </div>
+    `;
+  });
+  
+  list.innerHTML = html;
+}
+
+function toggleNotif() {
+  const panel = document.getElementById('notifPanel');
+  panel.classList.toggle('show');
+}
+
+function requestNotify() {
+  if ('Notification' in window) {
+    Notification.requestPermission().then(perm => {
+      if (perm === 'granted') {
+        alert('✅ 提醒已开启！活动开始前会通知你～');
+        createSparkle(window.innerWidth / 2, window.innerHeight / 2);
+      } else {
+        alert('⚠️ 你拒绝了通知权限，可以在浏览器设置里开启');
+      }
+    });
+  } else {
+    alert('⚠️ 你的浏览器不支持通知功能');
+  }
+}
+
+function addReminder(id) {
+  const e = events.find(ev => ev.id === id);
+  if (!e) return;
+  
+  if ('Notification' in window && Notification.permission === 'granted') {
+    new Notification('💜 RIIZE 活动提醒', {
+      body: `${e.title}\n${e.city} · ${e.venue}`,
+      icon: 'assets/cover.jpg'
+    });
+    alert('✅ 提醒已设置！');
+  } else {
+    alert('⚠️ 请先开启通知权限（点顶部的「开启提醒」按钮）');
+  }
+}
+</script>
+</body>
+</html>
