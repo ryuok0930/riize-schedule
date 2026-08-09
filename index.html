@@ -635,6 +635,7 @@ body {
   font-size: 14px;
   font-weight: 600;
   color: var(--purple-900);
+  line-height: 1.5;
 }
 .info-card .value.highlight {
   color: var(--purple-700);
@@ -1083,15 +1084,15 @@ body {
     <p class="hero-subtitle">全 球 活 动 汇 总 · Ryuok</p>
     <div class="hero-stats">
       <div class="stat-item">
-        <div class="stat-num" id="statTotal">50+</div>
+        <div class="stat-num" id="statTotal">60+</div>
         <div class="stat-label">场活动</div>
       </div>
       <div class="stat-item">
-        <div class="stat-num" id="statUpcoming">15</div>
+        <div class="stat-num" id="statUpcoming">20</div>
         <div class="stat-label">即将开始</div>
       </div>
       <div class="stat-item">
-        <div class="stat-num" id="statCities">30+</div>
+        <div class="stat-num" id="statCities">40+</div>
         <div class="stat-label">座城市</div>
       </div>
     </div>
@@ -1244,7 +1245,7 @@ document.addEventListener('keydown', function(e) {
   }
 });
 
-// ===== 活动数据（出道至今全部） =====
+// ===== 活动数据（出道至今全部，详细信息补全） =====
 const events = [
   // ===== 2023年 出道年 =====
   {
@@ -1265,7 +1266,7 @@ const events = [
     ticketTime: "已结束",
     organizer: "SM Entertainment",
     ticketUrl: "",
-    desc: "RIIZE 出道纪念 Showcase 'RIIZING DAY: RIIZE Premiere'，首次公开《Get A Guitar》舞台。",
+    desc: "RIIZE 出道纪念 Showcase 'RIIZING DAY: RIIZE Premiere'，首次公开《Get A Guitar》舞台。6名成员正式出道，开启RIIZE时代。",
     highlight: "出道日！首张单曲专辑《Get A Guitar》发行"
   },
   {
@@ -1286,7 +1287,7 @@ const events = [
     ticketTime: "已结束",
     organizer: "CJ ENM",
     ticketUrl: "",
-    desc: "RIIZE 出道后首次海外行程，参加 KCON 2023 LA。",
+    desc: "RIIZE 出道后首次海外行程，参加 KCON 2023 LA。出道仅19天就登上KCON舞台，展现新人气势。",
     highlight: "首次海外舞台"
   },
   {
@@ -1307,7 +1308,7 @@ const events = [
     ticketTime: "已结束",
     organizer: "SM Entertainment",
     ticketUrl: "",
-    desc: "SMTOWN LIVE 2023 : SMCU PALACE @JAKARTA",
+    desc: "SMTOWN LIVE 2023 : SMCU PALACE @JAKARTA。RIIZE 首次参加SMTOWN家族演唱会，与SM前辈们同台。",
     highlight: "首次SMTOWN家族演唱会"
   },
   {
@@ -1328,7 +1329,7 @@ const events = [
     ticketTime: "已结束",
     organizer: "CJ ENM",
     ticketUrl: "",
-    desc: "KCON SAUDI ARABIA 2023",
+    desc: "KCON SAUDI ARABIA 2023。RIIZE 首次中东行程，出道后迅速展开全球活动。",
     highlight: "首次中东行程"
   },
   {
@@ -1349,7 +1350,7 @@ const events = [
     ticketTime: "已结束",
     organizer: "CJ ENM",
     ticketUrl: "",
-    desc: "2023 MAMA AWARDS，RIIZE 获得最受喜爱新人奖。",
+    desc: "2023 MAMA AWARDS，RIIZE 获得最受喜爱新人奖。出道3个月斩获首个新人奖，展现超强新人气势。",
     highlight: "出道首个新人奖"
   },
   {
@@ -1370,7 +1371,7 @@ const events = [
     ticketTime: "已结束",
     organizer: "Kakao",
     ticketUrl: "",
-    desc: "2023 Melon Music Awards，RIIZE 获得最佳新人奖。",
+    desc: "2023 Melon Music Awards，RIIZE 获得最佳新人奖。横扫各大颁奖礼新人奖，成为2023年最强新人。",
     highlight: "MMA新人奖"
   },
   {
@@ -1391,7 +1392,7 @@ const events = [
     ticketTime: "已结束",
     organizer: "MBC",
     ticketUrl: "",
-    desc: "2023 MBC 歌谣大祭典，跨年舞台。",
+    desc: "2023 MBC 歌谣大祭典，跨年舞台。RIIZE 出道后首个跨年舞台，与粉丝一起迎接2024年。",
     highlight: "首次跨年舞台"
   },
 
@@ -1414,7 +1415,7 @@ const events = [
     ticketTime: "已结束",
     organizer: "首尔体育",
     ticketUrl: "",
-    desc: "第33届首尔歌谣大赏，RIIZE 获得本赏和新人奖。",
+    desc: "第33届首尔歌谣大赏，RIIZE 获得本赏和新人奖。出道4个月同时获得本赏和新人奖，创造历史。",
     highlight: "本赏 + 新人奖双丰收"
   },
   {
@@ -1435,7 +1436,7 @@ const events = [
     ticketTime: "已结束",
     organizer: "ONE IN A BILLION",
     ticketUrl: "",
-    desc: "ONE IN A BILLION Richeese Land 粉丝见面会。",
+    desc: "ONE IN A BILLION Richeese Land 粉丝见面会。RIIZE 首次印尼单独粉丝活动，与当地BRIIZE见面。",
     highlight: "印尼首次单独FM"
   },
   {
@@ -1457,7 +1458,7 @@ const events = [
     ticketTime: "已结束",
     organizer: "SM Entertainment / Dream Maker",
     ticketUrl: "",
-    desc: "2024 RIIZE FAN-CON TOUR 'RIIZING DAY' 首尔站，首次单独演唱会。",
+    desc: "2024 RIIZE FAN-CON TOUR 'RIIZING DAY' 首尔站，首次单独演唱会。两天连开，全部售罄，开启RIIZE的演唱会时代。",
     highlight: "首次单独演唱会！两天连开"
   },
   {
@@ -1479,7 +1480,7 @@ const events = [
     ticketTime: "已结束",
     organizer: "SM Entertainment Japan",
     ticketUrl: "",
-    desc: "2024 RIIZE FAN-CON TOUR 'RIIZING DAY' 东京站。",
+    desc: "2024 RIIZE FAN-CON TOUR 'RIIZING DAY' 东京站。日本首次单独演唱会，两天连开，人气火爆。",
     highlight: "日本首次单独演唱会"
   },
   {
@@ -1500,7 +1501,7 @@ const events = [
     ticketTime: "已结束",
     organizer: "SM Entertainment",
     ticketUrl: "",
-    desc: "2024 RIIZE FAN-CON TOUR 'RIIZING DAY' 香港站。",
+    desc: "2024 RIIZE FAN-CON TOUR 'RIIZING DAY' 香港站。中国首站，与中国BRIIZE首次见面。",
     highlight: "中国首站！"
   },
   {
@@ -1521,7 +1522,7 @@ const events = [
     ticketTime: "已结束",
     organizer: "SM Entertainment",
     ticketUrl: "",
-    desc: "2024 RIIZE FAN-CON TOUR 'RIIZING DAY' 台北站。",
+    desc: "2024 RIIZE FAN-CON TOUR 'RIIZING DAY' 台北站。台湾首站，粉丝热情高涨。",
     highlight: "台湾首站"
   },
   {
@@ -1542,7 +1543,7 @@ const events = [
     ticketTime: "已结束",
     organizer: "SUMMER SONIC",
     ticketUrl: "",
-    desc: "日本最大夏日音乐节 SUMMER SONIC 2024。",
+    desc: "日本最大夏日音乐节 SUMMER SONIC 2024。RIIZE 首次参加日本大型音乐节，舞台表现惊艳。",
     highlight: "首次日本音乐节"
   },
   {
@@ -1563,7 +1564,7 @@ const events = [
     ticketTime: "已结束",
     organizer: "SM Entertainment",
     ticketUrl: "",
-    desc: "RIIZE 出道1周年纪念线上粉丝派对。",
+    desc: "RIIZE 出道1周年纪念线上粉丝派对。与全球BRIIZE一起庆祝出道1周年，回顾成长历程。",
     highlight: "1周年快乐！"
   },
   {
@@ -1584,7 +1585,7 @@ const events = [
     ticketTime: "已结束",
     organizer: "CJ ENM",
     ticketUrl: "",
-    desc: "2024 MAMA AWARDS 大阪站。",
+    desc: "2024 MAMA AWARDS 大阪站。RIIZE 首次在日本巨蛋舞台表演，气势如虹。",
     highlight: "首次日本MAMA"
   },
   {
@@ -1605,7 +1606,7 @@ const events = [
     ticketTime: "已结束",
     organizer: "SBS",
     ticketUrl: "",
-    desc: "2024 SBS 歌谣大战，圣诞特别舞台。",
+    desc: "2024 SBS 歌谣大战，圣诞特别舞台。圣诞节与BRIIZE一起度过，特别舞台令人难忘。",
     highlight: "圣诞年末舞台"
   },
 
@@ -1629,7 +1630,7 @@ const events = [
     ticketTime: "已结束",
     organizer: "SM Entertainment Japan",
     ticketUrl: "",
-    desc: "RIIZE JAPAN FANMEETING 2025 'The Secret LIEZ'。",
+    desc: "RIIZE JAPAN FANMEETING 2025 'The Secret LIEZ'。日本首次单独FM，两天连开，全部售罄。",
     highlight: "日本首次单独FM"
   },
   {
@@ -1651,7 +1652,7 @@ const events = [
     ticketTime: "已结束",
     organizer: "SM Entertainment / Dream Maker",
     ticketUrl: "",
-    desc: "2025 RIIZE CONCERT TOUR [RIIZING LOUD] 首尔站，首次世巡起点。三天连开，规模空前。",
+    desc: "2025 RIIZE CONCERT TOUR [RIIZING LOUD] 首尔站，首次世巡起点。三天连开，规模空前，开启RIIZE的世界巡演时代。",
     highlight: "首次世界巡演！三天连开"
   },
   {
@@ -1673,7 +1674,7 @@ const events = [
     ticketTime: "已结束",
     organizer: "SM Entertainment Japan",
     ticketUrl: "",
-    desc: "2025 RIIZE CONCERT TOUR [RIIZING LOUD] 神户站。",
+    desc: "2025 RIIZE CONCERT TOUR [RIIZING LOUD] 神户站。日本世巡首站，两天连开，人气火爆。",
     highlight: "日本世巡首站"
   },
   {
@@ -1694,7 +1695,7 @@ const events = [
     ticketTime: "已结束",
     organizer: "SM Entertainment",
     ticketUrl: "",
-    desc: "2025 RIIZE CONCERT TOUR [RIIZING LOUD] 香港站。",
+    desc: "2025 RIIZE CONCERT TOUR [RIIZING LOUD] 香港站。中国首站，粉丝热情高涨，全部售罄。",
     highlight: "中国首站"
   },
   {
@@ -1716,7 +1717,7 @@ const events = [
     ticketTime: "已结束",
     organizer: "SM Entertainment Japan",
     ticketUrl: "",
-    desc: "2025 RIIZE CONCERT TOUR [RIIZING LOUD] 埼玉站。",
+    desc: "2025 RIIZE CONCERT TOUR [RIIZING LOUD] 埼玉站。两天连开，大型竞技场规模，展现日本人气。",
     highlight: "两天连开"
   },
   {
@@ -1738,7 +1739,7 @@ const events = [
     ticketTime: "已结束",
     organizer: "SM Entertainment Japan",
     ticketUrl: "",
-    desc: "2025 RIIZE CONCERT TOUR [RIIZING LOUD] 广岛站。",
+    desc: "2025 RIIZE CONCERT TOUR [RIIZING LOUD] 广岛站。两天连开，日本巡演持续火爆。",
     highlight: "广岛首场"
   },
   {
@@ -1759,7 +1760,7 @@ const events = [
     ticketTime: "已结束",
     organizer: "SM Entertainment",
     ticketUrl: "",
-    desc: "SMTOWN LIVE 2025 in TOKYO 东京巨蛋。",
+    desc: "SMTOWN LIVE 2025 in TOKYO 东京巨蛋。RIIZE 首次登上东京巨蛋舞台，与SM家族一起。",
     highlight: "首次东京巨蛋"
   },
   {
@@ -1780,7 +1781,7 @@ const events = [
     ticketTime: "已结束",
     organizer: "SM Entertainment",
     ticketUrl: "",
-    desc: "2025 RIIZE CONCERT TOUR [RIIZING LOUD] 吉隆坡站。",
+    desc: "2025 RIIZE CONCERT TOUR [RIIZING LOUD] 吉隆坡站。马来西亚首站，东南亚人气爆发。",
     highlight: "马来西亚首站"
   },
   {
@@ -1802,7 +1803,7 @@ const events = [
     ticketTime: "已结束",
     organizer: "SM Entertainment Japan",
     ticketUrl: "",
-    desc: "2025 RIIZE CONCERT TOUR [RIIZING LOUD] 福冈站。",
+    desc: "2025 RIIZE CONCERT TOUR [RIIZING LOUD] 福冈站。两天连开，日本巡演最后一站。",
     highlight: "两天连开"
   },
   {
@@ -1823,7 +1824,7 @@ const events = [
     ticketTime: "已结束",
     organizer: "SM Entertainment",
     ticketUrl: "",
-    desc: "2025 RIIZE CONCERT TOUR [RIIZING LOUD] 台北站。",
+    desc: "2025 RIIZE CONCERT TOUR [RIIZING LOUD] 台北站。首次登上台北小巨蛋，台湾BRIIZE热情高涨。",
     highlight: "小巨蛋首唱"
   },
   {
@@ -1845,7 +1846,7 @@ const events = [
     ticketTime: "已结束",
     organizer: "SM Entertainment",
     ticketUrl: "",
-    desc: "2025 RIIZE CONCERT TOUR [RIIZING LOUD] 曼谷站。",
+    desc: "2025 RIIZE CONCERT TOUR [RIIZING LOUD] 曼谷站。泰国首站，三天连开，东南亚人气爆棚。",
     highlight: "泰国首站，三天连开"
   },
   {
@@ -1866,7 +1867,7 @@ const events = [
     ticketTime: "已结束",
     organizer: "AEG Presents",
     ticketUrl: "",
-    desc: "2025 RIIZE CONCERT TOUR [RIIZING LOUD] 北美巡演洛杉矶站。",
+    desc: "2025 RIIZE CONCERT TOUR [RIIZING LOUD] 北美巡演洛杉矶站。北美巡演最后一站，完美收官。",
     highlight: "北美巡演"
   },
   {
@@ -1887,7 +1888,7 @@ const events = [
     ticketTime: "已结束",
     organizer: "CJ ENM",
     ticketUrl: "",
-    desc: "2025 MAMA AWARDS，RIIZE 获得最佳男子组合和年度歌曲。",
+    desc: "2025 MAMA AWARDS，RIIZE 获得最佳男子组合和年度歌曲。出道两年拿下大赏级奖项，成长速度惊人。",
     highlight: "大赏级获奖！"
   },
   {
@@ -1908,7 +1909,7 @@ const events = [
     ticketTime: "已结束",
     organizer: "Kakao",
     ticketUrl: "",
-    desc: "2025 Melon Music Awards，RIIZE 获得最佳男艺人表演、TOP10等三项大奖。",
+    desc: "2025 Melon Music Awards，RIIZE 获得最佳男艺人表演、TOP10等三项大奖。横扫颁奖礼，成为顶级男团。",
     highlight: "三项大奖！"
   },
 
@@ -1931,7 +1932,7 @@ const events = [
     ticketTime: "已结束",
     organizer: "SM Entertainment",
     ticketUrl: "",
-    desc: "2025 RIIZE CONCERT TOUR [RIIZING LOUD] 雅加达站。",
+    desc: "2025 RIIZE CONCERT TOUR [RIIZING LOUD] 雅加达站。世巡东南亚最后一站，印尼BRIIZE热情高涨。",
     highlight: "印尼世巡"
   },
   {
@@ -1952,11 +1953,32 @@ const events = [
     ticketTime: "已结束",
     organizer: "金唱片奖委员会",
     ticketUrl: "",
-    desc: "第40届韩国金唱片奖，RIIZE 获得最佳专辑。",
+    desc: "第40届韩国金唱片奖，RIIZE 获得最佳专辑。金唱片最佳专辑奖，音乐品质获得认可。",
     highlight: "金唱片最佳专辑"
   },
   {
     id: 34,
+    title: "日本二单 All of You 签售会",
+    type: "fansign",
+    typeLabel: "签售会",
+    date: "2026-02-18",
+    time: "18:00",
+    city: "东京",
+    venue: "都内某所",
+    status: "ended",
+    statusLabel: "已结束",
+    price: "专辑抽选",
+    currency: "JPY",
+    priceCNY: "",
+    ticketPlatform: "UNIVERSAL MUSIC STORE",
+    ticketTime: "已结束",
+    organizer: "SM Entertainment Japan",
+    ticketUrl: "",
+    desc: "The 2nd Japan Single 『All of You』发售纪念 豪华团体签名会。限定100名，日本二单纪念活动。",
+    highlight: "日本二单纪念签售"
+  },
+  {
+    id: 35,
     title: "SMTOWN LIVE 曼谷",
     type: "festival",
     typeLabel: "家族演唱会",
@@ -1973,11 +1995,11 @@ const events = [
     ticketTime: "已结束",
     organizer: "SM Entertainment",
     ticketUrl: "",
-    desc: "SMTOWN LIVE 2025-26 in BANGKOK。",
+    desc: "SMTOWN LIVE 2025-26 in BANGKOK。情人节SMTOWN，与SM家族一起在泰国度过浪漫节日。",
     highlight: "情人节SMTOWN"
   },
   {
-    id: 35,
+    id: 36,
     title: "Lollapalooza 阿根廷 2026",
     type: "festival",
     typeLabel: "音乐节",
@@ -1994,11 +2016,11 @@ const events = [
     ticketTime: "已结束",
     organizer: "Lollapalooza",
     ticketUrl: "",
-    desc: "Lollapalooza ARGENTINA 2026，RIIZE 首次南美音乐节。",
+    desc: "Lollapalooza ARGENTINA 2026，RIIZE 首次南美音乐节。南美首秀，全球影响力持续扩大。",
     highlight: "南美首秀！"
   },
   {
-    id: 36,
+    id: 37,
     title: "K2O 泼水节音乐节",
     type: "festival",
     typeLabel: "音乐节",
@@ -2015,11 +2037,11 @@ const events = [
     ticketTime: "已结束",
     organizer: "K2O",
     ticketUrl: "",
-    desc: "K2O Songkran Music Festival 泰国泼水节音乐节。",
+    desc: "K2O Songkran Music Festival 泰国泼水节音乐节。泰国泼水节特别舞台，夏日狂欢。",
     highlight: "泼水节特别舞台"
   },
   {
-    id: 37,
+    id: 38,
     title: "微博国际娱乐盛典",
     type: "festival",
     typeLabel: "颁奖礼",
@@ -2036,11 +2058,11 @@ const events = [
     ticketTime: "已结束",
     organizer: "微博",
     ticketUrl: "",
-    desc: "Weibo International Entertainment Festival。",
+    desc: "Weibo International Entertainment Festival。中国首秀，微博国际娱乐盛典，与中国粉丝见面。",
     highlight: "中国首秀"
   },
   {
-    id: 38,
+    id: 39,
     title: "Channel B 棒球音乐节",
     type: "festival",
     typeLabel: "音乐节",
@@ -2057,11 +2079,11 @@ const events = [
     ticketTime: "已结束",
     organizer: "Channel B",
     ticketUrl: "",
-    desc: "Channel B Baseball Music Fest 台湾棒球音乐节。",
+    desc: "Channel B Baseball Music Fest 台湾棒球音乐节。棒球场特别舞台，台湾音乐节首秀。",
     highlight: "台湾音乐节"
   },
   {
-    id: 39,
+    id: 40,
     title: "RIIZE 1000天 Fan Party",
     type: "fanmeeting",
     typeLabel: "粉丝见面会",
@@ -2078,18 +2100,60 @@ const events = [
     ticketTime: "已结束",
     organizer: "SM Entertainment",
     ticketUrl: "",
-    desc: "RIIZE 1000 DAYS FAN PARTY [RIIZE OFFIICE]，两场线下。",
+    desc: "RIIZE 1000 DAYS FAN PARTY [RIIZE OFFIICE]，两场线下。出道1000天纪念，与BRIIZE一起庆祝。",
     highlight: "1000天纪念！"
   },
   {
-    id: 40,
-    title: "RIIZE 日本FM 2026 RPG",
+    id: 41,
+    title: "RAPBEAT 音乐节 2026",
+    type: "festival",
+    typeLabel: "音乐节",
+    date: "2026-06-20",
+    time: "18:00",
+    city: "首尔",
+    venue: "麻浦油罐文化公园",
+    status: "ended",
+    statusLabel: "已结束",
+    price: "165,000",
+    currency: "KRW",
+    priceCNY: "875",
+    ticketPlatform: "Melon Ticket / Interpark",
+    ticketTime: "已结束",
+    organizer: "9ENT",
+    ticketUrl: "",
+    desc: "韩国最大嘻哈音乐节 RAPBEAT 2026。RIIZE 首日出演，与ZICO、Simon Dominic等顶级艺人同台。",
+    highlight: "嘻哈音乐节首秀"
+  },
+  {
+    id: 42,
+    title: "釜山 BOF 2026",
+    type: "festival",
+    typeLabel: "音乐节",
+    date: "2026-06-28",
+    time: "18:00",
+    city: "釜山",
+    venue: "釜山亚运主体育场",
+    status: "ended",
+    statusLabel: "已结束",
+    price: "待公布",
+    currency: "KRW",
+    priceCNY: "",
+    ticketPlatform: "以官方公告为准",
+    ticketTime: "已结束",
+    organizer: "釜山文化财团",
+    ticketUrl: "",
+    desc: "Busan One Asia Festival 2026。釜山最大K-POP庆典，夏日特别舞台。",
+    highlight: "釜山最大庆典"
+  },
+  {
+    id: 43,
+    title: "日本FM 2026 RPG 福冈站",
     type: "fanmeeting",
     typeLabel: "粉丝见面会",
     date: "2026-07-10",
-    time: "18:00",
+    time: "17:30",
     city: "福冈",
-    venue: "福冈太阳宫",
+    venue: "Marine Messe 福冈 B馆",
     status: "ended",
     statusLabel: "已结束",
     price: "11,800",
@@ -2099,16 +2163,81 @@ const events = [
     ticketTime: "已结束",
     organizer: "SM Entertainment Japan",
     ticketUrl: "",
-    desc: "RIIZE FANMEETING 2026 'RPG' 日本巡演福冈站。",
-    highlight: "日本FM巡演"
+    desc: "RIIZE FANMEETING 2026 'RPG - RIIZE PLAYING GAME -' 福冈站。日本第二次FM巡演，游戏主题，与粉丝互动。",
+    highlight: "日本FM巡演首站"
   },
   {
-    id: 41,
+    id: 44,
+    title: "日本FM 2026 RPG 东京站",
+    type: "fanmeeting",
+    typeLabel: "粉丝见面会",
+    date: "2026-07-15",
+    dateEnd: "2026-07-16",
+    time: "18:00",
+    city: "东京",
+    venue: "国立代代木竞技场第一体育馆",
+    status: "ended",
+    statusLabel: "已结束",
+    price: "11,800",
+    currency: "JPY",
+    priceCNY: "555",
+    ticketPlatform: "FC抽选",
+    ticketTime: "已结束",
+    organizer: "SM Entertainment Japan",
+    ticketUrl: "",
+    desc: "RIIZE FANMEETING 2026 'RPG - RIIZE PLAYING GAME -' 东京站。三天连开（15日夜场、16日午场+夜场），全部售罄。首次公开三单《Sunburst》舞台。",
+    highlight: "三天连开！Sunburst首公开"
+  },
+  {
+    id: 45,
+    title: "二辑 K4 线下签售 2.0",
+    type: "fansign",
+    typeLabel: "签售会",
+    date: "2026-07-19",
+    time: "13:00",
+    city: "首尔",
+    venue: "首尔某场馆",
+    status: "ended",
+    statusLabel: "已结束",
+    price: "专辑抽选",
+    currency: "KRW",
+    priceCNY: "",
+    ticketPlatform: "Ktown4u",
+    ticketTime: "已结束",
+    organizer: "Ktown4u",
+    ticketUrl: "",
+    desc: "RIIZE The 2nd Mini Album 《II》发行纪念特别 ONE-DAY SPECIAL EVENT & 线下签售会。二辑纪念签售，5个场次。",
+    highlight: "二辑纪念签售"
+  },
+  {
+    id: 46,
+    title: "日本FM 2026 RPG 兵库站",
+    type: "fanmeeting",
+    typeLabel: "粉丝见面会",
+    date: "2026-07-23",
+    dateEnd: "2026-07-24",
+    time: "18:00",
+    city: "兵库",
+    venue: "神户世界纪念馆",
+    status: "ended",
+    statusLabel: "已结束",
+    price: "11,800",
+    currency: "JPY",
+    priceCNY: "555",
+    ticketPlatform: "FC抽选",
+    ticketTime: "已结束",
+    organizer: "SM Entertainment Japan",
+    ticketUrl: "",
+    desc: "RIIZE FANMEETING 2026 'RPG - RIIZE PLAYING GAME -' 兵库站。两天连开，日本FM巡演最后一站。6场公演5万观众，全部售罄。",
+    highlight: "日本FM巡演收官，5万人动员"
+  },
+  {
+    id: 47,
     title: "WATERBOMB 首尔 2026",
     type: "festival",
     typeLabel: "音乐节",
     date: "2026-07-26",
-    time: "14:00",
+    time: "17:10",
     city: "首尔",
     venue: "首尔森林",
     status: "ended",
@@ -2120,11 +2249,11 @@ const events = [
     ticketTime: "已结束",
     organizer: "SBS / 9ENT",
     ticketUrl: "",
-    desc: "韩国最火夏日水上音乐节 WATERBOMB 2026 首尔站。",
+    desc: "韩国最火夏日水上音乐节 WATERBOMB 2026 首尔站。TEAM YELLOW，18:10-18:40出演。水枪大战，夏日狂欢。",
     highlight: "水枪大战！"
   },
   {
-    id: 42,
+    id: 48,
     title: "SBS 夏季歌谣大战",
     type: "festival",
     typeLabel: "音乐节/颁奖礼",
@@ -2141,11 +2270,11 @@ const events = [
     ticketTime: "优先售票：6月23日 13:00 北京时间<br>一般售票：6月25日 12:00 北京时间",
     organizer: "SBS",
     ticketUrl: "https://tickets.interpark.com/",
-    desc: "SBS 夏季歌谣大战，成灿担任主持人。夏日特别舞台，多位顶级艺人齐聚。",
+    desc: "SBS 夏季歌谣大战，成灿担任主持人。夏日特别舞台，多位顶级艺人齐聚。成灿作为MC展现主持实力。",
     highlight: "成灿主持！"
   },
   {
-    id: 43,
+    id: 49,
     title: "二辑东京线下活动",
     type: "fansign",
     typeLabel: "签售会",
@@ -2162,654 +2291,46 @@ const events = [
     ticketTime: "以官方公告为准",
     organizer: "SM Entertainment Japan",
     ticketUrl: "https://rize.jp/",
-    desc: "RIIZE 日本二辑纪念线下签售活动。",
+    desc: "RIIZE 日本二辑纪念线下签售活动。东京限定，与日本BRIIZE近距离见面。",
     highlight: "日本限定！"
   },
   {
-    id: 44,
+    id: 50,
     title: "Mezamashi WANGAN Fes",
     type: "festival",
     typeLabel: "音乐节",
     date: "2026-08-13",
-    time: "12:00",
+    time: "16:30",
     city: "东京",
-    venue: "台场",
+    venue: "有明 东京花园剧场",
     status: "upcoming",
     statusLabel: "即将开始",
-    price: "12,800",
+    price: "13,000",
     currency: "JPY",
-    priceCNY: "602",
+    priceCNY: "612",
     ticketPlatform: "e+ / ぴあ / 罗森票务",
     ticketTime: "以官方公告为准",
     organizer: "富士电视台",
     ticketUrl: "https://eplus.jp/",
-    desc: "日本台场夏日音乐节 Mezamashi WANGAN Fes 2026。",
+    desc: "日本台场夏日音乐节 Mezamashi WANGAN Fes 2026。STAR×めざましライブ，台场海边舞台，夏日祭典氛围。",
     highlight: "台场海边舞台！"
   },
   {
-    id: 45,
-    title: "上海线下签售会",
-    type: "fansign",
-    typeLabel: "签售会",
-    date: "2026-08-20",
-    time: "19:30",
-    city: "上海",
-    venue: "上海静安体育中心",
-    status: "upcoming",
-    statusLabel: "即将开始",
-    price: "399",
-    currency: "CNY",
-    priceCNY: "399",
-    ticketPlatform: "熊宝空间站",
-    ticketTime: "以官方公告为准",
-    organizer: "熊宝空间站",
-    ticketUrl: "https://www.xiongbao.com/",
-    desc: "RIIZE 七夕特别场上海线下签售会。",
-    highlight: "七夕特别场！"
-  },
-  {
-    id: 46,
-    title: "TMEA 腾讯音乐娱乐盛典",
+    id: 51,
+    title: "TIMA 国际音乐大赏 2026",
     type: "festival",
     typeLabel: "颁奖礼",
-    date: "2026-08-23",
-    time: "19:00",
-    city: "澳门",
-    venue: "银河综艺馆",
-    status: "upcoming",
-    statusLabel: "即将开始",
-    price: "待公布",
-    currency: "MOP",
-    priceCNY: "",
-    ticketPlatform: "大麦网",
-    ticketTime: "以官方公告为准",
-    organizer: "腾讯音乐娱乐集团",
-    ticketUrl: "https://www.damai.cn/",
-    desc: "TMEA 腾讯音乐娱乐盛典 2026。",
-    highlight: "中国盛典！"
-  },
-  {
-    id: 47,
-    title: "香港线下签售会",
-    type: "fansign",
-    typeLabel: "签售会",
-    date: "2026-08-28",
+    date: "2026-08-22",
     time: "19:00",
     city: "香港",
-    venue: "待定",
+    venue: "启德主场馆",
     status: "upcoming",
     statusLabel: "即将开始",
-    price: "1,280",
+    price: "待公布",
     currency: "HKD",
-    priceCNY: "1,178",
-    ticketPlatform: "Fantopia",
-    ticketTime: "抽选：7月23日 19:00 ~ 8月5日 23:59 北京时间",
-    organizer: "Fantopia",
-    ticketUrl: "https://www.fantopia.app/",
-    desc: "RIIZE The 2nd Mini Album 【II】 Fan Sign Event IN HONG KONG。",
-    highlight: "香港签售！"
-  },
-  {
-    id: 48,
-    title: "三周年粉丝见面会",
-    type: "fanmeeting",
-    typeLabel: "粉丝见面会",
-    date: "2026-09-12",
-    dateEnd: "2026-09-13",
-    time: "18:00",
-    city: "仁川",
-    venue: "INSPIRE Arena",
-    status: "upcoming",
-    statusLabel: "即将开始",
-    price: "154,000",
-    currency: "KRW",
-    priceCNY: "816",
-    ticketPlatform: "Yes24 / Interpark",
-    ticketTime: "会员先行：7月27日 19:00 北京时间（韩）<br>会员先行：7月28日 19:00 北京时间（全球）<br>一般售票：7月29日 19:00 北京时间",
-    organizer: "SM Entertainment / Dream Maker",
-    ticketUrl: "https://ticket.yes24.com/",
-    desc: "RIIZE 出道三周年特别粉丝见面会 'Ch. RIIZE : ON AIR'。360度全开放舞台，打造专属于BRIIZE的特别频道。",
-    highlight: "三周年特别活动！两场全部售罄"
-  },
-  {
-    id: 49,
-    title: "RAPBEAT 音乐节 2026",
-    type: "festival",
-    typeLabel: "音乐节",
-    date: "2026-09-20",
-    dateEnd: "2026-09-21",
-    time: "13:00",
-    city: "首尔",
-    venue: "奥林匹克公园",
-    status: "upcoming",
-    statusLabel: "即将开始",
-    price: "165,000",
-    currency: "KRW",
-    priceCNY: "875",
-    ticketPlatform: "Melon Ticket / Interpark",
-    ticketTime: "以官方公告为准",
-    organizer: "9ENT",
-    ticketUrl: "https://ticket.melon.com/",
-    desc: "韩国最大嘻哈音乐节 RAPBEAT 2026。",
-    highlight: "两天连开！"
-  },
-  {
-    id: 50,
-    title: "釜山 BOF 2026",
-    type: "festival",
-    typeLabel: "音乐节",
-    date: "2026-10-01",
-    dateEnd: "2026-10-10",
-    time: "18:00",
-    city: "釜山",
-    venue: "釜山亚运主体育场",
-    status: "upcoming",
-    statusLabel: "即将开始",
-    price: "待公布",
-    currency: "KRW",
     priceCNY: "",
-    ticketPlatform: "以官方公告为准",
+    ticketPlatform: "TMElive官方",
     ticketTime: "以官方公告为准",
-    organizer: "釜山文化财团",
+    organizer: "TMElive",
     ticketUrl: "",
-    desc: "釜山 One Asia Festival 2026。",
-    highlight: "釜山最大K-POP庆典！"
-  },
-  {
-    id: 51,
-    title: "MAMA 2026",
-    type: "festival",
-    typeLabel: "颁奖礼",
-    date: "2026-11-01",
-    time: "18:00",
-    city: "待定",
-    venue: "待定",
-    status: "upcoming",
-    statusLabel: "即将开始",
-    price: "待公布",
-    currency: "KRW",
-    priceCNY: "",
-    ticketPlatform: "以官方公告为准",
-    ticketTime: "以官方公告为准",
-    organizer: "CJ ENM",
-    ticketUrl: "",
-    desc: "MAMA 大奖 2026。",
-    highlight: "年度最大颁奖礼！"
-  }
-];
-
-// ===== 当前状态 =====
-let currentMonth = new Date();
-let currentFilter = 'all';
-let selectedEvent = null;
-let notifications = [];
-
-// ===== 初始化 =====
-document.addEventListener('DOMContentLoaded', function() {
-  updateTime();
-  setInterval(updateTime, 1000);
-  renderCalendar();
-  renderTimeline();
-  renderEventList();
-  updateStats();
-  initNotifications();
-});
-
-// ===== 时间更新 =====
-function updateTime() {
-  const now = new Date();
-  const options = { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' };
-  document.getElementById('currentDate').textContent = now.toLocaleDateString('zh-CN', options);
-  document.getElementById('currentTime').textContent = now.toLocaleTimeString('zh-CN');
-}
-
-// ===== 日历 =====
-function renderCalendar() {
-  const grid = document.getElementById('calendarGrid');
-  const monthLabel = document.getElementById('calendarMonth');
-  
-  const year = currentMonth.getFullYear();
-  const month = currentMonth.getMonth();
-  
-  monthLabel.textContent = `${year}年${month + 1}月`;
-  
-  const firstDay = new Date(year, month, 1);
-  const lastDay = new Date(year, month + 1, 0);
-  const startDay = firstDay.getDay();
-  const daysInMonth = lastDay.getDate();
-  
-  const prevLastDay = new Date(year, month, 0).getDate();
-  
-  let html = '';
-  const weekdays = ['日', '一', '二', '三', '四', '五', '六'];
-  weekdays.forEach(d => {
-    html += `<div class="calendar-weekday">${d}</div>`;
-  });
-  
-  for (let i = startDay - 1; i >= 0; i--) {
-    html += `<div class="calendar-day other-month">${prevLastDay - i}</div>`;
-  }
-  
-  const today = new Date();
-  const eventDates = getEventDatesForMonth(year, month);
-  
-  for (let day = 1; day <= daysInMonth; day++) {
-    const dateStr = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
-    const isToday = today.getFullYear() === year && today.getMonth() === month && today.getDate() === day;
-    const hasEvent = eventDates.includes(dateStr);
-    
-    let classes = 'calendar-day';
-    if (isToday) classes += ' today';
-    if (hasEvent) classes += ' has-event';
-    
-    html += `<div class="${classes}" onclick="selectDate('${dateStr}')">
-      ${day}
-      ${hasEvent ? '<div class="dot"></div>' : ''}
-    </div>`;
-  }
-  
-  const totalCells = startDay + daysInMonth;
-  const remaining = (7 - (totalCells % 7)) % 7;
-  for (let i = 1; i <= remaining; i++) {
-    html += `<div class="calendar-day other-month">${i}</div>`;
-  }
-  
-  grid.innerHTML = html;
-}
-
-function getEventDatesForMonth(year, month) {
-  const dates = [];
-  events.forEach(e => {
-    const start = new Date(e.date);
-    const end = e.dateEnd ? new Date(e.dateEnd) : start;
-    if (start.getFullYear() === year && start.getMonth() === month ||
-        end.getFullYear() === year && end.getMonth() === month) {
-      for (let d = new Date(start); d <= end; d.setDate(d.getDate() + 1)) {
-        if (d.getFullYear() === year && d.getMonth() === month) {
-          dates.push(d.toISOString().split('T')[0]);
-        }
-      }
-    }
-  });
-  return dates;
-}
-
-function changeMonth(delta) {
-  currentMonth.setMonth(currentMonth.getMonth() + delta);
-  renderCalendar();
-}
-
-function goToday() {
-  currentMonth = new Date();
-  renderCalendar();
-}
-
-function selectDate(dateStr) {
-  const dateEvents = events.filter(e => {
-    const start = new Date(e.date);
-    const end = e.dateEnd ? new Date(e.dateEnd) : start;
-    const d = new Date(dateStr);
-    return d >= start && d <= end;
-  });
-  
-  if (dateEvents.length > 0) {
-    selectEvent(dateEvents[0].id);
-  }
-}
-
-// ===== 时间线 =====
-function renderTimeline() {
-  const list = document.getElementById('timelineList');
-  const now = new Date();
-  
-  const upcoming = events
-    .filter(e => new Date(e.date) >= now)
-    .sort((a, b) => new Date(a.date) - new Date(b.date))
-    .slice(0, 5);
-  
-  if (upcoming.length === 0) {
-    list.innerHTML = `<div class="empty-state"><div class="emoji">💜</div><p>近期暂无活动</p></div>`;
-    return;
-  }
-  
-  let html = '';
-  upcoming.forEach(e => {
-    const date = new Date(e.date);
-    const isActive = selectedEvent && selectedEvent.id === e.id;
-    html += `
-      <div class="timeline-item ${isActive ? 'active' : ''}" onclick="selectEvent(${e.id})">
-        <div class="tl-date">
-          <div class="month">${date.getMonth() + 1}月</div>
-          <div class="day">${date.getDate()}</div>
-        </div>
-        <div class="tl-info">
-          <div class="title">${e.title}</div>
-          <div class="city">📍 ${e.city}</div>
-          <span class="status-tag status-${e.status}">${e.statusLabel}</span>
-        </div>
-      </div>
-    `;
-  });
-  
-  list.innerHTML = html;
-}
-
-// ===== 活动列表 =====
-function renderEventList() {
-  const list = document.getElementById('eventList');
-  const countEl = document.getElementById('eventCount');
-  
-  let filtered = events;
-  
-  if (currentFilter === 'upcoming') {
-    const now = new Date();
-    filtered = events.filter(e => new Date(e.date) >= now);
-  } else if (currentFilter !== 'all') {
-    filtered = events.filter(e => e.type === currentFilter);
-  }
-  
-  filtered.sort((a, b) => new Date(a.date) - new Date(b.date));
-  
-  countEl.textContent = `${filtered.length} 场`;
-  
-  if (filtered.length === 0) {
-    list.innerHTML = `<div class="empty-state"><div class="emoji">🎫</div><p>暂无相关活动</p></div>`;
-    return;
-  }
-  
-  let html = '';
-  filtered.forEach(e => {
-    const date = new Date(e.date);
-    const isSelected = selectedEvent && selectedEvent.id === e.id;
-    const hasTicket = e.ticketUrl && e.ticketUrl.length > 0;
-    
-    html += `
-      <div class="event-card ${isSelected ? 'selected' : ''}" onclick="selectEvent(${e.id})">
-        <div class="card-top">
-          <div class="card-date-badge">
-            <div class="month">${date.getMonth() + 1}月</div>
-            <div class="day">${date.getDate()}</div>
-          </div>
-          <span class="card-status status-${e.status}">${e.statusLabel}</span>
-        </div>
-        <div class="card-title">${e.title}</div>
-        <div class="card-location">📍 ${e.city} · ${e.venue}</div>
-        <div class="card-actions">
-          <button class="card-btn detail" onclick="event.stopPropagation(); selectEvent(${e.id})">📋 详情</button>
-          <button class="card-btn ticket" ${hasTicket ? '' : 'disabled'} onclick="event.stopPropagation(); openTicket(${e.id})">🎫 购票</button>
-        </div>
-      </div>
-    `;
-  });
-  
-  list.innerHTML = html;
-}
-
-function filterEvents(filter) {
-  currentFilter = filter;
-  document.querySelectorAll('.filter-btn').forEach(btn => {
-    btn.classList.toggle('active', btn.dataset.filter === filter);
-  });
-  renderEventList();
-}
-
-// ===== 详情 =====
-function selectEvent(id) {
-  const e = events.find(ev => ev.id === id);
-  if (!e) return;
-  
-  selectedEvent = e;
-  
-  document.getElementById('detailType').textContent = e.typeLabel;
-  document.getElementById('detailTitle').textContent = e.title;
-  document.getElementById('detailSubtitle').textContent = `📍 ${e.city} · ${e.venue}`;
-  
-  const date = new Date(e.date);
-  const dateEnd = e.dateEnd ? new Date(e.dateEnd) : null;
-  const dateStr = dateEnd 
-    ? `${date.getMonth() + 1}月${date.getDate()}日 - ${dateEnd.getMonth() + 1}月${dateEnd.getDate()}日`
-    : `${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日`;
-  
-  const priceStr = e.priceCNY 
-    ? `${e.price} ${e.currency}<br><span style="font-size:11px;color:#9b59b6;">约¥${e.priceCNY} 人民币</span>`
-    : `${e.price} ${e.currency || ''}`;
-  
-  const body = document.getElementById('detailBody');
-  body.innerHTML = `
-    <div class="detail-section">
-      <h3>📋 基本信息</h3>
-      <div class="info-grid">
-        <div class="info-card">
-          <div class="label">活动日期</div>
-          <div class="value">${dateStr}</div>
-        </div>
-        <div class="info-card">
-          <div class="label">活动时间</div>
-          <div class="value">${e.time}（北京时间）</div>
-        </div>
-        <div class="info-card">
-          <div class="label">举办城市</div>
-          <div class="value">${e.city}</div>
-        </div>
-        <div class="info-card">
-          <div class="label">举办场馆</div>
-          <div class="value">${e.venue}</div>
-        </div>
-        <div class="info-card">
-          <div class="label">票价</div>
-          <div class="value">${priceStr}</div>
-        </div>
-        <div class="info-card">
-          <div class="label">状态</div>
-          <div class="value"><span class="status-tag status-${e.status}">${e.statusLabel}</span></div>
-        </div>
-        <div class="info-card">
-          <div class="label">购票平台</div>
-          <div class="value" style="font-size:12px;">${e.ticketPlatform || '以官方公告为准'}</div>
-        </div>
-        <div class="info-card">
-          <div class="label">购票时间</div>
-          <div class="value" style="font-size:12px;color:#9b59b6;line-height:1.5;">${e.ticketTime || '以官方公告为准'}</div>
-        </div>
-        <div class="info-card" style="grid-column: span 2;">
-          <div class="label">主办方</div>
-          <div class="value">${e.organizer}</div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="detail-section">
-      <h3>📅 场次安排</h3>
-      <div class="schedule-list">
-        <div class="schedule-item">
-          <div class="schedule-date">
-            <div class="date">${date.getDate()}</div>
-            <div class="month">${date.getMonth() + 1}月</div>
-          </div>
-          <div class="schedule-info">
-            <div class="time">${e.time} 北京时间</div>
-            <div class="label">正式演出</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="detail-section">
-      <h3>📝 活动介绍</h3>
-      <div class="detail-desc">
-        <p>${e.desc}</p>
-        ${e.highlight ? `
-        <div class="highlight-box">
-          <div class="title">✨ 亮点</div>
-          <div class="content">${e.highlight}</div>
-        </div>
-        ` : ''}
-      </div>
-    </div>
-    
-    <div class="detail-section">
-      <h3>🎫 购票信息</h3>
-      <div class="ticket-section">
-        <button class="btn-ticket primary" ${e.ticketUrl ? '' : 'disabled'} onclick="openTicket(${e.id})">
-          🎫 立即购票
-        </button>
-        <button class="btn-ticket secondary" onclick="addReminder(${e.id})">
-          🔔 设置提醒
-        </button>
-      </div>
-      <div class="ticket-tip">
-        💡 温馨提示：购票请通过官方渠道，谨防黄牛和诈骗。所有时间均为北京时间，请注意时差。
-      </div>
-    </div>
-  `;
-  
-  // 更新快速购票
-  document.getElementById('qtEvent').textContent = e.title;
-  const qtBtn = document.getElementById('qtBtn');
-  if (e.ticketUrl) {
-    qtBtn.disabled = false;
-    qtBtn.textContent = '⚡ 立即购票';
-    qtBtn.onclick = () => openTicket(e.id);
-  } else {
-    qtBtn.disabled = true;
-    qtBtn.textContent = '暂无购票链接';
-  }
-  
-  // 撒花效果
-  createSparkle(window.innerWidth / 2, window.innerHeight / 2);
-  
-  // 更新列表选中状态
-  renderEventList();
-  renderTimeline();
-}
-
-function openTicket(id) {
-  const e = events.find(ev => ev.id === id);
-  if (e && e.ticketUrl) {
-    window.open(e.ticketUrl, '_blank');
-    createSparkle(window.innerWidth / 2, window.innerHeight / 2);
-  }
-}
-
-// ===== 撒花效果 =====
-function createSparkle(x, y) {
-  const emojis = ['💜', '✨', '🎀', '🌸', '💫', '⭐', '💕', '🌟'];
-  for (let i = 0; i < 15; i++) {
-    const sparkle = document.createElement('div');
-    sparkle.className = 'sparkle';
-    sparkle.textContent = emojis[Math.floor(Math.random() * emojis.length)];
-    sparkle.style.left = (x + (Math.random() - 0.5) * 200) + 'px';
-    sparkle.style.top = (y + (Math.random() - 0.5) * 100) + 'px';
-    sparkle.style.animationDelay = (Math.random() * 0.3) + 's';
-    sparkle.style.fontSize = (16 + Math.random() * 20) + 'px';
-    document.body.appendChild(sparkle);
-    setTimeout(() => sparkle.remove(), 2000);
-  }
-}
-
-// ===== 统计 =====
-function updateStats() {
-  const now = new Date();
-  const upcoming = events.filter(e => new Date(e.date) >= now);
-  const cities = new Set(events.map(e => e.city));
-  
-  document.getElementById('statTotal').textContent = events.length;
-  document.getElementById('statUpcoming').textContent = upcoming.length;
-  document.getElementById('statCities').textContent = cities.size;
-}
-
-// ===== 刷新 =====
-function refreshData() {
-  createSparkle(window.innerWidth / 2, window.innerHeight / 2);
-  alert('✅ 数据已是最新！');
-}
-
-// ===== 通知 =====
-function initNotifications() {
-  const now = new Date();
-  const upcoming = events
-    .filter(e => new Date(e.date) >= now)
-    .sort((a, b) => new Date(a.date) - new Date(b.date))
-    .slice(0, 3);
-  
-  notifications = upcoming.map(e => ({
-    id: e.id,
-    title: e.title,
-    desc: `${e.city} · ${e.venue}`,
-    time: getCountdown(e.date),
-    unread: true
-  }));
-  
-  renderNotifications();
-}
-
-function getCountdown(dateStr) {
-  const now = new Date();
-  const date = new Date(dateStr);
-  const diff = date - now;
-  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-  
-  if (days < 0) return '已结束';
-  if (days === 0) return '今天！';
-  return `还有 ${days} 天`;
-}
-
-function renderNotifications() {
-  const list = document.getElementById('notifList');
-  
-  if (notifications.length === 0) {
-    list.innerHTML = `<div class="empty-state"><div class="emoji">🔔</div><p>暂无通知</p></div>`;
-    return;
-  }
-  
-  let html = '';
-  notifications.forEach(n => {
-    html += `
-      <div class="notif-item ${n.unread ? 'unread' : ''}" onclick="selectEvent(${n.id})">
-        <div class="title">${n.title}</div>
-        <div class="desc">${n.desc}</div>
-        <div class="time">${n.time}</div>
-      </div>
-    `;
-  });
-  
-  list.innerHTML = html;
-}
-
-function toggleNotif() {
-  const panel = document.getElementById('notifPanel');
-  panel.classList.toggle('show');
-}
-
-function requestNotify() {
-  if ('Notification' in window) {
-    Notification.requestPermission().then(perm => {
-      if (perm === 'granted') {
-        alert('✅ 提醒已开启！活动开始前会通知你～');
-        createSparkle(window.innerWidth / 2, window.innerHeight / 2);
-      } else {
-        alert('⚠️ 你拒绝了通知权限，可以在浏览器设置里开启');
-      }
-    });
-  } else {
-    alert('⚠️ 你的浏览器不支持通知功能');
-  }
-}
-
-function addReminder(id) {
-  const e = events.find(ev => ev.id === id);
-  if (!e) return;
-  
-  if ('Notification' in window && Notification.permission === 'granted') {
-    new Notification('💜 RIIZE 活动提醒', {
-      body: `${e.title}\n${e.city} · ${e.venue}`,
-      icon: 'assets/cover.jpg'
-    });
-    alert('✅ 提醒已设置！');
-  } else {
-    alert('⚠️ 请先开启通知权限（点顶部的「开启提醒」按钮）');
-  }
-}
-</script>
-</body>
-</html>
+    desc: "2026 TIMA 
