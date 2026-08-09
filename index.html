@@ -1529,7 +1529,104 @@ document.addEventListener('DOMContentLoaded', function() {
   renderTimeline();
   renderEventList();
   updateStats();
+  // 渲染完成后更新一次状态
+  setTimeout(updateAllStatus, 100);
 });
+
+// ===== 计算活动实时状态（精确到秒）=====
+function getEventStatus(event) {
+  const now = new Date();
+  
+  // 解析活动日期
+  const eventDate = new Date(event.date + 'T00:00:00');
+  
+  // 解析活动时间
+  let eventTime = null;
+  const timeStr = event.time || '';
+  
+  // 尝试匹配 HH:MM 格式
+  const timeMatch = timeStr.match(/(\d{1,2}):(\d{2})/);
+  if (timeMatch) {
+    const hours = parseInt(timeMatch[1]);
+    const minutes = parseInt(timeMatch[2]);
+    eventTime = new Date(event.date + 'T' + String(hours).padStart(2, '0') + ':' + String(minutes).padStart(2, '0') + ':00');
+  }
+  
+  // 如果有具体时间，按具体时间判断
+  if (eventTime) {
+    if (now >= eventTime) {
+      return { status: 'ended', label: '已结束' };
+    } else {
+      return { status: 'upcoming', label: '即将开始' };
+    }
+  }
+  
+  // 没有具体时间，按日期判断
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  
+  const eventDay = new Date(event.date);
+  eventDay.setHours(0, 0, 0, 0);
+  
+  if (eventDay < today) {
+    return { status: 'ended', label: '已结束' };
+  } else if (eventDay.getTime() === today.getTime()) {
+    // 今天的活动，默认显示即将开始（因为不知道具体时间）
+    return { status: 'upcoming', label: '即将开始' };
+  } else {
+    return { status: 'upcoming', label: '即将开始' };
+  }
+}
+
+// ===== 更新所有活动状态 =====
+function updateAllStatus() {
+  // 更新统计数据
+  updateStats();
+  
+  // 重新渲染活动列表和时间线（如果需要）
+  // 为了性能，只更新状态标签，不重新渲染整个列表
+  document.querySelectorAll('.event-card').forEach(card => {
+    // 找到对应的活动
+    const title = card.querySelector('.card-title')?.textContent;
+    if (!title) return;
+    
+    const event = events.find(e => e.title === title);
+    if (!event) return;
+    
+    const status = getEventStatus(event);
+    const statusEl = card.querySelector('.card-status');
+    if (statusEl) {
+      statusEl.className = 'card-status status-' + status.status;
+      statusEl.textContent = status.label;
+    }
+  });
+  
+  // 更新时间线
+  document.querySelectorAll('.timeline-item').forEach(item => {
+    const title = item.querySelector('.title')?.textContent;
+    if (!title) return;
+    
+    const event = events.find(e => e.title === title);
+    if (!event) return;
+    
+    const status = getEventStatus(event);
+    const statusEl = item.querySelector('.status-tag');
+    if (statusEl) {
+      statusEl.className = 'status-tag status-' + status.status;
+      statusEl.textContent = status.label;
+    }
+  });
+  
+  // 更新详情页（如果有选中的活动）
+  if (selectedEvent) {
+    const status = getEventStatus(selectedEvent);
+    const statusEl = document.querySelector('.detail-status .status-tag');
+    if (statusEl) {
+      statusEl.className = 'status-tag status-' + status.status;
+      statusEl.textContent = status.label;
+    }
+  }
+}
 
 // ===== 更新时间 =====
 function updateTime() {
@@ -1537,12 +1634,15 @@ function updateTime() {
   const options = { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' };
   document.getElementById('currentDate').textContent = now.toLocaleDateString('zh-CN', options);
   document.getElementById('currentTime').textContent = now.toLocaleTimeString('zh-CN');
+  
+  // 每秒更新活动状态
+  updateAllStatus();
 }
 
 // ===== 更新统计数据 =====
 function updateStats() {
   const total = events.length;
-  const upcoming = events.filter(e => e.status === 'upcoming').length;
+  const upcoming = events.filter(e => getEventStatus(e).status === 'upcoming').length;
   const cities = new Set(events.map(e => e.city)).size;
   
   // 数字滚动动画
@@ -1708,7 +1808,7 @@ function renderEventList() {
   let filtered = [...events];
   
   if (currentFilter === 'upcoming') {
-    filtered = filtered.filter(e => e.status === 'upcoming');
+    filtered = filtered.filter(e => getEventStatus(e).status === 'upcoming');
   } else if (currentFilter !== 'all') {
     filtered = filtered.filter(e => e.type === currentFilter);
   }
@@ -1850,7 +1950,7 @@ function selectEvent(id) {
         </div>
         <div class="info-card">
           <div class="label">状态</div>
-          <div class="value"><span class="status-tag status-${event.status}">${event.statusLabel}</span></div>
+          <div class="value"><span class="status-tag status-${getEventStatus(event).status}">${getEventStatus(event).label}</span></div>
         </div>
       </div>
     </div>
@@ -1932,7 +2032,15 @@ function openTicket(id) {
 function openNotice(id) {
   const event = events.find(e => e.id === id);
   if (event && event.noticeUrl) {
-    window.open(event.noticeUrl, '_blank');
+    // 检查是不是目录页
+    if (event.noticeUrl === 'https://weverse.io/riize/notice') {
+      // 如果是目录页，跳转到搜索页面，搜索活动名称
+      const searchQuery = encodeURIComponent(event.title);
+      window.open('https://weverse.io/riize/notice?q=' + searchQuery, '_blank');
+    } else {
+      // 有具体链接，直接跳转
+      window.open(event.noticeUrl, '_blank');
+    }
   } else {
     // 默认打开 Weverse RIIZE 公告页
     window.open('https://weverse.io/riize/notice', '_blank');
@@ -2010,7 +2118,7 @@ function toggleNotif() {
 
 function renderNotifList() {
   const list = document.getElementById('notifList');
-  const upcoming = events.filter(e => e.status === 'upcoming').slice(0, 5);
+  const upcoming = events.filter(e => getEventStatus(e).status === 'upcoming').slice(0, 5);
   
   list.innerHTML = '';
   upcoming.forEach((event, index) => {
