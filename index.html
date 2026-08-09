@@ -11,7 +11,6 @@
 <meta property="og:url" content="https://riizeandbriize.pages.dev/">
 <meta name="twitter:card" content="summary_large_image">
 <style>
-/* ===== 全局变量 ===== */
 :root {
   --purple-900: #4c1d95;
   --purple-800: #5b21b6;
@@ -40,9 +39,7 @@
   --radius-lg: 24px;
   --radius-xl: 32px;
 }
-
 * { margin: 0; padding: 0; box-sizing: border-box; }
-
 body {
   font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
   background: var(--gradient-bg);
@@ -52,7 +49,6 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
 }
-
 @keyframes bgShift {
   0%, 100% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -85,8 +81,6 @@ body {
   overflow: hidden;
   position: relative;
   animation: modalPop 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
-  display: flex;
-  flex-direction: column;
 }
 @keyframes modalPop {
   0% { opacity: 0; transform: scale(0.7); }
@@ -159,7 +153,6 @@ body {
   50% { transform: translateY(-10px) rotate(10deg); }
 }
 
-/* ===== 漂浮装饰 ===== */
 .floating-deco {
   position: fixed;
   pointer-events: none;
@@ -167,27 +160,23 @@ body {
   opacity: 0.15;
   animation: float 6s ease-in-out infinite;
 }
-
 .floating-deco.d1 { top: 10%; left: 5%; font-size: 60px; animation-delay: 0s; }
 .floating-deco.d2 { top: 20%; right: 8%; font-size: 50px; animation-delay: 1s; }
 .floating-deco.d3 { bottom: 15%; left: 10%; font-size: 55px; animation-delay: 2s; }
 .floating-deco.d4 { bottom: 25%; right: 5%; font-size: 45px; animation-delay: 3s; }
 .floating-deco.d5 { top: 50%; left: 3%; font-size: 40px; animation-delay: 4s; }
 .floating-deco.d6 { top: 60%; right: 3%; font-size: 50px; animation-delay: 5s; }
-
 @keyframes float {
   0%, 100% { transform: translateY(0) rotate(0deg); }
   50% { transform: translateY(-20px) rotate(10deg); }
 }
 
-/* ===== 顶部Hero区域 ===== */
 .hero-section {
   position: relative;
   height: 300px;
   overflow: hidden;
   background: var(--gradient-primary);
 }
-
 .hero-bg {
   position: absolute;
   inset: 0;
@@ -195,13 +184,11 @@ body {
   opacity: 0.35;
   filter: blur(1px);
 }
-
 .hero-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(to bottom, rgba(76, 29, 149, 0.3) 0%, rgba(124, 58, 237, 0.6) 70%, rgba(245, 243, 255, 1) 100%);
 }
-
 .hero-content {
   position: relative;
   z-index: 10;
@@ -213,7 +200,6 @@ body {
   padding: 20px 20px 30px;
   gap: 8px;
 }
-
 .hero-dolls {
   width: 280px;
   height: 80px;
@@ -222,12 +208,10 @@ body {
   filter: drop-shadow(0 4px 12px rgba(0,0,0,0.2));
   animation: bounce 3s ease-in-out infinite;
 }
-
 @keyframes bounce {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-8px); }
 }
-
 .hero-title {
   font-size: 42px;
   font-weight: 900;
@@ -236,38 +220,25 @@ body {
   letter-spacing: 8px;
   margin-bottom: 8px;
 }
-
 .hero-subtitle {
   font-size: 15px;
   color: rgba(255,255,255,0.9);
   font-weight: 500;
   letter-spacing: 2px;
 }
-
 .hero-stats {
   display: flex;
   gap: 40px;
   margin-top: 12px;
 }
-
-.stat-item {
-  text-align: center;
-  color: white;
-}
-
+.stat-item { text-align: center; color: white; }
 .stat-num {
   font-size: 28px;
   font-weight: 800;
   text-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
+.stat-label { font-size: 11px; opacity: 0.85; margin-top: 2px; }
 
-.stat-label {
-  font-size: 11px;
-  opacity: 0.85;
-  margin-top: 2px;
-}
-
-/* ===== 时间栏 ===== */
 .time-bar {
   position: relative;
   z-index: 20;
@@ -275,7 +246,6 @@ body {
   max-width: 1200px;
   padding: 0 20px;
 }
-
 .time-card {
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(20px);
@@ -288,42 +258,18 @@ body {
   justify-content: space-between;
   border: 1px solid rgba(255,255,255,0.8);
 }
-
-.time-left {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
+.time-left { display: flex; align-items: center; gap: 16px; }
 .time-icon {
-  width: 48px;
-  height: 48px;
+  width: 48px; height: 48px;
   background: var(--gradient-soft);
   border-radius: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: flex; align-items: center; justify-content: center;
   font-size: 24px;
   box-shadow: var(--shadow-sm);
 }
-
-.time-info .date {
-  font-size: 18px;
-  font-weight: 700;
-  color: var(--purple-800);
-}
-
-.time-info .time {
-  font-size: 14px;
-  color: var(--purple-500);
-  font-weight: 500;
-}
-
-.time-right {
-  display: flex;
-  gap: 10px;
-}
-
+.time-info .date { font-size: 18px; font-weight: 700; color: var(--purple-800); }
+.time-info .time { font-size: 14px; color: var(--purple-500); font-weight: 500; }
+.time-right { display: flex; gap: 10px; }
 .action-btn {
   padding: 10px 18px;
   border-radius: var(--radius-md);
@@ -332,34 +278,21 @@ body {
   font-size: 13px;
   font-weight: 600;
   transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  gap: 6px;
+  display: flex; align-items: center; gap: 6px;
 }
-
 .btn-primary {
   background: var(--gradient-primary);
   color: white;
   box-shadow: var(--shadow-sm);
 }
-
-.btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
-}
-
+.btn-primary:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
 .btn-secondary {
   background: rgba(167, 139, 250, 0.15);
   color: var(--purple-700);
   border: 1.5px solid var(--purple-300);
 }
+.btn-secondary:hover { background: rgba(167, 139, 250, 0.25); transform: translateY(-2px); }
 
-.btn-secondary:hover {
-  background: rgba(167, 139, 250, 0.25);
-  transform: translateY(-2px);
-}
-
-/* ===== 主体三栏 ===== */
 .main-container {
   max-width: 1400px;
   margin: 24px auto;
@@ -371,7 +304,6 @@ body {
   z-index: 10;
   min-height: 700px;
 }
-
 .panel {
   background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(20px);
@@ -384,7 +316,6 @@ body {
   flex-direction: column;
   height: 720px;
 }
-
 .panel-header {
   padding: 18px 20px 14px;
   border-bottom: 1px solid var(--purple-100);
@@ -392,16 +323,12 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-
 .panel-header h2 {
   font-size: 16px;
   font-weight: 700;
   color: var(--purple-800);
-  display: flex;
-  align-items: center;
-  gap: 8px;
+  display: flex; align-items: center; gap: 8px;
 }
-
 .panel-header .badge {
   background: var(--gradient-soft);
   color: white;
@@ -411,33 +338,20 @@ body {
   font-weight: 600;
 }
 
-/* ===== 左侧：日历 ===== */
-.calendar-nav {
-  display: flex;
-  gap: 6px;
-}
-
+.calendar-nav { display: flex; gap: 6px; }
 .nav-btn {
-  width: 30px;
-  height: 30px;
+  width: 30px; height: 30px;
   border: none;
   background: var(--gradient-soft);
   color: white;
   border-radius: 10px;
   cursor: pointer;
   font-size: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: flex; align-items: center; justify-content: center;
   transition: all 0.2s ease;
   font-weight: 600;
 }
-
-.nav-btn:hover {
-  transform: scale(1.1);
-  box-shadow: var(--shadow-sm);
-}
-
+.nav-btn:hover { transform: scale(1.1); box-shadow: var(--shadow-sm); }
 .calendar-month {
   text-align: center;
   font-size: 15px;
@@ -445,7 +359,6 @@ body {
   color: var(--purple-700);
   padding: 12px 0 8px;
 }
-
 .calendar-grid {
   padding: 0 16px 16px;
   display: grid;
@@ -453,14 +366,12 @@ body {
   gap: 3px;
   text-align: center;
 }
-
 .calendar-weekday {
   font-size: 10px;
   color: var(--purple-400);
   font-weight: 600;
   padding: 6px 0;
 }
-
 .calendar-day {
   aspect-ratio: 1;
   display: flex;
@@ -475,71 +386,45 @@ body {
   color: var(--purple-600);
   position: relative;
 }
-
-.calendar-day:hover {
-  background: var(--purple-100);
-  transform: scale(1.08);
-}
-
+.calendar-day:hover { background: var(--purple-100); transform: scale(1.08); }
 .calendar-day.today {
   background: var(--gradient-primary);
   color: white;
   font-weight: 700;
   box-shadow: var(--shadow-glow);
 }
-
 .calendar-day.has-event {
   background: var(--purple-100);
   color: var(--purple-800);
   font-weight: 600;
 }
-
 .calendar-day.has-event.today {
   background: var(--gradient-primary);
   color: white;
 }
-
 .calendar-day .dot {
-  width: 5px;
-  height: 5px;
+  width: 5px; height: 5px;
   border-radius: 50%;
   background: var(--pink-500);
   margin-top: 2px;
 }
+.calendar-day.today .dot { background: white; }
+.calendar-day.other-month { color: var(--purple-300); opacity: 0.5; }
 
-.calendar-day.today .dot {
-  background: white;
-}
-
-.calendar-day.other-month {
-  color: var(--purple-300);
-  opacity: 0.5;
-}
-
-/* 时间线 */
 .timeline-section {
   border-top: 1px solid var(--purple-100);
   padding: 14px 16px;
   flex: 1;
   overflow-y: auto;
 }
-
 .timeline-title {
   font-size: 13px;
   font-weight: 700;
   color: var(--purple-800);
   margin-bottom: 12px;
-  display: flex;
-  align-items: center;
-  gap: 6px;
+  display: flex; align-items: center; gap: 6px;
 }
-
-.timeline-list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
+.timeline-list { display: flex; flex-direction: column; gap: 10px; }
 .timeline-item {
   display: flex;
   gap: 12px;
@@ -550,24 +435,18 @@ body {
   background: var(--purple-50);
   border: 1.5px solid transparent;
 }
-
 .timeline-item:hover {
   background: var(--purple-100);
   border-color: var(--purple-300);
   transform: translateX(4px);
 }
-
 .timeline-item.active {
   background: var(--gradient-soft);
   border-color: transparent;
 }
-
 .timeline-item.active .tl-date .day,
 .timeline-item.active .tl-info .title,
-.timeline-item.active .tl-info .city {
-  color: white;
-}
-
+.timeline-item.active .tl-info .city { color: white; }
 .tl-date {
   min-width: 44px;
   text-align: center;
@@ -575,30 +454,16 @@ body {
   border-radius: 10px;
   padding: 6px 4px;
 }
-
-.timeline-item.active .tl-date {
-  background: rgba(255,255,255,0.25);
-}
-
-.tl-date .month {
-  font-size: 9px;
-  color: var(--purple-500);
-  font-weight: 500;
-}
-
-.timeline-item.active .tl-date .month {
-  color: rgba(255,255,255,0.8);
-}
-
+.timeline-item.active .tl-date { background: rgba(255,255,255,0.25); }
+.tl-date .month { font-size: 9px; color: var(--purple-500); font-weight: 500; }
+.timeline-item.active .tl-date .month { color: rgba(255,255,255,0.8); }
 .tl-date .day {
   font-size: 20px;
   font-weight: 800;
   color: var(--purple-700);
   line-height: 1.1;
 }
-
 .tl-info { flex: 1; min-width: 0; }
-
 .tl-info .title {
   font-size: 12px;
   font-weight: 600;
@@ -607,13 +472,7 @@ body {
   text-overflow: ellipsis;
   color: var(--purple-900);
 }
-
-.tl-info .city {
-  font-size: 10px;
-  color: var(--purple-500);
-  margin-top: 3px;
-}
-
+.tl-info .city { font-size: 10px; color: var(--purple-500); margin-top: 3px; }
 .status-tag {
   display: inline-block;
   padding: 2px 8px;
@@ -622,39 +481,33 @@ body {
   font-weight: 600;
   margin-top: 5px;
 }
-
 .status-upcoming { background: #d1fae5; color: #059669; }
 .status-onsale { background: #fef3c7; color: #d97706; }
 .status-soldout { background: #f3f4f6; color: #6b7280; }
 .status-ended { background: #fee2e2; color: #dc2626; text-decoration: line-through; }
 .status-closed { background: #f3f4f6; color: #6b7280; }
-
 .timeline-item.active .status-tag {
   background: rgba(255,255,255,0.3);
   color: white;
 }
 
-/* ===== 中间：详情 ===== */
 .detail-banner {
   height: 200px;
   position: relative;
   background: var(--gradient-primary);
   overflow: hidden;
 }
-
 .detail-banner-img {
   position: absolute;
   inset: 0;
   background: url('assets/group2.jpg') center 30%/cover;
   opacity: 0.4;
 }
-
 .detail-banner-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(to top, rgba(76, 29, 149, 0.85) 0%, rgba(124, 58, 237, 0.5) 100%);
 }
-
 .detail-banner-content {
   position: relative;
   z-index: 10;
@@ -665,7 +518,6 @@ body {
   justify-content: flex-end;
   color: white;
 }
-
 .detail-type {
   display: inline-block;
   background: rgba(255,255,255,0.25);
@@ -678,34 +530,18 @@ body {
   width: fit-content;
   border: 1px solid rgba(255,255,255,0.3);
 }
-
 .detail-banner-content h1 {
   font-size: 24px;
   font-weight: 800;
   margin-bottom: 6px;
   text-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
+.detail-banner-content p { font-size: 13px; opacity: 0.9; }
+.detail-body { flex: 1; padding: 20px 24px; overflow-y: auto; }
 
-.detail-banner-content p {
-  font-size: 13px;
-  opacity: 0.9;
-}
-
-.detail-body {
-  flex: 1;
-  padding: 20px 24px;
-  overflow-y: auto;
-}
-
-/* 欢迎状态 */
-.welcome-state {
-  text-align: center;
-  padding: 30px 0;
-}
-
+.welcome-state { text-align: center; padding: 30px 0; }
 .welcome-dolls {
-  width: 220px;
-  height: 180px;
+  width: 220px; height: 180px;
   margin: 0 auto 20px;
   background: url('assets/dolls.jpg') center/cover;
   border-radius: var(--radius-lg);
@@ -713,14 +549,12 @@ body {
   position: relative;
   overflow: hidden;
 }
-
 .welcome-dolls::after {
   content: '';
   position: absolute;
   inset: 0;
   background: linear-gradient(to top, rgba(124, 58, 237, 0.2), transparent);
 }
-
 .welcome-state h2 {
   font-size: 24px;
   font-weight: 800;
@@ -730,13 +564,11 @@ body {
   background-clip: text;
   margin-bottom: 8px;
 }
-
 .welcome-state > p {
   font-size: 14px;
   color: var(--purple-600);
   margin-bottom: 24px;
 }
-
 .welcome-features {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -744,7 +576,6 @@ body {
   max-width: 400px;
   margin: 0 auto 24px;
 }
-
 .feature-card {
   padding: 16px;
   background: linear-gradient(135deg, rgba(167, 139, 250, 0.1), rgba(249, 168, 212, 0.1));
@@ -753,52 +584,34 @@ body {
   text-align: center;
   transition: all 0.3s ease;
 }
-
 .feature-card:hover {
   transform: translateY(-3px);
   box-shadow: var(--shadow-md);
   border-color: var(--purple-400);
 }
-
-.feature-icon {
-  font-size: 28px;
-  margin-bottom: 8px;
-}
-
+.feature-icon { font-size: 28px; margin-bottom: 8px; }
 .feature-card span {
   font-size: 13px;
   font-weight: 600;
   color: var(--purple-700);
 }
+.welcome-tip { font-size: 12px; color: var(--purple-400); }
 
-.welcome-tip {
-  font-size: 12px;
-  color: var(--purple-400);
-}
-
-/* 详情内容 */
-.detail-section {
-  margin-bottom: 24px;
-}
-
+.detail-section { margin-bottom: 24px; }
 .detail-section h3 {
   font-size: 15px;
   font-weight: 700;
   color: var(--purple-800);
   margin-bottom: 14px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+  display: flex; align-items: center; gap: 8px;
   padding-bottom: 10px;
   border-bottom: 2px solid var(--purple-200);
 }
-
 .info-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 12px;
 }
-
 .info-card {
   background: linear-gradient(135deg, rgba(167, 139, 250, 0.08), rgba(249, 168, 212, 0.08));
   padding: 14px 16px;
@@ -806,12 +619,10 @@ body {
   border-left: 4px solid var(--purple-400);
   transition: all 0.2s ease;
 }
-
 .info-card:hover {
   border-left-color: var(--pink-500);
   background: linear-gradient(135deg, rgba(167, 139, 250, 0.12), rgba(249, 168, 212, 0.12));
 }
-
 .info-card .label {
   font-size: 10px;
   color: var(--purple-400);
@@ -820,18 +631,15 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
-
 .info-card .value {
   font-size: 14px;
   font-weight: 600;
   color: var(--purple-900);
 }
-
 .info-card .value.highlight {
   color: var(--purple-700);
   font-size: 15px;
 }
-
 .detail-desc {
   font-size: 13px;
   line-height: 1.9;
@@ -840,15 +648,8 @@ body {
   padding: 18px;
   border-radius: var(--radius-md);
 }
-
-.detail-desc p {
-  margin-bottom: 10px;
-}
-
-.detail-desc p:last-child {
-  margin-bottom: 0;
-}
-
+.detail-desc p { margin-bottom: 10px; }
+.detail-desc p:last-child { margin-bottom: 0; }
 .highlight-box {
   background: linear-gradient(135deg, rgba(249, 168, 212, 0.2), rgba(167, 139, 250, 0.2));
   border: 2px dashed var(--pink-400);
@@ -856,30 +657,20 @@ body {
   padding: 16px;
   margin-top: 14px;
 }
-
 .highlight-box .title {
   font-size: 13px;
   font-weight: 700;
   color: var(--purple-800);
   margin-bottom: 8px;
-  display: flex;
-  align-items: center;
-  gap: 6px;
+  display: flex; align-items: center; gap: 6px;
 }
-
 .highlight-box .content {
   font-size: 12px;
   color: var(--purple-600);
   line-height: 1.7;
 }
 
-/* 购票按钮 */
-.ticket-section {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
+.ticket-section { display: flex; gap: 12px; flex-wrap: wrap; }
 .btn-ticket {
   flex: 1;
   min-width: 140px;
@@ -890,44 +681,32 @@ body {
   font-weight: 700;
   cursor: pointer;
   transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
 }
-
 .btn-ticket.primary {
   background: var(--gradient-primary);
   color: white;
   box-shadow: var(--shadow-md);
 }
-
 .btn-ticket.primary:hover {
   transform: translateY(-3px);
   box-shadow: var(--shadow-lg);
 }
-
-.btn-ticket.primary:active {
-  transform: translateY(-1px);
-}
-
+.btn-ticket.primary:active { transform: translateY(-1px); }
 .btn-ticket.disabled {
   background: #e5e7eb;
   color: #9ca3af;
   cursor: not-allowed;
 }
-
 .btn-ticket.secondary {
   background: linear-gradient(135deg, rgba(167, 139, 250, 0.15), rgba(249, 168, 212, 0.15));
   color: var(--purple-700);
   border: 2px solid var(--purple-300);
 }
-
 .btn-ticket.secondary:hover {
   background: linear-gradient(135deg, rgba(167, 139, 250, 0.25), rgba(249, 168, 212, 0.25));
   transform: translateY(-2px);
 }
-
 .ticket-tip {
   font-size: 11px;
   color: var(--purple-400);
@@ -939,13 +718,7 @@ body {
   border-left: 3px solid var(--purple-300);
 }
 
-/* 场次安排 */
-.schedule-list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
+.schedule-list { display: flex; flex-direction: column; gap: 10px; }
 .schedule-item {
   display: flex;
   align-items: center;
@@ -956,45 +729,29 @@ body {
   border: 1.5px solid var(--purple-100);
   transition: all 0.2s ease;
 }
-
 .schedule-item:hover {
   border-color: var(--purple-300);
   background: var(--purple-100);
 }
-
-.schedule-date {
-  min-width: 60px;
-  text-align: center;
-}
-
+.schedule-date { min-width: 60px; text-align: center; }
 .schedule-date .date {
   font-size: 18px;
   font-weight: 800;
   color: var(--purple-700);
 }
-
-.schedule-date .month {
-  font-size: 10px;
-  color: var(--purple-400);
-}
-
-.schedule-info {
-  flex: 1;
-}
-
+.schedule-date .month { font-size: 10px; color: var(--purple-400); }
+.schedule-info { flex: 1; }
 .schedule-info .time {
   font-size: 14px;
   font-weight: 700;
   color: var(--purple-800);
 }
-
 .schedule-info .label {
   font-size: 11px;
   color: var(--purple-500);
   margin-top: 3px;
 }
 
-/* ===== 右侧：活动列表 ===== */
 .filter-bar {
   padding: 12px 16px;
   display: flex;
@@ -1002,7 +759,6 @@ body {
   flex-wrap: wrap;
   border-bottom: 1px solid var(--purple-100);
 }
-
 .filter-btn {
   padding: 5px 12px;
   border-radius: 14px;
@@ -1014,19 +770,16 @@ body {
   transition: all 0.2s ease;
   font-weight: 600;
 }
-
 .filter-btn:hover {
   border-color: var(--purple-500);
   color: var(--purple-700);
 }
-
 .filter-btn.active {
   background: var(--gradient-primary);
   color: white;
   border-color: transparent;
   box-shadow: var(--shadow-sm);
 }
-
 .event-list {
   flex: 1;
   overflow-y: auto;
@@ -1035,7 +788,6 @@ body {
   flex-direction: column;
   gap: 12px;
 }
-
 .event-card {
   background: linear-gradient(135deg, rgba(167, 139, 250, 0.08), rgba(249, 168, 212, 0.08));
   border-radius: var(--radius-md);
@@ -1047,45 +799,32 @@ body {
   overflow: hidden;
   flex-shrink: 0;
 }
-
 .event-card::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 5px;
-  height: 100%;
+  top: 0; left: 0;
+  width: 5px; height: 100%;
   background: var(--gradient-primary);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
-
 .event-card:hover {
   transform: translateX(5px);
   box-shadow: var(--shadow-md);
   border-color: var(--purple-200);
 }
-
-.event-card:hover::before {
-  opacity: 1;
-}
-
+.event-card:hover::before { opacity: 1; }
 .event-card.selected {
   background: linear-gradient(135deg, rgba(167, 139, 250, 0.15), rgba(249, 168, 212, 0.15));
   border-color: var(--purple-400);
 }
-
-.event-card.selected::before {
-  opacity: 1;
-}
-
+.event-card.selected::before { opacity: 1; }
 .card-top {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 12px;
 }
-
 .card-date-badge {
   text-align: center;
   min-width: 50px;
@@ -1095,26 +834,18 @@ body {
   color: white;
   box-shadow: var(--shadow-sm);
 }
-
-.card-date-badge .month {
-  font-size: 9px;
-  font-weight: 500;
-  opacity: 0.9;
-}
-
+.card-date-badge .month { font-size: 9px; font-weight: 500; opacity: 0.9; }
 .card-date-badge .day {
   font-size: 20px;
   font-weight: 800;
   line-height: 1.1;
 }
-
 .card-status {
   font-size: 10px;
   padding: 4px 10px;
   border-radius: 12px;
   font-weight: 600;
 }
-
 .card-title {
   font-size: 14px;
   font-weight: 700;
@@ -1122,7 +853,6 @@ body {
   line-height: 1.4;
   color: var(--purple-900);
 }
-
 .card-location {
   font-size: 11px;
   color: var(--purple-500);
@@ -1131,13 +861,11 @@ body {
   gap: 4px;
   margin-bottom: 12px;
 }
-
 .card-actions {
   display: flex;
   gap: 8px;
   margin-top: 8px;
 }
-
 .card-btn {
   flex: 1;
   padding: 10px 8px;
@@ -1147,23 +875,17 @@ body {
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 4px;
+  display: flex; align-items: center; justify-content: center; gap: 4px;
   white-space: nowrap;
 }
-
 .card-btn.ticket {
   background: var(--gradient-primary);
   color: white;
 }
-
 .card-btn.ticket:hover {
   transform: scale(1.03);
   box-shadow: var(--shadow-sm);
 }
-
 .card-btn.ticket:disabled {
   background: #e5e7eb;
   color: #9ca3af;
@@ -1171,34 +893,25 @@ body {
   transform: none;
   box-shadow: none;
 }
-
 .card-btn.detail {
   background: rgba(167, 139, 250, 0.15);
   color: var(--purple-700);
 }
+.card-btn.detail:hover { background: rgba(167, 139, 250, 0.25); }
 
-.card-btn.detail:hover {
-  background: rgba(167, 139, 250, 0.25);
-}
-
-/* 快速购票 */
 .quick-ticket {
   padding: 16px;
   background: linear-gradient(135deg, rgba(124, 58, 237, 0.08), rgba(236, 72, 153, 0.08));
   border-top: 2px solid var(--purple-200);
   flex-shrink: 0;
 }
-
 .qt-title {
   font-size: 13px;
   font-weight: 700;
   color: var(--purple-800);
   margin-bottom: 8px;
-  display: flex;
-  align-items: center;
-  gap: 6px;
+  display: flex; align-items: center; gap: 6px;
 }
-
 .qt-event {
   font-size: 12px;
   color: var(--purple-500);
@@ -1207,7 +920,6 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
 .qt-btn {
   width: 100%;
   padding: 14px;
@@ -1222,12 +934,10 @@ body {
   box-shadow: var(--shadow-md);
   letter-spacing: 1px;
 }
-
 .qt-btn:hover:not(:disabled) {
   transform: translateY(-2px);
   box-shadow: var(--shadow-lg);
 }
-
 .qt-btn:disabled {
   background: #e5e7eb;
   color: #9ca3af;
@@ -1235,7 +945,6 @@ body {
   box-shadow: none;
 }
 
-/* ===== 底部 ===== */
 .footer {
   text-align: center;
   padding: 20px;
@@ -1244,7 +953,6 @@ body {
   position: relative;
   z-index: 10;
 }
-
 .footer .dolls-row {
   width: 200px;
   height: 60px;
@@ -1252,11 +960,7 @@ body {
   background: url('assets/characters.png') center/contain no-repeat;
   opacity: 0.6;
 }
-
-.footer p {
-  margin-bottom: 4px;
-}
-
+.footer p { margin-bottom: 4px; }
 .footer .slogan {
   font-weight: 700;
   color: var(--purple-500);
@@ -1264,11 +968,9 @@ body {
   letter-spacing: 1px;
 }
 
-/* ===== 通知面板 ===== */
 .notif-panel {
   position: fixed;
-  top: 20px;
-  right: 20px;
+  top: 20px; right: 20px;
   width: 340px;
   max-height: 450px;
   background: rgba(255, 255, 255, 0.98);
@@ -1280,17 +982,14 @@ body {
   overflow: hidden;
   border: 1px solid var(--purple-200);
 }
-
 .notif-panel.show {
   display: block;
   animation: slideIn 0.3s ease;
 }
-
 @keyframes slideIn {
   from { transform: translateX(100%); opacity: 0; }
   to { transform: translateX(0); opacity: 1; }
 }
-
 .notif-header {
   padding: 16px 20px;
   background: var(--gradient-primary);
@@ -1301,49 +1000,30 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-
-.notif-close {
-  cursor: pointer;
-  font-size: 22px;
-  opacity: 0.8;
-  transition: opacity 0.2s;
-}
-
+.notif-close { cursor: pointer; font-size: 22px; opacity: 0.8; transition: opacity 0.2s; }
 .notif-close:hover { opacity: 1; }
-
-.notif-list {
-  max-height: 380px;
-  overflow-y: auto;
-}
-
+.notif-list { max-height: 380px; overflow-y: auto; }
 .notif-item {
   padding: 14px 20px;
   border-bottom: 1px solid var(--purple-100);
   cursor: pointer;
   transition: background 0.2s;
 }
-
-.notif-item:hover {
-  background: var(--purple-50);
-}
-
+.notif-item:hover { background: var(--purple-50); }
 .notif-item.unread {
   background: linear-gradient(135deg, rgba(249, 168, 212, 0.1), rgba(167, 139, 250, 0.1));
 }
-
 .notif-item .title {
   font-size: 13px;
   font-weight: 600;
   margin-bottom: 5px;
   color: var(--purple-900);
 }
-
 .notif-item .desc {
   font-size: 12px;
   color: var(--purple-600);
   line-height: 1.5;
 }
-
 .notif-item .time {
   font-size: 10px;
   color: var(--pink-500);
@@ -1351,7 +1031,6 @@ body {
   font-weight: 500;
 }
 
-/* ===== 撒花效果 ===== */
 .sparkle {
   position: fixed;
   pointer-events: none;
@@ -1359,70 +1038,39 @@ body {
   animation: sparkle-fade 1.8s ease-out forwards;
   z-index: 9999;
 }
-
 @keyframes sparkle-fade {
   0% { opacity: 1; transform: scale(0) rotate(0deg); }
   40% { opacity: 1; transform: scale(1.5) rotate(180deg); }
   100% { opacity: 0; transform: scale(0.6) rotate(360deg) translateY(-60px); }
 }
 
-/* ===== 滚动条 ===== */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--purple-100); border-radius: 3px; }
 ::-webkit-scrollbar-thumb { background: var(--purple-400); border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--purple-500); }
 
-/* ===== 空状态 ===== */
 .empty-state {
   text-align: center;
   padding: 40px 20px;
   color: var(--purple-400);
 }
+.empty-state .emoji { font-size: 48px; margin-bottom: 12px; }
+.empty-state p { font-size: 13px; line-height: 1.7; }
 
-.empty-state .emoji {
-  font-size: 48px;
-  margin-bottom: 12px;
-}
-
-.empty-state p {
-  font-size: 13px;
-  line-height: 1.7;
-}
-
-/* ===== 响应式 ===== */
 @media (max-width: 1200px) {
-  .main-container {
-    grid-template-columns: 250px 1fr 280px;
-  }
+  .main-container { grid-template-columns: 250px 1fr 280px; }
 }
-
 @media (max-width: 900px) {
-  .main-container {
-    grid-template-columns: 1fr;
-  }
+  .main-container { grid-template-columns: 1fr; }
   .panel { max-height: none; }
   .hero-title { font-size: 32px; }
 }
-
 @media (max-width: 600px) {
-  .welcome-modal {
-    width: 320px;
-    height: 320px;
-  }
-  .welcome-modal-title {
-    font-size: 26px;
-    letter-spacing: 4px;
-  }
-  .welcome-modal-subtitle {
-    font-size: 12px;
-    letter-spacing: 2px;
-  }
-  .hero-bg {
-    background-position: center 15%;
-  }
-  .detail-banner-img {
-    background-position: center 15%;
-  }
+  .welcome-modal { width: 320px; height: 320px; }
+  .welcome-modal-title { font-size: 26px; letter-spacing: 4px; }
+  .welcome-modal-subtitle { font-size: 12px; letter-spacing: 2px; }
+  .hero-bg { background-position: center 15%; }
+  .detail-banner-img { background-position: center 15%; }
   .hero-section { height: 260px; }
   .hero-title { font-size: 26px; letter-spacing: 4px; }
   .hero-dolls { width: 220px; height: 60px; }
@@ -1526,13 +1174,11 @@ body {
     <div class="calendar-month" id="calendarMonth">2026年8月</div>
     
     <div class="calendar-grid" id="calendarGrid">
-      <!-- 动态生成 -->
     </div>
     
     <div class="timeline-section">
       <div class="timeline-title">⏰ 近期活动</div>
       <div class="timeline-list" id="timelineList">
-        <!-- 动态生成 -->
       </div>
     </div>
   </div>
@@ -1569,4 +1215,759 @@ body {
           </div>
           <div class="feature-card">
             <div class="feature-icon">🌐</div>
-            <span>全北京时间
+            <span>全北京时间</span>
+          </div>
+        </div>
+        <p class="welcome-tip">从右侧选择一场活动开始探索吧～</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 右侧：活动列表 -->
+  <div class="panel right-panel">
+    <div class="panel-header">
+      <h2>🎫 活动列表</h2>
+      <span class="badge" id="eventCount">0 场</span>
+    </div>
+    
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all" onclick="filterEvents('all')">全部</button>
+      <button class="filter-btn" data-filter="upcoming" onclick="filterEvents('upcoming')">即将开始</button>
+      <button class="filter-btn" data-filter="concert" onclick="filterEvents('concert')">演唱会</button>
+      <button class="filter-btn" data-filter="fanmeeting" onclick="filterEvents('fanmeeting')">见面会</button>
+      <button class="filter-btn" data-filter="fansign" onclick="filterEvents('fansign')">签售会</button>
+      <button class="filter-btn" data-filter="festival" onclick="filterEvents('festival')">音乐节</button>
+    </div>
+    
+    <div class="event-list" id="eventList">
+    </div>
+    
+    <div class="quick-ticket">
+      <div class="qt-title">⚡ 快速购票</div>
+      <div class="qt-event" id="qtEvent">选择活动后显示</div>
+      <button class="qt-btn" id="qtBtn" disabled>暂无活动</button>
+    </div>
+  </div>
+</div>
+
+<!-- 底部 -->
+<div class="footer">
+  <div class="dolls-row"></div>
+  <p class="slogan">RISE and REALIZE, we are RIIZE 💜</p>
+  <p>数据来源：RIIZE 官方 / SMTOWN / 各主办方官方公告</p>
+  <p style="margin-top:8px;font-size:11px;opacity:0.7;">仅供粉丝学习交流使用 · Ryuok</p>
+</div>
+
+<!-- 通知面板 -->
+<div class="notif-panel" id="notifPanel">
+  <div class="notif-header">
+    <span>🔔 通知中心</span>
+    <span class="notif-close" onclick="toggleNotif()">×</span>
+  </div>
+  <div class="notif-list" id="notifList">
+  </div>
+</div>
+
+<script>
+// ===== 欢迎封面 =====
+function enterSite() {
+  document.getElementById('welcome-cover').classList.add('hidden');
+}
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Enter' || e.key === ' ') {
+    enterSite();
+  }
+});
+
+// ===== 活动数据 =====
+const events = window.RIIZE_EVENTS || [
+  {
+    id: 1,
+    title: "RIIZE 三周年粉丝见面会",
+    type: "fanmeeting",
+    typeLabel: "粉丝见面会",
+    date: "2026-09-06",
+    dateEnd: "2026-09-07",
+    time: "18:00",
+    city: "首尔",
+    venue: "奥林匹克体操竞技场",
+    status: "upcoming",
+    statusLabel: "即将开始",
+    price: "154,000",
+    currency: "KRW",
+    priceCNY: "816",
+    ticketPlatform: "Yes24 / Interpark",
+    ticketTime: "会员先行：7月27日 19:00 北京时间（韩）<br>会员先行：7月28日 19:00 北京时间（全球）<br>一般售票：7月29日 19:00 北京时间",
+    organizer: "SM Entertainment / Dream Maker",
+    ticketUrl: "https://ticket.yes24.com/",
+    desc: "RIIZE 出道三周年特别粉丝见面会，与 BRIIZE 一起度过难忘的时光。现场准备了特别舞台、游戏互动和粉丝福利环节。",
+    highlight: "三周年特别活动，有限定周边和特别舞台！"
+  },
+  {
+    id: 20,
+    title: "SBS 夏季歌谣大战",
+    type: "festival",
+    typeLabel: "音乐节/颁奖礼",
+    date: "2026-08-09",
+    time: "18:00",
+    city: "高阳",
+    venue: "KINTEX",
+    status: "upcoming",
+    statusLabel: "即将开始",
+    price: "154,000",
+    currency: "KRW",
+    priceCNY: "816",
+    ticketPlatform: "Creatrip / Interpark / Melon Ticket",
+    ticketTime: "优先售票：6月23日 13:00 北京时间<br>一般售票：6月25日 12:00 北京时间",
+    organizer: "SBS",
+    ticketUrl: "https://tickets.interpark.com/",
+    desc: "SBS 夏季歌谣大战，成灿担任主持人。夏日特别舞台，多位顶级艺人齐聚。",
+    highlight: "成灿主持！"
+  },
+  {
+    id: 18,
+    title: "WATERBOMB 首尔 2026",
+    type: "festival",
+    typeLabel: "音乐节",
+    date: "2026-07-26",
+    time: "14:00",
+    city: "首尔",
+    venue: "首尔森林",
+    status: "ended",
+    statusLabel: "已结束",
+    price: "165,000",
+    currency: "KRW",
+    priceCNY: "875",
+    ticketPlatform: "Melon Ticket",
+    ticketTime: "以官方公告为准",
+    organizer: "SBS / 9ENT",
+    ticketUrl: "https://ticket.melon.com/",
+    desc: "韩国最火的夏日水上音乐节 WATERBOMB 2026 首尔站。",
+    highlight: "夏日限定水枪大战！"
+  },
+  {
+    id: 19,
+    title: "RAPBEAT 音乐节 2026",
+    type: "festival",
+    typeLabel: "音乐节",
+    date: "2026-09-20",
+    dateEnd: "2026-09-21",
+    time: "13:00",
+    city: "首尔",
+    venue: "奥林匹克公园",
+    status: "upcoming",
+    statusLabel: "即将开始",
+    price: "165,000",
+    currency: "KRW",
+    priceCNY: "875",
+    ticketPlatform: "Melon Ticket / Interpark",
+    ticketTime: "以官方公告为准",
+    organizer: "9ENT",
+    ticketUrl: "https://ticket.melon.com/",
+    desc: "韩国最大嘻哈音乐节 RAPBEAT 2026。",
+    highlight: "两天连开！"
+  },
+  {
+    id: 15,
+    title: "RIIZE 二辑东京线下活动",
+    type: "fansign",
+    typeLabel: "签售会",
+    date: "2026-08-12",
+    time: "19:00",
+    city: "东京",
+    venue: "东京国际论坛",
+    status: "upcoming",
+    statusLabel: "即将开始",
+    price: "3,300",
+    currency: "JPY",
+    priceCNY: "155",
+    ticketPlatform: "RIIZE JAPAN官网抽选",
+    ticketTime: "以官方公告为准",
+    organizer: "SM Entertainment Japan",
+    ticketUrl: "https://rize.jp/",
+    desc: "RIIZE 日本二辑纪念线下签售活动。",
+    highlight: "日本限定！"
+  },
+  {
+    id: 16,
+    title: "RIIZE 上海线下签售会",
+    type: "fansign",
+    typeLabel: "签售会",
+    date: "2026-08-20",
+    time: "19:30",
+    city: "上海",
+    venue: "上海静安体育中心",
+    status: "upcoming",
+    statusLabel: "即将开始",
+    price: "399",
+    currency: "CNY",
+    priceCNY: "399",
+    ticketPlatform: "熊宝空间站",
+    ticketTime: "以官方公告为准",
+    organizer: "熊宝空间站",
+    ticketUrl: "https://www.xiongbao.com/",
+    desc: "RIIZE 七夕特别场上海线下签售会。",
+    highlight: "七夕特别场！"
+  },
+  {
+    id: 17,
+    title: "TMEA 腾讯音乐娱乐盛典",
+    type: "festival",
+    typeLabel: "颁奖礼",
+    date: "2026-08-23",
+    time: "19:00",
+    city: "澳门",
+    venue: "银河综艺馆",
+    status: "upcoming",
+    statusLabel: "即将开始",
+    price: "待公布",
+    currency: "CNY",
+    priceCNY: "",
+    ticketPlatform: "大麦网",
+    ticketTime: "以官方公告为准",
+    organizer: "腾讯音乐娱乐集团",
+    ticketUrl: "https://www.damai.cn/",
+    desc: "TMEA 腾讯音乐娱乐盛典 2026。",
+    highlight: "中国首秀！"
+  },
+  {
+    id: 21,
+    title: "Mezamashi WANGAN Fes 2026",
+    type: "festival",
+    typeLabel: "音乐节",
+    date: "2026-08-13",
+    time: "12:00",
+    city: "东京",
+    venue: "台场",
+    status: "upcoming",
+    statusLabel: "即将开始",
+    price: "12,800",
+    currency: "JPY",
+    priceCNY: "602",
+    ticketPlatform: "e+ / ぴあ / 罗森票务",
+    ticketTime: "以官方公告为准",
+    organizer: "富士电视台",
+    ticketUrl: "https://eplus.jp/",
+    desc: "日本台场夏日音乐节 Mezamashi WANGAN Fes。",
+    highlight: "台场海边舞台！"
+  },
+  {
+    id: 22,
+    title: "釜山 BOF 2026",
+    type: "festival",
+    typeLabel: "音乐节",
+    date: "2026-10-01",
+    dateEnd: "2026-10-10",
+    time: "18:00",
+    city: "釜山",
+    venue: "釜山亚运主体育场",
+    status: "upcoming",
+    statusLabel: "即将开始",
+    price: "待公布",
+    currency: "KRW",
+    priceCNY: "",
+    ticketPlatform: "以官方公告为准",
+    ticketTime: "以官方公告为准",
+    organizer: "釜山文化财团",
+    ticketUrl: "",
+    desc: "釜山 One Asia Festival 2026。",
+    highlight: "釜山最大K-POP庆典！"
+  },
+  {
+    id: 23,
+    title: "MAMA 2026",
+    type: "festival",
+    typeLabel: "颁奖礼",
+    date: "2026-11-01",
+    time: "18:00",
+    city: "待定",
+    venue: "待定",
+    status: "upcoming",
+    statusLabel: "即将开始",
+    price: "待公布",
+    currency: "KRW",
+    priceCNY: "",
+    ticketPlatform: "以官方公告为准",
+    ticketTime: "以官方公告为准",
+    organizer: "CJ ENM",
+    ticketUrl: "",
+    desc: "MAMA 大奖 2026。",
+    highlight: "年度最大颁奖礼！"
+  }
+];
+
+// ===== 当前状态 =====
+let currentMonth = new Date();
+let currentFilter = 'all';
+let selectedEvent = null;
+let notifications = [];
+
+// ===== 初始化 =====
+document.addEventListener('DOMContentLoaded', function() {
+  updateTime();
+  setInterval(updateTime, 1000);
+  renderCalendar();
+  renderTimeline();
+  renderEventList();
+  updateStats();
+  initNotifications();
+});
+
+// ===== 时间更新 =====
+function updateTime() {
+  const now = new Date();
+  const options = { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' };
+  document.getElementById('currentDate').textContent = now.toLocaleDateString('zh-CN', options);
+  document.getElementById('currentTime').textContent = now.toLocaleTimeString('zh-CN');
+}
+
+// ===== 日历 =====
+function renderCalendar() {
+  const grid = document.getElementById('calendarGrid');
+  const monthLabel = document.getElementById('calendarMonth');
+  
+  const year = currentMonth.getFullYear();
+  const month = currentMonth.getMonth();
+  
+  monthLabel.textContent = `${year}年${month + 1}月`;
+  
+  const firstDay = new Date(year, month, 1);
+  const lastDay = new Date(year, month + 1, 0);
+  const startDay = firstDay.getDay();
+  const daysInMonth = lastDay.getDate();
+  
+  const prevLastDay = new Date(year, month, 0).getDate();
+  
+  let html = '';
+  const weekdays = ['日', '一', '二', '三', '四', '五', '六'];
+  weekdays.forEach(d => {
+    html += `<div class="calendar-weekday">${d}</div>`;
+  });
+  
+  for (let i = startDay - 1; i >= 0; i--) {
+    html += `<div class="calendar-day other-month">${prevLastDay - i}</div>`;
+  }
+  
+  const today = new Date();
+  const eventDates = getEventDatesForMonth(year, month);
+  
+  for (let day = 1; day <= daysInMonth; day++) {
+    const dateStr = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+    const isToday = today.getFullYear() === year && today.getMonth() === month && today.getDate() === day;
+    const hasEvent = eventDates.includes(dateStr);
+    
+    let classes = 'calendar-day';
+    if (isToday) classes += ' today';
+    if (hasEvent) classes += ' has-event';
+    
+    html += `<div class="${classes}" onclick="selectDate('${dateStr}')">
+      ${day}
+      ${hasEvent ? '<div class="dot"></div>' : ''}
+    </div>`;
+  }
+  
+  const totalCells = startDay + daysInMonth;
+  const remaining = (7 - (totalCells % 7)) % 7;
+  for (let i = 1; i <= remaining; i++) {
+    html += `<div class="calendar-day other-month">${i}</div>`;
+  }
+  
+  grid.innerHTML = html;
+}
+
+function getEventDatesForMonth(year, month) {
+  const dates = [];
+  events.forEach(e => {
+    const start = new Date(e.date);
+    const end = e.dateEnd ? new Date(e.dateEnd) : start;
+    if (start.getFullYear() === year && start.getMonth() === month ||
+        end.getFullYear() === year && end.getMonth() === month) {
+      for (let d = new Date(start); d <= end; d.setDate(d.getDate() + 1)) {
+        if (d.getFullYear() === year && d.getMonth() === month) {
+          dates.push(d.toISOString().split('T')[0]);
+        }
+      }
+    }
+  });
+  return dates;
+}
+
+function changeMonth(delta) {
+  currentMonth.setMonth(currentMonth.getMonth() + delta);
+  renderCalendar();
+}
+
+function goToday() {
+  currentMonth = new Date();
+  renderCalendar();
+}
+
+function selectDate(dateStr) {
+  const dateEvents = events.filter(e => {
+    const start = new Date(e.date);
+    const end = e.dateEnd ? new Date(e.dateEnd) : start;
+    const d = new Date(dateStr);
+    return d >= start && d <= end;
+  });
+  
+  if (dateEvents.length > 0) {
+    selectEvent(dateEvents[0].id);
+  }
+}
+
+// ===== 时间线 =====
+function renderTimeline() {
+  const list = document.getElementById('timelineList');
+  const now = new Date();
+  
+  const upcoming = events
+    .filter(e => new Date(e.date) >= now)
+    .sort((a, b) => new Date(a.date) - new Date(b.date))
+    .slice(0, 5);
+  
+  if (upcoming.length === 0) {
+    list.innerHTML = `<div class="empty-state"><div class="emoji">💜</div><p>近期暂无活动</p></div>`;
+    return;
+  }
+  
+  let html = '';
+  upcoming.forEach(e => {
+    const date = new Date(e.date);
+    const isActive = selectedEvent && selectedEvent.id === e.id;
+    html += `
+      <div class="timeline-item ${isActive ? 'active' : ''}" onclick="selectEvent(${e.id})">
+        <div class="tl-date">
+          <div class="month">${date.getMonth() + 1}月</div>
+          <div class="day">${date.getDate()}</div>
+        </div>
+        <div class="tl-info">
+          <div class="title">${e.title}</div>
+          <div class="city">📍 ${e.city}</div>
+          <span class="status-tag status-${e.status}">${e.statusLabel}</span>
+        </div>
+      </div>
+    `;
+  });
+  
+  list.innerHTML = html;
+}
+
+// ===== 活动列表 =====
+function renderEventList() {
+  const list = document.getElementById('eventList');
+  const countEl = document.getElementById('eventCount');
+  
+  let filtered = events;
+  
+  if (currentFilter === 'upcoming') {
+    const now = new Date();
+    filtered = events.filter(e => new Date(e.date) >= now);
+  } else if (currentFilter !== 'all') {
+    filtered = events.filter(e => e.type === currentFilter);
+  }
+  
+  filtered.sort((a, b) => new Date(a.date) - new Date(b.date));
+  
+  countEl.textContent = `${filtered.length} 场`;
+  
+  if (filtered.length === 0) {
+    list.innerHTML = `<div class="empty-state"><div class="emoji">🎫</div><p>暂无相关活动</p></div>`;
+    return;
+  }
+  
+  let html = '';
+  filtered.forEach(e => {
+    const date = new Date(e.date);
+    const isSelected = selectedEvent && selectedEvent.id === e.id;
+    const hasTicket = e.ticketUrl && e.ticketUrl.length > 0;
+    
+    html += `
+      <div class="event-card ${isSelected ? 'selected' : ''}" onclick="selectEvent(${e.id})">
+        <div class="card-top">
+          <div class="card-date-badge">
+            <div class="month">${date.getMonth() + 1}月</div>
+            <div class="day">${date.getDate()}</div>
+          </div>
+          <span class="card-status status-${e.status}">${e.statusLabel}</span>
+        </div>
+        <div class="card-title">${e.title}</div>
+        <div class="card-location">📍 ${e.city} · ${e.venue}</div>
+        <div class="card-actions">
+          <button class="card-btn detail" onclick="event.stopPropagation(); selectEvent(${e.id})">📋 详情</button>
+          <button class="card-btn ticket" ${hasTicket ? '' : 'disabled'} onclick="event.stopPropagation(); openTicket(${e.id})">🎫 购票</button>
+        </div>
+      </div>
+    `;
+  });
+  
+  list.innerHTML = html;
+}
+
+function filterEvents(filter) {
+  currentFilter = filter;
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.filter === filter);
+  });
+  renderEventList();
+}
+
+// ===== 详情 =====
+function selectEvent(id) {
+  const e = events.find(ev => ev.id === id);
+  if (!e) return;
+  
+  selectedEvent = e;
+  
+  document.getElementById('detailType').textContent = e.typeLabel;
+  document.getElementById('detailTitle').textContent = e.title;
+  document.getElementById('detailSubtitle').textContent = `📍 ${e.city} · ${e.venue}`;
+  
+  const date = new Date(e.date);
+  const dateEnd = e.dateEnd ? new Date(e.dateEnd) : null;
+  const dateStr = dateEnd 
+    ? `${date.getMonth() + 1}月${date.getDate()}日 - ${dateEnd.getMonth() + 1}月${dateEnd.getDate()}日`
+    : `${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日`;
+  
+  const priceStr = e.priceCNY 
+    ? `${e.price} ${e.currency}<br><span style="font-size:11px;color:#9b59b6;">约¥${e.priceCNY} 人民币</span>`
+    : `${e.price} ${e.currency || ''}`;
+  
+  const body = document.getElementById('detailBody');
+  body.innerHTML = `
+    <div class="detail-section">
+      <h3>📋 基本信息</h3>
+      <div class="info-grid">
+        <div class="info-card">
+          <div class="label">活动日期</div>
+          <div class="value">${dateStr}</div>
+        </div>
+        <div class="info-card">
+          <div class="label">活动时间</div>
+          <div class="value">${e.time}（北京时间）</div>
+        </div>
+        <div class="info-card">
+          <div class="label">举办城市</div>
+          <div class="value">${e.city}</div>
+        </div>
+        <div class="info-card">
+          <div class="label">举办场馆</div>
+          <div class="value">${e.venue}</div>
+        </div>
+        <div class="info-card">
+          <div class="label">票价</div>
+          <div class="value">${priceStr}</div>
+        </div>
+        <div class="info-card">
+          <div class="label">状态</div>
+          <div class="value"><span class="status-tag status-${e.status}">${e.statusLabel}</span></div>
+        </div>
+        <div class="info-card">
+          <div class="label">购票平台</div>
+          <div class="value" style="font-size:12px;">${e.ticketPlatform || '以官方公告为准'}</div>
+        </div>
+        <div class="info-card">
+          <div class="label">购票时间</div>
+          <div class="value" style="font-size:12px;color:#9b59b6;line-height:1.5;">${e.ticketTime || '以官方公告为准'}</div>
+        </div>
+        <div class="info-card" style="grid-column: span 2;">
+          <div class="label">主办方</div>
+          <div class="value">${e.organizer}</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="detail-section">
+      <h3>📅 场次安排</h3>
+      <div class="schedule-list">
+        <div class="schedule-item">
+          <div class="schedule-date">
+            <div class="date">${date.getDate()}</div>
+            <div class="month">${date.getMonth() + 1}月</div>
+          </div>
+          <div class="schedule-info">
+            <div class="time">${e.time} 北京时间</div>
+            <div class="label">正式演出</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="detail-section">
+      <h3>📝 活动介绍</h3>
+      <div class="detail-desc">
+        <p>${e.desc}</p>
+        ${e.highlight ? `
+        <div class="highlight-box">
+          <div class="title">✨ 亮点</div>
+          <div class="content">${e.highlight}</div>
+        </div>
+        ` : ''}
+      </div>
+    </div>
+    
+    <div class="detail-section">
+      <h3>🎫 购票信息</h3>
+      <div class="ticket-section">
+        <button class="btn-ticket primary" ${e.ticketUrl ? '' : 'disabled'} onclick="openTicket(${e.id})">
+          🎫 立即购票
+        </button>
+        <button class="btn-ticket secondary" onclick="addReminder(${e.id})">
+          🔔 设置提醒
+        </button>
+      </div>
+      <div class="ticket-tip">
+        💡 温馨提示：购票请通过官方渠道，谨防黄牛和诈骗。所有时间均为北京时间，请注意时差。
+      </div>
+    </div>
+  `;
+  
+  // 更新快速购票
+  document.getElementById('qtEvent').textContent = e.title;
+  const qtBtn = document.getElementById('qtBtn');
+  if (e.ticketUrl) {
+    qtBtn.disabled = false;
+    qtBtn.textContent = '⚡ 立即购票';
+    qtBtn.onclick = () => openTicket(e.id);
+  } else {
+    qtBtn.disabled = true;
+    qtBtn.textContent = '暂无购票链接';
+  }
+  
+  // 撒花效果
+  createSparkle(window.innerWidth / 2, window.innerHeight / 2);
+  
+  // 更新列表选中状态
+  renderEventList();
+  renderTimeline();
+}
+
+function openTicket(id) {
+  const e = events.find(ev => ev.id === id);
+  if (e && e.ticketUrl) {
+    window.open(e.ticketUrl, '_blank');
+    createSparkle(window.innerWidth / 2, window.innerHeight / 2);
+  }
+}
+
+// ===== 撒花效果 =====
+function createSparkle(x, y) {
+  const emojis = ['💜', '✨', '🎀', '🌸', '💫', '⭐', '💕', '🌟'];
+  for (let i = 0; i < 15; i++) {
+    const sparkle = document.createElement('div');
+    sparkle.className = 'sparkle';
+    sparkle.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+    sparkle.style.left = (x + (Math.random() - 0.5) * 200) + 'px';
+    sparkle.style.top = (y + (Math.random() - 0.5) * 100) + 'px';
+    sparkle.style.animationDelay = (Math.random() * 0.3) + 's';
+    sparkle.style.fontSize = (16 + Math.random() * 20) + 'px';
+    document.body.appendChild(sparkle);
+    setTimeout(() => sparkle.remove(), 2000);
+  }
+}
+
+// ===== 统计 =====
+function updateStats() {
+  const now = new Date();
+  const upcoming = events.filter(e => new Date(e.date) >= now);
+  const cities = new Set(events.map(e => e.city));
+  
+  document.getElementById('statTotal').textContent = events.length;
+  document.getElementById('statUpcoming').textContent = upcoming.length;
+  document.getElementById('statCities').textContent = cities.size;
+}
+
+// ===== 刷新 =====
+function refreshData() {
+  createSparkle(window.innerWidth / 2, window.innerHeight / 2);
+  alert('✅ 数据已是最新！');
+}
+
+// ===== 通知 =====
+function initNotifications() {
+  const now = new Date();
+  const upcoming = events
+    .filter(e => new Date(e.date) >= now)
+    .sort((a, b) => new Date(a.date) - new Date(b.date))
+    .slice(0, 3);
+  
+  notifications = upcoming.map(e => ({
+    id: e.id,
+    title: e.title,
+    desc: `${e.city} · ${e.venue}`,
+    time: getCountdown(e.date),
+    unread: true
+  }));
+  
+  renderNotifications();
+}
+
+function getCountdown(dateStr) {
+  const now = new Date();
+  const date = new Date(dateStr);
+  const diff = date - now;
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  
+  if (days < 0) return '已结束';
+  if (days === 0) return '今天！';
+  return `还有 ${days} 天`;
+}
+
+function renderNotifications() {
+  const list = document.getElementById('notifList');
+  
+  if (notifications.length === 0) {
+    list.innerHTML = `<div class="empty-state"><div class="emoji">🔔</div><p>暂无通知</p></div>`;
+    return;
+  }
+  
+  let html = '';
+  notifications.forEach(n => {
+    html += `
+      <div class="notif-item ${n.unread ? 'unread' : ''}" onclick="selectEvent(${n.id})">
+        <div class="title">${n.title}</div>
+        <div class="desc">${n.desc}</div>
+        <div class="time">${n.time}</div>
+      </div>
+    `;
+  });
+  
+  list.innerHTML = html;
+}
+
+function toggleNotif() {
+  const panel = document.getElementById('notifPanel');
+  panel.classList.toggle('show');
+}
+
+function requestNotify() {
+  if ('Notification' in window) {
+    Notification.requestPermission().then(perm => {
+      if (perm === 'granted') {
+        alert('✅ 提醒已开启！活动开始前会通知你～');
+        createSparkle(window.innerWidth / 2, window.innerHeight / 2);
+      } else {
+        alert('⚠️ 你拒绝了通知权限，可以在浏览器设置里开启');
+      }
+    });
+  } else {
+    alert('⚠️ 你的浏览器不支持通知功能');
+  }
+}
+
+function addReminder(id) {
+  const e = events.find(ev => ev.id === id);
+  if (!e) return;
+  
+  if ('Notification' in window && Notification.permission === 'granted') {
+    new Notification('💜 RIIZE 活动提醒', {
+      body: `${e.title}\n${e.city} · ${e.venue}`,
+      icon: 'assets/cover.jpg'
+    });
+    alert('✅ 提醒已设置！');
+  } else {
+    alert('⚠️ 请先开启通知权限（点顶部的「开启提醒」按钮）');
+  }
+}
+</script>
+</body>
+</html>
