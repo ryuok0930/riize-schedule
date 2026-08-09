@@ -1528,7 +1528,7 @@ document.addEventListener('DOMContentLoaded', function() {
   renderCalendar();
   renderTimeline();
   renderEventList();
-  updateStats();
+  updateStats(true);
   // 渲染完成后更新一次状态
   setTimeout(updateAllStatus, 100);
 });
@@ -1640,15 +1640,20 @@ function updateTime() {
 }
 
 // ===== 更新统计数据 =====
-function updateStats() {
+function updateStats(animate = false) {
   const total = events.length;
   const upcoming = events.filter(e => getEventStatus(e).status === 'upcoming').length;
   const cities = new Set(events.map(e => e.city)).size;
   
-  // 数字滚动动画
-  animateNumber('statTotal', total);
-  animateNumber('statUpcoming', upcoming);
-  animateNumber('statCities', cities);
+  if (animate) {
+    animateNumber('statTotal', total);
+    animateNumber('statUpcoming', upcoming);
+    animateNumber('statCities', cities);
+  } else {
+    document.getElementById('statTotal').textContent = total;
+    document.getElementById('statUpcoming').textContent = upcoming;
+    document.getElementById('statCities').textContent = cities;
+  }
   
   document.getElementById('eventCount').textContent = total + ' 场';
 }
@@ -2099,7 +2104,7 @@ function refreshData() {
     renderCalendar();
     renderTimeline();
     renderEventList();
-    updateStats();
+    updateStats(true);
   }, 500);
 }
 
