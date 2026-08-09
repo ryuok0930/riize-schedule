@@ -39,7 +39,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【早鸟票】以官方公告为准<br>【一般售票】以官方公告为准",
     organizer: "SM Entertainment",
     ticketUrl: "https://www.smtown.com/",
-    desc: "SMTOWN 家族演唱会雅加达站，RIIZE 出道后首次参加家族演唱会。",
+    desc: "SMTOWN 家族演唱会雅加达站，RIIZE 出道后首次参加家族演唱会。震撼舞台首秀，点燃全场热情！",
     highlight: "出道后首次家族演唱会"
   },
 
@@ -61,7 +61,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【早鸟票】以官方公告为准<br>【一般售票】以官方公告为准",
     organizer: "CJ ENM",
     ticketUrl: "https://www.kconofficial.com/",
-    desc: "KCON 沙特阿拉伯站，RIIZE 首次出演 KCON。",
+    desc: "KCON 沙特阿拉伯站，RIIZE 首次出演 KCON。震撼舞台首秀，点燃全场热情！",
     highlight: "首次 KCON 舞台"
   },
 
@@ -84,7 +84,7 @@ window.RIIZE_EVENTS = [
     organizer: "AAA组委会",
     ticketUrl: "",
     noticeUrl: "https://weverse.io/riize/notice",
-    desc: "2026 亚洲明星盛典（AAA）第二天，RIIZE出演。",
+    desc: "2026 亚洲明星盛典（AAA）第二天，RIIZE出演。星光熠熠的盛典，期待精彩舞台！",
     highlight: "AAA 2026 Day2"
   },
 
@@ -106,7 +106,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【一般售票】以官方公告为准",
     organizer: "CJ ENM",
     ticketUrl: "https://mama.mwave.me/",
-    desc: "2023 MAMA 大奖，RIIZE 获得最受喜爱新人奖。",
+    desc: "2023 MAMA 大奖，RIIZE 获得最受喜爱新人奖。荣耀时刻，见证成长与辉煌！",
     highlight: "获得最佳新人奖！"
   },
 
@@ -128,7 +128,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【一般售票】以官方公告为准",
     organizer: "Kakao Entertainment",
     ticketUrl: "https://www.melon.com/",
-    desc: "2023 MMA 颁奖典礼，RIIZE 获得年度新人奖。",
+    desc: "2023 MMA 颁奖典礼，RIIZE 获得年度新人奖。荣耀时刻，见证成长与辉煌！",
     highlight: "MMA 新人奖大赏！"
   },
 
@@ -150,7 +150,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【一般售票】以官方公告为准",
     organizer: "首尔体育",
     ticketUrl: "https://www.seoulmusicawards.com/",
-    desc: "第33届首尔歌谣大赏，RIIZE 获得本赏和新人奖。",
+    desc: "第33届首尔歌谣大赏，RIIZE 获得本赏和新人奖。荣耀时刻，见证成长与辉煌！",
     highlight: "本赏 + 新人奖双丰收"
   },
 
@@ -172,7 +172,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【会员先行】以官方公告为准<br>【一般售票】以官方公告为准",
     organizer: "SM Entertainment / Dream Maker",
     ticketUrl: "https://www.melon.com/",
-    desc: "RIIZE 首次 Fan-Con 巡演首尔站，'RIIZING DAY' 主题。",
+    desc: "RIIZE 首次 Fan-Con 巡演首尔站，'RIIZING DAY' 主题。精彩不容错过！",
     highlight: "首次 Fan-Con 巡演！"
   },
 
@@ -194,7 +194,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【会员先行】以官方公告为准<br>【一般售票】以官方公告为准",
     organizer: "SM Entertainment / Dream Maker",
     ticketUrl: "https://www.melon.com/",
-    desc: "RIIZE 首次 Fan-Con 巡演首尔站第二天。",
+    desc: "RIIZE 首次 Fan-Con 巡演首尔站第二天。精彩不容错过！",
     highlight: "首尔两场连开"
   },
 
@@ -216,7 +216,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【FC先行抽选】以官方公告为准<br>【一般售票】以官方公告为准",
     organizer: "SM Entertainment Japan",
     ticketUrl: "https://riizeofficial.jp/",
-    desc: "RIIZE 首次日本 Fan-Con，东京站两场连开。",
+    desc: "RIIZE 首次日本 Fan-Con，东京站两场连开。精彩不容错过！",
     highlight: "日本首演！"
   },
 
@@ -238,7 +238,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【FC先行抽选】以官方公告为准<br>【一般售票】以官方公告为准",
     organizer: "SM Entertainment Japan",
     ticketUrl: "https://riizeofficial.jp/",
-    desc: "RIIZE 首次日本 Fan-Con 东京站第二天。",
+    desc: "RIIZE 首次日本 Fan-Con 东京站第二天。精彩不容错过！",
     highlight: "东京两场连开"
   },
 
@@ -260,7 +260,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【会员先行】以官方公告为准<br>【一般售票】以官方公告为准",
     organizer: "SM Entertainment",
     ticketUrl: "https://www.melon.com/",
-    desc: "RIIZE 首次香港 Fan-Con。",
+    desc: "RIIZE 首次香港 Fan-Con。精彩不容错过！",
     highlight: "香港首秀！"
   },
 
@@ -282,7 +282,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【会员先行】以官方公告为准<br>【一般售票】以官方公告为准",
     organizer: "SM Entertainment",
     ticketUrl: "https://www.melon.com/",
-    desc: "RIIZE 首次台湾 Fan-Con。",
+    desc: "RIIZE 首次台湾 Fan-Con。精彩不容错过！",
     highlight: "台湾首秀！"
   },
 
@@ -304,7 +304,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【早鸟票】以官方公告为准<br>【一般售票】以官方公告为准",
     organizer: "SUMMER SONIC",
     ticketUrl: "https://riizeofficial.jp/",
-    desc: "日本最大夏季音乐节 SUMMER SONIC 2024。",
+    desc: "日本最大夏季音乐节 SUMMER SONIC 2024。音乐盛宴嗨翻全场，一起释放青春能量！",
     highlight: "首次 SUMMER SONIC！"
   },
 
@@ -326,7 +326,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【会员先行】以官方公告为准<br>【一般售票】以官方公告为准",
     organizer: "SM Entertainment",
     ticketUrl: "https://www.melon.com/",
-    desc: "RIIZE 出道 1000 天特别粉丝派对。",
+    desc: "RIIZE 出道 1000 天特别粉丝派对。温馨又欢乐的时光，和粉丝一起创造美好记忆！",
     highlight: "出道 1000 天纪念！"
   },
 
@@ -348,7 +348,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【一般售票】以官方公告为准",
     organizer: "CJ ENM",
     ticketUrl: "https://riizeofficial.jp/",
-    desc: "2024 MAMA 大奖大阪站。",
+    desc: "2024 MAMA 大奖大阪站。星光熠熠的盛典，期待精彩舞台！",
     highlight: "MAMA 舞台"
   },
 
@@ -370,7 +370,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【FC先行抽选】以官方公告为准<br>【一般售票】以官方公告为准",
     organizer: "SM Entertainment Japan",
     ticketUrl: "https://riizeofficial.jp/",
-    desc: "RIIZE 日本首次粉丝俱乐部专属 FM，'The Secret LIEZ' 主题。",
+    desc: "RIIZE 日本首次粉丝俱乐部专属 FM，'The Secret LIEZ' 主题。近距离互动，专属回忆拉满！",
     highlight: "日本 FC 限定 FM！"
   },
 
@@ -392,7 +392,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【FC先行抽选】以官方公告为准<br>【一般售票】以官方公告为准",
     organizer: "SM Entertainment Japan",
     ticketUrl: "https://riizeofficial.jp/",
-    desc: "RIIZE 日本首次粉丝俱乐部专属 FM 第二天。",
+    desc: "RIIZE 日本首次粉丝俱乐部专属 FM 第二天。近距离互动，专属回忆拉满！",
     highlight: "横滨两场连开"
   },
 
@@ -414,7 +414,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【会员先行】以官方公告为准<br>【一般售票】以官方公告为准",
     organizer: "SM Entertainment / Dream Maker",
     ticketUrl: "https://www.melon.com/",
-    desc: "RIIZE 首次世界巡演 [RIIZING LOUD] 首尔站。",
+    desc: "RIIZE 首次世界巡演 [RIIZING LOUD] 首尔站。震撼舞台首秀，点燃全场热情！",
     highlight: "首次世界巡演！首尔三场连开"
   },
 
@@ -436,7 +436,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【会员先行】以官方公告为准<br>【一般售票】以官方公告为准",
     organizer: "SM Entertainment / Dream Maker",
     ticketUrl: "https://www.melon.com/",
-    desc: "RIIZE 首次世界巡演 [RIIZING LOUD] 首尔站第二天。",
+    desc: "RIIZE 首次世界巡演 [RIIZING LOUD] 首尔站第二天。震撼舞台首秀，点燃全场热情！",
     highlight: "首尔三场连开"
   },
 
@@ -458,7 +458,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【会员先行】以官方公告为准<br>【一般售票】以官方公告为准",
     organizer: "SM Entertainment / Dream Maker",
     ticketUrl: "https://www.melon.com/",
-    desc: "RIIZE 首次世界巡演 [RIIZING LOUD] 首尔站第三天。",
+    desc: "RIIZE 首次世界巡演 [RIIZING LOUD] 首尔站第三天。震撼舞台首秀，点燃全场热情！",
     highlight: "首尔三场连开"
   },
 
@@ -480,7 +480,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【FC先行抽选】以官方公告为准<br>【一般售票】以官方公告为准",
     organizer: "SM Entertainment Japan",
     ticketUrl: "https://riizeofficial.jp/",
-    desc: "RIIZING LOUD 世界巡演日本神户站。",
+    desc: "RIIZING LOUD 世界巡演日本神户站。热血沸腾的现场，与粉丝共度难忘夜晚！",
     highlight: "日本巡演第一站"
   },
 
@@ -502,7 +502,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【FC先行抽选】以官方公告为准<br>【一般售票】以官方公告为准",
     organizer: "SM Entertainment Japan",
     ticketUrl: "https://riizeofficial.jp/",
-    desc: "RIIZING LOUD 世界巡演日本神户站第二天。",
+    desc: "RIIZING LOUD 世界巡演日本神户站第二天。热血沸腾的现场，与粉丝共度难忘夜晚！",
     highlight: "神户两场连开"
   },
 
@@ -524,7 +524,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【会员先行】以官方公告为准<br>【一般售票】以官方公告为准",
     organizer: "SM Entertainment",
     ticketUrl: "https://www.melon.com/",
-    desc: "RIIZING LOUD 世界巡演香港站。",
+    desc: "RIIZING LOUD 世界巡演香港站。热血沸腾的现场，与粉丝共度难忘夜晚！",
     highlight: "香港演唱会"
   },
 
@@ -546,7 +546,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【FC先行抽选】以官方公告为准<br>【一般售票】以官方公告为准",
     organizer: "SM Entertainment Japan",
     ticketUrl: "https://riizeofficial.jp/",
-    desc: "RIIZING LOUD 世界巡演日本埼玉站。",
+    desc: "RIIZING LOUD 世界巡演日本埼玉站。热血沸腾的现场，与粉丝共度难忘夜晚！",
     highlight: "埼玉超级竞技场"
   },
 
@@ -568,7 +568,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【FC先行抽选】以官方公告为准<br>【一般售票】以官方公告为准",
     organizer: "SM Entertainment Japan",
     ticketUrl: "https://riizeofficial.jp/",
-    desc: "RIIZING LOUD 世界巡演日本埼玉站第二天。",
+    desc: "RIIZING LOUD 世界巡演日本埼玉站第二天。热血沸腾的现场，与粉丝共度难忘夜晚！",
     highlight: "埼玉两场连开"
   },
 
@@ -590,7 +590,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【FC先行抽选】以官方公告为准<br>【一般售票】以官方公告为准",
     organizer: "SM Entertainment Japan",
     ticketUrl: "https://riizeofficial.jp/",
-    desc: "RIIZING LOUD 世界巡演日本广岛站。",
+    desc: "RIIZING LOUD 世界巡演日本广岛站。热血沸腾的现场，与粉丝共度难忘夜晚！",
     highlight: "广岛 Green Arena"
   },
 
@@ -612,7 +612,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【FC先行抽选】以官方公告为准<br>【一般售票】以官方公告为准",
     organizer: "SM Entertainment Japan",
     ticketUrl: "https://riizeofficial.jp/",
-    desc: "RIIZING LOUD 世界巡演日本广岛站第二天。",
+    desc: "RIIZING LOUD 世界巡演日本广岛站第二天。热血沸腾的现场，与粉丝共度难忘夜晚！",
     highlight: "广岛两场连开"
   },
 
@@ -634,7 +634,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【早鸟票】以官方公告为准<br>【一般售票】以官方公告为准",
     organizer: "SM Entertainment Japan",
     ticketUrl: "https://riizeofficial.jp/",
-    desc: "SMTOWN LIVE 2025 东京巨蛋站。",
+    desc: "SMTOWN LIVE 2025 东京巨蛋站。高燃舞台炸裂来袭，不容错过的视听盛宴！",
     highlight: "东京巨蛋！"
   },
 
@@ -656,7 +656,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【早鸟票】以官方公告为准<br>【一般售票】以官方公告为准",
     organizer: "SM Entertainment Japan",
     ticketUrl: "https://riizeofficial.jp/",
-    desc: "SMTOWN LIVE 2025 东京巨蛋站第二天。",
+    desc: "SMTOWN LIVE 2025 东京巨蛋站第二天。高燃舞台炸裂来袭，不容错过的视听盛宴！",
     highlight: "东京巨蛋两场连开"
   },
 
@@ -678,7 +678,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【会员先行】以官方公告为准<br>【一般售票】以官方公告为准",
     organizer: "SM Entertainment",
     ticketUrl: "https://www.melon.com/",
-    desc: "RIIZING LOUD 世界巡演马来西亚吉隆坡站。",
+    desc: "RIIZING LOUD 世界巡演马来西亚吉隆坡站。热血沸腾的现场，与粉丝共度难忘夜晚！",
     highlight: "马来西亚首秀！"
   },
 
@@ -700,7 +700,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【FC先行抽选】以官方公告为准<br>【一般售票】以官方公告为准",
     organizer: "SM Entertainment Japan",
     ticketUrl: "https://riizeofficial.jp/",
-    desc: "RIIZING LOUD 世界巡演日本福冈站。",
+    desc: "RIIZING LOUD 世界巡演日本福冈站。热血沸腾的现场，与粉丝共度难忘夜晚！",
     highlight: "福冈 Marine Messe"
   },
 
@@ -722,7 +722,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【FC先行抽选】以官方公告为准<br>【一般售票】以官方公告为准",
     organizer: "SM Entertainment Japan",
     ticketUrl: "https://riizeofficial.jp/",
-    desc: "RIIZING LOUD 世界巡演日本福冈站第二天。",
+    desc: "RIIZING LOUD 世界巡演日本福冈站第二天。热血沸腾的现场，与粉丝共度难忘夜晚！",
     highlight: "福冈两场连开"
   },
 
@@ -744,7 +744,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【会员先行】以官方公告为准<br>【一般售票】以官方公告为准",
     organizer: "SM Entertainment",
     ticketUrl: "https://www.melon.com/",
-    desc: "RIIZING LOUD 世界巡演台北站。",
+    desc: "RIIZING LOUD 世界巡演台北站。热血沸腾的现场，与粉丝共度难忘夜晚！",
     highlight: "台北小巨蛋！"
   },
 
@@ -766,7 +766,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【会员先行】以官方公告为准<br>【一般售票】以官方公告为准",
     organizer: "SM Entertainment",
     ticketUrl: "https://www.melon.com/",
-    desc: "RIIZING LOUD 世界巡演泰国曼谷站。",
+    desc: "RIIZING LOUD 世界巡演泰国曼谷站。热血沸腾的现场，与粉丝共度难忘夜晚！",
     highlight: "泰国首秀！"
   },
 
@@ -788,7 +788,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【会员先行】以官方公告为准<br>【一般售票】以官方公告为准",
     organizer: "SM Entertainment",
     ticketUrl: "https://www.melon.com/",
-    desc: "RIIZING LOUD 世界巡演泰国曼谷站第二天。",
+    desc: "RIIZING LOUD 世界巡演泰国曼谷站第二天。热血沸腾的现场，与粉丝共度难忘夜晚！",
     highlight: "曼谷两场连开"
   },
 
@@ -810,7 +810,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【会员先行】以官方公告为准<br>【一般售票】以官方公告为准",
     organizer: "SM Entertainment / AEG Presents",
     ticketUrl: "https://www.melon.com/",
-    desc: "RIIZING LOUD 世界巡演北美洛杉矶站。",
+    desc: "RIIZING LOUD 世界巡演北美洛杉矶站。热血沸腾的现场，与粉丝共度难忘夜晚！",
     highlight: "北美巡演！"
   },
 
@@ -832,7 +832,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【一般售票】以官方公告为准",
     organizer: "CJ ENM",
     ticketUrl: "https://mama.mwave.me/",
-    desc: "2025 MAMA 大奖，RIIZE 获得最佳男子组合奖。",
+    desc: "2025 MAMA 大奖，RIIZE 获得最佳男子组合奖。星光熠熠的盛典，期待精彩舞台！",
     highlight: "最佳男子组合！"
   },
 
@@ -854,7 +854,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【一般售票】以官方公告为准",
     organizer: "Kakao Entertainment",
     ticketUrl: "https://www.melon.com/",
-    desc: "2025 MMA，RIIZE 获得最佳男艺人表演奖、TOP10、百万销量 TOP10 三项大奖。",
+    desc: "2025 MMA，RIIZE 获得最佳男艺人表演奖、TOP10、百万销量 TOP10 三项大奖。星光熠熠的盛典，期待精彩舞台！",
     highlight: "MMA 三项大奖！"
   },
 
@@ -876,7 +876,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【会员先行】以官方公告为准<br>【一般售票】以官方公告为准",
     organizer: "SM Entertainment",
     ticketUrl: "https://www.melon.com/",
-    desc: "RIIZING LOUD 世界巡演印尼雅加达站。",
+    desc: "RIIZING LOUD 世界巡演印尼雅加达站。热血沸腾的现场，与粉丝共度难忘夜晚！",
     highlight: "印尼首秀！"
   },
 
@@ -898,7 +898,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【一般售票】以官方公告为准",
     organizer: "金唱片奖委员会",
     ticketUrl: "https://riizeofficial.jp/",
-    desc: "第40届金唱片奖，RIIZE 获得最佳专辑奖。",
+    desc: "第40届金唱片奖，RIIZE 获得最佳专辑奖。星光熠熠的盛典，期待精彩舞台！",
     highlight: "金唱片最佳专辑！"
   },
 
@@ -920,7 +920,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【会员先行】以官方公告为准<br>【一般售票】以官方公告为准",
     organizer: "SM Entertainment / iMe",
     ticketUrl: "https://www.melon.com/",
-    desc: "RIIZING LOUD 世界巡演菲律宾马尼拉站。",
+    desc: "RIIZING LOUD 世界巡演菲律宾马尼拉站。热血沸腾的现场，与粉丝共度难忘夜晚！",
     highlight: "菲律宾首秀！"
   },
 
@@ -942,7 +942,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【会员先行】以官方公告为准<br>【一般售票】以官方公告为准",
     organizer: "SM Entertainment / iMe",
     ticketUrl: "https://www.melon.com/",
-    desc: "RIIZING LOUD 世界巡演新加坡站。",
+    desc: "RIIZING LOUD 世界巡演新加坡站。热血沸腾的现场，与粉丝共度难忘夜晚！",
     highlight: "新加坡首秀！"
   },
 
@@ -964,7 +964,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【早鸟票】以官方公告为准<br>【一般售票】以官方公告为准",
     organizer: "SM Entertainment",
     ticketUrl: "https://www.smtown.com/",
-    desc: "SMTOWN LIVE 曼谷站，情人节特别场。",
+    desc: "SMTOWN LIVE 曼谷站，情人节特别场。高燃舞台炸裂来袭，不容错过的视听盛宴！",
     highlight: "情人节 SMTOWN！"
   },
 
@@ -986,7 +986,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【会员先行】以官方公告为准<br>【一般售票】以官方公告为准",
     organizer: "SM Entertainment / 银河综艺馆",
     ticketUrl: "https://www.melon.com/",
-    desc: "RIIZING LOUD 世界巡演澳门站第一天。",
+    desc: "RIIZING LOUD 世界巡演澳门站第一天。热血沸腾的现场，与粉丝共度难忘夜晚！",
     highlight: "澳门首秀！两场连开"
   },
 
@@ -1008,7 +1008,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【会员先行】以官方公告为准<br>【一般售票】以官方公告为准",
     organizer: "SM Entertainment / 银河综艺馆",
     ticketUrl: "https://www.melon.com/",
-    desc: "RIIZING LOUD 世界巡演澳门站第二天（加场）。",
+    desc: "RIIZING LOUD 世界巡演澳门站第二天（加场）。热血沸腾的现场，与粉丝共度难忘夜晚！",
     highlight: "澳门加场！两场连开"
   },
 
@@ -1030,7 +1030,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【FC先行抽选】以官方公告为准<br>【一般售票】以官方公告为准",
     organizer: "SM Entertainment Japan",
     ticketUrl: "https://riizeofficial.jp/",
-    desc: "RIIZING LOUD Special Edition 东京巨蛋特别场第一天。",
+    desc: "RIIZING LOUD Special Edition 东京巨蛋特别场第一天。高燃舞台炸裂来袭，不容错过的视听盛宴！",
     highlight: "东京巨蛋！三场连开"
   },
 
@@ -1052,7 +1052,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【FC先行抽选】以官方公告为准<br>【一般售票】以官方公告为准",
     organizer: "SM Entertainment Japan",
     ticketUrl: "https://riizeofficial.jp/",
-    desc: "RIIZING LOUD Special Edition 东京巨蛋特别场第二天。",
+    desc: "RIIZING LOUD Special Edition 东京巨蛋特别场第二天。高燃舞台炸裂来袭，不容错过的视听盛宴！",
     highlight: "东京巨蛋！三场连开"
   },
 
@@ -1074,7 +1074,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【FC先行抽选】以官方公告为准<br>【一般售票】以官方公告为准",
     organizer: "SM Entertainment Japan",
     ticketUrl: "https://riizeofficial.jp/",
-    desc: "RIIZING LOUD Special Edition 东京巨蛋特别场第三天（加场）。",
+    desc: "RIIZING LOUD Special Edition 东京巨蛋特别场第三天（加场）。高燃舞台炸裂来袭，不容错过的视听盛宴！",
     highlight: "东京巨蛋加场！三场连开"
   },
 
@@ -1096,7 +1096,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【会员先行】以官方公告为准<br>【一般售票】以官方公告为准",
     organizer: "SM Entertainment / Dream Maker",
     ticketUrl: "https://www.melon.com/",
-    desc: "RIIZING LOUD 世界巡演 FINALE 首尔安可场第一天。",
+    desc: "RIIZING LOUD 世界巡演 FINALE 首尔安可场第一天。热血沸腾的现场，与粉丝共度难忘夜晚！",
     highlight: "巡演FINALE！首尔三场连开"
   },
 
@@ -1118,7 +1118,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【会员先行】以官方公告为准<br>【一般售票】以官方公告为准",
     organizer: "SM Entertainment / Dream Maker",
     ticketUrl: "https://www.melon.com/",
-    desc: "RIIZING LOUD 世界巡演 FINALE 首尔安可场第二天。",
+    desc: "RIIZING LOUD 世界巡演 FINALE 首尔安可场第二天。热血沸腾的现场，与粉丝共度难忘夜晚！",
     highlight: "巡演FINALE！首尔三场连开"
   },
 
@@ -1140,7 +1140,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【会员先行】以官方公告为准<br>【一般售票】以官方公告为准",
     organizer: "SM Entertainment / Dream Maker",
     ticketUrl: "https://www.melon.com/",
-    desc: "RIIZING LOUD 世界巡演 FINALE 首尔安可场第三天。",
+    desc: "RIIZING LOUD 世界巡演 FINALE 首尔安可场第三天。热血沸腾的现场，与粉丝共度难忘夜晚！",
     highlight: "巡演FINALE！首尔三场连开"
   },
 
@@ -1162,7 +1162,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【早鸟票】以官方公告为准<br>【一般售票】以官方公告为准",
     organizer: "Lollapalooza",
     ticketUrl: "https://www.lollapalooza.com/",
-    desc: "RIIZE 首次出演 Lollapalooza 阿根廷站。",
+    desc: "RIIZE 首次出演 Lollapalooza 阿根廷站。夏日音乐狂欢，点燃舞台激情！",
     highlight: "南美首秀！Lollapalooza"
   },
 
@@ -1184,7 +1184,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【早鸟票】以官方公告为准<br>【一般售票】以官方公告为准",
     organizer: "Lollapalooza",
     ticketUrl: "https://www.lollapalooza.com/",
-    desc: "RIIZE 首次出演 Lollapalooza 智利站。",
+    desc: "RIIZE 首次出演 Lollapalooza 智利站。夏日音乐狂欢，点燃舞台激情！",
     highlight: "智利首秀！Lollapalooza"
   },
 
@@ -1206,7 +1206,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【早鸟票】以官方公告为准<br>【一般售票】以官方公告为准",
     organizer: "Lollapalooza",
     ticketUrl: "https://www.lollapalooza.com/",
-    desc: "RIIZE 首次出演 Lollapalooza 巴西站。",
+    desc: "RIIZE 首次出演 Lollapalooza 巴西站。夏日音乐狂欢，点燃舞台激情！",
     highlight: "巴西首秀！Lollapalooza"
   },
 
@@ -1228,7 +1228,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【早鸟票】以官方公告为准<br>【一般售票】以官方公告为准",
     organizer: "K2O",
     ticketUrl: "https://world.nol.com/",
-    desc: "泰国泼水节音乐节 K2O Songkran。",
+    desc: "泰国泼水节音乐节 K2O Songkran。音乐盛宴嗨翻全场，一起释放青春能量！",
     highlight: "泼水节音乐节！"
   },
 
@@ -1250,7 +1250,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【FC先行抽选】以官方公告为准<br>【一般售票】以官方公告为准",
     organizer: "SM Entertainment Japan",
     ticketUrl: "https://riizeofficial.jp/",
-    desc: "RIIZE 日本特别演唱会 'The Performance' 横滨站第一天。",
+    desc: "RIIZE 日本特别演唱会 'The Performance' 横滨站第一天。高燃舞台炸裂来袭，不容错过的视听盛宴！",
     highlight: "日本特别演唱会！两场连开"
   },
 
@@ -1272,7 +1272,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【FC先行抽选】以官方公告为准<br>【一般售票】以官方公告为准",
     organizer: "SM Entertainment Japan",
     ticketUrl: "https://riizeofficial.jp/",
-    desc: "RIIZE 日本特别演唱会 'The Performance' 横滨站第二天。",
+    desc: "RIIZE 日本特别演唱会 'The Performance' 横滨站第二天。高燃舞台炸裂来袭，不容错过的视听盛宴！",
     highlight: "日本特别演唱会！两场连开"
   },
 
@@ -1294,7 +1294,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【一般售票】以官方公告为准",
     organizer: "微博",
     ticketUrl: "https://world.nol.com/",
-    desc: "微博国际娱乐盛典，RIIZE 获得年度国际艺人奖。",
+    desc: "微博国际娱乐盛典，RIIZE 获得年度国际艺人奖。星光熠熠的盛典，期待精彩舞台！",
     highlight: "中国首秀！"
   },
 
@@ -1316,7 +1316,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【早鸟票】以官方公告为准<br>【一般售票】以官方公告为准",
     organizer: "Kstyle",
     ticketUrl: "https://riizeofficial.jp/",
-    desc: "Kstyle PARTY 2026 拼盘演唱会第二天。",
+    desc: "Kstyle PARTY 2026 拼盘演唱会第二天。高燃舞台炸裂来袭，不容错过的视听盛宴！",
     highlight: "Kstyle PARTY！"
   },
 
@@ -1338,7 +1338,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【早鸟票】以官方公告为准<br>【一般售票】以官方公告为准",
     organizer: "Channel B",
     ticketUrl: "https://world.nol.com/",
-    desc: "台湾 Channel B 棒球音乐节。",
+    desc: "台湾 Channel B 棒球音乐节。音乐盛宴嗨翻全场，一起释放青春能量！",
     highlight: "台湾音乐节！"
   },
 
@@ -1360,7 +1360,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【1st 早鸟】2025年9月30日 11:00 北京时间<br>【2nd 早鸟】2025年12月15日 13:00 北京时间<br>【一般售票】以官方公告为准",
     organizer: "WATERBOMB",
     ticketUrl: "https://waterbomb.co.kr/",
-    desc: "韩国最大夏日音乐节 WATERBOMB 首尔站（高阳KINTEX）。",
+    desc: "韩国最大夏日音乐节 WATERBOMB 首尔站（高阳KINTEX）。音乐盛宴嗨翻全场，一起释放青春能量！",
     highlight: "水弹音乐节！"
   },
 
@@ -1382,7 +1382,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【1st 早鸟】2025年9月30日 11:00 北京时间<br>【2nd 早鸟】2025年12月15日 13:00 北京时间<br>【一般售票】以官方公告为准",
     organizer: "WATERBOMB",
     ticketUrl: "https://waterbomb.co.kr/",
-    desc: "韩国最大夏日音乐节 WATERBOMB 首尔站第二天（高阳KINTEX）。",
+    desc: "韩国最大夏日音乐节 WATERBOMB 首尔站第二天（高阳KINTEX）。音乐盛宴嗨翻全场，一起释放青春能量！",
     highlight: "水弹音乐节！两场连开"
   },
 
@@ -1426,7 +1426,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【早鸟票】以官方公告为准<br>【一般售票】以官方公告为准",
     organizer: "Spotify",
     ticketUrl: "https://world.nol.com/",
-    desc: "Spotify House Seoul 特别演出，邀请制。",
+    desc: "Spotify House Seoul 特别演出，邀请制。精彩不容错过！",
     highlight: "Spotify 特别演出！"
   },
 
@@ -1449,7 +1449,7 @@ window.RIIZE_EVENTS = [
     organizer: "SM Entertainment / Dream Maker",
     ticketUrl: "https://world.nol.com/en/articles/85486922-78da-44c2-b695-c16e3edc2b51",
     noticeUrl: "https://weverse.io/riize/notice",
-    desc: "RIIZE 出道3周年特别粉丝见面会 'Ch. RIIZE : ON AIR'。",
+    desc: "RIIZE 出道3周年特别粉丝见面会 'Ch. RIIZE : ON AIR'。温馨又欢乐的时光，和粉丝一起创造美好记忆！",
     highlight: "出道3周年！INSPIRE Arena 两场连开"
   },
 
@@ -1472,7 +1472,7 @@ window.RIIZE_EVENTS = [
     organizer: "SM Entertainment / Dream Maker",
     ticketUrl: "https://world.nol.com/en/articles/85486922-78da-44c2-b695-c16e3edc2b51",
     noticeUrl: "https://weverse.io/riize/notice",
-    desc: "RIIZE 出道3周年特别粉丝见面会 'Ch. RIIZE : ON AIR' 第二天。",
+    desc: "RIIZE 出道3周年特别粉丝见面会 'Ch. RIIZE : ON AIR' 第二天。温馨又欢乐的时光，和粉丝一起创造美好记忆！",
     highlight: "出道3周年！INSPIRE Arena 两场连开"
   },
 
@@ -1494,7 +1494,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【一般售票】以官方公告为准",
     organizer: "CJ ENM",
     ticketUrl: "https://mama.mwave.me/",
-    desc: "2026 MAMA 大奖。",
+    desc: "2026 MAMA 大奖。星光熠熠的盛典，期待精彩舞台！",
     highlight: "MAMA 颁奖礼"
   },
 
@@ -1516,7 +1516,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【一般售票】以官方公告为准",
     organizer: "Kakao Entertainment",
     ticketUrl: "https://www.melon.com/",
-    desc: "2026 MMA 颁奖典礼。",
+    desc: "2026 MMA 颁奖典礼。星光熠熠的盛典，期待精彩舞台！",
     highlight: "MMA 颁奖礼"
   },
 
@@ -1538,7 +1538,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【早鸟票】以官方公告为准<br>【一般售票】以官方公告为准",
     organizer: "SM Entertainment",
     ticketUrl: "https://www.smtown.com/",
-    desc: "SMTOWN LIVE 2026 首尔站圣诞节特别场第一天。",
+    desc: "SMTOWN LIVE 2026 首尔站圣诞节特别场第一天。高燃舞台炸裂来袭，不容错过的视听盛宴！",
     highlight: "圣诞节 SMTOWN！"
   },
 
@@ -1560,7 +1560,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【早鸟票】以官方公告为准<br>【一般售票】以官方公告为准",
     organizer: "SM Entertainment",
     ticketUrl: "https://www.smtown.com/",
-    desc: "SMTOWN LIVE 2026 首尔站第二天。",
+    desc: "SMTOWN LIVE 2026 首尔站第二天。高燃舞台炸裂来袭，不容错过的视听盛宴！",
     highlight: "首尔两场连开"
   },
 
@@ -1582,7 +1582,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【一般售票】以官方公告为准",
     organizer: "金唱片奖委员会",
     ticketUrl: "https://www.goldendiscawards.com/",
-    desc: "第36届金唱片奖第一天，RIIZE 获得新人奖。",
+    desc: "第36届金唱片奖第一天，RIIZE 获得新人奖。荣耀时刻，见证成长与辉煌！",
     highlight: "金唱片新人奖！"
   },
 
@@ -1604,7 +1604,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【一般售票】以官方公告为准",
     organizer: "金唱片奖委员会",
     ticketUrl: "https://www.goldendiscawards.com/",
-    desc: "第36届金唱片奖第二天。",
+    desc: "第36届金唱片奖第二天。星光熠熠的盛典，期待精彩舞台！",
     highlight: "金唱片颁奖礼"
   },
 
@@ -1626,7 +1626,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【一般售票】以官方公告为准",
     organizer: "Circle Chart",
     ticketUrl: "https://circlechart.kr/",
-    desc: "Circle Chart 音乐奖，RIIZE 获得年度新人奖。",
+    desc: "Circle Chart 音乐奖，RIIZE 获得年度新人奖。荣耀时刻，见证成长与辉煌！",
     highlight: "Circle Chart 新人奖！"
   },
 
@@ -1648,7 +1648,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【早鸟票】以官方公告为准<br>【一般售票】以官方公告为准",
     organizer: "CJ ENM",
     ticketUrl: "https://www.kconofficial.com/",
-    desc: "KCON LA 2024 第一天，RIIZE 首次出演 KCON 美国站。",
+    desc: "KCON LA 2024 第一天，RIIZE 首次出演 KCON 美国站。震撼舞台首秀，点燃全场热情！",
     highlight: "美国 KCON 首秀！"
   },
 
@@ -1670,7 +1670,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【早鸟票】以官方公告为准<br>【一般售票】以官方公告为准",
     organizer: "CJ ENM",
     ticketUrl: "https://www.kconofficial.com/",
-    desc: "KCON LA 2024 第二天。",
+    desc: "KCON LA 2024 第二天。高燃舞台炸裂来袭，不容错过的视听盛宴！",
     highlight: "KCON LA 两场连开"
   },
 
@@ -1692,7 +1692,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【早鸟票】以官方公告为准<br>【一般售票】以官方公告为准",
     organizer: "KBS",
     ticketUrl: "https://world.nol.com/",
-    desc: "Music Bank 墨西哥站，RIIZE 首次出演。",
+    desc: "Music Bank 墨西哥站，RIIZE 首次出演。震撼舞台首秀，点燃全场热情！",
     highlight: "墨西哥首秀！"
   },
 
@@ -1714,7 +1714,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【一般售票】以官方公告为准",
     organizer: "Kakao Entertainment",
     ticketUrl: "https://www.melon.com/",
-    desc: "2024 MMA 颁奖典礼，RIIZE 获得 TOP10 本赏。",
+    desc: "2024 MMA 颁奖典礼，RIIZE 获得 TOP10 本赏。星光熠熠的盛典，期待精彩舞台！",
     highlight: "MMA TOP10 本赏！"
   },
 
@@ -1736,7 +1736,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【一般售票】以官方公告为准",
     organizer: "SBS",
     ticketUrl: "https://www.sbs.co.kr/",
-    desc: "SBS 歌谣大战 2024 圣诞节特别场。",
+    desc: "SBS 歌谣大战 2024 圣诞节特别场。星光熠熠的盛典，期待精彩舞台！",
     highlight: "圣诞节 SBS 歌谣大战"
   },
 
@@ -1758,7 +1758,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【一般售票】以官方公告为准",
     organizer: "MBC",
     ticketUrl: "https://www.sbs.co.kr/",
-    desc: "MBC 歌谣大祭典 2024 跨年场。",
+    desc: "MBC 歌谣大祭典 2024 跨年场。星光熠熠的盛典，期待精彩舞台！",
     highlight: "跨年 MBC 歌谣大祭典"
   },
 
@@ -1780,7 +1780,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【一般售票】以官方公告为准",
     organizer: "金唱片奖委员会",
     ticketUrl: "https://www.goldendiscawards.com/",
-    desc: "第37届金唱片奖第一天，RIIZE 获得本赏。",
+    desc: "第37届金唱片奖第一天，RIIZE 获得本赏。星光熠熠的盛典，期待精彩舞台！",
     highlight: "金唱片本赏！"
   },
 
@@ -1802,7 +1802,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【一般售票】以官方公告为准",
     organizer: "金唱片奖委员会",
     ticketUrl: "https://www.goldendiscawards.com/",
-    desc: "第37届金唱片奖第二天。",
+    desc: "第37届金唱片奖第二天。星光熠熠的盛典，期待精彩舞台！",
     highlight: "金唱片颁奖礼"
   },
 
@@ -1824,7 +1824,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【一般售票】以官方公告为准",
     organizer: "Circle Chart",
     ticketUrl: "https://circlechart.kr/",
-    desc: "Circle Chart 音乐奖 2025，RIIZE 获得年度艺人奖。",
+    desc: "Circle Chart 音乐奖 2025，RIIZE 获得年度艺人奖。星光熠熠的盛典，期待精彩舞台！",
     highlight: "Circle Chart 年度艺人！"
   },
 
@@ -1846,7 +1846,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【早鸟票】以官方公告为准<br>【一般售票】以官方公告为准",
     organizer: "SM Entertainment",
     ticketUrl: "https://www.smtown.com/",
-    desc: "SMTOWN LIVE 2025 香港站第一天。",
+    desc: "SMTOWN LIVE 2025 香港站第一天。高燃舞台炸裂来袭，不容错过的视听盛宴！",
     highlight: "香港 SMTOWN！两场连开"
   },
 
@@ -1868,7 +1868,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【早鸟票】以官方公告为准<br>【一般售票】以官方公告为准",
     organizer: "SM Entertainment",
     ticketUrl: "https://www.smtown.com/",
-    desc: "SMTOWN LIVE 2025 香港站第二天。",
+    desc: "SMTOWN LIVE 2025 香港站第二天。高燃舞台炸裂来袭，不容错过的视听盛宴！",
     highlight: "香港两场连开"
   },
 
@@ -1890,7 +1890,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【早鸟票】以官方公告为准<br>【一般售票】以官方公告为准",
     organizer: "CJ ENM",
     ticketUrl: "https://riizeofficial.jp/",
-    desc: "KCON JAPAN 2025 第一天。",
+    desc: "KCON JAPAN 2025 第一天。高燃舞台炸裂来袭，不容错过的视听盛宴！",
     highlight: "KCON 日本站！"
   },
 
@@ -1912,7 +1912,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【早鸟票】以官方公告为准<br>【一般售票】以官方公告为准",
     organizer: "CJ ENM",
     ticketUrl: "https://riizeofficial.jp/",
-    desc: "KCON JAPAN 2025 第二天。",
+    desc: "KCON JAPAN 2025 第二天。高燃舞台炸裂来袭，不容错过的视听盛宴！",
     highlight: "KCON 两场连开"
   },
 
@@ -1934,7 +1934,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【早鸟票】以官方公告为准<br>【一般售票】以官方公告为准",
     organizer: "WATERBOMB",
     ticketUrl: "https://riizeofficial.jp/",
-    desc: "WATERBOMB 东京站，RIIZE 首次出演日本水弹音乐节。",
+    desc: "WATERBOMB 东京站，RIIZE 首次出演日本水弹音乐节。夏日音乐狂欢，点燃舞台激情！",
     highlight: "日本水弹音乐节首秀！"
   },
 
@@ -1956,7 +1956,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【早鸟票】以官方公告为准<br>【一般售票】以官方公告为准",
     organizer: "CJ ENM",
     ticketUrl: "https://www.kconofficial.com/",
-    desc: "KCON LA 2025 第一天。",
+    desc: "KCON LA 2025 第一天。高燃舞台炸裂来袭，不容错过的视听盛宴！",
     highlight: "KCON LA！"
   },
 
@@ -1978,7 +1978,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【早鸟票】以官方公告为准<br>【一般售票】以官方公告为准",
     organizer: "CJ ENM",
     ticketUrl: "https://www.kconofficial.com/",
-    desc: "KCON LA 2025 第二天。",
+    desc: "KCON LA 2025 第二天。高燃舞台炸裂来袭，不容错过的视听盛宴！",
     highlight: "KCON LA 两场连开"
   },
 
@@ -2000,7 +2000,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【一般售票】以官方公告为准",
     organizer: "Kakao Entertainment",
     ticketUrl: "https://www.melon.com/",
-    desc: "2025 MMA 颁奖典礼，RIIZE 获得年度艺人奖。",
+    desc: "2025 MMA 颁奖典礼，RIIZE 获得年度艺人奖。星光熠熠的盛典，期待精彩舞台！",
     highlight: "MMA 年度艺人！"
   },
 
@@ -2022,7 +2022,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【一般售票】以官方公告为准",
     organizer: "SBS",
     ticketUrl: "https://www.sbs.co.kr/",
-    desc: "SBS 歌谣大战 2025 圣诞节特别场。",
+    desc: "SBS 歌谣大战 2025 圣诞节特别场。星光熠熠的盛典，期待精彩舞台！",
     highlight: "圣诞节 SBS 歌谣大战"
   },
 
@@ -2044,7 +2044,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【一般售票】以官方公告为准",
     organizer: "MBC",
     ticketUrl: "https://www.sbs.co.kr/",
-    desc: "MBC 歌谣大祭典 2025 跨年场。",
+    desc: "MBC 歌谣大祭典 2025 跨年场。星光熠熠的盛典，期待精彩舞台！",
     highlight: "跨年 MBC 歌谣大祭典"
   },
 
@@ -2066,7 +2066,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【一般售票】以官方公告为准",
     organizer: "金唱片奖委员会",
     ticketUrl: "https://riizeofficial.jp/",
-    desc: "第38届金唱片奖第一天，RIIZE 获得大赏。",
+    desc: "第38届金唱片奖第一天，RIIZE 获得大赏。星光熠熠的盛典，期待精彩舞台！",
     highlight: "金唱片大赏！"
   },
 
@@ -2088,7 +2088,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【一般售票】以官方公告为准",
     organizer: "金唱片奖委员会",
     ticketUrl: "https://riizeofficial.jp/",
-    desc: "第38届金唱片奖第二天。",
+    desc: "第38届金唱片奖第二天。星光熠熠的盛典，期待精彩舞台！",
     highlight: "金唱片颁奖礼"
   },
 
@@ -2110,7 +2110,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【一般售票】以官方公告为准",
     organizer: "Circle Chart",
     ticketUrl: "https://circlechart.kr/",
-    desc: "Circle Chart 音乐奖 2026，RIIZE 获得年度专辑奖。",
+    desc: "Circle Chart 音乐奖 2026，RIIZE 获得年度专辑奖。星光熠熠的盛典，期待精彩舞台！",
     highlight: "Circle Chart 年度专辑！"
   },
 
@@ -2132,7 +2132,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【早鸟票】以官方公告为准<br>【一般售票】以官方公告为准",
     organizer: "CJ ENM",
     ticketUrl: "https://riizeofficial.jp/",
-    desc: "KCON JAPAN 2026 第一天。",
+    desc: "KCON JAPAN 2026 第一天。高燃舞台炸裂来袭，不容错过的视听盛宴！",
     highlight: "KCON 日本站！"
   },
 
@@ -2154,7 +2154,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【早鸟票】以官方公告为准<br>【一般售票】以官方公告为准",
     organizer: "CJ ENM",
     ticketUrl: "https://riizeofficial.jp/",
-    desc: "KCON JAPAN 2026 第二天。",
+    desc: "KCON JAPAN 2026 第二天。高燃舞台炸裂来袭，不容错过的视听盛宴！",
     highlight: "KCON 两场连开"
   },
 
@@ -2176,7 +2176,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【1st 早鸟】2025年9月30日 11:00 北京时间<br>【2nd 早鸟】2025年12月15日 13:00 北京时间<br>【一般售票】以官方公告为准",
     organizer: "WATERBOMB",
     ticketUrl: "https://waterbomb.co.kr/",
-    desc: "WATERBOMB 首尔站第三天（高阳KINTEX）。",
+    desc: "WATERBOMB 首尔站第三天（高阳KINTEX）。音乐盛宴嗨翻全场，一起释放青春能量！",
     highlight: "水弹音乐节第三天"
   },
 
@@ -2198,7 +2198,7 @@ window.RIIZE_EVENTS = [
     ticketTime: "【早鸟票】以官方公告为准<br>【一般售票】以官方公告为准",
     organizer: "WATERBOMB",
     ticketUrl: "https://riizeofficial.jp/",
-    desc: "WATERBOMB 东京站 2026。",
+    desc: "WATERBOMB 东京站 2026。音乐盛宴嗨翻全场，一起释放青春能量！",
     highlight: "日本水弹音乐节！"
   },
 
@@ -2222,7 +2222,7 @@ window.RIIZE_EVENTS = [
     organizer: "SM Entertainment",
     ticketUrl: "https://world.nol.com/en/content/festas/019ea9e7-ffa1-70f0-91c0-a03509e9f3a0",
     noticeUrl: "https://weverse.io/riize/notice",
-    desc: "纪念迷你二辑《II》发行的特别快闪店「ARCHIIVE²」，约250坪，100%预约制，全场次售罄。",
+    desc: "纪念迷你二辑《II》发行的特别快闪店「ARCHIIVE²」，约250坪，100%预约制，全场次售罄。限时打卡，周边与惊喜等你来探索！",
     highlight: "迷你二辑回归快闪！全场售罄"
   },
 
@@ -2246,7 +2246,7 @@ window.RIIZE_EVENTS = [
     organizer: "SM Entertainment",
     ticketUrl: "",
     noticeUrl: "https://weverse.io/riize/notice",
-    desc: "RIIZE 快闪店「ARCHIIVE²」中国首站，登陆上海。",
+    desc: "RIIZE 快闪店「ARCHIIVE²」中国首站，登陆上海。限时打卡，周边与惊喜等你来探索！",
     highlight: "中国首站快闪！"
   },
 
@@ -2316,7 +2316,7 @@ window.RIIZE_EVENTS = [
     organizer: "釜山广域市",
     ticketUrl: "",
     noticeUrl: "https://weverse.io/riize/notice",
-    desc: "釜山One Asia Festival（BOF）十周年纪念，户外公园演唱会。",
+    desc: "釜山One Asia Festival（BOF）十周年纪念，户外公园演唱会。音乐盛宴嗨翻全场，一起释放青春能量！",
     highlight: "BOF十周年！"
   },
 
@@ -2339,7 +2339,7 @@ window.RIIZE_EVENTS = [
     organizer: "釜山广域市",
     ticketUrl: "",
     noticeUrl: "https://weverse.io/riize/notice",
-    desc: "釜山One Asia Festival（BOF）十周年纪念大型演唱会第一天。",
+    desc: "釜山One Asia Festival（BOF）十周年纪念大型演唱会第一天。音乐盛宴嗨翻全场，一起释放青春能量！",
     highlight: "BOF十周年大型演唱会"
   },
 
@@ -2362,7 +2362,7 @@ window.RIIZE_EVENTS = [
     organizer: "釜山广域市",
     ticketUrl: "",
     noticeUrl: "https://weverse.io/riize/notice",
-    desc: "釜山One Asia Festival（BOF）十周年纪念大型演唱会第二天。",
+    desc: "釜山One Asia Festival（BOF）十周年纪念大型演唱会第二天。音乐盛宴嗨翻全场，一起释放青春能量！",
     highlight: "BOF十周年两场连开"
   },
 
@@ -2385,7 +2385,7 @@ window.RIIZE_EVENTS = [
     organizer: "SM Entertainment",
     ticketUrl: "",
     noticeUrl: "https://weverse.io/riize/notice",
-    desc: "RIIZE 迷你二辑《II》香港线下粉丝签名会，通过Fantopia购买专辑抽取名额。",
+    desc: "RIIZE 迷你二辑《II》香港线下粉丝签名会，通过Fantopia购买专辑抽取名额。专属签名与互动，留下独一无二的珍贵回忆！",
     highlight: "香港首次签售！"
   },
 
@@ -2408,7 +2408,7 @@ window.RIIZE_EVENTS = [
     organizer: "K-World",
     ticketUrl: "",
     noticeUrl: "https://weverse.io/riize/notice",
-    desc: "2026 K-World Dream Awards，RIIZE 出席并表演。",
+    desc: "2026 K-World Dream Awards，RIIZE 出席并表演。星光熠熠的盛典，期待精彩舞台！",
     highlight: "颁奖礼舞台"
   },
 
@@ -2431,7 +2431,7 @@ window.RIIZE_EVENTS = [
     organizer: "The Fact",
     ticketUrl: "",
     noticeUrl: "https://weverse.io/riize/notice",
-    desc: "2026 The Fact Music Awards，RIIZE 出席并表演。",
+    desc: "2026 The Fact Music Awards，RIIZE 出席并表演。星光熠熠的盛典，期待精彩舞台！",
     highlight: "TMA颁奖礼"
   },
 
@@ -2454,7 +2454,7 @@ window.RIIZE_EVENTS = [
     organizer: "FEST. INAZUMA",
     ticketUrl: "https://riizeofficial.jp/",
     noticeUrl: "https://riizeofficial.jp/news/",
-    desc: "日本大型户外音乐节 FEST. INAZUMA 2026，RIIZE 出演。",
+    desc: "日本大型户外音乐节 FEST. INAZUMA 2026，RIIZE 出演。音乐盛宴嗨翻全场，一起释放青春能量！",
     highlight: "日本音乐节"
   },
 
@@ -2477,7 +2477,7 @@ window.RIIZE_EVENTS = [
     organizer: "SBS / 日本电视台",
     ticketUrl: "https://riizeofficial.jp/",
     noticeUrl: "https://riizeofficial.jp/news/",
-    desc: "SBS人气歌谣东京演唱会，RIIZE 出演。",
+    desc: "SBS人气歌谣东京演唱会，RIIZE 出演。高燃舞台炸裂来袭，不容错过的视听盛宴！",
     highlight: "人气歌谣东京演唱会"
   },
 
@@ -2500,7 +2500,7 @@ window.RIIZE_EVENTS = [
     organizer: "SM Entertainment",
     ticketUrl: "https://riizeofficial.jp/",
     noticeUrl: "https://riizeofficial.jp/news/",
-    desc: "SM娱乐创立30周年纪念SMTOWN LIVE福冈站，RIIZE首次参加日本SMTOWN。",
+    desc: "SM娱乐创立30周年纪念SMTOWN LIVE福冈站，RIIZE首次参加日本SMTOWN。震撼舞台首秀，点燃全场热情！",
     highlight: "SM30周年！福冈SMTOWN"
   },
 
@@ -2523,7 +2523,7 @@ window.RIIZE_EVENTS = [
     organizer: "SM Entertainment",
     ticketUrl: "https://riizeofficial.jp/",
     noticeUrl: "https://riizeofficial.jp/news/",
-    desc: "SM娱乐创立30周年纪念SMTOWN LIVE福冈站第二天。",
+    desc: "SM娱乐创立30周年纪念SMTOWN LIVE福冈站第二天。高燃舞台炸裂来袭，不容错过的视听盛宴！",
     highlight: "SMTOWN两场连开"
   },
 
@@ -2546,7 +2546,7 @@ window.RIIZE_EVENTS = [
     organizer: "マイナビ",
     ticketUrl: "https://theperformance.jp/",
     noticeUrl: "https://riizeofficial.jp/news/",
-    desc: "RIIZE 与 THE RAMPAGE 同台的特别拼盘演唱会，首日有合作舞台。",
+    desc: "RIIZE 与 THE RAMPAGE 同台的特别拼盘演唱会，首日有合作舞台。高燃舞台炸裂来袭，不容错过的视听盛宴！",
     highlight: "横滨K Arena！合作舞台"
   },
 
@@ -2569,7 +2569,7 @@ window.RIIZE_EVENTS = [
     organizer: "マイナビ",
     ticketUrl: "https://theperformance.jp/",
     noticeUrl: "https://riizeofficial.jp/news/",
-    desc: "The Performance 2026 第二天，与ATEEZ、EVNNE等同台。",
+    desc: "The Performance 2026 第二天，与ATEEZ、EVNNE等同台。高燃舞台炸裂来袭，不容错过的视听盛宴！",
     highlight: "横滨两场连开"
   },
 
@@ -2592,7 +2592,7 @@ window.RIIZE_EVENTS = [
     organizer: "LOVESOME",
     ticketUrl: "",
     noticeUrl: "https://weverse.io/riize/notice",
-    desc: "韩国春季代表性音乐节LOVESOME 2026，RIIZE出演。",
+    desc: "韩国春季代表性音乐节LOVESOME 2026，RIIZE出演。音乐盛宴嗨翻全场，一起释放青春能量！",
     highlight: "春季音乐节！"
   },
 
@@ -2615,7 +2615,7 @@ window.RIIZE_EVENTS = [
     organizer: "Channel B",
     ticketUrl: "",
     noticeUrl: "https://weverse.io/riize/notice",
-    desc: "台湾棒球音乐节，RIIZE出演并参加开球仪式。",
+    desc: "台湾棒球音乐节，RIIZE出演并参加开球仪式。音乐盛宴嗨翻全场，一起释放青春能量！",
     highlight: "台湾首秀！开球仪式"
   },
 
@@ -2638,7 +2638,7 @@ window.RIIZE_EVENTS = [
     organizer: "SM Entertainment",
     ticketUrl: "",
     noticeUrl: "https://weverse.io/riize/notice",
-    desc: "RIIZE 出道1000天纪念粉丝派对「RIIZE OFFICE」第一场。",
+    desc: "RIIZE 出道1000天纪念粉丝派对「RIIZE OFFICE」第一场。温馨又欢乐的时光，和粉丝一起创造美好记忆！",
     highlight: "1000天纪念！"
   },
 
@@ -2661,7 +2661,7 @@ window.RIIZE_EVENTS = [
     organizer: "SM Entertainment",
     ticketUrl: "",
     noticeUrl: "https://weverse.io/riize/notice",
-    desc: "RIIZE 出道1000天纪念粉丝派对「RIIZE OFFICE」第二场。",
+    desc: "RIIZE 出道1000天纪念粉丝派对「RIIZE OFFICE」第二场。温馨又欢乐的时光，和粉丝一起创造美好记忆！",
     highlight: "1000天两场连开"
   },
 
@@ -2684,7 +2684,7 @@ window.RIIZE_EVENTS = [
     organizer: "蔚山广域市",
     ticketUrl: "",
     noticeUrl: "https://weverse.io/riize/notice",
-    desc: "蔚山音乐节，RIIZE出演。",
+    desc: "蔚山音乐节，RIIZE出演。音乐盛宴嗨翻全场，一起释放青春能量！",
     highlight: "蔚山音乐节"
   },
 
@@ -2707,7 +2707,7 @@ window.RIIZE_EVENTS = [
     organizer: "MyK",
     ticketUrl: "",
     noticeUrl: "https://weverse.io/riize/notice",
-    desc: "MyK FESTA 2026，RIIZE与HIGHLIGHT、TREASURE等同台。",
+    desc: "MyK FESTA 2026，RIIZE与HIGHLIGHT、TREASURE等同台。音乐盛宴嗨翻全场，一起释放青春能量！",
     highlight: "高阳KINTEX"
   },
 
@@ -2730,7 +2730,7 @@ window.RIIZE_EVENTS = [
     organizer: "高雄市政府",
     ticketUrl: "",
     noticeUrl: "https://weverse.io/riize/notice",
-    desc: "第18届高雄啤酒音乐节，RIIZE压轴出演。",
+    desc: "第18届高雄啤酒音乐节，RIIZE压轴出演。音乐盛宴嗨翻全场，一起释放青春能量！",
     highlight: "台湾音乐节！压轴"
   },
 
@@ -2868,7 +2868,7 @@ window.RIIZE_EVENTS = [
     organizer: "富士电视台",
     ticketUrl: "https://riizeofficial.jp/",
     noticeUrl: "https://riizeofficial.jp/news/",
-    desc: "日本电视台晨间节目《闹钟电视》主办的湾岸音乐节，RIIZE出演。",
+    desc: "日本电视台晨间节目《闹钟电视》主办的湾岸音乐节，RIIZE出演。音乐盛宴嗨翻全场，一起释放青春能量！",
     highlight: "日本湾岸音乐节"
   },
 
@@ -2914,7 +2914,7 @@ window.RIIZE_EVENTS = [
     organizer: "LG Twins",
     ticketUrl: "",
     noticeUrl: "https://weverse.io/riize/notice",
-    desc: "RIIZE 出席LG双子队主场比赛开球仪式，成灿投球、银硕击球，比赛结束后进行特别公演。",
+    desc: "RIIZE 出席LG双子队主场比赛开球仪式，成灿投球、银硕击球，比赛结束后进行特别公演。精彩不容错过！",
     highlight: "蚕室棒球场！开球+公演"
   },
 
@@ -2937,7 +2937,7 @@ window.RIIZE_EVENTS = [
     organizer: "仁川大学",
     ticketUrl: "",
     noticeUrl: "https://weverse.io/riize/notice",
-    desc: "仁川大学2026年大学校庆，RIIZE出演Day3。",
+    desc: "仁川大学2026年大学校庆，RIIZE出演Day3。精彩不容错过！",
     highlight: "仁川大学校庆"
   },
 
@@ -2960,7 +2960,7 @@ window.RIIZE_EVENTS = [
     organizer: "西江大学",
     ticketUrl: "",
     noticeUrl: "https://weverse.io/riize/notice",
-    desc: "西江大学2026年大学校庆，RIIZE下午场出演。",
+    desc: "西江大学2026年大学校庆，RIIZE下午场出演。精彩不容错过！",
     highlight: "西江大学校庆"
   },
 
@@ -2983,7 +2983,7 @@ window.RIIZE_EVENTS = [
     organizer: "崇实大学",
     ticketUrl: "",
     noticeUrl: "https://weverse.io/riize/notice",
-    desc: "崇实大学2026年大学校庆，RIIZE同一天第二场校庆演出。",
+    desc: "崇实大学2026年大学校庆，RIIZE同一天第二场校庆演出。精彩不容错过！",
     highlight: "崇实大学校庆"
   },
 
@@ -3006,7 +3006,7 @@ window.RIIZE_EVENTS = [
     organizer: "SM Entertainment Japan",
     ticketUrl: "https://riizeofficial.jp/",
     noticeUrl: "https://riizeofficial.jp/news/20260617/",
-    desc: "迷你二辑《II》日本应募抽选特典线下活动（大阪场）。",
+    desc: "迷你二辑《II》日本应募抽选特典线下活动（大阪场）。专属签名与互动，留下独一无二的珍贵回忆！",
     highlight: "日本线下活动 大阪"
   },
 
@@ -3029,7 +3029,7 @@ window.RIIZE_EVENTS = [
     organizer: "SM Entertainment Japan",
     ticketUrl: "https://riizeofficial.jp/",
     noticeUrl: "https://riizeofficial.jp/news/20260617/",
-    desc: "迷你二辑《II》日本应募抽选特典线下活动（东京场）。",
+    desc: "迷你二辑《II》日本应募抽选特典线下活动（东京场）。专属签名与互动，留下独一无二的珍贵回忆！",
     highlight: "日本线下活动 东京"
   },
 
@@ -3052,7 +3052,7 @@ window.RIIZE_EVENTS = [
     organizer: "Mnet",
     ticketUrl: "",
     noticeUrl: "https://weverse.io/riize/notice",
-    desc: "迷你二辑《II》主打曲《Do your dance》初舞台，M Countdown回归首秀。",
+    desc: "迷你二辑《II》主打曲《Do your dance》初舞台，M Countdown回归首秀。精彩舞台呈现，展现百变魅力！",
     highlight: "回归初舞台！"
   },
 
@@ -3075,7 +3075,7 @@ window.RIIZE_EVENTS = [
     organizer: "KBS",
     ticketUrl: "",
     noticeUrl: "https://weverse.io/riize/notice",
-    desc: "迷你二辑《II》音乐银行舞台。",
+    desc: "迷你二辑《II》音乐银行舞台。精彩舞台呈现，展现百变魅力！",
     highlight: "音乐银行"
   },
 
@@ -3098,7 +3098,7 @@ window.RIIZE_EVENTS = [
     organizer: "MBC",
     ticketUrl: "",
     noticeUrl: "https://weverse.io/riize/notice",
-    desc: "迷你二辑《II》音乐中心舞台。",
+    desc: "迷你二辑《II》音乐中心舞台。精彩舞台呈现，展现百变魅力！",
     highlight: "音乐中心"
   },
 
@@ -3121,7 +3121,7 @@ window.RIIZE_EVENTS = [
     organizer: "SBS",
     ticketUrl: "",
     noticeUrl: "https://weverse.io/riize/notice",
-    desc: "迷你二辑《II》人气歌谣舞台。",
+    desc: "迷你二辑《II》人气歌谣舞台。精彩舞台呈现，展现百变魅力！",
     highlight: "人气歌谣"
   },
 
@@ -3144,7 +3144,7 @@ window.RIIZE_EVENTS = [
     organizer: "MBC M",
     ticketUrl: "",
     noticeUrl: "https://weverse.io/riize/notice",
-    desc: "迷你二辑《II》Show Champion舞台，获得回归首个一位！",
+    desc: "迷你二辑《II》Show Champion舞台，获得回归首个一位！荣耀一位，见证实力与人气！",
     highlight: "首个一位！🏆"
   },
 
@@ -3167,7 +3167,7 @@ window.RIIZE_EVENTS = [
     organizer: "Mnet",
     ticketUrl: "",
     noticeUrl: "https://weverse.io/riize/notice",
-    desc: "迷你二辑《II》M Countdown第二周舞台。",
+    desc: "迷你二辑《II》M Countdown第二周舞台。精彩舞台呈现，展现百变魅力！",
     highlight: "M Countdown"
   },
 
@@ -3190,7 +3190,7 @@ window.RIIZE_EVENTS = [
     organizer: "KBS",
     ticketUrl: "",
     noticeUrl: "https://weverse.io/riize/notice",
-    desc: "迷你二辑《II》音乐银行一位，以15,059分打破2026年音乐银行最高分数纪录！",
+    desc: "迷你二辑《II》音乐银行一位，以15,059分打破2026年音乐银行最高分数纪录！荣耀一位，见证实力与人气！",
     highlight: "第二个一位！破纪录🏆"
   },
 
@@ -3213,7 +3213,7 @@ window.RIIZE_EVENTS = [
     organizer: "MBC",
     ticketUrl: "",
     noticeUrl: "https://weverse.io/riize/notice",
-    desc: "迷你二辑《II》音乐中心第二周舞台。",
+    desc: "迷你二辑《II》音乐中心第二周舞台。精彩舞台呈现，展现百变魅力！",
     highlight: "音乐中心"
   },
 
@@ -3236,7 +3236,7 @@ window.RIIZE_EVENTS = [
     organizer: "SBS",
     ticketUrl: "",
     noticeUrl: "https://weverse.io/riize/notice",
-    desc: "迷你二辑《II》人气歌谣一位，达成音乐节目三冠王！",
+    desc: "迷你二辑《II》人气歌谣一位，达成音乐节目三冠王！荣耀一位，见证实力与人气！",
     highlight: "三冠王！🏆×3"
   },
 
@@ -3259,7 +3259,7 @@ window.RIIZE_EVENTS = [
     organizer: "Mnet",
     ticketUrl: "",
     noticeUrl: "https://weverse.io/riize/notice",
-    desc: "迷你二辑《II》M Countdown第三周舞台。",
+    desc: "迷你二辑《II》M Countdown第三周舞台。精彩舞台呈现，展现百变魅力！",
     highlight: "M Countdown"
   },
 
@@ -3282,7 +3282,7 @@ window.RIIZE_EVENTS = [
     organizer: "KBS",
     ticketUrl: "",
     noticeUrl: "https://weverse.io/riize/notice",
-    desc: "迷你二辑《II》音乐银行第三周舞台。",
+    desc: "迷你二辑《II》音乐银行第三周舞台。精彩舞台呈现，展现百变魅力！",
     highlight: "音乐银行"
   },
 
@@ -3305,7 +3305,7 @@ window.RIIZE_EVENTS = [
     organizer: "MBC",
     ticketUrl: "",
     noticeUrl: "https://weverse.io/riize/notice",
-    desc: "迷你二辑《II》音乐中心第三周舞台。",
+    desc: "迷你二辑《II》音乐中心第三周舞台。精彩舞台呈现，展现百变魅力！",
     highlight: "音乐中心"
   },
 
@@ -3328,7 +3328,7 @@ window.RIIZE_EVENTS = [
     organizer: "SM Entertainment Japan",
     ticketUrl: "https://riizeofficial.jp/",
     noticeUrl: "https://riizeofficial.jp/news/2026012902/",
-    desc: "日本第二张单曲《All of You》发售纪念Showcase。",
+    desc: "日本第二张单曲《All of You》发售纪念Showcase。新歌首秀舞台，开启全新篇章！",
     highlight: "日本2单Showcase"
   },
 
@@ -3351,7 +3351,7 @@ window.RIIZE_EVENTS = [
     organizer: "SM Entertainment Japan",
     ticketUrl: "https://riizeofficial.jp/",
     noticeUrl: "https://riizeofficial.jp/news/2026012902/",
-    desc: "日本第二张单曲《All of You》Premium Group签名会，当选100名。",
+    desc: "日本第二张单曲《All of You》Premium Group签名会，当选100名。专属签名与互动，留下独一无二的珍贵回忆！",
     highlight: "日本2单签名会"
   },
 
@@ -3374,7 +3374,7 @@ window.RIIZE_EVENTS = [
     organizer: "SM Entertainment Japan",
     ticketUrl: "https://riizeofficial.jp/",
     noticeUrl: "https://riizeofficial.jp/news/",
-    desc: "日本第三张单曲《Sunburst》预约者对象Showcase（大阪场）。",
+    desc: "日本第三张单曲《Sunburst》预约者对象Showcase（大阪场）。新歌首秀舞台，开启全新篇章！",
     highlight: "日本3单Showcase 大阪"
   },
 
@@ -3397,7 +3397,7 @@ window.RIIZE_EVENTS = [
     organizer: "Makestar",
     ticketUrl: "https://www.makestar.co.kr/",
     noticeUrl: "https://weverse.io/riize/notice",
-    desc: "迷你二辑《II》Makestar平台线上视频签售会。",
+    desc: "迷你二辑《II》Makestar平台线上视频签售会。专属签名与互动，留下独一无二的珍贵回忆！",
     highlight: "Makestar 线上签售"
   },
 
@@ -3420,7 +3420,7 @@ window.RIIZE_EVENTS = [
     organizer: "Withmuu",
     ticketUrl: "https://www.withmuu.com/",
     noticeUrl: "https://weverse.io/riize/notice",
-    desc: "迷你二辑《II》Withmuu平台线上视频签售会。",
+    desc: "迷你二辑《II》Withmuu平台线上视频签售会。专属签名与互动，留下独一无二的珍贵回忆！",
     highlight: "Withmuu 线上签售"
   },
 
@@ -3443,7 +3443,7 @@ window.RIIZE_EVENTS = [
     organizer: "Ktown4u",
     ticketUrl: "https://www.ktown4u.com/",
     noticeUrl: "https://weverse.io/riize/notice",
-    desc: "迷你二辑《II》Ktown4u平台线上视频签售会。",
+    desc: "迷你二辑《II》Ktown4u平台线上视频签售会。专属签名与互动，留下独一无二的珍贵回忆！",
     highlight: "Ktown4u 线上签售"
   },
 
@@ -3466,7 +3466,7 @@ window.RIIZE_EVENTS = [
     organizer: "Soundwave",
     ticketUrl: "https://www.soundwave.co.kr/",
     noticeUrl: "https://weverse.io/riize/notice",
-    desc: "迷你二辑《II》Soundwave平台线下签售会。",
+    desc: "迷你二辑《II》Soundwave平台线下签售会。专属签名与互动，留下独一无二的珍贵回忆！",
     highlight: "Soundwave 线下签售"
   },
 
@@ -3489,7 +3489,7 @@ window.RIIZE_EVENTS = [
     organizer: "Everline",
     ticketUrl: "https://www.everline.kr/",
     noticeUrl: "https://weverse.io/riize/notice",
-    desc: "迷你二辑《II》Everline平台线下签售会。",
+    desc: "迷你二辑《II》Everline平台线下签售会。专属签名与互动，留下独一无二的珍贵回忆！",
     highlight: "Everline 线下签售"
   },
 
@@ -3512,7 +3512,7 @@ window.RIIZE_EVENTS = [
     organizer: "Weverse",
     ticketUrl: "https://www.weverseshop.io/",
     noticeUrl: "https://weverse.io/riize/notice",
-    desc: "迷你二辑《II》Weverse Shop平台线上视频签售会。",
+    desc: "迷你二辑《II》Weverse Shop平台线上视频签售会。专属签名与互动，留下独一无二的珍贵回忆！",
     highlight: "Weverse 线上签售"
   },
 
@@ -3535,7 +3535,7 @@ window.RIIZE_EVENTS = [
     organizer: "Apple Music",
     ticketUrl: "",
     noticeUrl: "https://weverse.io/riize/notice",
-    desc: "迷你二辑《II》Apple Music平台线上视频签售会。",
+    desc: "迷你二辑《II》Apple Music平台线上视频签售会。专属签名与互动，留下独一无二的珍贵回忆！",
     highlight: "Apple Music 线上签售"
   },
 
@@ -3558,7 +3558,7 @@ window.RIIZE_EVENTS = [
     organizer: "Music Korea",
     ticketUrl: "",
     noticeUrl: "https://weverse.io/riize/notice",
-    desc: "迷你二辑《II》Music Korea平台线下签售会。",
+    desc: "迷你二辑《II》Music Korea平台线下签售会。专属签名与互动，留下独一无二的珍贵回忆！",
     highlight: "Music Korea 线下签售"
   },
 
@@ -3581,7 +3581,7 @@ window.RIIZE_EVENTS = [
     organizer: "Music Plant",
     ticketUrl: "",
     noticeUrl: "https://weverse.io/riize/notice",
-    desc: "迷你二辑《II》Music Plant平台线下签售会。",
+    desc: "迷你二辑《II》Music Plant平台线下签售会。专属签名与互动，留下独一无二的珍贵回忆！",
     highlight: "Music Plant 线下签售"
   },
 
@@ -3604,7 +3604,7 @@ window.RIIZE_EVENTS = [
     organizer: "Namil Music",
     ticketUrl: "",
     noticeUrl: "https://weverse.io/riize/notice",
-    desc: "迷你二辑《II》Namil Music平台线下签售会。",
+    desc: "迷你二辑《II》Namil Music平台线下签售会。专属签名与互动，留下独一无二的珍贵回忆！",
     highlight: "Namil Music 线下签售"
   },
 
@@ -3627,7 +3627,7 @@ window.RIIZE_EVENTS = [
     organizer: "SM Entertainment Japan",
     ticketUrl: "https://riizeofficial.jp/",
     noticeUrl: "https://riizeofficial.jp/news/",
-    desc: "日本第三张单曲《Sunburst》幸运抽选签名会。",
+    desc: "日本第三张单曲《Sunburst》幸运抽选签名会。专属签名与互动，留下独一无二的珍贵回忆！",
     highlight: "日本3单签名会"
   },
 
@@ -3650,7 +3650,7 @@ window.RIIZE_EVENTS = [
     organizer: "SBS",
     ticketUrl: "",
     noticeUrl: "https://weverse.io/riize/notice",
-    desc: "SBS 歌谣大战 Summer 2026，RIIZE出演。",
+    desc: "SBS 歌谣大战 Summer 2026，RIIZE出演。星光熠熠的盛典，期待精彩舞台！",
     highlight: '成灿担任MC！'
   },
 
@@ -3673,7 +3673,7 @@ window.RIIZE_EVENTS = [
     organizer: "Yes24",
     ticketUrl: "",
     noticeUrl: "https://weverse.io/riize/notice",
-    desc: "迷你二辑《II》Yes24平台线下签售会。",
+    desc: "迷你二辑《II》Yes24平台线下签售会。专属签名与互动，留下独一无二的珍贵回忆！",
     highlight: "Yes24 线下签售"
   },
 
@@ -3696,7 +3696,7 @@ window.RIIZE_EVENTS = [
     organizer: "Aladin",
     ticketUrl: "",
     noticeUrl: "https://weverse.io/riize/notice",
-    desc: "迷你二辑《II》Aladin平台线下签售会。",
+    desc: "迷你二辑《II》Aladin平台线下签售会。专属签名与互动，留下独一无二的珍贵回忆！",
     highlight: "Aladin 线下签售"
   },
 
@@ -3719,7 +3719,7 @@ window.RIIZE_EVENTS = [
     organizer: "Synnara",
     ticketUrl: "",
     noticeUrl: "https://weverse.io/riize/notice",
-    desc: "迷你二辑《II》Synnara平台线下签售会。",
+    desc: "迷你二辑《II》Synnara平台线下签售会。专属签名与互动，留下独一无二的珍贵回忆！",
     highlight: "Synnara 线下签售"
   },
 
@@ -3742,7 +3742,7 @@ window.RIIZE_EVENTS = [
     organizer: "Hot Tracks",
     ticketUrl: "",
     noticeUrl: "https://weverse.io/riize/notice",
-    desc: "迷你二辑《II》Hot Tracks平台线下签售会。",
+    desc: "迷你二辑《II》Hot Tracks平台线下签售会。专属签名与互动，留下独一无二的珍贵回忆！",
     highlight: "Hot Tracks 线下签售"
   },
 
@@ -3765,7 +3765,7 @@ window.RIIZE_EVENTS = [
     organizer: "SM Entertainment",
     ticketUrl: "",
     noticeUrl: "https://weverse.io/riize/notice",
-    desc: "RIIZE 出道3周年纪念生日派对活动。",
+    desc: "RIIZE 出道3周年纪念生日派对活动。精彩不容错过！",
     highlight: "3周年生日派对！"
   },
 
@@ -3788,7 +3788,7 @@ window.RIIZE_EVENTS = [
     organizer: "SM Entertainment",
     ticketUrl: "",
     noticeUrl: "https://weverse.io/riize/notice",
-    desc: "RIIZE 官方粉丝俱乐部 BRIIZE 会员日活动。",
+    desc: "RIIZE 官方粉丝俱乐部 BRIIZE 会员日活动。精彩不容错过！",
     highlight: "BRIIZE会员日"
   },
 
@@ -3811,7 +3811,7 @@ window.RIIZE_EVENTS = [
     organizer: "Interpark",
     ticketUrl: "",
     noticeUrl: "https://weverse.io/riize/notice",
-    desc: "迷你二辑《II》Interpark平台线下签售会。",
+    desc: "迷你二辑《II》Interpark平台线下签售会。专属签名与互动，留下独一无二的珍贵回忆！",
     highlight: "Interpark 线下签售"
   },
 
@@ -3834,7 +3834,7 @@ window.RIIZE_EVENTS = [
     organizer: "JTBC",
     ticketUrl: "",
     noticeUrl: "https://weverse.io/riize/notice",
-    desc: "RIIZE 出演JTBC《认识的哥哥》节目录制。",
+    desc: "RIIZE 出演JTBC《认识的哥哥》节目录制。精彩不容错过！",
     highlight: "认识的哥哥"
   },
 
@@ -3857,7 +3857,7 @@ window.RIIZE_EVENTS = [
     organizer: "MBC",
     ticketUrl: "",
     noticeUrl: "https://weverse.io/riize/notice",
-    desc: "RIIZE 出演MBC《一周的偶像》节目录制。",
+    desc: "RIIZE 出演MBC《一周的偶像》节目录制。精彩不容错过！",
     highlight: "一周的偶像"
   },
 
@@ -3880,7 +3880,7 @@ window.RIIZE_EVENTS = [
     organizer: "EITHER&",
     ticketUrl: "",
     noticeUrl: "https://weverse.io/riize/notice",
-    desc: "RIIZE x EITHER& 联名快闪店，成灿、元彬相关。",
+    desc: "RIIZE x EITHER& 联名快闪店，成灿、元彬相关。限时打卡，周边与惊喜等你来探索！",
     highlight: "EITHER&联名快闪"
   },
 
@@ -3903,7 +3903,7 @@ window.RIIZE_EVENTS = [
     organizer: "SM Entertainment",
     ticketUrl: "",
     noticeUrl: "https://weverse.io/riize/notice",
-    desc: "RIIZE 出道3周年纪念展览活动。",
+    desc: "RIIZE 出道3周年纪念展览活动。精彩不容错过！",
     highlight: "3周年纪念展览"
   },
 
@@ -3926,7 +3926,7 @@ window.RIIZE_EVENTS = [
     organizer: "SM Entertainment Japan",
     ticketUrl: "https://riizeofficial.jp/",
     noticeUrl: "https://riizeofficial.jp/news/",
-    desc: "RIIZE 日本粉丝见面会 2026 RPG 追加公演。",
+    desc: "RIIZE 日本粉丝见面会 2026 RPG 追加公演。精彩不容错过！",
     highlight: "日本FM追加公演"
   },
 
@@ -3949,7 +3949,7 @@ window.RIIZE_EVENTS = [
     organizer: "首尔体育",
     ticketUrl: "",
     noticeUrl: "https://weverse.io/riize/notice",
-    desc: "第36届首尔歌谣大赏，RIIZE出演。",
+    desc: "第36届首尔歌谣大赏，RIIZE出演。星光熠熠的盛典，期待精彩舞台！",
     highlight: "首尔歌谣大赏"
   },
 
@@ -3972,7 +3972,7 @@ window.RIIZE_EVENTS = [
     organizer: "Kakao",
     ticketUrl: "",
     noticeUrl: "https://weverse.io/riize/notice",
-    desc: "2026 Melon Music Awards，RIIZE提名/出演。",
+    desc: "2026 Melon Music Awards，RIIZE提名/出演。星光熠熠的盛典，期待精彩舞台！",
     highlight: "MMA 2026"
   },
 
@@ -3995,7 +3995,7 @@ window.RIIZE_EVENTS = [
     organizer: "AAA组委会",
     ticketUrl: "",
     noticeUrl: "https://weverse.io/riize/notice",
-    desc: "2026 亚洲明星盛典（AAA），RIIZE确定出演。12月5-6日在高雄国家体育场举行。",
+    desc: "2026 亚洲明星盛典（AAA），RIIZE确定出演。12月5-6日在高雄国家体育场举行。星光熠熠的盛典，期待精彩舞台！",
     highlight: "AAA 2026 高雄"
   }
 
