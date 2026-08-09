@@ -1,6 +1,5 @@
 window.RIIZE_EVENTS = [
-  // ===== 2023年（出道年） =====
-  {
+{
     id: 1,
     title: "RIIZE 出道 Showcase 'RIIZING DAY: RIIZE Premiere'",
     type: "concert",
@@ -20,9 +19,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://www.melon.com/",
     desc: "RIIZE 正式出道 Showcase，首次公开《Get A Guitar》和《Memories》舞台，与全球粉丝见面。",
     highlight: "出道日！首张单曲专辑《Get A Guitar》发行"
-  },,
+  },
 
-  {
+{
     id: 2,
     title: "SMTOWN LIVE 2023 : SMCU Palace @ Jakarta",
     type: "festival",
@@ -42,9 +41,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://www.smtown.com/",
     desc: "SMTOWN 家族演唱会雅加达站，RIIZE 出道后首次参加家族演唱会。",
     highlight: "出道后首次家族演唱会"
-  },,
+  },
 
-  {
+{
     id: 3,
     title: "KCON SAUDI ARABIA 2023",
     type: "festival",
@@ -64,9 +63,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://www.kconofficial.com/",
     desc: "KCON 沙特阿拉伯站，RIIZE 首次出演 KCON。",
     highlight: "首次 KCON 舞台"
-  },,
+  },
 
-  {
+{
     id: 4,
     title: "2026 Asia Artist Awards (AAA) Day2",
     type: "festival",
@@ -87,10 +86,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://weverse.io/riize/notice",
     desc: "2026 亚洲明星盛典（AAA）第二天，RIIZE出演。",
     highlight: "AAA 2026 Day2"
-  }
-];",
+  },
 
-  {
+{
     id: 5,
     title: "2023 MAMA AWARDS",
     type: "festival",
@@ -110,9 +108,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://mama.mwave.me/",
     desc: "2023 MAMA 大奖，RIIZE 获得最受喜爱新人奖。",
     highlight: "获得最佳新人奖！"
-  },,
+  },
 
-  {
+{
     id: 6,
     title: "2023 Melon Music Awards (MMA)",
     type: "festival",
@@ -132,9 +130,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://www.melon.com/",
     desc: "2023 MMA 颁奖典礼，RIIZE 获得年度新人奖。",
     highlight: "MMA 新人奖大赏！"
-  },,
+  },
 
-  {
+{
     id: 7,
     title: "第33届首尔歌谣大赏",
     type: "festival",
@@ -156,9 +154,7 @@ window.RIIZE_EVENTS = [
     highlight: "本赏 + 新人奖双丰收"
   },
 
-  // ===== 2024年 =====,
-
-  {
+{
     id: 8,
     title: "2024 RIIZE FAN-CON TOUR 'RIIZING DAY' 首尔站 Day1",
     type: "concert",
@@ -178,9 +174,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://www.melon.com/",
     desc: "RIIZE 首次 Fan-Con 巡演首尔站，'RIIZING DAY' 主题。",
     highlight: "首次 Fan-Con 巡演！"
-  },,
+  },
 
-  {
+{
     id: 9,
     title: "2024 RIIZE FAN-CON TOUR 'RIIZING DAY' 首尔站 Day2",
     type: "concert",
@@ -200,9 +196,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://www.melon.com/",
     desc: "RIIZE 首次 Fan-Con 巡演首尔站第二天。",
     highlight: "首尔两场连开"
-  },,
+  },
 
-  {
+{
     id: 10,
     title: "2024 RIIZE FAN-CON 'RIIZING DAY' 东京站 Day1",
     type: "concert",
@@ -222,9 +218,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://riizeofficial.jp/",
     desc: "RIIZE 首次日本 Fan-Con，东京站两场连开。",
     highlight: "日本首演！"
-  },,
+  },
 
-  {
+{
     id: 11,
     title: "2024 RIIZE FAN-CON 'RIIZING DAY' 东京站 Day2",
     type: "concert",
@@ -244,9 +240,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://riizeofficial.jp/",
     desc: "RIIZE 首次日本 Fan-Con 东京站第二天。",
     highlight: "东京两场连开"
-  },,
+  },
 
-  {
+{
     id: 12,
     title: "2024 RIIZE FAN-CON 'RIIZING DAY' 香港站",
     type: "concert",
@@ -266,9 +262,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://www.melon.com/",
     desc: "RIIZE 首次香港 Fan-Con。",
     highlight: "香港首秀！"
-  },,
+  },
 
-  {
+{
     id: 13,
     title: "2024 RIIZE FAN-CON 'RIIZING DAY' 台北站",
     type: "concert",
@@ -288,9 +284,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://www.melon.com/",
     desc: "RIIZE 首次台湾 Fan-Con。",
     highlight: "台湾首秀！"
-  },,
+  },
 
-  {
+{
     id: 14,
     title: "SUMMER SONIC 2024 东京",
     type: "festival",
@@ -310,9 +306,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://riizeofficial.jp/",
     desc: "日本最大夏季音乐节 SUMMER SONIC 2024。",
     highlight: "首次 SUMMER SONIC！"
-  },,
+  },
 
-  {
+{
     id: 15,
     title: "RIIZE 出道 1周年 Fan Party 'RIIZE 1000 DAYS'",
     type: "fanmeeting",
@@ -332,9 +328,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://www.melon.com/",
     desc: "RIIZE 出道 1000 天特别粉丝派对。",
     highlight: "出道 1000 天纪念！"
-  },,
+  },
 
-  {
+{
     id: 16,
     title: "2024 MAMA AWARDS",
     type: "festival",
@@ -356,9 +352,7 @@ window.RIIZE_EVENTS = [
     highlight: "MAMA 舞台"
   },
 
-  // ===== 2025年 =====,
-
-  {
+{
     id: 17,
     title: "RIIZE JAPAN FANMEETING 2025 'The Secret LIEZ' 横滨 Day1",
     type: "fanmeeting",
@@ -378,9 +372,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://riizeofficial.jp/",
     desc: "RIIZE 日本首次粉丝俱乐部专属 FM，'The Secret LIEZ' 主题。",
     highlight: "日本 FC 限定 FM！"
-  },,
+  },
 
-  {
+{
     id: 18,
     title: "RIIZE JAPAN FANMEETING 2025 'The Secret LIEZ' 横滨 Day2",
     type: "fanmeeting",
@@ -400,9 +394,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://riizeofficial.jp/",
     desc: "RIIZE 日本首次粉丝俱乐部专属 FM 第二天。",
     highlight: "横滨两场连开"
-  },,
+  },
 
-  {
+{
     id: 19,
     title: "2025 RIIZE CONCERT TOUR [RIIZING LOUD] 首尔站 Day1",
     type: "concert",
@@ -422,9 +416,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://www.melon.com/",
     desc: "RIIZE 首次世界巡演 [RIIZING LOUD] 首尔站。",
     highlight: "首次世界巡演！首尔三场连开"
-  },,
+  },
 
-  {
+{
     id: 20,
     title: "2025 RIIZE CONCERT TOUR [RIIZING LOUD] 首尔站 Day2",
     type: "concert",
@@ -444,9 +438,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://www.melon.com/",
     desc: "RIIZE 首次世界巡演 [RIIZING LOUD] 首尔站第二天。",
     highlight: "首尔三场连开"
-  },,
+  },
 
-  {
+{
     id: 21,
     title: "2025 RIIZE CONCERT TOUR [RIIZING LOUD] 首尔站 Day3",
     type: "concert",
@@ -466,9 +460,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://www.melon.com/",
     desc: "RIIZE 首次世界巡演 [RIIZING LOUD] 首尔站第三天。",
     highlight: "首尔三场连开"
-  },,
+  },
 
-  {
+{
     id: 22,
     title: "2025 RIIZE CONCERT TOUR [RIIZING LOUD] 神户站 Day1",
     type: "concert",
@@ -488,9 +482,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://riizeofficial.jp/",
     desc: "RIIZING LOUD 世界巡演日本神户站。",
     highlight: "日本巡演第一站"
-  },,
+  },
 
-  {
+{
     id: 23,
     title: "2025 RIIZE CONCERT TOUR [RIIZING LOUD] 神户站 Day2",
     type: "concert",
@@ -510,9 +504,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://riizeofficial.jp/",
     desc: "RIIZING LOUD 世界巡演日本神户站第二天。",
     highlight: "神户两场连开"
-  },,
+  },
 
-  {
+{
     id: 24,
     title: "2025 RIIZE CONCERT TOUR [RIIZING LOUD] 香港站",
     type: "concert",
@@ -532,9 +526,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://www.melon.com/",
     desc: "RIIZING LOUD 世界巡演香港站。",
     highlight: "香港演唱会"
-  },,
+  },
 
-  {
+{
     id: 25,
     title: "2025 RIIZE CONCERT TOUR [RIIZING LOUD] 埼玉站 Day1",
     type: "concert",
@@ -554,9 +548,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://riizeofficial.jp/",
     desc: "RIIZING LOUD 世界巡演日本埼玉站。",
     highlight: "埼玉超级竞技场"
-  },,
+  },
 
-  {
+{
     id: 26,
     title: "2025 RIIZE CONCERT TOUR [RIIZING LOUD] 埼玉站 Day2",
     type: "concert",
@@ -576,9 +570,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://riizeofficial.jp/",
     desc: "RIIZING LOUD 世界巡演日本埼玉站第二天。",
     highlight: "埼玉两场连开"
-  },,
+  },
 
-  {
+{
     id: 27,
     title: "2025 RIIZE CONCERT TOUR [RIIZING LOUD] 广岛站 Day1",
     type: "concert",
@@ -598,9 +592,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://riizeofficial.jp/",
     desc: "RIIZING LOUD 世界巡演日本广岛站。",
     highlight: "广岛 Green Arena"
-  },,
+  },
 
-  {
+{
     id: 28,
     title: "2025 RIIZE CONCERT TOUR [RIIZING LOUD] 广岛站 Day2",
     type: "concert",
@@ -620,9 +614,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://riizeofficial.jp/",
     desc: "RIIZING LOUD 世界巡演日本广岛站第二天。",
     highlight: "广岛两场连开"
-  },,
+  },
 
-  {
+{
     id: 29,
     title: "SMTOWN LIVE 2025 in TOKYO Day1",
     type: "festival",
@@ -642,9 +636,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://riizeofficial.jp/",
     desc: "SMTOWN LIVE 2025 东京巨蛋站。",
     highlight: "东京巨蛋！"
-  },,
+  },
 
-  {
+{
     id: 30,
     title: "SMTOWN LIVE 2025 in TOKYO Day2",
     type: "festival",
@@ -664,9 +658,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://riizeofficial.jp/",
     desc: "SMTOWN LIVE 2025 东京巨蛋站第二天。",
     highlight: "东京巨蛋两场连开"
-  },,
+  },
 
-  {
+{
     id: 31,
     title: "2025 RIIZE CONCERT TOUR [RIIZING LOUD] 吉隆坡站",
     type: "concert",
@@ -686,9 +680,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://www.melon.com/",
     desc: "RIIZING LOUD 世界巡演马来西亚吉隆坡站。",
     highlight: "马来西亚首秀！"
-  },,
+  },
 
-  {
+{
     id: 32,
     title: "2025 RIIZE CONCERT TOUR [RIIZING LOUD] 福冈站 Day1",
     type: "concert",
@@ -708,9 +702,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://riizeofficial.jp/",
     desc: "RIIZING LOUD 世界巡演日本福冈站。",
     highlight: "福冈 Marine Messe"
-  },,
+  },
 
-  {
+{
     id: 33,
     title: "2025 RIIZE CONCERT TOUR [RIIZING LOUD] 福冈站 Day2",
     type: "concert",
@@ -730,9 +724,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://riizeofficial.jp/",
     desc: "RIIZING LOUD 世界巡演日本福冈站第二天。",
     highlight: "福冈两场连开"
-  },,
+  },
 
-  {
+{
     id: 34,
     title: "2025 RIIZE CONCERT TOUR [RIIZING LOUD] 台北站",
     type: "concert",
@@ -752,9 +746,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://www.melon.com/",
     desc: "RIIZING LOUD 世界巡演台北站。",
     highlight: "台北小巨蛋！"
-  },,
+  },
 
-  {
+{
     id: 35,
     title: "2025 RIIZE CONCERT TOUR [RIIZING LOUD] 曼谷站 Day1",
     type: "concert",
@@ -774,9 +768,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://www.melon.com/",
     desc: "RIIZING LOUD 世界巡演泰国曼谷站。",
     highlight: "泰国首秀！"
-  },,
+  },
 
-  {
+{
     id: 36,
     title: "2025 RIIZE CONCERT TOUR [RIIZING LOUD] 曼谷站 Day2",
     type: "concert",
@@ -796,9 +790,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://www.melon.com/",
     desc: "RIIZING LOUD 世界巡演泰国曼谷站第二天。",
     highlight: "曼谷两场连开"
-  },,
+  },
 
-  {
+{
     id: 37,
     title: "2025 RIIZE CONCERT TOUR [RIIZING LOUD] 洛杉矶站",
     type: "concert",
@@ -818,9 +812,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://www.melon.com/",
     desc: "RIIZING LOUD 世界巡演北美洛杉矶站。",
     highlight: "北美巡演！"
-  },,
+  },
 
-  {
+{
     id: 38,
     title: "2025 MAMA AWARDS",
     type: "festival",
@@ -840,9 +834,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://mama.mwave.me/",
     desc: "2025 MAMA 大奖，RIIZE 获得最佳男子组合奖。",
     highlight: "最佳男子组合！"
-  },,
+  },
 
-  {
+{
     id: 39,
     title: "2025 Melon Music Awards (MMA)",
     type: "festival",
@@ -864,9 +858,7 @@ window.RIIZE_EVENTS = [
     highlight: "MMA 三项大奖！"
   },
 
-  // ===== 2026年 =====,
-
-  {
+{
     id: 40,
     title: "2025 RIIZE CONCERT TOUR [RIIZING LOUD] 雅加达站",
     type: "concert",
@@ -886,9 +878,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://www.melon.com/",
     desc: "RIIZING LOUD 世界巡演印尼雅加达站。",
     highlight: "印尼首秀！"
-  },,
+  },
 
-  {
+{
     id: 41,
     title: "第40届韩国金唱片奖",
     type: "festival",
@@ -908,9 +900,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://riizeofficial.jp/",
     desc: "第40届金唱片奖，RIIZE 获得最佳专辑奖。",
     highlight: "金唱片最佳专辑！"
-  },,
+  },
 
-  {
+{
     id: 42,
     title: "2026 RIIZE CONCERT TOUR [RIIZING LOUD] 马尼拉站",
     type: "concert",
@@ -930,9 +922,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://www.melon.com/",
     desc: "RIIZING LOUD 世界巡演菲律宾马尼拉站。",
     highlight: "菲律宾首秀！"
-  },,
+  },
 
-  {
+{
     id: 43,
     title: "2026 RIIZE CONCERT TOUR [RIIZING LOUD] 新加坡站",
     type: "concert",
@@ -952,9 +944,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://www.melon.com/",
     desc: "RIIZING LOUD 世界巡演新加坡站。",
     highlight: "新加坡首秀！"
-  },,
+  },
 
-  {
+{
     id: 44,
     title: "SMTOWN LIVE 2025-26 in BANGKOK",
     type: "festival",
@@ -974,9 +966,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://www.smtown.com/",
     desc: "SMTOWN LIVE 曼谷站，情人节特别场。",
     highlight: "情人节 SMTOWN！"
-  },,
+  },
 
-  {
+{
     id: 45,
     title: "2026 RIIZE CONCERT TOUR [RIIZING LOUD] 澳门站 Day1",
     type: "concert",
@@ -996,9 +988,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://www.melon.com/",
     desc: "RIIZING LOUD 世界巡演澳门站第一天。",
     highlight: "澳门首秀！两场连开"
-  },,
+  },
 
-  {
+{
     id: 46,
     title: "2026 RIIZE CONCERT TOUR [RIIZING LOUD] 澳门站 Day2（加场）",
     type: "concert",
@@ -1018,9 +1010,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://www.melon.com/",
     desc: "RIIZING LOUD 世界巡演澳门站第二天（加场）。",
     highlight: "澳门加场！两场连开"
-  },,
+  },
 
-  {
+{
     id: 47,
     title: "RIIZING LOUD Special Edition 东京巨蛋 Day1",
     type: "concert",
@@ -1040,9 +1032,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://riizeofficial.jp/",
     desc: "RIIZING LOUD Special Edition 东京巨蛋特别场第一天。",
     highlight: "东京巨蛋！三场连开"
-  },,
+  },
 
-  {
+{
     id: 48,
     title: "RIIZING LOUD Special Edition 东京巨蛋 Day2",
     type: "concert",
@@ -1062,9 +1054,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://riizeofficial.jp/",
     desc: "RIIZING LOUD Special Edition 东京巨蛋特别场第二天。",
     highlight: "东京巨蛋！三场连开"
-  },,
+  },
 
-  {
+{
     id: 49,
     title: "RIIZING LOUD Special Edition 东京巨蛋 Day3（加场）",
     type: "concert",
@@ -1084,9 +1076,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://riizeofficial.jp/",
     desc: "RIIZING LOUD Special Edition 东京巨蛋特别场第三天（加场）。",
     highlight: "东京巨蛋加场！三场连开"
-  },,
+  },
 
-  {
+{
     id: 50,
     title: "RIIZING LOUD FINALE 首尔站 Day1",
     type: "concert",
@@ -1106,9 +1098,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://www.melon.com/",
     desc: "RIIZING LOUD 世界巡演 FINALE 首尔安可场第一天。",
     highlight: "巡演FINALE！首尔三场连开"
-  },,
+  },
 
-  {
+{
     id: 51,
     title: "RIIZING LOUD FINALE 首尔站 Day2",
     type: "concert",
@@ -1128,9 +1120,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://www.melon.com/",
     desc: "RIIZING LOUD 世界巡演 FINALE 首尔安可场第二天。",
     highlight: "巡演FINALE！首尔三场连开"
-  },,
+  },
 
-  {
+{
     id: 52,
     title: "RIIZING LOUD FINALE 首尔站 Day3",
     type: "concert",
@@ -1150,9 +1142,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://www.melon.com/",
     desc: "RIIZING LOUD 世界巡演 FINALE 首尔安可场第三天。",
     highlight: "巡演FINALE！首尔三场连开"
-  },,
+  },
 
-  {
+{
     id: 53,
     title: "Lollapalooza ARGENTINA 2026",
     type: "festival",
@@ -1172,9 +1164,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://www.lollapalooza.com/",
     desc: "RIIZE 首次出演 Lollapalooza 阿根廷站。",
     highlight: "南美首秀！Lollapalooza"
-  },,
+  },
 
-  {
+{
     id: 54,
     title: "Lollapalooza CHILE 2026",
     type: "festival",
@@ -1194,9 +1186,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://www.lollapalooza.com/",
     desc: "RIIZE 首次出演 Lollapalooza 智利站。",
     highlight: "智利首秀！Lollapalooza"
-  },,
+  },
 
-  {
+{
     id: 55,
     title: "Lollapalooza BRAZIL 2026",
     type: "festival",
@@ -1216,9 +1208,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://www.lollapalooza.com/",
     desc: "RIIZE 首次出演 Lollapalooza 巴西站。",
     highlight: "巴西首秀！Lollapalooza"
-  },,
+  },
 
-  {
+{
     id: 56,
     title: "K2O Songkran Music Festival 2026",
     type: "festival",
@@ -1238,9 +1230,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://world.nol.com/",
     desc: "泰国泼水节音乐节 K2O Songkran。",
     highlight: "泼水节音乐节！"
-  },,
+  },
 
-  {
+{
     id: 57,
     title: "The Performance 横滨 Day1",
     type: "concert",
@@ -1260,9 +1252,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://riizeofficial.jp/",
     desc: "RIIZE 日本特别演唱会 'The Performance' 横滨站第一天。",
     highlight: "日本特别演唱会！两场连开"
-  },,
+  },
 
-  {
+{
     id: 58,
     title: "The Performance 横滨 Day2",
     type: "concert",
@@ -1282,9 +1274,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://riizeofficial.jp/",
     desc: "RIIZE 日本特别演唱会 'The Performance' 横滨站第二天。",
     highlight: "日本特别演唱会！两场连开"
-  },,
+  },
 
-  {
+{
     id: 59,
     title: "微博国际娱乐盛典 2026",
     type: "festival",
@@ -1304,9 +1296,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://world.nol.com/",
     desc: "微博国际娱乐盛典，RIIZE 获得年度国际艺人奖。",
     highlight: "中国首秀！"
-  },,
+  },
 
-  {
+{
     id: 60,
     title: "Kstyle PARTY 2026 Day2",
     type: "festival",
@@ -1326,9 +1318,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://riizeofficial.jp/",
     desc: "Kstyle PARTY 2026 拼盘演唱会第二天。",
     highlight: "Kstyle PARTY！"
-  },,
+  },
 
-  {
+{
     id: 61,
     title: "Channel B 棒球音乐节 2026",
     type: "festival",
@@ -1348,9 +1340,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://world.nol.com/",
     desc: "台湾 Channel B 棒球音乐节。",
     highlight: "台湾音乐节！"
-  },,
+  },
 
-  {
+{
     id: 62,
     title: "WATERBOMB 首尔 2026 Day1",
     type: "festival",
@@ -1370,9 +1362,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://waterbomb.co.kr/",
     desc: "韩国最大夏日音乐节 WATERBOMB 首尔站（高阳KINTEX）。",
     highlight: "水弹音乐节！"
-  },,
+  },
 
-  {
+{
     id: 63,
     title: "WATERBOMB 首尔 2026 Day2",
     type: "festival",
@@ -1392,9 +1384,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://waterbomb.co.kr/",
     desc: "韩国最大夏日音乐节 WATERBOMB 首尔站第二天（高阳KINTEX）。",
     highlight: "水弹音乐节！两场连开"
-  },,
+  },
 
-  {
+{
     id: 64,
     title: 'TIMA 国际音乐大赏 Day1',
     type: "festival",
@@ -1414,9 +1406,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://world.nol.com/",
     desc: "TIMA 国际音乐大赏香港站第二天。",
     highlight: "香港颁奖礼！"
-  },,
+  },
 
-  {
+{
     id: 65,
     title: "Spotify House Seoul 2026",
     type: "festival",
@@ -1436,9 +1428,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://world.nol.com/",
     desc: "Spotify House Seoul 特别演出，邀请制。",
     highlight: "Spotify 特别演出！"
-  },,
+  },
 
-  {
+{
     id: 66,
     title: "RIIZE 出道3周年粉丝见面会 'Ch. RIIZE : ON AIR' Day1",
     type: "fanmeeting",
@@ -1459,9 +1451,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://weverse.io/riize/notice",
     desc: "RIIZE 出道3周年特别粉丝见面会 'Ch. RIIZE : ON AIR'。",
     highlight: "出道3周年！INSPIRE Arena 两场连开"
-  },,
+  },
 
-  {
+{
     id: 67,
     title: "RIIZE 出道3周年粉丝见面会 'Ch. RIIZE : ON AIR' Day2",
     type: "fanmeeting",
@@ -1482,9 +1474,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://weverse.io/riize/notice",
     desc: "RIIZE 出道3周年特别粉丝见面会 'Ch. RIIZE : ON AIR' 第二天。",
     highlight: "出道3周年！INSPIRE Arena 两场连开"
-  },,
+  },
 
-  {
+{
     id: 68,
     title: "2026 MAMA AWARDS",
     type: "festival",
@@ -1504,9 +1496,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://mama.mwave.me/",
     desc: "2026 MAMA 大奖。",
     highlight: "MAMA 颁奖礼"
-  },,
+  },
 
-  {
+{
     id: 69,
     title: "2026 Melon Music Awards (MMA)",
     type: "festival",
@@ -1526,9 +1518,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://www.melon.com/",
     desc: "2026 MMA 颁奖典礼。",
     highlight: "MMA 颁奖礼"
-  },,
+  },
 
-  {
+{
     id: 70,
     title: "SMTOWN LIVE 2026 in SEOUL Day1",
     type: "festival",
@@ -1548,9 +1540,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://www.smtown.com/",
     desc: "SMTOWN LIVE 2026 首尔站圣诞节特别场第一天。",
     highlight: "圣诞节 SMTOWN！"
-  },,
+  },
 
-  {
+{
     id: 71,
     title: "SMTOWN LIVE 2026 in SEOUL Day2",
     type: "festival",
@@ -1570,9 +1562,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://www.smtown.com/",
     desc: "SMTOWN LIVE 2026 首尔站第二天。",
     highlight: "首尔两场连开"
-  },,
+  },
 
-  {
+{
     id: 72,
     title: "第36届金唱片奖 Day1",
     type: "festival",
@@ -1592,9 +1584,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://www.goldendiscawards.com/",
     desc: "第36届金唱片奖第一天，RIIZE 获得新人奖。",
     highlight: "金唱片新人奖！"
-  },,
+  },
 
-  {
+{
     id: 73,
     title: "第36届金唱片奖 Day2",
     type: "festival",
@@ -1614,9 +1606,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://www.goldendiscawards.com/",
     desc: "第36届金唱片奖第二天。",
     highlight: "金唱片颁奖礼"
-  },,
+  },
 
-  {
+{
     id: 74,
     title: "Circle Chart Music Awards 2024",
     type: "festival",
@@ -1636,9 +1628,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://circlechart.kr/",
     desc: "Circle Chart 音乐奖，RIIZE 获得年度新人奖。",
     highlight: "Circle Chart 新人奖！"
-  },,
+  },
 
-  {
+{
     id: 75,
     title: "KCON LA 2024 Day1",
     type: "festival",
@@ -1658,9 +1650,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://www.kconofficial.com/",
     desc: "KCON LA 2024 第一天，RIIZE 首次出演 KCON 美国站。",
     highlight: "美国 KCON 首秀！"
-  },,
+  },
 
-  {
+{
     id: 76,
     title: "KCON LA 2024 Day2",
     type: "festival",
@@ -1680,9 +1672,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://www.kconofficial.com/",
     desc: "KCON LA 2024 第二天。",
     highlight: "KCON LA 两场连开"
-  },,
+  },
 
-  {
+{
     id: 77,
     title: "Music Bank in Mexico 2024",
     type: "festival",
@@ -1702,9 +1694,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://world.nol.com/",
     desc: "Music Bank 墨西哥站，RIIZE 首次出演。",
     highlight: "墨西哥首秀！"
-  },,
+  },
 
-  {
+{
     id: 78,
     title: "2024 MMA Melon Music Awards",
     type: "festival",
@@ -1724,9 +1716,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://www.melon.com/",
     desc: "2024 MMA 颁奖典礼，RIIZE 获得 TOP10 本赏。",
     highlight: "MMA TOP10 本赏！"
-  },,
+  },
 
-  {
+{
     id: 79,
     title: "SBS 歌谣大战 2024",
     type: "festival",
@@ -1746,9 +1738,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://www.sbs.co.kr/",
     desc: "SBS 歌谣大战 2024 圣诞节特别场。",
     highlight: "圣诞节 SBS 歌谣大战"
-  },,
+  },
 
-  {
+{
     id: 80,
     title: "MBC 歌谣大祭典 2024",
     type: "festival",
@@ -1768,9 +1760,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://www.sbs.co.kr/",
     desc: "MBC 歌谣大祭典 2024 跨年场。",
     highlight: "跨年 MBC 歌谣大祭典"
-  },,
+  },
 
-  {
+{
     id: 81,
     title: "Golden Disc Awards 2025 Day1",
     type: "festival",
@@ -1790,9 +1782,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://www.goldendiscawards.com/",
     desc: "第37届金唱片奖第一天，RIIZE 获得本赏。",
     highlight: "金唱片本赏！"
-  },,
+  },
 
-  {
+{
     id: 82,
     title: "Golden Disc Awards 2025 Day2",
     type: "festival",
@@ -1812,9 +1804,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://www.goldendiscawards.com/",
     desc: "第37届金唱片奖第二天。",
     highlight: "金唱片颁奖礼"
-  },,
+  },
 
-  {
+{
     id: 83,
     title: "Circle Chart Music Awards 2025",
     type: "festival",
@@ -1834,9 +1826,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://circlechart.kr/",
     desc: "Circle Chart 音乐奖 2025，RIIZE 获得年度艺人奖。",
     highlight: "Circle Chart 年度艺人！"
-  },,
+  },
 
-  {
+{
     id: 84,
     title: "SMTOWN LIVE 2025 in HONG KONG Day1",
     type: "festival",
@@ -1856,9 +1848,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://www.smtown.com/",
     desc: "SMTOWN LIVE 2025 香港站第一天。",
     highlight: "香港 SMTOWN！两场连开"
-  },,
+  },
 
-  {
+{
     id: 85,
     title: "SMTOWN LIVE 2025 in HONG KONG Day2",
     type: "festival",
@@ -1878,9 +1870,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://www.smtown.com/",
     desc: "SMTOWN LIVE 2025 香港站第二天。",
     highlight: "香港两场连开"
-  },,
+  },
 
-  {
+{
     id: 86,
     title: "KCON JAPAN 2025 Day1",
     type: "festival",
@@ -1900,9 +1892,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://riizeofficial.jp/",
     desc: "KCON JAPAN 2025 第一天。",
     highlight: "KCON 日本站！"
-  },,
+  },
 
-  {
+{
     id: 87,
     title: "KCON JAPAN 2025 Day2",
     type: "festival",
@@ -1922,9 +1914,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://riizeofficial.jp/",
     desc: "KCON JAPAN 2025 第二天。",
     highlight: "KCON 两场连开"
-  },,
+  },
 
-  {
+{
     id: 88,
     title: "WATERBOMB 东京 2025",
     type: "festival",
@@ -1944,9 +1936,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://riizeofficial.jp/",
     desc: "WATERBOMB 东京站，RIIZE 首次出演日本水弹音乐节。",
     highlight: "日本水弹音乐节首秀！"
-  },,
+  },
 
-  {
+{
     id: 89,
     title: "KCON LA 2025 Day1",
     type: "festival",
@@ -1966,9 +1958,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://www.kconofficial.com/",
     desc: "KCON LA 2025 第一天。",
     highlight: "KCON LA！"
-  },,
+  },
 
-  {
+{
     id: 90,
     title: "KCON LA 2025 Day2",
     type: "festival",
@@ -1988,9 +1980,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://www.kconofficial.com/",
     desc: "KCON LA 2025 第二天。",
     highlight: "KCON LA 两场连开"
-  },,
+  },
 
-  {
+{
     id: 91,
     title: "2025 MMA Melon Music Awards",
     type: "festival",
@@ -2010,9 +2002,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://www.melon.com/",
     desc: "2025 MMA 颁奖典礼，RIIZE 获得年度艺人奖。",
     highlight: "MMA 年度艺人！"
-  },,
+  },
 
-  {
+{
     id: 92,
     title: "SBS 歌谣大战 2025",
     type: "festival",
@@ -2032,9 +2024,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://www.sbs.co.kr/",
     desc: "SBS 歌谣大战 2025 圣诞节特别场。",
     highlight: "圣诞节 SBS 歌谣大战"
-  },,
+  },
 
-  {
+{
     id: 93,
     title: "MBC 歌谣大祭典 2025",
     type: "festival",
@@ -2054,9 +2046,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://www.sbs.co.kr/",
     desc: "MBC 歌谣大祭典 2025 跨年场。",
     highlight: "跨年 MBC 歌谣大祭典"
-  },,
+  },
 
-  {
+{
     id: 94,
     title: "第38届金唱片奖 Day1",
     type: "festival",
@@ -2076,9 +2068,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://riizeofficial.jp/",
     desc: "第38届金唱片奖第一天，RIIZE 获得大赏。",
     highlight: "金唱片大赏！"
-  },,
+  },
 
-  {
+{
     id: 95,
     title: "第38届金唱片奖 Day2",
     type: "festival",
@@ -2098,9 +2090,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://riizeofficial.jp/",
     desc: "第38届金唱片奖第二天。",
     highlight: "金唱片颁奖礼"
-  },,
+  },
 
-  {
+{
     id: 96,
     title: "Circle Chart Music Awards 2026",
     type: "festival",
@@ -2120,9 +2112,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://circlechart.kr/",
     desc: "Circle Chart 音乐奖 2026，RIIZE 获得年度专辑奖。",
     highlight: "Circle Chart 年度专辑！"
-  },,
+  },
 
-  {
+{
     id: 97,
     title: "KCON JAPAN 2026 Day1",
     type: "festival",
@@ -2142,9 +2134,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://riizeofficial.jp/",
     desc: "KCON JAPAN 2026 第一天。",
     highlight: "KCON 日本站！"
-  },,
+  },
 
-  {
+{
     id: 98,
     title: "KCON JAPAN 2026 Day2",
     type: "festival",
@@ -2164,9 +2156,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://riizeofficial.jp/",
     desc: "KCON JAPAN 2026 第二天。",
     highlight: "KCON 两场连开"
-  },,
+  },
 
-  {
+{
     id: 99,
     title: "WATERBOMB 首尔 2026 Day3",
     type: "festival",
@@ -2186,9 +2178,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://waterbomb.co.kr/",
     desc: "WATERBOMB 首尔站第三天（高阳KINTEX）。",
     highlight: "水弹音乐节第三天"
-  },,
+  },
 
-  {
+{
     id: 100,
     title: "WATERBOMB 东京 2026",
     type: "festival",
@@ -2208,9 +2200,9 @@ window.RIIZE_EVENTS = [
     ticketUrl: "https://riizeofficial.jp/",
     desc: "WATERBOMB 东京站 2026。",
     highlight: "日本水弹音乐节！"
-  },,
+  },
 
-  {
+{
     id: 101,
     title: "RIIZE POP-UP [ARCHIIVE²] 首尔快闪店",
     type: "popup",
@@ -2232,9 +2224,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://weverse.io/riize/notice",
     desc: "纪念迷你二辑《II》发行的特别快闪店「ARCHIIVE²」，约250坪，100%预约制，全场次售罄。",
     highlight: "迷你二辑回归快闪！全场售罄"
-  },,
+  },
 
-  {
+{
     id: 102,
     title: "RIIZE POP-UP [ARCHIIVE²] 上海快闪店",
     type: "popup",
@@ -2256,9 +2248,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://weverse.io/riize/notice",
     desc: "RIIZE 快闪店「ARCHIIVE²」中国首站，登陆上海。",
     highlight: "中国首站快闪！"
-  },,
+  },
 
-  {
+{
     id: 103,
     title: 'RIIZE POP-UP STORE "All of You" 原宿快闪店',
     type: "popup",
@@ -2280,9 +2272,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://riizeofficial.jp/news/",
     desc: "纪念日本第2张单曲《All of You》发行的快闪店，在原宿竹下通举办。",
     highlight: "日本二单快闪！"
-  },,
+  },
 
-  {
+{
     id: 104,
     title: "RAPBEAT Festival 2026",
     type: "festival",
@@ -2303,9 +2295,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://weverse.io/riize/notice",
     desc: "RIIZE 出演 RAPBEAT Festival 2026 第一天，与ZICO、Simon Dominic、NCT泰容等同台。",
     highlight: "回归期首个音乐节！"
-  },,
+  },
 
-  {
+{
     id: 105,
     title: "Busan One Asia Festival 2026 - PARK CONCERT",
     type: "festival",
@@ -2326,9 +2318,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://weverse.io/riize/notice",
     desc: "釜山One Asia Festival（BOF）十周年纪念，户外公园演唱会。",
     highlight: "BOF十周年！"
-  },,
+  },
 
-  {
+{
     id: 106,
     title: "Busan One Asia Festival 2026 - BIG CONCERT Day1",
     type: "festival",
@@ -2349,9 +2341,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://weverse.io/riize/notice",
     desc: "釜山One Asia Festival（BOF）十周年纪念大型演唱会第一天。",
     highlight: "BOF十周年大型演唱会"
-  },,
+  },
 
-  {
+{
     id: 107,
     title: "Busan One Asia Festival 2026 - BIG CONCERT Day2",
     type: "festival",
@@ -2372,9 +2364,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://weverse.io/riize/notice",
     desc: "釜山One Asia Festival（BOF）十周年纪念大型演唱会第二天。",
     highlight: "BOF十周年两场连开"
-  },,
+  },
 
-  {
+{
     id: 108,
     title: "RIIZE 迷你二辑《II》香港签售会",
     type: "fansign",
@@ -2395,9 +2387,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://weverse.io/riize/notice",
     desc: "RIIZE 迷你二辑《II》香港线下粉丝签名会，通过Fantopia购买专辑抽取名额。",
     highlight: "香港首次签售！"
-  },,
+  },
 
-  {
+{
     id: 109,
     title: "K-World Dream Awards 2026",
     type: "festival",
@@ -2418,9 +2410,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://weverse.io/riize/notice",
     desc: "2026 K-World Dream Awards，RIIZE 出席并表演。",
     highlight: "颁奖礼舞台"
-  },,
+  },
 
-  {
+{
     id: 110,
     title: "The Fact Music Awards 2026",
     type: "festival",
@@ -2441,9 +2433,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://weverse.io/riize/notice",
     desc: "2026 The Fact Music Awards，RIIZE 出席并表演。",
     highlight: "TMA颁奖礼"
-  },,
+  },
 
-  {
+{
     id: 111,
     title: "FEST. INAZUMA 2026",
     type: "festival",
@@ -2464,9 +2456,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://riizeofficial.jp/news/",
     desc: "日本大型户外音乐节 FEST. INAZUMA 2026，RIIZE 出演。",
     highlight: "日本音乐节"
-  },,
+  },
 
-  {
+{
     id: 112,
     title: "Inkigayo Live in Tokyo 2026",
     type: "festival",
@@ -2487,9 +2479,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://riizeofficial.jp/news/",
     desc: "SBS人气歌谣东京演唱会，RIIZE 出演。",
     highlight: "人气歌谣东京演唱会"
-  },,
+  },
 
-  {
+{
     id: 113,
     title: "SMTOWN LIVE 2025-26 in FUKUOKA Day1",
     type: "concert",
@@ -2510,9 +2502,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://riizeofficial.jp/news/",
     desc: "SM娱乐创立30周年纪念SMTOWN LIVE福冈站，RIIZE首次参加日本SMTOWN。",
     highlight: "SM30周年！福冈SMTOWN"
-  },,
+  },
 
-  {
+{
     id: 114,
     title: "SMTOWN LIVE 2025-26 in FUKUOKA Day2",
     type: "concert",
@@ -2533,9 +2525,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://riizeofficial.jp/news/",
     desc: "SM娱乐创立30周年纪念SMTOWN LIVE福冈站第二天。",
     highlight: "SMTOWN两场连开"
-  },,
+  },
 
-  {
+{
     id: 115,
     title: "The Performance 2026 横滨 Day1",
     type: "festival",
@@ -2556,9 +2548,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://riizeofficial.jp/news/",
     desc: "RIIZE 与 THE RAMPAGE 同台的特别拼盘演唱会，首日有合作舞台。",
     highlight: "横滨K Arena！合作舞台"
-  },,
+  },
 
-  {
+{
     id: 116,
     title: "The Performance 2026 横滨 Day2",
     type: "festival",
@@ -2579,9 +2571,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://riizeofficial.jp/news/",
     desc: "The Performance 2026 第二天，与ATEEZ、EVNNE等同台。",
     highlight: "横滨两场连开"
-  },,
+  },
 
-  {
+{
     id: 117,
     title: "2026 LOVESOME Festival",
     type: "festival",
@@ -2602,9 +2594,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://weverse.io/riize/notice",
     desc: "韩国春季代表性音乐节LOVESOME 2026，RIIZE出演。",
     highlight: "春季音乐节！"
-  },,
+  },
 
-  {
+{
     id: 118,
     title: "Channel B Baseball Music Fest 2026",
     type: "festival",
@@ -2625,9 +2617,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://weverse.io/riize/notice",
     desc: "台湾棒球音乐节，RIIZE出演并参加开球仪式。",
     highlight: "台湾首秀！开球仪式"
-  },,
+  },
 
-  {
+{
     id: 119,
     title: "RIIZE 1000 DAYS FAN PARTY [RIIZE OFFICE] 第一场",
     type: "fanmeeting",
@@ -2648,9 +2640,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://weverse.io/riize/notice",
     desc: "RIIZE 出道1000天纪念粉丝派对「RIIZE OFFICE」第一场。",
     highlight: "1000天纪念！"
-  },,
+  },
 
-  {
+{
     id: 120,
     title: "RIIZE 1000 DAYS FAN PARTY [RIIZE OFFICE] 第二场",
     type: "fanmeeting",
@@ -2671,9 +2663,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://weverse.io/riize/notice",
     desc: "RIIZE 出道1000天纪念粉丝派对「RIIZE OFFICE」第二场。",
     highlight: "1000天两场连开"
-  },,
+  },
 
-  {
+{
     id: 121,
     title: "ULSAN MUSIC FESTIVAL 2026",
     type: "festival",
@@ -2694,9 +2686,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://weverse.io/riize/notice",
     desc: "蔚山音乐节，RIIZE出演。",
     highlight: "蔚山音乐节"
-  },,
+  },
 
-  {
+{
     id: 122,
     title: "MyK FESTA 2026",
     type: "festival",
@@ -2717,9 +2709,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://weverse.io/riize/notice",
     desc: "MyK FESTA 2026，RIIZE与HIGHLIGHT、TREASURE等同台。",
     highlight: "高阳KINTEX"
-  },,
+  },
 
-  {
+{
     id: 123,
     title: "2026 高雄啤酒音乐节",
     type: "festival",
@@ -2740,9 +2732,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://weverse.io/riize/notice",
     desc: "第18届高雄啤酒音乐节，RIIZE压轴出演。",
     highlight: "台湾音乐节！压轴"
-  },,
+  },
 
-  {
+{
     id: 124,
     title: "RIIZE JAPAN FANMEETING 2026 RPG 福冈",
     type: "fanmeeting",
@@ -2763,9 +2755,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://riizeofficial.jp/news/",
     desc: "RIIZE 第二次日本粉丝见面会「RPG - RIIZE PLAYING GAME -」福冈站，全席售罄。",
     highlight: "日本二巡FM！RPG概念"
-  },,
+  },
 
-  {
+{
     id: 125,
     title: "RIIZE JAPAN FANMEETING 2026 RPG 东京 Day1",
     type: "fanmeeting",
@@ -2786,9 +2778,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://riizeofficial.jp/news/",
     desc: "RIIZE 第二次日本粉丝见面会「RPG - RIIZE PLAYING GAME -」东京站第一天。",
     highlight: "东京代代木！"
-  },,
+  },
 
-  {
+{
     id: 126,
     title: "RIIZE JAPAN FANMEETING 2026 RPG 东京 Day2",
     type: "fanmeeting",
@@ -2809,9 +2801,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://riizeofficial.jp/news/",
     desc: "RIIZE 第二次日本粉丝见面会「RPG - RIIZE PLAYING GAME -」东京站第二天。",
     highlight: "东京两场连开"
-  },,
+  },
 
-  {
+{
     id: 127,
     title: "RIIZE JAPAN FANMEETING 2026 RPG 兵库 Day1",
     type: "fanmeeting",
@@ -2832,9 +2824,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://riizeofficial.jp/news/",
     desc: "RIIZE 第二次日本粉丝见面会「RPG - RIIZE PLAYING GAME -」兵库站第一天。",
     highlight: "兵库站！"
-  },,
+  },
 
-  {
+{
     id: 128,
     title: "RIIZE JAPAN FANMEETING 2026 RPG 兵库 Day2",
     type: "fanmeeting",
@@ -2855,9 +2847,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://riizeofficial.jp/news/",
     desc: "RIIZE 第二次日本粉丝见面会「RPG - RIIZE PLAYING GAME -」兵库站第二天，全6场全席售罄，动员约5万人。",
     highlight: "全6场售罄！5万人"
-  },,
+  },
 
-  {
+{
     id: 129,
     title: "Mezamashi WANGAN Festival 2026",
     type: "festival",
@@ -2878,9 +2870,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://riizeofficial.jp/news/",
     desc: "日本电视台晨间节目《闹钟电视》主办的湾岸音乐节，RIIZE出演。",
     highlight: "日本湾岸音乐节"
-  },,
+  },
 
-  {
+{
     id: 130,
     title: "DYD Night at Namsan 南山塔户外公演",
     type: "festival",
@@ -2901,9 +2893,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://weverse.io/riize/notice",
     desc: "迷你二辑《II》回归纪念特别公演「DYD Night at Namsan」，与Billboard Korea合作，在南山N首尔塔户外舞台举行。雨中公演，外墙点灯活动同步进行。",
     highlight: "南山塔雨中公演！回归纪念"
-  },,
+  },
 
-  {
+{
     id: 131,
     title: "LG双子队 开球式 + 特别公演",
     type: "festival",
@@ -2924,9 +2916,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://weverse.io/riize/notice",
     desc: "RIIZE 出席LG双子队主场比赛开球仪式，成灿投球、银硕击球，比赛结束后进行特别公演。",
     highlight: "蚕室棒球场！开球+公演"
-  },,
+  },
 
-  {
+{
     id: 132,
     title: "仁川大学校庆 2026",
     type: "festival",
@@ -2947,9 +2939,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://weverse.io/riize/notice",
     desc: "仁川大学2026年大学校庆，RIIZE出演Day3。",
     highlight: "仁川大学校庆"
-  },,
+  },
 
-  {
+{
     id: 133,
     title: "西江大学校庆 2026",
     type: "festival",
@@ -2970,9 +2962,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://weverse.io/riize/notice",
     desc: "西江大学2026年大学校庆，RIIZE下午场出演。",
     highlight: "西江大学校庆"
-  },,
+  },
 
-  {
+{
     id: 134,
     title: "崇实大学校庆 2026",
     type: "festival",
@@ -2993,9 +2985,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://weverse.io/riize/notice",
     desc: "崇实大学2026年大学校庆，RIIZE同一天第二场校庆演出。",
     highlight: "崇实大学校庆"
-  },,
+  },
 
-  {
+{
     id: 135,
     title: "RIIZE 迷你二辑《II》日本线下活动 大阪场",
     type: "fansign",
@@ -3016,9 +3008,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://riizeofficial.jp/news/20260617/",
     desc: "迷你二辑《II》日本应募抽选特典线下活动（大阪场）。",
     highlight: "日本线下活动 大阪"
-  },,
+  },
 
-  {
+{
     id: 136,
     title: "RIIZE 迷你二辑《II》日本线下活动 东京场",
     type: "fansign",
@@ -3039,9 +3031,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://riizeofficial.jp/news/20260617/",
     desc: "迷你二辑《II》日本应募抽选特典线下活动（东京场）。",
     highlight: "日本线下活动 东京"
-  },,
+  },
 
-  {
+{
     id: 137,
     title: "M Countdown 《Do your dance》初舞台",
     type: "festival",
@@ -3062,9 +3054,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://weverse.io/riize/notice",
     desc: "迷你二辑《II》主打曲《Do your dance》初舞台，M Countdown回归首秀。",
     highlight: "回归初舞台！"
-  },,
+  },
 
-  {
+{
     id: 138,
     title: "音乐银行 《Do your dance》舞台",
     type: "festival",
@@ -3085,9 +3077,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://weverse.io/riize/notice",
     desc: "迷你二辑《II》音乐银行舞台。",
     highlight: "音乐银行"
-  },,
+  },
 
-  {
+{
     id: 139,
     title: "音乐中心 《Do your dance》舞台",
     type: "festival",
@@ -3108,9 +3100,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://weverse.io/riize/notice",
     desc: "迷你二辑《II》音乐中心舞台。",
     highlight: "音乐中心"
-  },,
+  },
 
-  {
+{
     id: 140,
     title: "人气歌谣 《Do your dance》舞台",
     type: "festival",
@@ -3131,9 +3123,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://weverse.io/riize/notice",
     desc: "迷你二辑《II》人气歌谣舞台。",
     highlight: "人气歌谣"
-  },,
+  },
 
-  {
+{
     id: 141,
     title: "Show Champion 《Do your dance》一位",
     type: "festival",
@@ -3154,9 +3146,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://weverse.io/riize/notice",
     desc: "迷你二辑《II》Show Champion舞台，获得回归首个一位！",
     highlight: "首个一位！🏆"
-  },,
+  },
 
-  {
+{
     id: 142,
     title: "M Countdown 《Do your dance》舞台",
     type: "festival",
@@ -3177,9 +3169,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://weverse.io/riize/notice",
     desc: "迷你二辑《II》M Countdown第二周舞台。",
     highlight: "M Countdown"
-  },,
+  },
 
-  {
+{
     id: 143,
     title: "音乐银行 《Do your dance》一位",
     type: "festival",
@@ -3200,9 +3192,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://weverse.io/riize/notice",
     desc: "迷你二辑《II》音乐银行一位，以15,059分打破2026年音乐银行最高分数纪录！",
     highlight: "第二个一位！破纪录🏆"
-  },,
+  },
 
-  {
+{
     id: 144,
     title: "音乐中心 《Do your dance》舞台",
     type: "festival",
@@ -3223,9 +3215,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://weverse.io/riize/notice",
     desc: "迷你二辑《II》音乐中心第二周舞台。",
     highlight: "音乐中心"
-  },,
+  },
 
-  {
+{
     id: 145,
     title: "人气歌谣 《Do your dance》一位",
     type: "festival",
@@ -3246,9 +3238,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://weverse.io/riize/notice",
     desc: "迷你二辑《II》人气歌谣一位，达成音乐节目三冠王！",
     highlight: "三冠王！🏆×3"
-  },,
+  },
 
-  {
+{
     id: 146,
     title: "M Countdown 《Do your dance》舞台",
     type: "festival",
@@ -3269,9 +3261,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://weverse.io/riize/notice",
     desc: "迷你二辑《II》M Countdown第三周舞台。",
     highlight: "M Countdown"
-  },,
+  },
 
-  {
+{
     id: 147,
     title: "音乐银行 《Do your dance》舞台",
     type: "festival",
@@ -3292,9 +3284,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://weverse.io/riize/notice",
     desc: "迷你二辑《II》音乐银行第三周舞台。",
     highlight: "音乐银行"
-  },,
+  },
 
-  {
+{
     id: 148,
     title: "音乐中心 《Do your dance》舞台",
     type: "festival",
@@ -3315,9 +3307,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://weverse.io/riize/notice",
     desc: "迷你二辑《II》音乐中心第三周舞台。",
     highlight: "音乐中心"
-  },,
+  },
 
-  {
+{
     id: 149,
     title: "RIIZE 日本2nd Single「All of You」Showcase",
     type: "fanmeeting",
@@ -3338,9 +3330,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://riizeofficial.jp/news/2026012902/",
     desc: "日本第二张单曲《All of You》发售纪念Showcase。",
     highlight: "日本2单Showcase"
-  },,
+  },
 
-  {
+{
     id: 150,
     title: "RIIZE 日本2nd Single「All of You」Premium Group签名会",
     type: "fansign",
@@ -3361,9 +3353,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://riizeofficial.jp/news/2026012902/",
     desc: "日本第二张单曲《All of You》Premium Group签名会，当选100名。",
     highlight: "日本2单签名会"
-  },,
+  },
 
-  {
+{
     id: 151,
     title: "RIIZE 日本3rd Single「Sunburst」Showcase 大阪",
     type: "fanmeeting",
@@ -3384,9 +3376,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://riizeofficial.jp/news/",
     desc: "日本第三张单曲《Sunburst》预约者对象Showcase（大阪场）。",
     highlight: "日本3单Showcase 大阪"
-  },,
+  },
 
-  {
+{
     id: 152,
     title: "迷你二辑《II》Makestar 线上签售会",
     type: "fansign",
@@ -3407,9 +3399,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://weverse.io/riize/notice",
     desc: "迷你二辑《II》Makestar平台线上视频签售会。",
     highlight: "Makestar 线上签售"
-  },,
+  },
 
-  {
+{
     id: 153,
     title: "迷你二辑《II》Withmuu 线上签售会",
     type: "fansign",
@@ -3430,9 +3422,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://weverse.io/riize/notice",
     desc: "迷你二辑《II》Withmuu平台线上视频签售会。",
     highlight: "Withmuu 线上签售"
-  },,
+  },
 
-  {
+{
     id: 154,
     title: "迷你二辑《II》Ktown4u 线上签售会",
     type: "fansign",
@@ -3453,9 +3445,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://weverse.io/riize/notice",
     desc: "迷你二辑《II》Ktown4u平台线上视频签售会。",
     highlight: "Ktown4u 线上签售"
-  },,
+  },
 
-  {
+{
     id: 155,
     title: "迷你二辑《II》Soundwave 线下签售会",
     type: "fansign",
@@ -3476,9 +3468,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://weverse.io/riize/notice",
     desc: "迷你二辑《II》Soundwave平台线下签售会。",
     highlight: "Soundwave 线下签售"
-  },,
+  },
 
-  {
+{
     id: 156,
     title: "迷你二辑《II》Everline 线下签售会",
     type: "fansign",
@@ -3499,9 +3491,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://weverse.io/riize/notice",
     desc: "迷你二辑《II》Everline平台线下签售会。",
     highlight: "Everline 线下签售"
-  },,
+  },
 
-  {
+{
     id: 157,
     title: "迷你二辑《II》Weverse Shop 线上签售会",
     type: "fansign",
@@ -3522,9 +3514,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://weverse.io/riize/notice",
     desc: "迷你二辑《II》Weverse Shop平台线上视频签售会。",
     highlight: "Weverse 线上签售"
-  },,
+  },
 
-  {
+{
     id: 158,
     title: "迷你二辑《II》Apple Music 线上签售会",
     type: "fansign",
@@ -3545,9 +3537,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://weverse.io/riize/notice",
     desc: "迷你二辑《II》Apple Music平台线上视频签售会。",
     highlight: "Apple Music 线上签售"
-  },,
+  },
 
-  {
+{
     id: 159,
     title: "迷你二辑《II》Music Korea 线下签售会",
     type: "fansign",
@@ -3568,9 +3560,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://weverse.io/riize/notice",
     desc: "迷你二辑《II》Music Korea平台线下签售会。",
     highlight: "Music Korea 线下签售"
-  },,
+  },
 
-  {
+{
     id: 160,
     title: "迷你二辑《II》Music Plant 线下签售会",
     type: "fansign",
@@ -3591,9 +3583,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://weverse.io/riize/notice",
     desc: "迷你二辑《II》Music Plant平台线下签售会。",
     highlight: "Music Plant 线下签售"
-  },,
+  },
 
-  {
+{
     id: 161,
     title: "迷你二辑《II》Namil Music 线下签售会",
     type: "fansign",
@@ -3614,9 +3606,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://weverse.io/riize/notice",
     desc: "迷你二辑《II》Namil Music平台线下签售会。",
     highlight: "Namil Music 线下签售"
-  },,
+  },
 
-  {
+{
     id: 162,
     title: "RIIZE 日本3rd Single「Sunburst」幸运抽选签名会",
     type: "fansign",
@@ -3637,9 +3629,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://riizeofficial.jp/news/",
     desc: "日本第三张单曲《Sunburst》幸运抽选签名会。",
     highlight: "日本3单签名会"
-  },,
+  },
 
-  {
+{
     id: 163,
     title: "SBS 歌谣大战 Summer 2026",
     type: "festival",
@@ -3660,9 +3652,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://weverse.io/riize/notice",
     desc: "SBS 歌谣大战 Summer 2026，RIIZE出演。",
     highlight: '成灿担任MC！'
-  },,
+  },
 
-  {
+{
     id: 164,
     title: "迷你二辑《II》Yes24 线下签售会",
     type: "fansign",
@@ -3683,9 +3675,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://weverse.io/riize/notice",
     desc: "迷你二辑《II》Yes24平台线下签售会。",
     highlight: "Yes24 线下签售"
-  },,
+  },
 
-  {
+{
     id: 165,
     title: "迷你二辑《II》Aladin 线下签售会",
     type: "fansign",
@@ -3706,9 +3698,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://weverse.io/riize/notice",
     desc: "迷你二辑《II》Aladin平台线下签售会。",
     highlight: "Aladin 线下签售"
-  },,
+  },
 
-  {
+{
     id: 166,
     title: "迷你二辑《II》Synnara 线下签售会",
     type: "fansign",
@@ -3729,9 +3721,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://weverse.io/riize/notice",
     desc: "迷你二辑《II》Synnara平台线下签售会。",
     highlight: "Synnara 线下签售"
-  },,
+  },
 
-  {
+{
     id: 167,
     title: "迷你二辑《II》Hot Tracks 线下签售会",
     type: "fansign",
@@ -3752,9 +3744,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://weverse.io/riize/notice",
     desc: "迷你二辑《II》Hot Tracks平台线下签售会。",
     highlight: "Hot Tracks 线下签售"
-  },,
+  },
 
-  {
+{
     id: 168,
     title: "RIIZE 出道3周年 生日派对",
     type: "fanmeeting",
@@ -3775,9 +3767,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://weverse.io/riize/notice",
     desc: "RIIZE 出道3周年纪念生日派对活动。",
     highlight: "3周年生日派对！"
-  },,
+  },
 
-  {
+{
     id: 169,
     title: "RIIZE 官方粉丝俱乐部 BRIIZE 会员日",
     type: "fanmeeting",
@@ -3798,9 +3790,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://weverse.io/riize/notice",
     desc: "RIIZE 官方粉丝俱乐部 BRIIZE 会员日活动。",
     highlight: "BRIIZE会员日"
-  },,
+  },
 
-  {
+{
     id: 170,
     title: "迷你二辑《II》Interpark 线下签售会",
     type: "fansign",
@@ -3821,9 +3813,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://weverse.io/riize/notice",
     desc: "迷你二辑《II》Interpark平台线下签售会。",
     highlight: "Interpark 线下签售"
-  },,
+  },
 
-  {
+{
     id: 171,
     title: "认识的哥哥 录制",
     type: "festival",
@@ -3844,9 +3836,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://weverse.io/riize/notice",
     desc: "RIIZE 出演JTBC《认识的哥哥》节目录制。",
     highlight: "认识的哥哥"
-  },,
+  },
 
-  {
+{
     id: 172,
     title: "一周的偶像 录制",
     type: "festival",
@@ -3867,9 +3859,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://weverse.io/riize/notice",
     desc: "RIIZE 出演MBC《一周的偶像》节目录制。",
     highlight: "一周的偶像"
-  },,
+  },
 
-  {
+{
     id: 173,
     title: "RIIZE x EITHER& 联名快闪店",
     type: "popup",
@@ -3890,9 +3882,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://weverse.io/riize/notice",
     desc: "RIIZE x EITHER& 联名快闪店，成灿、元彬相关。",
     highlight: "EITHER&联名快闪"
-  },,
+  },
 
-  {
+{
     id: 174,
     title: "RIIZE 出道3周年 纪念展览",
     type: "popup",
@@ -3913,9 +3905,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://weverse.io/riize/notice",
     desc: "RIIZE 出道3周年纪念展览活动。",
     highlight: "3周年纪念展览"
-  },,
+  },
 
-  {
+{
     id: 175,
     title: "RIIZE JAPAN FANMEETING 2026 RPG 追加公演",
     type: "fanmeeting",
@@ -3936,9 +3928,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://riizeofficial.jp/news/",
     desc: "RIIZE 日本粉丝见面会 2026 RPG 追加公演。",
     highlight: "日本FM追加公演"
-  },,
+  },
 
-  {
+{
     id: 176,
     title: "2026 首尔歌谣大赏",
     type: "festival",
@@ -3959,9 +3951,9 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://weverse.io/riize/notice",
     desc: "第36届首尔歌谣大赏，RIIZE出演。",
     highlight: "首尔歌谣大赏"
-  },,
+  },
 
-  {
+{
     id: 177,
     title: "2026 Melon Music Awards",
     type: "festival",
@@ -3982,7 +3974,8 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://weverse.io/riize/notice",
     desc: "2026 Melon Music Awards，RIIZE提名/出演。",
     highlight: "MMA 2026"
-  }
+  },
+
 {
     id: 177,
     title: "2026 Asia Artist Awards (AAA)",
@@ -4004,5 +3997,6 @@ window.RIIZE_EVENTS = [
     noticeUrl: "https://weverse.io/riize/notice",
     desc: "2026 亚洲明星盛典（AAA），RIIZE确定出演。12月5-6日在高雄国家体育场举行。",
     highlight: "AAA 2026 高雄"
-  },
+  }
+
 ];
